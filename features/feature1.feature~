@@ -1,0 +1,12 @@
+Feature: User can add new article
+
+ Scenario: Add an article
+    Given I am on the articles page
+    When follow "New article"
+    Then I should be on the new article page
+    When I fill in "Title" with "Personal Introduction"
+    When I fill in "Text"  with "My name is Sky"
+    When I press "submit"
+    Then I should be on helloworld articles page
+    And  I should see "Personal Introduction"
+  
