@@ -1,0 +1,12 @@
+
+<h4>The comments</h4>
+<ul><% @article.comments.each do |comment|  %>
+<li>Commentor:<%= comment.commenter   %></li>
+    Body:     <%= comment.body    %>|
+    <%= link_to 'delete', [comment.article, comment], 
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %>
+
+<%  end %>
+
+ </ul>

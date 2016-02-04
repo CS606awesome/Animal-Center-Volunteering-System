@@ -1,14 +1,20 @@
 class CommentsController < ApplicationController
+  def new
+    
+  end
+  
   def create
-    @article = Article.find(params[:article_id])
+    @account = Account.find_by(id: session[:account_id])
+    @article = @account.articles.find(params[:article_id])
     @comment = @article.comments.create(comment_params)
-    redirect_to article_path(@article)
+    redirect_to account_article_path(@account, @article)
   end
   def destroy
-  	@article = Article.find(params[:article_id])
+    @account = Account.find_by(id: session[:account_id])
+    @article = @account.articles.find(params[:article_id])
     @comment = @article.comments.find(params[:id])
     @comment.destroy
-        redirect_to article_path(@article)  	
+        redirect_to account_article_path(@account, @article)  	
   end
   private
     def comment_params

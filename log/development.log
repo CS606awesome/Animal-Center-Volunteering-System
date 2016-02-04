@@ -1,0 +1,120 @@
+
+
+Started GET "/" for ::1 at 2016-02-04 12:01:47 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 2550ms (Views: 2536.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for ::1 at 2016-02-04 12:01:52 -0600
+Processing by AccountsController#index as HTML
+Redirected to http://localhost:3000/accounts/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts/new" for ::1 at 2016-02-04 12:01:52 -0600
+Processing by AccountsController#new as HTML
+  Rendered sessions/_login.html.haml (5.4ms)
+  Rendered accounts/new.html.haml within layouts/application (22.6ms)
+Completed 200 OK in 112ms (Views: 88.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/login" for ::1 at 2016-02-04 12:01:56 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4mApHuyMcra+xerpGx1OHccy8cZVh1mCI5my6VsSgn7gggDq/A3YgApv61aSk9slapTqmOnWCsiDPFlbGyXO5w==", "session"=>{"email"=>"111", "password"=>"[FILTERED]"}, "commit"=>"Login Now!"}
+  [1m[35mAccount Load (0.5ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "111"]]
+Redirected to http://localhost:3000/accounts/9/articles
+Completed 302 Found in 116ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/accounts/9/articles" for ::1 at 2016-02-04 12:01:56 -0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"account_id"=>"9"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mArticle Load (1.0ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."account_id" = ?  [["account_id", 9]]
+  Rendered articles/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 85ms (Views: 44.2ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/accounts/9/articles/2" for ::1 at 2016-02-04 12:02:00 -0600
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"noS+VdG2+UcTCCZ/rB10U/4+TpMKDE1Hxd5QZHWNbcmcZpehwTdTcaeiJ8Alk+FrU5hVzbZdHg1le7vWNbohUA==", "account_id"=>"9", "id"=>"2"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."account_id" = ? AND "articles"."id" = ? LIMIT 1  [["account_id", 9], ["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mComment Load (0.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 2]]
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/accounts/9/articles
+Completed 302 Found in 13ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/accounts/9/articles" for ::1 at 2016-02-04 12:02:00 -0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"account_id"=>"9"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."account_id" = ?  [["account_id", 9]]
+  Rendered articles/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/accounts/9/articles/3" for ::1 at 2016-02-04 12:02:01 -0600
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CbBih1P0FM9zPtrzWW05s3u1E/m05X2bFzgU9Af/CB8LUktzQ3W++ceU20zQ46yL1hMIpwi0LtG3nf9GR8hEhg==", "account_id"=>"9", "id"=>"3"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."account_id" = ? AND "articles"."id" = ? LIMIT 1  [["account_id", 9], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 3]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/accounts/9/articles
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/accounts/9/articles" for ::1 at 2016-02-04 12:02:01 -0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"account_id"=>"9"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."account_id" = ?  [["account_id", 9]]
+  Rendered articles/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/accounts/9/articles/4" for ::1 at 2016-02-04 12:02:02 -0600
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"w8B+GsE3+txhHb61mIEDi+iNtybzucTy9cAwZUTu8rTBIlfu0bZQ6tW3vwoRD5azRSuseE/ol7hVZdvXBNm+LQ==", "account_id"=>"9", "id"=>"4"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."account_id" = ? AND "articles"."id" = ? LIMIT 1  [["account_id", 9], ["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 4]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/accounts/9/articles
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/accounts/9/articles" for ::1 at 2016-02-04 12:02:02 -0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"account_id"=>"9"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."account_id" = ?  [["account_id", 9]]
+  Rendered articles/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/accounts/9/articles/new" for ::1 at 2016-02-04 12:02:04 -0600
+Processing by ArticlesController#new as HTML
+  Parameters: {"account_id"=>"9"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered articles/new.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 72ms (Views: 70.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/accounts/9/articles" for ::1 at 2016-02-04 12:02:06 -0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"account_id"=>"9"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."account_id" = ?[0m  [["account_id", 9]]
+  Rendered articles/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.2ms)

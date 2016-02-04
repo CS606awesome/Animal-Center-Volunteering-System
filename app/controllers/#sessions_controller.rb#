@@ -1,0 +1,14 @@
+
+      redirect_to @account.articles
+    else
+    render 'new'  
+    end
+  end 
+  def destroy
+    
+  end
+  
+    
+ 
+  
+end

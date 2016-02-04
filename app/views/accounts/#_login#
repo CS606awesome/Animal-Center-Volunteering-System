@@ -1,0 +1,8 @@
+%legend
+  login
+   %div{:style => "margin-bottom:10px"}
+    =form_for @account, url: login_path do |f|
+      =f.text_field :email, {placeholder=>'e-mail'}
+        %div{:style => "margin-bottom:10px"}
+	  =f.text_field :password, {placeholder=>'password'}
+	   =f.submit 'Login Now!'

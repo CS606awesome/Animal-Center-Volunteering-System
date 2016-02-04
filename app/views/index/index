@@ -1,2 +1,0 @@
-<h1>Articles</h1>
-<%= link_to 'My Bolg',controller:'articles' %>

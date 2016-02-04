@@ -1,4 +1,4 @@
-<%= form_for([@article, @article.comments.build]) do |f| %>
+<%= form_for  @article.comments.new,  url: account_article_comments_path(@account, @article, @article.comments.build) do |f| %>
 <p>
   <%= f.label :commenter %><br>
   <%= f.text_field :commenter %>

@@ -1,0 +1,12 @@
+%h1
+ Welcome!
+=render 'sessions/login'
+%fieldset
+ %legend
+  Register
+ %div{:style => "margin-bottom:10px"}
+ =form_for @account do |f|
+  =f.text_field :email, {:placeholder=>'e-mail'}
+  %div{:style => "margin-bottom:10px"}
+  =f.text_field :password, {:placeholder=>'password'}
+  =f.submit 'Join us Now!'
