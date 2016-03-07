@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  interested_area: MyString
+  volunteering_status: MyString
+  signature: 
+  application_date: 2016-03-07 23:05:08
+  available_time_begin: 2016-03-07 23:05:08
+  available_time_end: 
+
+two:
+  interested_area: MyString
+  volunteering_status: MyString
+  signature: 
+  application_date: 2016-03-07 23:05:08
+  available_time_begin: 2016-03-07 23:05:08
+  available_time_end: 
