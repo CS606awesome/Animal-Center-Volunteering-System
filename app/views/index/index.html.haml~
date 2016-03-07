@@ -1,0 +1,2 @@
+%h1  Animal Center Volunteering System
+=link_to "New user? Sign up now!", accounts_path

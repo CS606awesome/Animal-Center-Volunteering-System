@@ -1,8 +1,24 @@
 class AccountsController < ApplicationController
   def index
-   redirect_to 'new'
+   render 'index' 
   end
   def new
+    @account = Account.new
+  end
+  def create
+    @account = Account.new(account_params)
+    if @account.save
+     redirect_to @account 
+    else  
+      render 'new'
+    end  
+  end
+  def show
+      
+  end
+    
+  def account_params
+   params.require(:account).permit(:email,:password,:first_name,:last_name,:introduction,:isstudent)
   end
   
 end

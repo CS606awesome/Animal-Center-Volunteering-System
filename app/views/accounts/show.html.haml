@@ -1,3 +1,4 @@
-%h1
- Hello!
-=render 'sessions/login'
+%h1 Login
+%flash 
+ =flash[:danger] 
+=render 'sessions/signin'

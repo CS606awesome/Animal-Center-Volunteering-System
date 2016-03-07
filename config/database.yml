@@ -4,25 +4,28 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
-default: &default
-  adapter: sqlite3
+development: &development
+  adapter: mysql
+  encoding: utf8
+  database: AMCdev
   pool: 5
-  timeout: 5000
-
-development:
-  <<: *default
-  database: db/development.sqlite3
-
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
+  username: root
+  password: Leili@123
 test: &test
-  <<: *default
-  database: db/test.sqlite3
+  adapter: mysql
+  encoding: utf8
+  database: AMCtest
+  pool: 5
+  username: root
+  password: Leili@123
+production: &production
+  adapter: mysql
+  encoding: utf8
+  database: AMCpro
+  pool: 5
+  username: root
+  password: Leili@123
 
-production:
-  <<: *default
-  database: db/production.sqlite3
 
 cucumber:
   <<: *test

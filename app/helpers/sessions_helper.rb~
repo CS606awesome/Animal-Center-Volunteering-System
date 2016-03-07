@@ -1,6 +1,0 @@
-module SessionsHelper
-  def log_in(account)
-    session[:account] = account.id
-  end
-   
-end
