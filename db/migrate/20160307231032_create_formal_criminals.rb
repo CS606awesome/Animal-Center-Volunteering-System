@@ -5,8 +5,6 @@ class CreateFormalCriminals < ActiveRecord::Migration
       t.string :nature_of_offense
       t.string :name_of_court
       t.string :disposition_of_case
-
-
       t.timestamps null: false
     end
   end

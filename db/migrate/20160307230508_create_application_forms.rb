@@ -7,7 +7,6 @@ class CreateApplicationForms < ActiveRecord::Migration
       t.datetime :application_date
       t.datetime :available_time_begin
       t.datetime :available_time_end
-
       t.timestamps null: false
     end
   end

@@ -5,7 +5,6 @@ class CreateUserFormalworkers < ActiveRecord::Migration
       t.string :reason_for_leaving
       t.string :position_or_department
       t.string :interested_area
-
       t.timestamps null: false
     end
   end
