@@ -11,11 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160307231855) do
-=======
-ActiveRecord::Schema.define(version: 20160307230636) do
->>>>>>> master
+
+  create_table "accommodations", force: :cascade do |t|
+    t.string   "accommodation_name", limit: 255
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
 
   create_table "accounts", force: :cascade do |t|
     t.string  "email",                     limit: 255
@@ -37,7 +39,6 @@ ActiveRecord::Schema.define(version: 20160307230636) do
     t.binary  "picture",                   limit: 16777215
     t.binary  "driver_license",            limit: 16777215
     t.integer "SSN",                       limit: 4
-<<<<<<< HEAD
   end
 
   create_table "application_forms", force: :cascade do |t|
@@ -59,10 +60,33 @@ ActiveRecord::Schema.define(version: 20160307230636) do
     t.datetime "updated_at",                  null: false
   end
 
+  create_table "current_workers", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "department", limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "formal_criminals", force: :cascade do |t|
+    t.datetime "date_of_conviction"
+    t.string   "nature_of_offense",   limit: 255
+    t.string   "name_of_court",       limit: 255
+    t.string   "disposition_of_case", limit: 255
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
+
   create_table "minor_applications", force: :cascade do |t|
     t.binary   "parent_signature", limit: 16777215
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
+  end
+
+  create_table "related_councilmembers", force: :cascade do |t|
+    t.string   "name",         limit: 255
+    t.string   "relationship", limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "student_applications", force: :cascade do |t|
@@ -72,8 +96,15 @@ ActiveRecord::Schema.define(version: 20160307230636) do
     t.datetime "deadline"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
-=======
->>>>>>> master
+  end
+
+  create_table "user_formalworkers", force: :cascade do |t|
+    t.datetime "date_of_employment"
+    t.string   "reason_for_leaving",     limit: 255
+    t.string   "position_or_department", limit: 255
+    t.string   "interested_area",        limit: 255
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
 end
