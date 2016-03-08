@@ -118,3 +118,5 @@ Processing by ArticlesController#index as HTML
   [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."account_id" = ?[0m  [["account_id", 9]]
   Rendered articles/index.html.erb within layouts/application (1.3ms)
 Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (7.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateAccounts (20160307195003)

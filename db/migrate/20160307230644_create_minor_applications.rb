@@ -1,7 +1,8 @@
 class CreateMinorApplications < ActiveRecord::Migration
   def change
     create_table :minor_applications do |t|
-      t.metadata :parent_signature
+      t.column(:parent_signature, :binary, limit: 2.megabytes)
+     
 
       t.timestamps null: false
     end
