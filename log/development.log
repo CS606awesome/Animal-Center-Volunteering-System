@@ -145,3 +145,130 @@ WHERE fk.referenced_column_name is not null
   [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `accounts`
   [1m[36mActiveRecord::SchemaMigration Load (7.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
 Migrating to CreateUserFormalworkers (20160307230545)
+  [1m[36mActiveRecord::SchemaMigration Load (8.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateUserFormalworkers (20160307230545)
+  [1m[35m (51.1ms)[0m  CREATE TABLE `user_formalworkers` (`id` int(11) auto_increment PRIMARY KEY, `date_of_employment` datetime, `reason_for_leaving` varchar(255), `position_or_department` varchar(255), `interested_area` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20160307230545"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateFormalCriminals (20160307231032)
+  [1m[35m (18.3ms)[0m  CREATE TABLE `formal_criminals` (`id` int(11) auto_increment PRIMARY KEY, `date_of_conviction` datetime, `nature_of_offense` varchar(255), `name_of_court` varchar(255), `disposition_of_case` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20160307231032"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateAccommodations (20160307231100)
+  [1m[35m (35.3ms)[0m  CREATE TABLE `accommodations` (`id` int(11) auto_increment PRIMARY KEY, `accommodation_name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20160307231100"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCurrentWorkers (20160307231131)
+  [1m[35m (14.7ms)[0m  CREATE TABLE `current_workers` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `department` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20160307231131"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRelatedCouncilmembers (20160307231157)
+  [1m[35m (17.4ms)[0m  CREATE TABLE `related_councilmembers` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `relationship` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20160307231157"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'AMCdev'
+  AND fk.table_name = 'accommodations'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `accommodations`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'AMCdev'
+  AND fk.table_name = 'accounts'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `accounts`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'AMCdev'
+  AND fk.table_name = 'application_forms'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `application_forms`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'AMCdev'
+  AND fk.table_name = 'criminal_applications'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `criminal_applications`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'AMCdev'
+  AND fk.table_name = 'current_workers'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `current_workers`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'AMCdev'
+  AND fk.table_name = 'formal_criminals'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `formal_criminals`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'AMCdev'
+  AND fk.table_name = 'minor_applications'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `minor_applications`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'AMCdev'
+  AND fk.table_name = 'related_councilmembers'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `related_councilmembers`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'AMCdev'
+  AND fk.table_name = 'student_applications'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `student_applications`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'AMCdev'
+  AND fk.table_name = 'user_formalworkers'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `user_formalworkers`
