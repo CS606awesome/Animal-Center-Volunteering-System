@@ -143,3 +143,5 @@ WHERE fk.referenced_column_name is not null
   AND fk.table_name = 'accounts'
 [0m
   [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `accounts`
+  [1m[36mActiveRecord::SchemaMigration Load (7.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateUserFormalworkers (20160307230545)
