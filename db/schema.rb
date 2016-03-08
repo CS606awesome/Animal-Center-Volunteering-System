@@ -11,17 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160215154557) do
+ActiveRecord::Schema.define(version: 20160307230636) do
 
   create_table "accounts", force: :cascade do |t|
-    t.string   "email",           limit: 255
-    t.string   "first_name",      limit: 255
-    t.string   "last_name",       limit: 255
-    t.string   "introduction",    limit: 255
-    t.boolean  "isstudent",       limit: 1
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.string   "password_digest", limit: 255
+    t.string  "email",                     limit: 255
+    t.string  "firstname",                 limit: 255
+    t.string  "lastname",                  limit: 255
+    t.string  "password_digest",           limit: 255
+    t.string  "current_address",           limit: 255
+    t.string  "homephone",                 limit: 255
+    t.string  "cellphone",                 limit: 255
+    t.string  "emergency_contact_name",    limit: 255
+    t.string  "emergency_phone",           limit: 255
+    t.string  "emergency_phone_alternate", limit: 255
+    t.date    "DOB"
+    t.boolean "is_formal_worker",          limit: 1
+    t.boolean "has_convicitons",           limit: 1
+    t.boolean "need_accomendations",       limit: 1
+    t.boolean "related_to_councilmember",  limit: 1
+    t.boolean "is_current_worker",         limit: 1
+    t.binary  "picture",                   limit: 16777215
+    t.binary  "driver_license",            limit: 16777215
+    t.integer "SSN",                       limit: 4
   end
 
 end
