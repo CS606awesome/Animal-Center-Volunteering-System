@@ -4,10 +4,9 @@ class CreateApplicationForms < ActiveRecord::Migration
       t.string :interested_area
       t.string :volunteering_status
       t.column(:signature, :binary, limit: 2.megabytes)
-      
       t.datetime :application_date
       t.datetime :available_time_begin
-      t.datatime :available_time_end
+      t.datetime :available_time_end
 
       t.timestamps null: false
     end

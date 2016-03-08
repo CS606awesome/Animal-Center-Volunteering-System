@@ -120,3 +120,82 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.2ms)
   [1m[36mActiveRecord::SchemaMigration Load (7.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
 Migrating to CreateAccounts (20160307195003)
+  [1m[36mActiveRecord::SchemaMigration Load (9.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateApplicationForms (20160307230508)
+  [1m[36mActiveRecord::SchemaMigration Load (12.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateApplicationForms (20160307230508)
+  [1m[35m (23.5ms)[0m  CREATE TABLE `application_forms` (`id` int(11) auto_increment PRIMARY KEY, `interested_area` varchar(255), `volunteering_status` varchar(255), `signature` blob(2097152), `application_date` datetime, `available_time_begin` datetime, `available_time_end` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20160307230508"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMinorApplications (20160307230644)
+  [1m[35m (35.9ms)[0m  CREATE TABLE `minor_applications` (`id` int(11) auto_increment PRIMARY KEY, `parent_signature` blob(2097152), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20160307230644"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCriminalApplications (20160307230914)
+  [1m[35m (21.0ms)[0m  CREATE TABLE `criminal_applications` (`id` int(11) auto_increment PRIMARY KEY, `mandatory_hours` int(11), `mandatory_area` varchar(255), `deadlin` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20160307230914"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateStudentApplications (20160307231010)
+  [1m[35m (17.7ms)[0m  CREATE TABLE `student_applications` (`id` int(11) auto_increment PRIMARY KEY, `student_program` varchar(255), `required_time` int(11), `required_area` varchar(255), `deadline` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20160307231010"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to ChangeColumnName (20160307231855)
+  [1m[35m (18.7ms)[0m  ALTER TABLE `application_forms` CHANGE `interested_area` `interested_areas` varchar(255) DEFAULT NULL
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20160307231855"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'AMCdev'
+  AND fk.table_name = 'accounts'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `accounts`
+  [1m[36m (2.1ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'AMCdev'
+  AND fk.table_name = 'application_forms'
+[0m
+  [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `application_forms`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'AMCdev'
+  AND fk.table_name = 'criminal_applications'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `criminal_applications`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'AMCdev'
+  AND fk.table_name = 'minor_applications'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `minor_applications`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'AMCdev'
+  AND fk.table_name = 'student_applications'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `student_applications`

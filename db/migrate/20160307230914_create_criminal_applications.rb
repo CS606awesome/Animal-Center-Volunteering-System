@@ -4,7 +4,6 @@ class CreateCriminalApplications < ActiveRecord::Migration
       t.integer :mandatory_hours
       t.string :mandatory_area
       t.datetime :deadlin
-
       t.timestamps null: false
     end
   end

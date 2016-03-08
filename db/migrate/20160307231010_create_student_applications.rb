@@ -5,7 +5,6 @@ class CreateStudentApplications < ActiveRecord::Migration
       t.integer :required_time
       t.string :required_area
       t.datetime :deadline
-
       t.timestamps null: false
     end
   end
