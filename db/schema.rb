@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160307231855) do
 
   create_table "accommodations", force: :cascade do |t|
@@ -18,6 +19,9 @@ ActiveRecord::Schema.define(version: 20160307231855) do
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
   end
+=======
+ActiveRecord::Schema.define(version: 20160307230636) do
+>>>>>>> master
 
   create_table "accounts", force: :cascade do |t|
     t.string  "email",                     limit: 255
@@ -39,6 +43,7 @@ ActiveRecord::Schema.define(version: 20160307231855) do
     t.binary  "picture",                   limit: 16777215
     t.binary  "driver_license",            limit: 16777215
     t.integer "SSN",                       limit: 4
+<<<<<<< HEAD
   end
 
   create_table "application_forms", force: :cascade do |t|
@@ -105,6 +110,8 @@ ActiveRecord::Schema.define(version: 20160307231855) do
     t.string   "interested_area",        limit: 255
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
+=======
+>>>>>>> master
   end
 
 end
