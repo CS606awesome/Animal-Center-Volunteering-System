@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'yaml_db'
-gem 'mysql'
 gem 'bcrypt'
 gem 'mysql'
 gem 'yaml_db'
