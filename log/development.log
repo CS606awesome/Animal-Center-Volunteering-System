@@ -118,3 +118,28 @@ Processing by ArticlesController#index as HTML
   [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."account_id" = ?[0m  [["account_id", 9]]
   Rendered articles/index.html.erb within layouts/application (1.3ms)
 Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (53.7ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (34.5ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateAccount (20160307230636)
+  [1m[36mActiveRecord::SchemaMigration Load (16.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateAccount (20160307230636)
+  [1m[36mActiveRecord::SchemaMigration Load (5.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateAccount (20160307230636)
+  [1m[36mActiveRecord::SchemaMigration Load (7.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateAccount (20160307230636)
+  [1m[35m (65.0ms)[0m  CREATE TABLE `accounts` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255), `firstname` varchar(255), `lastname` varchar(255), `password_digest` varchar(255), `current_address` varchar(255), `homephone` varchar(255), `cellphone` varchar(255), `emergency_contact_name` varchar(255), `emergency_phone` varchar(255), `emergency_phone_alternate` varchar(255), `DOB` date, `is_formal_worker` tinyint(1), `has_convicitons` tinyint(1), `need_accomendations` tinyint(1), `related_to_councilmember` tinyint(1), `is_current_worker` tinyint(1), `picture` blob(2097152), `driver_license` blob(2097152), `SSN` int(11)) ENGINE=InnoDB
+  [1m[36mSQL (1.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (9.7ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20160307230636"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (3.6ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'AMCdev'
+  AND fk.table_name = 'accounts'
+[0m
+  [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `accounts`
