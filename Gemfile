@@ -1,12 +1,5 @@
 source 'https://rubygems.org'
 
-<<<<<<< HEAD
-gem 'mysql'
-gem 'yaml_db'
-=======
-gem 'yaml_db'
-gem 'mysql'
->>>>>>> master
 gem 'bcrypt'
 gem 'mysql'
 gem 'yaml_db'
