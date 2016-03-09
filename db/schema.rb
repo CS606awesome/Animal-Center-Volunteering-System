@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160309015005) do
+ActiveRecord::Schema.define(version: 20160309021705) do
 
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name", limit: 255
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20160309015005) do
     t.binary  "picture",                   limit: 16777215
     t.binary  "driver_license",            limit: 16777215
     t.integer "SSN",                       limit: 4
+    t.string  "middlename",                limit: 255
   end
 
   create_table "application_forms", force: :cascade do |t|
