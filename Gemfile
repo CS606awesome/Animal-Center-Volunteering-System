@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'bcrypt'
-gem 'mysql'
-gem 'yaml_db'
 gem 'rerun'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
