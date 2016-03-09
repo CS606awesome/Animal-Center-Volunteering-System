@@ -9,12 +9,10 @@
   =f.text_field :password, {:placeholder => 'Password', :type => 'password'}
   =f.text_field :email,{:placeholder => 'E-mail'}
   %div{:style => "margin-bottom:10px"}
-  =f.text_field :first_name, {:placeholder => 'Firstname'}
-  =f.text_field :last_name,  {:placeholder => 'Lastname'}
-  %div{:style => "margin-bottom:10px"}
-  =f.text_field :introduction, {:placeholder => 'Introduction', :style => "widt  h:250px;height:50px"}
+  =f.text_field :firstname, {:placeholder => 'Firstname'}
+  =f.text_field :lastname,  {:placeholder => 'Lastname'}
   %div{:style => "margin-bottom:20px"}
   %p
-   Are you signing up as a student?
-   =f.check_box :isstudent 
+   Are you signing up as a criminal?
+   =f.check_box :has_convictions
   =f.submit 'Be a volunteer right now!'
