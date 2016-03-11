@@ -6,15 +6,18 @@
  %flash
   =flash[:danger] 
  =form_for @account do |f|
-  =f.text_field :password, {:placeholder => 'Password', :type => 'password'}
-  =f.text_field :email,{:placeholder => 'E-mail'}
+  =f.text_field :firstname, {:placeholder => 'Firstname'}
+  =f.text_field :middlename, {:placeholder => 'Middlename'}
+  =f.text_field :lastname,  {:placeholder => 'Lastname'}
   %div{:style => "margin-bottom:10px"}
-  =f.text_field :first_name, {:placeholder => 'Firstname'}
-  =f.text_field :last_name,  {:placeholder => 'Lastname'}
+  =f.text_field :DOB, {:placeholder => 'Date of Birth'}
   %div{:style => "margin-bottom:10px"}
-  =f.text_field :introduction, {:placeholder => 'Introduction', :style => "widt  h:250px;height:50px"}
-  %div{:style => "margin-bottom:20px"}
+  =f.text_field :email, {:placeholder => 'E-mail'}
+  =f.text_field :password, {:placeholder => 'password'}
+  %div{:style => "margin-bottom:10px"}
+  =f.text_field :homephone, {:placeholder => 'Homephone'}
+  =f.text_field :cellphone, {:placeholder => 'Cellphone'}
+  %div{:style => "margin-bottom:10px"}
+  =f.text_field :current_address, {:placeholder => 'Address'}
   %p
-   Are you signing up as a student?
-   =f.check_box :isstudent 
-  =f.submit 'Be a volunteer right now!'
+  =f.submit 'Join us now!'

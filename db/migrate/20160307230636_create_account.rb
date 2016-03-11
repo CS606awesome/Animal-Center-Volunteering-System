@@ -13,13 +13,11 @@ class CreateAccount < ActiveRecord::Migration
       t.string :emergency_phone_alternate
       t.date    :DOB
       t.boolean :is_formal_worker
-      t.boolean :has_convicitons
+      t.boolean :has_convictions
       t.boolean :need_accomendations
       t.boolean :related_to_councilmember
       t.boolean :is_current_worker
-
       t.column(:picture, :binary, limit: 2.megabytes)
-
       t.column(:driver_license, :binary, limit: 2.megabytes)
       t.integer :SSN
       

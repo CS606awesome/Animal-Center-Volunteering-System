@@ -19,7 +19,7 @@ class AccountsController < ApplicationController
   end
     
   def account_params
-   params.require(:account).permit(:email,:password, :password_confirmation,:first_name,:last_name,:introduction,:isstudent)
+   params.require(:account).permit(:email,:password, :password_confirmation,:first_name,:last_name)
   end
   
 end
