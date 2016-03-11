@@ -440,3 +440,285 @@ WHERE fk.referenced_column_name is not null
   [1m[36mActiveRecord::SchemaMigration Load (7.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
 Migrating to CreateUserFormalworkers (20160307230545)
 >>>>>>> master
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-11 14:01:54 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (4.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 2244ms (Views: 2232.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/accounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-11 14:01:57 -0600
+
+
+Started GET "/assets/index.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-11 14:01:57 -0600
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-11 14:01:57 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-11 14:01:57 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-03-11 14:01:57 -0600
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-11 14:01:57 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-11 14:01:57 -0600
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-11 14:01:57 -0600
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-11 14:01:57 -0600
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-11 14:01:57 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-03-11 14:01:57 -0600
+
+
+Started GET "/accounts" for 127.0.0.1 at 2016-03-11 14:02:00 -0600
+Processing by AccountsController#index as HTML
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2016-03-11 14:02:00 -0600
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (5.8ms)
+  Rendered accounts/new.html.haml within layouts/application (40.6ms)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 1.8ms)
+
+ActionView::Template::Error (undefined method `first_name' for #<Account:0x007fa937e8da18>
+Did you mean?  firstname
+               firstname=
+               firstname?):
+     9:   =f.text_field :password, {:placeholder => 'Password', :type => 'password'}
+    10:   =f.text_field :email,{:placeholder => 'E-mail'}
+    11:   %div{:style => "margin-bottom:10px"}
+    12:   =f.text_field :first_name, {:placeholder => 'Firstname'}
+    13:   =f.text_field :last_name,  {:placeholder => 'Lastname'}
+    14:   %div{:style => "margin-bottom:10px"}
+    15:   =f.text_field :introduction, {:placeholder => 'Introduction', :style => "widt  h:250px;height:50px"}
+  app/views/accounts/new.html.haml:12:in `block in _app_views_accounts_new_html_haml__405846017669586931_70182382766760'
+  app/views/accounts/new.html.haml:8:in `_app_views_accounts_new_html_haml__405846017669586931_70182382766760'
+
+
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.3ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (67.0ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (143.4ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2016-03-11 14:02:01 -0600
+Processing by AccountsController#index as HTML
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2016-03-11 14:02:01 -0600
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.7ms)
+  Rendered accounts/new.html.haml within layouts/application (17.7ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `first_name' for #<Account:0x007fa9391017f8>
+Did you mean?  firstname
+               firstname=
+               firstname?):
+     9:   =f.text_field :password, {:placeholder => 'Password', :type => 'password'}
+    10:   =f.text_field :email,{:placeholder => 'E-mail'}
+    11:   %div{:style => "margin-bottom:10px"}
+    12:   =f.text_field :first_name, {:placeholder => 'Firstname'}
+    13:   =f.text_field :last_name,  {:placeholder => 'Lastname'}
+    14:   %div{:style => "margin-bottom:10px"}
+    15:   =f.text_field :introduction, {:placeholder => 'Introduction', :style => "widt  h:250px;height:50px"}
+  app/views/accounts/new.html.haml:12:in `block in _app_views_accounts_new_html_haml__405846017669586931_70182395083020'
+  app/views/accounts/new.html.haml:8:in `_app_views_accounts_new_html_haml__405846017669586931_70182395083020'
+
+
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.0ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (52.8ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (117.7ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2016-03-11 14:06:26 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (5.0ms)
+  Rendered accounts/new.html.haml within layouts/application (45.0ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 1.5ms)
+
+ActionView::Template::Error (undefined method `first_name' for #<Account:0x007f923806d110>
+Did you mean?  firstname
+               firstname=
+               firstname?):
+     9:   =f.text_field :password, {:placeholder => 'Password', :type => 'password'}
+    10:   =f.text_field :email,{:placeholder => 'E-mail'}
+    11:   %div{:style => "margin-bottom:10px"}
+    12:   =f.text_field :first_name, {:placeholder => 'Firstname'}
+    13:   =f.text_field :last_name,  {:placeholder => 'Lastname'}
+    14:   %div{:style => "margin-bottom:10px"}
+    15:   =f.text_field :introduction, {:placeholder => 'Introduction', :style => "widt  h:250px;height:50px"}
+  app/views/accounts/new.html.haml:12:in `block in _app_views_accounts_new_html_haml__3729528546909258830_70132965986900'
+  app/views/accounts/new.html.haml:8:in `_app_views_accounts_new_html_haml__3729528546909258830_70132965986900'
+
+
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (78.9ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (74.9ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (155.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-11 14:06:31 -0600
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 344ms (Views: 335.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2016-03-11 14:06:33 -0600
+Processing by AccountsController#index as HTML
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2016-03-11 14:06:33 -0600
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (2.1ms)
+  Rendered accounts/new.html.haml within layouts/application (21.7ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `first_name' for #<Account:0x007f92384e16b0>
+Did you mean?  firstname
+               firstname=
+               firstname?):
+     9:   =f.text_field :password, {:placeholder => 'Password', :type => 'password'}
+    10:   =f.text_field :email,{:placeholder => 'E-mail'}
+    11:   %div{:style => "margin-bottom:10px"}
+    12:   =f.text_field :first_name, {:placeholder => 'Firstname'}
+    13:   =f.text_field :last_name,  {:placeholder => 'Lastname'}
+    14:   %div{:style => "margin-bottom:10px"}
+    15:   =f.text_field :introduction, {:placeholder => 'Introduction', :style => "widt  h:250px;height:50px"}
+  app/views/accounts/new.html.haml:12:in `block in _app_views_accounts_new_html_haml__3729528546909258830_70132984692220'
+  app/views/accounts/new.html.haml:8:in `_app_views_accounts_new_html_haml__3729528546909258830_70132984692220'
+
+
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (81.9ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (71.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (160.7ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2016-03-11 14:06:33 -0600
+Processing by AccountsController#index as HTML
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2016-03-11 14:06:33 -0600
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (0.9ms)
+  Rendered accounts/new.html.haml within layouts/application (16.2ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `first_name' for #<Account:0x007f9233ccbbf0>
+Did you mean?  firstname
+               firstname=
+               firstname?):
+     9:   =f.text_field :password, {:placeholder => 'Password', :type => 'password'}
+    10:   =f.text_field :email,{:placeholder => 'E-mail'}
+    11:   %div{:style => "margin-bottom:10px"}
+    12:   =f.text_field :first_name, {:placeholder => 'Firstname'}
+    13:   =f.text_field :last_name,  {:placeholder => 'Lastname'}
+    14:   %div{:style => "margin-bottom:10px"}
+    15:   =f.text_field :introduction, {:placeholder => 'Introduction', :style => "widt  h:250px;height:50px"}
+  app/views/accounts/new.html.haml:12:in `block in _app_views_accounts_new_html_haml__3729528546909258830_70132965986900'
+  app/views/accounts/new.html.haml:8:in `_app_views_accounts_new_html_haml__3729528546909258830_70132965986900'
+
+
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.8ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (61.0ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (134.9ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2016-03-11 14:08:29 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (5.3ms)
+  Rendered accounts/new.html.haml within layouts/application (37.9ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (undefined method `first_name' for #<Account:0x007f826a7b7390>
+Did you mean?  firstname
+               firstname=
+               firstname?):
+     9:   =f.text_field :password, {:placeholder => 'Password', :type => 'password'}
+    10:   =f.text_field :email,{:placeholder => 'E-mail'}
+    11:   %div{:style => "margin-bottom:10px"}
+    12:   =f.text_field :first_name, {:placeholder => 'Firstname'}
+    13:   =f.text_field :last_name,  {:placeholder => 'Lastname'}
+    14:   %div{:style => "margin-bottom:10px"}
+    15:   =f.text_field :introduction, {:placeholder => 'Introduction', :style => "widt  h:250px;height:50px"}
+  app/views/accounts/new.html.haml:12:in `block in _app_views_accounts_new_html_haml___3681514017799714614_70099096088380'
+  app/views/accounts/new.html.haml:8:in `_app_views_accounts_new_html_haml___3681514017799714614_70099096088380'
+
+
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.0ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.3ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (88.1ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (170.0ms)
