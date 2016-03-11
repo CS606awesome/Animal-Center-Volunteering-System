@@ -2010,3 +2010,23 @@ Processing by AccountsController#new as HTML
   Rendered accounts/new.html.haml within layouts/application (26.1ms)
 Completed 200 OK in 400ms (Views: 367.2ms | ActiveRecord: 1.4ms)
 >>>>>>> origin/master
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-11 14:10:28 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 304ms (Views: 293.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2016-03-11 14:10:29 -0600
+Processing by AccountsController#index as HTML
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2016-03-11 14:10:29 -0600
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (7.1ms)
+  Rendered accounts/new.html.haml within layouts/application (24.5ms)
+Completed 200 OK in 98ms (Views: 64.5ms | ActiveRecord: 1.4ms)
