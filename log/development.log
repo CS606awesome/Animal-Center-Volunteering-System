@@ -1764,3 +1764,32 @@ Processing by AccountsController#new as HTML
   Rendered sessions/_signin.html.haml (9.4ms)
   Rendered accounts/new.html.haml within layouts/application (26.1ms)
 Completed 200 OK in 400ms (Views: 367.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-11 14:03:08 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 282ms (Views: 271.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2016-03-11 14:03:11 -0600
+Processing by AccountsController#index as HTML
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2016-03-11 14:03:11 -0600
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (8.0ms)
+  Rendered accounts/new.html.haml within layouts/application (29.8ms)
+Completed 200 OK in 83ms (Views: 58.3ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2016-03-11 14:03:32 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n0GYYnZeB9s+FyyceYgpjnS7a+nkG7v8UCWPvCbTdNWwrQ992Mpl8wBF8Qb+IogfdEmP49KDSz0citm91x1EZQ==", "session"=>{"email"=>"", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (4.1ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`email` = ? LIMIT 1  [["email", ""]]
+  Rendered sessions/_signin.html.haml (4.7ms)
+  Rendered accounts/show.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 49ms (Views: 33.4ms | ActiveRecord: 4.1ms)
