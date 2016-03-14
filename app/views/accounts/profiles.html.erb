@@ -1,0 +1,140 @@
+<h1> Profile </h1>
+
+
+<div id='basicinfo'  style = "margin-bottom:10px">
+    <div class='left column' style = "margin-bottom:10px">
+        <img src="http://i2.hdslb.com/video/31/31fd26b6842ef1fe811c020324d80a1e.jpg" style="width:300px;height:222px;">   
+        <!-- option, need discussion -->
+        <p>photo</p>
+    </div>
+    <div class="right column"  style = "margin-bottom:10px">
+      <p>
+          <strong>Name</strong> 
+          <%= basicinfo.name%>
+      </p>
+      <p>
+          <strong>Date of Birth</strong> 
+          <%= basicinfo.dob%>
+      </p>
+      <p>
+          <strong>Email</strong>
+          <%= basicinfo.email%>
+
+          <strong>Home Phone</strong>
+          <%= basicinfo.hphone%>
+
+          <strong>Cell phone</strong>
+          <%= basicinfo.cphone%>
+      </p>
+      <p>
+          <strong>Home Address</strong>
+          <%= basicinfo.address%>
+      </p>
+    </div>
+</div>
+
+
+<form>
+    <p>1.Are you a former worker of the city of Bryan?</p>
+        <input type="radio" name="FormerWorker" value="yes" /> Yes 
+        <input type="radio" name="FormerWorker" value="no" /> No
+    <br />
+    <br />
+    Date of Employment:
+        <input type="text" name="DOE">
+    <br />
+    Reasons of Leaving:
+        <input type="text" name="ROL">
+    <br />
+    Department:
+        <input type="text" name="Department">
+    <br />
+    Position:
+        <input type="text" name="FormerPOS">
+</form>
+
+<form>
+    <p>2.Are you a relative of any council members?</p>
+        <input type="radio" name="RelatedtoCM" value="yes" /> Yes 
+        <input type="radio" name="RelatedtoCM" value="no" /> No
+                                     <br />
+                                     <br />
+    The council member's Name:
+        <input type="text" name="CMname">
+    <br>
+    Relationship:
+        <input type="text" name="RelationshiptoCM">
+</form>
+
+<form>
+    <p>3.Are you a current worker of the city of Bryan?</p>
+        <input type="radio" name="RelatedtoCM" value="yes" /> Yes 
+        <input type="radio" name="RelatedtoCM" value="no" /> No
+                                     <br />
+                                     <br />
+    Department:
+        <input type="text" name="CurrentDep">
+        <br />
+    Position:
+        <input type="text" name="CurrentPOS">
+</form>
+
+<form>
+    <p>4.Are you a criminal?</p>
+        <input type="radio" name="ifcrimianl" value="yes" /> Yes 
+        <input type="radio" name="ifcrimianl" value="no" /> No
+                                     <br />
+                                     <br />
+    Date of conviction:
+        <input type="text" name="DOCon">
+    <br />
+    Nature of offense:
+        <input type="text" name="NatureofOffense">
+        <br />
+    Name of court:
+        <input type="text" name="NOC">
+    Deposition of case:
+        <input type="text" name="DOCase">
+        <br />
+</form>
+
+<form>
+    <p>5.Emergency contact</p>
+    Name:
+        <input type="text" name="ECfirstname">
+        <!--input type="text" name="ECmiddlename">
+        <input type="text" name="EClastname"-->
+    <br />
+    Phone :
+        <input type="text" name="ECphone">
+    <br>
+    Alt phone:
+        <input type="text" name="ECAphone">
+</form>
+
+<form>
+    <p>5.Do you need any accommendation?</p>
+        <input type="radio" name="NeedAccom" value="yes"> Yes 
+        <input type="radio" name="NeedAccom" value="no"> No
+    <br />    
+</form>
+Write the accomdation you need below <br>
+<textarea name="AccomRequests",cols="66" rows="6">
+</textarea>
+<br>
+
+<table>
+    <tr>
+        <tb>
+            <a href="http://www.tamu.edu"><Strong>Next Page</strong></a>
+        </tb>
+        <tb>
+             <a href="http://www.tamu.edu"><Strong>Save</strong></a>
+        </tb> 
+        <tb>
+             <a href="http://www.tamu.edu"><Strong>apply</strong></a>
+        </tb>
+    </tr>
+   
+</table>
+
