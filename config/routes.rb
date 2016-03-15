@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     resources :accounts do
       resources :applications 
   end
+  
+  get "/profiles" => "accounts#profiles"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -34,8 +34,18 @@
       </p>
     </div>
 </div>
-<% end %>
 
+  <%= form_for account do |f| %>
+  <!-- **************************************************************************** -->
+  <!-- add all form contents within this helper -->
+  
+  <%= f.label  :emergency_contact_name, 'Emergency Contact Name'%>
+  <%= f.text_field 'emergency_contact_name'%>
+  <!-- change form below into helper format: 
+  f.label :field_name 'questions you need to ask'
+  f.text_field 'filed_name'
+  radio dot has other f. method name
+  -->
 <form>
     <p>1.Are you a former worker of the city of Bryan?</p>
         <input type="radio" name="FormerWorker" value="yes" /> Yes 
@@ -124,6 +134,15 @@ Write the accomdation you need below <br>
 <textarea name="AccomRequests",cols="66" rows="6">
 </textarea>
 <br>
+
+
+  <%= f.submit 'Save Changes'%>
+  
+  
+  <% end %>
+
+<% end %>
+
 
 <table>
     <tr>
