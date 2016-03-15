@@ -1,7 +1,7 @@
 <h1> Profile </h1>
 
-
-<div id='basicinfo'  style = "margin-bottom:10px">
+<% @accounts.each do |account| %>
+<div id='account'  style = "margin-bottom:10px">
     <div class='left column' style = "margin-bottom:10px">
         <img src="http://i2.hdslb.com/video/31/31fd26b6842ef1fe811c020324d80a1e.jpg" style="width:300px;height:222px;">   
         <!-- option, need discussion -->
@@ -10,29 +10,31 @@
     <div class="right column"  style = "margin-bottom:10px">
       <p>
           <strong>Name</strong> 
-          <%= basicinfo.name%>
+          <%= account.firstname%> <%= account.lastname%>
       </p>
       <p>
           <strong>Date of Birth</strong> 
-          <%= basicinfo.dob%>
+          <%= account.DOB%>
       </p>
       <p>
           <strong>Email</strong>
-          <%= basicinfo.email%>
-
+          <%= account.email%>
+      </p>
+      <p>
           <strong>Home Phone</strong>
-          <%= basicinfo.hphone%>
-
+          <%= account.homephone%>
+      </p>
+      <p>
           <strong>Cell phone</strong>
-          <%= basicinfo.cphone%>
+          <%= account.cellphone%>
       </p>
       <p>
           <strong>Home Address</strong>
-          <%= basicinfo.address%>
+          <%= account.current_address%>
       </p>
     </div>
 </div>
-
+<% end %>
 
 <form>
     <p>1.Are you a former worker of the city of Bryan?</p>

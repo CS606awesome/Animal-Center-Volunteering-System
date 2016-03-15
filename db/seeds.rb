@@ -9,9 +9,10 @@
 accounts =  [{:email => '423523@qwe.com',
              :firstname => 'xudong',
              :lastname => 'huang',
-             :password_digest => '12345' ,
+             :password_digest => '123457777' ,
              :current_address => 'baker street',
              :homephone => '4543656345',
+             :DOB => '2000-1-1',
              :cellphone => '54356565'}]
 
 accounts.each do |account|

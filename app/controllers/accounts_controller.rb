@@ -17,6 +17,11 @@ class AccountsController < ApplicationController
   def show
     @account = Account.new
   end
+  
+  def profiles 
+      #@account = Account.find(params[:id])  
+      @accounts = Account.all
+  end
     
   def account_params
    params.require(:account).permit(:email,:password, :password_confirmation,:first_name,:last_name)
