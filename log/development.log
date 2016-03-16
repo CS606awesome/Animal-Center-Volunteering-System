@@ -1,8 +1,0 @@
-
-
-Started GET "/signup" for 127.0.0.1 at 2016-03-11 14:54:28 -0600
-  [1m[36mActiveRecord::SchemaMigration Load (3.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
-Processing by AccountsController#new as HTML
-  Rendered sessions/_signin.html.haml (8.3ms)
-  Rendered accounts/new.html.haml within layouts/application (23.7ms)
-Completed 200 OK in 327ms (Views: 293.4ms | ActiveRecord: 1.6ms)
