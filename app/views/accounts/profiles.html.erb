@@ -48,12 +48,12 @@
   -->
     <p>
         <b>1.Are you a former worker of the city of Bryan?</b><br />
-        <%= f.radio_button :is_former_worker, 'yes' %> Yes<br />
-        <%= f.radio_button :is_former_worker, 'no' %> No<br />
+        <%= f.radio_button :is_former_worker, "1", :checked => account.is_former_worker  %> Yes<br />
+        <%= f.radio_button :is_former_worker, "0", :checked => !account.is_former_worker %> No<br />
     </p>
 
     Date of Employment:
-        <input type="text" name="DOE">
+        <input type="text" name="DOE"  >
     <br />
     Reasons of Leaving:
         <input type="text" name="ROL">
@@ -63,8 +63,8 @@
         
     <p>
         <b>2.Are you a relative of any council members?</b><br />
-        <%= f.radio_button :related_to_councilmember, 'yes' %> Yes<br />
-        <%= f.radio_button :related_to_councilmember, 'no' %> No<br />
+        <%= f.radio_button :related_to_councilmember, '1', :checked => account.related_to_councilmember %> Yes<br />
+        <%= f.radio_button :related_to_councilmember, '0', :checked =>!account.related_to_councilmember %> No<br />
     </p>
     
      The council member's Name:
@@ -75,8 +75,8 @@
     
     <p>
         <b>3.Are you a current worker of the city of Bryan?</b><br />
-        <%= f.radio_button :is_current_worker, 'yes' %> Yes<br />
-        <%= f.radio_button :is_current_worker, 'no' %> No<br />
+        <%= f.radio_button :is_current_worker, '1', :checked =>account.is_current_worker %> Yes<br />
+        <%= f.radio_button :is_current_worker, '0', :checked =>!account.is_current_worker %> No<br />
     </p>
 
     Department:
@@ -87,8 +87,8 @@
         
     <p>
         <b>4.Do you come here to do community service because of criminal conviction?</b><br />
-        <%= f.radio_button :has_convictions, 'yes' %> Yes<br />
-        <%= f.radio_button :has_convictions, 'no' %> No<br />
+        <%= f.radio_button :has_convictions, '1', :checked =>account.has_convictions %> Yes<br />
+        <%= f.radio_button :has_convictions, '0', :checked =>!account.has_convictions %> No<br />
     </p>  
     
     Date of Conviction:
@@ -113,16 +113,16 @@
     <br><br>
     
         <%=f.label :emergency_phone, 'Emergency Contact Phone'%>
-        <%= f.text_field :emergency_phone%>
+        <%= f.text_field :emergency_phone, :value => account.emergency_phone %>
         
     <br><br>
         <%=f.label :emergency_phone_alternate, 'Emergency Contact Alt Phone'%>
-        <%= f.text_field :emergency_phone_alternate%>
+        <%= f.text_field :emergency_phone_alternate, :value => account.emergency_phone_alternate %>
         
     <p>
         <b>5.Do you need any accommodations?</b><br />
-        <%= f.radio_button :need_accommodations, 'yes' %> Yes<br />
-        <%= f.radio_button :need_accommodations, 'no' %> No<br />
+        <%= f.radio_button :need_accommodations, '1', :checked =>account.need_accommodations %> Yes<br />
+        <%= f.radio_button :need_accommodations, '0', :checked =>!account.need_accommodations %> No<br />
     </p>
   
    Write the accomodation you need below <br>

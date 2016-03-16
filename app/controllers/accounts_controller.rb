@@ -24,7 +24,8 @@ class AccountsController < ApplicationController
   end
   
   def update
-     #redirect_to signup_path
+     @account = Account.find(params[:id])
+     @account.update_attributes!(account_update_params)
      redirect_to save_change_path
      #profiles_path
   end
@@ -34,6 +35,12 @@ class AccountsController < ApplicationController
     
   def account_params
    params.require(:account).permit(:email,:password, :password_confirmation,:first_name,:last_name)
+  end
+  
+  def account_update_params
+   params.require(:account).permit(:is_former_worker,:is_current_worker, :emergency_contact_name,
+                                  :emergency_phone,:emergency_phone_alternate,:related_to_councilmember,
+                                  :has_convictions, :need_accommodations)
   end
   
 end
