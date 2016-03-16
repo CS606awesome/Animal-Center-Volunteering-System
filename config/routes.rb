@@ -16,6 +16,7 @@ Rails.application.routes.draw do
       resources :applications 
   end
   
+  get "/save_change" => "accounts#save_change"
   get "/profiles" => "accounts#profiles"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

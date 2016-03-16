@@ -1,9 +1,9 @@
 <h1> Profile </h1>
 
 <% @accounts.each do |account| %>
-<div id='account'  style = "margin-bottom:10px">
+<div id='account'  style = "margin-top:10px">
     <div class='left column' style = "margin-bottom:10px">
-        <img src="http://i2.hdslb.com/video/31/31fd26b6842ef1fe811c020324d80a1e.jpg" style="width:300px;height:222px;">   
+        <img src="http://i2.hdslb.com/video/31/31fd26b6842ef1fe811c020324d80a1e.jpg" alt="HTML5 Icon" style="width:300px;height:222px;">   
         <!-- option, need discussion -->
         <p>photo</p>
     </div>
@@ -14,7 +14,7 @@
       </p>
       <p>
           <strong>Date of Birth</strong> 
-          <%= account.DOB%>
+          <%= account.DOB%>               <!-- why DOB is orange? -->
       </p>
       <p>
           <strong>Email</strong>
@@ -39,103 +39,97 @@
   <!-- **************************************************************************** -->
   <!-- add all form contents within this helper -->
   
-  <%= f.label  :emergency_contact_name, 'Emergency Contact Name'%>
-  <%= f.text_field 'emergency_contact_name'%>
+  <!--%= f.label  :emergency_contact_name, 'Emergency Contact Name'%>
+  <!--%= f.text_field 'emergency_contact_name'%>
   <!-- change form below into helper format: 
   f.label :field_name 'questions you need to ask'
-  f.text_field 'filed_name'
+  f.text_field :field_name
   radio dot has other f. method name
   -->
-<form>
-    <p>1.Are you a former worker of the city of Bryan?</p>
-        <input type="radio" name="FormerWorker" value="yes" /> Yes 
-        <input type="radio" name="FormerWorker" value="no" /> No
-    <br />
-    <br />
+    <p>
+        <b>1.Are you a former worker of the city of Bryan?</b><br />
+        <%= f.radio_button :is_former_worker, 'yes' %> Yes<br />
+        <%= f.radio_button :is_former_worker, 'no' %> No<br />
+    </p>
+
     Date of Employment:
         <input type="text" name="DOE">
     <br />
     Reasons of Leaving:
         <input type="text" name="ROL">
     <br />
-    Department:
-        <input type="text" name="Department">
-    <br />
     Position:
         <input type="text" name="FormerPOS">
-</form>
-
-<form>
-    <p>2.Are you a relative of any council members?</p>
-        <input type="radio" name="RelatedtoCM" value="yes" /> Yes 
-        <input type="radio" name="RelatedtoCM" value="no" /> No
-                                     <br />
-                                     <br />
-    The council member's Name:
+        
+    <p>
+        <b>2.Are you a relative of any council members?</b><br />
+        <%= f.radio_button :related_to_councilmember, 'yes' %> Yes<br />
+        <%= f.radio_button :related_to_councilmember, 'no' %> No<br />
+    </p>
+    
+     The council member's Name:
         <input type="text" name="CMname">
     <br>
     Relationship:
         <input type="text" name="RelationshiptoCM">
-</form>
+    
+    <p>
+        <b>3.Are you a current worker of the city of Bryan?</b><br />
+        <%= f.radio_button :is_current_worker, 'yes' %> Yes<br />
+        <%= f.radio_button :is_current_worker, 'no' %> No<br />
+    </p>
 
-<form>
-    <p>3.Are you a current worker of the city of Bryan?</p>
-        <input type="radio" name="RelatedtoCM" value="yes" /> Yes 
-        <input type="radio" name="RelatedtoCM" value="no" /> No
-                                     <br />
-                                     <br />
     Department:
         <input type="text" name="CurrentDep">
         <br />
     Position:
         <input type="text" name="CurrentPOS">
-</form>
-
-<form>
-    <p>4.Are you a criminal?</p>
-        <input type="radio" name="ifcrimianl" value="yes" /> Yes 
-        <input type="radio" name="ifcrimianl" value="no" /> No
-                                     <br />
-                                     <br />
-    Date of conviction:
+        
+    <p>
+        <b>4.Do you come here to do community service because of criminal conviction?</b><br />
+        <%= f.radio_button :has_convictions, 'yes' %> Yes<br />
+        <%= f.radio_button :has_convictions, 'no' %> No<br />
+    </p>  
+    
+    Date of Conviction:
         <input type="text" name="DOCon">
     <br />
-    Nature of offense:
+    Nature of Offense:
         <input type="text" name="NatureofOffense">
         <br />
-    Name of court:
+    Name of Court:
         <input type="text" name="NOC">
-    Deposition of case:
+        <br />
+
+    Deposition of Case:
         <input type="text" name="DOCase">
         <br />
-</form>
-
-<form>
-    <p>5.Emergency contact</p>
-    Name:
-        <input type="text" name="ECfirstname">
-        <!--input type="text" name="ECmiddlename">
-        <input type="text" name="EClastname"-->
-    <br />
-    Phone :
-        <input type="text" name="ECphone">
-    <br>
-    Alt phone:
-        <input type="text" name="ECAphone">
-</form>
-
-<form>
-    <p>5.Do you need any accommendation?</p>
-        <input type="radio" name="NeedAccom" value="yes"> Yes 
-        <input type="radio" name="NeedAccom" value="no"> No
-    <br />    
-</form>
-Write the accomdation you need below <br>
-<textarea name="AccomRequests",cols="66" rows="6">
-</textarea>
-<br>
 
 
+    <p><strong>5.Emergency contact</strong></p>
+    
+        <%=f.label :emergency_contact_name, 'Emergency Contact Name'%>
+        <%= f.text_field :emergency_contact_name, :value => account.emergency_contact_name %>
+    <br><br>
+    
+        <%=f.label :emergency_phone, 'Emergency Contact Phone'%>
+        <%= f.text_field :emergency_phone%>
+        
+    <br><br>
+        <%=f.label :emergency_phone_alternate, 'Emergency Contact Alt Phone'%>
+        <%= f.text_field :emergency_phone_alternate%>
+        
+    <p>
+        <b>5.Do you need any accommodations?</b><br />
+        <%= f.radio_button :need_accommodations, 'yes' %> Yes<br />
+        <%= f.radio_button :need_accommodations, 'no' %> No<br />
+    </p>
+  
+   Write the accomodation you need below <br>
+       <textarea name="AccomRequests",cols="66" rows="6">
+       </textarea>
+   <br> 
+        
   <%= f.submit 'Save Changes'%>
   
   
@@ -148,12 +142,6 @@ Write the accomdation you need below <br>
     <tr>
         <tb>
             <a href="http://www.tamu.edu"><Strong>Next Page</strong></a>
-        </tb>
-        <tb>
-             <a href="http://www.tamu.edu"><Strong>Save</strong></a>
-        </tb> 
-        <tb>
-             <a href="http://www.tamu.edu"><Strong>apply</strong></a>
         </tb>
     </tr>
    

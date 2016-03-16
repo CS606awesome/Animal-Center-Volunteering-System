@@ -24,7 +24,12 @@ class AccountsController < ApplicationController
   end
   
   def update
-    redirect_to signup_path
+     #redirect_to signup_path
+     redirect_to save_change_path
+     #profiles_path
+  end
+  
+  def save_change
   end
     
   def account_params
