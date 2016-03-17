@@ -1,10 +1,17 @@
 class AccountsController < ApplicationController
   def index
    redirect_to action: 'new' 
+   
   end
+  
   def new
     @account = Account.new
   end
+  
+  def edit
+      @account = Account.find params[:id]
+  end
+  
   def create
     @account = Account.new(account_params)
     if @account.save
@@ -14,6 +21,7 @@ class AccountsController < ApplicationController
       render 'new'
     end  
   end
+  
   def show
     @account = Account.new
   end
