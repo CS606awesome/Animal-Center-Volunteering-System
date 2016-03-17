@@ -10,8 +10,15 @@ Rails.application.routes.draw do
   get    'signup'  => 'accounts#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
+  
   delete 'logout'  => 'sessions#destroy'
    post 'accounts/:account_id/articles/:article_id' => 'comments#create'
+   
+  get    'forget_your_password' => 'accounts#forgetyourpassword'
+  get    'receive_your_email' => 'accounts#checkyouremail'
+   
+  
+   
     resources :accounts do
       resources :applications 
   end
