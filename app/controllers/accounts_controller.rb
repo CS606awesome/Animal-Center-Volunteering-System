@@ -25,9 +25,29 @@ class AccountsController < ApplicationController
   def show
     @account = Account.new
   end
-    
+  
+  def profiles 
+      #@account = Account.find(params[:id])  
+      @accounts = Account.all
+  end
+  
+  def update
+     @account = Account.find(params[:id])
+     @account.update_attributes!(account_update_params)
+     redirect_to save_change_path
+     #profiles_path
+  end
+  
+  def save_change
+  end  
+  
   def account_params
    params.require(:account).permit(:email,:password, :password_confirmation,:firstname,:lastname,:current_address,:homephone,:cellphone,:DOB)
   end
   
+  def account_update_params
+   params.require(:account).permit(:is_former_worker,:is_current_worker, :emergency_contact_name,
+                                  :emergency_phone,:emergency_phone_alternate,:related_to_councilmember,
+                                  :has_convictions, :need_accommodations)
+  end
 end
