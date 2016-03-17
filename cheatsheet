@@ -1,0 +1,28 @@
+ 
+ <%= form_for @movie do |f| %>
+
+  <%= f.label  :title, 'Title'%>
+  <%= f.text_field 'title'%>
+
+  <%= f.label :rating, 'Rating'%>
+  <%= select :movie, :rating, ['G','PG','PG-13','R','NC-17'] %>
+  
+  <%= f.label  :release_date, 'Released On'%>
+  <%= f.date_select :release_date%>
+
+
+  <%= f.submit 'Save Changes form_for'%>
+  
+  <% end %>
+  
+
+//常用表格形式
+<%= check_box_tag(:pet_dog) %>
+<%= date_field(:user, :born_on) %>
+<%= datetime_field(:user, :meeting_time) %>
+<%= month_field(:user, :birthday_month) %>
+<%= week_field(:user, :birthday_week) %>
+<%= url_field(:user, :homepage) %>
+<%= email_field(:user, :address) %>
+<%= number_field(:product, :price, in: 1.0..20.0, step: 0.5) %>
+<%= range_field(:product, :discount, in: 1..100) %>

@@ -6,7 +6,7 @@ def new
    @account = Account.find_by(email: params[:session][:email].downcase)
     if @account && @account.authenticate(params[:session][:password])
       log_in @account
-      render 'volunteer'
+      render 'accounts/profiles'
     else
     flash.now[:danger] = 'Wrong username/password combination!'  
        render 'accounts/show'

@@ -1,0 +1,195 @@
+    <%= form_for user_formalworker do |f| %>
+    <% f.label :date_of_employment, 'Date of Employment' %>
+    <% f.text_field :date_of_employment %>
+    <!--Date of Employment:
+        <input type="text" name="DOE"-->
+    <br />
+    <% f.label :reason_for_leaving, 'Reasons of Leaving'%>
+    <% f.text_field :reason_for_leaving%>
+    <!--Reasons of Leaving:
+        <input type="text" name="ROL"-->
+    <br />
+
+    <% f.label :position_or_department, 'Position and department'%>
+    <% f.text_field :position_or_department %>
+    <!--Position:
+        <input type="text" name="FormerPOS"-->
+    <% end %>
+
+
+
+    <p>
+        <b>2.Are you a relative of any council members?</b><br />
+        <%= f.radio_button :related_to_councilmember, 'yes' %> Yes<br />
+        <%= f.radio_button :related_to_councilmember, 'no' %> No<br />
+    </p>
+    <!--p>2.Are you a relative of any council members?</p>
+        <input type="radio" name="RelatedtoCM" value="yes" /> Yes 
+        <input type="radio" name="RelatedtoCM" value="no" /> No    -->
+                                     <br />
+                                     <br />
+    <% f.label :the_cm_name, 'The council member\'s Name'%>
+    <% f.text_field :the_cm_name%>
+    <!--The council member's Name:
+        <input type="text" name="CMname"-->
+    <br>
+    <% f.label :relationship, 'Relationship'%>
+    <% f.text_field :relationship%>
+    <!--Relationship:
+        <input type="text" name="RelationshiptoCM"-->
+
+
+
+    <p>
+        <b>3.Are you a current worker of the city of Bryan?</b><br />
+        <%= f.radio_button :is_current_worker, 'yes' %> Yes<br />
+        <%= f.radio_button :is_current_worker, 'no' %> No<br />
+    </p>
+    <!--p>3.Are you a current worker of the city of Bryan?</p>
+        <input type="radio" name="RelatedtoCM" value="yes" /> Yes 
+        <input type="radio" name="RelatedtoCM" value="no" /> No     -->
+                                     <br />
+                                     <br />
+    <% f.label :current_department, 'Department'%>
+    <% f.text_field :current_department%>
+    <!--Department:
+        <input type="text" name="CurrentDep"-->
+        <br />
+    <% f.label :current_position, 'Position'%>
+    <% f.text_field :current_position%>
+    <!--Position:
+        <input type="text" name="CurrentPOS"-->
+
+
+
+    <p>
+        <b>4.Are you a criminal?</b><br />
+        <%= f.radio_button :has_convictions, 'yes' %> Yes<br />
+        <%= f.radio_button :has_convictions, 'no' %> No<br />
+    </p>
+    <!--p>4.Are you a criminal?</p>
+        <input type="radio" name="ifcrimianl" value="yes" /> Yes 
+        <input type="radio" name="ifcrimianl" value="no" /> No     -->
+                                     <br />
+                                     <br />
+    <% f.label :date_of_conviction, 'Date of Conviction'%>
+    <% f.text_field :date_of_conviction%>
+    <!--Date of Conviction:
+        <input type="text" name="DOCon"-->
+    <br />
+    <% f.label :nature_of_offense, 'Nature of Offense'%>
+    <% f.text_field :nature_of_offense%>
+    <!--Nature of Offense:
+        <input type="text" name="NatureofOffense"-->
+        <br />
+    <% f.label :name_of_court, 'Name of Court'%>
+    <% f.text_field :name_of_court%>
+    <!--Name of Court:
+        <input type="text" name="NOC"-->
+        <br />
+    <% f.label :deposition_of_case, 'Deposition of Case'%>
+    <% f.text_field :deposition_of_case%>
+    <!--Deposition of Case:
+        <input type="text" name="DOCase"-->
+        <br />
+
+
+////////////////////////////////////////////////
+        
+        ////////////////////////////////////////////
+        
+    <!--p>1.Are you a former worker of the city of Bryan?</p>
+        <input type="radio" name="FormerWorker" value="yes" /> Yes 
+        <input type="radio" name="FormerWorker" value="no" /> No  -->
+    <br />
+    <br />
+    Date of Employment:
+        <input type="text" name="DOE">
+    <br />
+    Reasons of Leaving:
+        <input type="text" name="ROL">
+    <br />
+
+    Position:
+        <input type="text" name="FormerPOS">
+
+
+    <p>
+        <b>2.Are you a relative of any council members?</b><br />
+        <%= f.radio_button :related_to_councilmember, 'yes' %> Yes<br />
+        <%= f.radio_button :related_to_councilmember, 'no' %> No<br />
+    </p>
+    <!--p>2.Are you a relative of any council members?</p>
+        <input type="radio" name="RelatedtoCM" value="yes" /> Yes 
+        <input type="radio" name="RelatedtoCM" value="no" /> No    -->
+                                     <br />
+                                     <br />
+    The council member's Name:
+        <input type="text" name="CMname">
+    <br>
+    Relationship:
+        <input type="text" name="RelationshiptoCM">
+
+
+
+    <p>
+        <b>3.Are you a current worker of the city of Bryan?</b><br />
+        <%= f.radio_button :is_current_worker, 'yes' %> Yes<br />
+        <%= f.radio_button :is_current_worker, 'no' %> No<br />
+    </p>
+
+    Department:
+        <input type="text" name="CurrentDep">
+        <br />
+    Position:
+        <input type="text" name="CurrentPOS">
+
+
+
+    <p>
+        <b>4.Do you come here to do community service because of criminal conviction?</b><br />
+        <%= f.radio_button :has_convictions, 'yes' %> Yes<br />
+        <%= f.radio_button :has_convictions, 'no' %> No<br />
+    </p>
+
+                                     <br />
+                                     <br />
+    Date of Conviction:
+        <input type="text" name="DOCon">
+    <br />
+    Nature of Offense:
+        <input type="text" name="NatureofOffense">
+        <br />
+    Name of Court:
+        <input type="text" name="NOC">
+        <br />
+
+    Deposition of Case:
+        <input type="text" name="DOCase">
+        <br />
+
+
+    <p><strong>5.Emergency contact</strong></p>
+        <%=f.label :emergency_contact_name, 'Emergency Contact Name'%>
+        <%= f.text_field :emergency_contact_name, :value => account.emergency_contact_name %>
+    <br><br>
+        <%=f.label :emergency_phone, 'Emergency Contact Phone'%>
+        <%= f.text_field :emergency_phone%>
+    <br><br>
+        <%=f.label :emergency_phone_alternate, 'Emergency Contact Alt Phone'%>
+        <%= f.text_field :emergency_phone_alternate%>
+
+
+
+
+    <p>
+        <b>5.Do you need any accommodations?</b><br />
+        <%= f.radio_button :need_accommodations, 'yes' %> Yes<br />
+        <%= f.radio_button :need_accommodations, 'no' %> No<br />
+    </p>
+ 
+
+ Write the accomodation you need below <br>
+<textarea name="AccomRequests",cols="66" rows="6">
+</textarea>
+<br>        

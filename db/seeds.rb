@@ -22,7 +22,7 @@ end
              # "emergency_contact_name" 'yifeng',
              # "emergency_phone_alternate" '2222222',
              # "DOB" '2000-1-1',
-             # "is_formal_worker" boolean,
+             # "is_former_worker" boolean,
              # "has_convictions" boolean,
              # "need_accomendations" boolean,
              # "related_to_councilmember" boolean,
