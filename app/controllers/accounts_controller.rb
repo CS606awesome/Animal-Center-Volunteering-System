@@ -19,7 +19,11 @@ class AccountsController < ApplicationController
   end
     
   def account_params
+<<<<<<< Updated upstream
    params.require(:account).permit(:email,:password, :password_confirmation,:firstname,:lastname,:current_address,:homephone,:cellphone,:DOB)
+=======
+   params.require(:account).permit(:firstname,:middlename,:lastname,:DOB,:email,:password, :password_confirmation,:hoemphone,:cellphone,:current_address)
+>>>>>>> Stashed changes
   end
   
 end
