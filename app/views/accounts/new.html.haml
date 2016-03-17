@@ -1,7 +1,6 @@
 %h1
  Animal Center 
-
- =render 'sessions/signin'
+=render 'sessions/signin'
 %fieldset
  %flash
   =flash[:danger] 
@@ -13,7 +12,7 @@
   =f.text_field :DOB, {:placeholder => 'Date of Birth'}
   %div{:style => "margin-bottom:10px"}
   =f.text_field :email, {:placeholder => 'E-mail'}
-  =f.text_field :password, {:placeholder => 'password'}
+  =f.text_field :password, {:type=>'password',:placeholder => 'password'}
   %div{:style => "margin-bottom:10px"}
   =f.text_field :homephone, {:placeholder => 'Homephone'}
   =f.text_field :cellphone, {:placeholder => 'Cellphone'}
