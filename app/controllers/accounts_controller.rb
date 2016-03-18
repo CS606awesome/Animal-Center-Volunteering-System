@@ -27,22 +27,26 @@ class AccountsController < ApplicationController
   end
   
   def profiles 
-      #@account = Account.find(params[:id])  
-      @accounts = Account.all
+      @account = Account.find(params[:id])  
+      #@accounts = Account.all
   end
+  
   
   def update
      @account = Account.find(params[:id])
-     @account.update_attributes!(account_update_params)
-     redirect_to save_change_path
+     #@account.update_attributes!(account_update_params)
+     @account.attributes = account_update_params
+     @account.save(:validate => false)
+     redirect_to save_change_path :id => @account.id
      #profiles_path
   end
   
   def save_change
+      @account = Account.find(params[:id])
   end  
   
   def account_params
-   params.require(:account).permit(:email,:password, :password_confirmation,:firstname,:lastname,:current_address,:homephone,:cellphone,:DOB)
+   params.require(:account).permit(:email, :password, :middlename, :password_confirmation,:firstname,:lastname,:current_address,:homephone,:cellphone,:DOB)
   end
   
   def account_update_params

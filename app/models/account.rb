@@ -1,7 +1,7 @@
 class Account < ActiveRecord::Base
 before_validation :ensure_has_value
 has_secure_password
-validates :password_digest, 
+validates :password, 
              presence: true,
              length: { in: 6..20,
              to_short: "your password should be at least %{count} characters",
