@@ -1,0 +1,4 @@
+class ChangeFormalCriminalsToFormerCriminals < ActiveRecord::Migration
+  def change
+  end
+end
