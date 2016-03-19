@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20160318004119) do
     t.date    "DOB"
     t.boolean "is_former_worker"
     t.boolean "has_convictions"
-    t.boolean "need_accomendations"
+    t.boolean "need_accommodations"
     t.boolean "related_to_councilmember"
     t.boolean "is_current_worker"
     t.binary  "picture"

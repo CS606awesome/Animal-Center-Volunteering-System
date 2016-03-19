@@ -4,9 +4,10 @@ def new
   end
   def create
    @account = Account.find_by(email: params[:session][:email].downcase)
-   if @account&& @account.authenticate(params[:session][:password])
+  #@account.authenticate('123456')
+   if @account && @account.authenticate(params[:session][:password])
       log_in @account
-      render 'volunteer'
+      redirect_to profiles_path :id => @account.id
     else
     flash.now[:danger] = 'Wrong email/password combination!'  
        render 'accounts/show'

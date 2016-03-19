@@ -1,0 +1,147 @@
+<h1> Profile </h1>
+
+<div id='@account'  style = "margin-top:10px">
+    <div class='left column' style = "margin-bottom:10px">
+        <img src="http://i2.hdslb.com/video/31/31fd26b6842ef1fe811c020324d80a1e.jpg" alt="HTML5 Icon" style="width:300px;height:222px;">   
+        <!-- option, need discussion -->
+        <p>photo</p>
+    </div>
+    <div class="right column"  style = "margin-bottom:10px">
+      <p>
+          <strong>Name</strong> 
+          <%= @account.firstname%> <%= @account.lastname%>
+      </p>
+      <p>
+          <strong>Date of Birth</strong> 
+          <%= @account.DOB%>               <!-- why DOB is orange? -->
+      </p>
+      <p>
+          <strong>Email</strong>
+          <%= @account.email%>
+      </p>
+      <p>
+          <strong>Home Phone</strong>
+          <%= @account.homephone%>
+      </p>
+      <p>
+          <strong>Cell phone</strong>
+          <%= @account.cellphone%>
+      </p>
+      <p>
+          <strong>Home Address</strong>
+          <%= @account.current_address%>
+      </p>
+    </div>
+</div>
+
+  <%= form_for @account do |f| %>
+  <!-- **************************************************************************** -->
+  <!-- add all form contents within this helper -->
+  
+  <!--%= f.label  :emergency_contact_name, 'Emergency Contact Name'%>
+  <!--%= f.text_field 'emergency_contact_name'%>
+  <!-- change form below into helper format: 
+  f.label :field_name 'questions you need to ask'
+  f.text_field :field_name
+  radio dot has other f. method name
+  -->
+    <p>
+        <b>1.Are you a former worker of the city of Bryan?</b><br />
+        <%= f.radio_button :is_former_worker, "1", :checked => @account.is_former_worker  %> Yes<br />
+        <%= f.radio_button :is_former_worker, "0", :checked => !@account.is_former_worker %> No<br />
+    </p>
+
+    Date of Employment:
+        <input type="text" name="DOE"  >
+    <br />
+    Reasons of Leaving:
+        <input type="text" name="ROL">
+    <br />
+    Position:
+        <input type="text" name="FormerPOS">
+        
+    <p>
+        <b>2.Are you a relative of any council members?</b><br />
+        <%= f.radio_button :related_to_councilmember, '1', :checked => @account.related_to_councilmember %> Yes<br />
+        <%= f.radio_button :related_to_councilmember, '0', :checked =>!@account.related_to_councilmember %> No<br />
+    </p>
+    
+     The council member's Name:
+        <input type="text" name="CMname">
+    <br>
+    Relationship:
+        <input type="text" name="RelationshiptoCM">
+    
+    <p>
+        <b>3.Are you a current worker of the city of Bryan?</b><br />
+        <%= f.radio_button :is_current_worker, '1', :checked =>@account.is_current_worker %> Yes<br />
+        <%= f.radio_button :is_current_worker, '0', :checked =>!@account.is_current_worker %> No<br />
+    </p>
+
+    Department:
+        <input type="text" name="CurrentDep">
+        <br />
+    Position:
+        <input type="text" name="CurrentPOS">
+        
+    <p>
+        <b>4.Do you come here to do community service because of criminal conviction?</b><br />
+        <%= f.radio_button :has_convictions, '1', :checked =>@account.has_convictions %> Yes<br />
+        <%= f.radio_button :has_convictions, '0', :checked =>!@account.has_convictions %> No<br />
+    </p>  
+    
+    Date of Conviction:
+        <input type="text" name="DOCon">
+    <br />
+    Nature of Offense:
+        <input type="text" name="NatureofOffense">
+        <br />
+    Name of Court:
+        <input type="text" name="NOC">
+        <br />
+
+    Deposition of Case:
+        <input type="text" name="DOCase">
+        <br />
+
+
+    <p><strong>5.Emergency contact</strong></p>
+    
+        <%=f.label :emergency_contact_name, 'Emergency Contact Name'%>
+        <%= f.text_field :emergency_contact_name, :value => @account.emergency_contact_name %>
+    <br><br>
+    
+        <%=f.label :emergency_phone, 'Emergency Contact Phone'%>
+        <%= f.text_field :emergency_phone, :value => @account.emergency_phone %>
+        
+    <br><br>
+        <%=f.label :emergency_phone_alternate, 'Emergency Contact Alt Phone'%>
+        <%= f.text_field :emergency_phone_alternate, :value => @account.emergency_phone_alternate %>
+        
+    <p>
+        <b>5.Do you need any accommodations?</b><br />
+        <%= f.radio_button :need_accommodations, '1', :checked =>@account.need_accommodations %> Yes<br />
+        <%= f.radio_button :need_accommodations, '0', :checked =>!@account.need_accommodations %> No<br />
+    </p>
+  
+   Write the accomodation you need below <br>
+       <textarea name="AccomRequests",cols="66" rows="6">
+       </textarea>
+   <br> 
+        
+  <%= f.submit 'Save Changes'%>
+  
+  
+  <% end %>
+
+
+
+<table>
+    <tr>
+        <tb>
+            <a href="http://www.tamu.edu"><Strong>Next Page</strong></a>
+        </tb>
+    </tr>
+   
+</table>
+

@@ -18,10 +18,15 @@ Rails.application.routes.draw do
   get    'receive_your_email' => 'accounts#checkyouremail'
    
   
+  get 'profiles' => 'accounts#profiles'
+  get 'profiles/:id' => 'accounts#profiles'
    
     resources :accounts do
       resources :applications 
   end
+  
+  get '/save_change' => 'accounts#save_change'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
