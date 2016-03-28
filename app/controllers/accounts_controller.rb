@@ -14,6 +14,7 @@ class AccountsController < ApplicationController
   
   def create
     @account = Account.new(account_params)
+    #@current_worker = @account.current_workers.create(current_worker_params)
     if @account.save
      redirect_to @account 
     else  
@@ -52,6 +53,12 @@ class AccountsController < ApplicationController
   def account_update_params
    params.require(:account).permit(:is_former_worker,:is_current_worker, :emergency_contact_name,
                                   :emergency_phone,:emergency_phone_alternate,:related_to_councilmember,
-                                  :has_convictions, :need_accommodations)
+                                  :has_convictions, :need_accommodations, 
+                                  current_worker_attributes: [:id, :department, :name])
+                                
   end
+  
+
+  #def current_worker_params
+     # params.require(:current_worker).permit(:)
 end

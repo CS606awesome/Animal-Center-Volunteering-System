@@ -34,7 +34,7 @@
     </div>
 </div>
 
-  <%= form_for @account do |f| %>
+  <%= form_for setup_account(@account) do |f| %>
   <!-- **************************************************************************** -->
   <!-- add all form contents within this helper -->
   
@@ -53,6 +53,8 @@
 
     Date of Employment:
         <input type="text" name="DOE"  >
+        <!--%=f.label :date_of_employment, 'Date of Employment'%>  -->
+        <!--%= f.text_field :date_of_employment, :value => @user_formerworkers.date_of_employment %> -->
     <br />
     Reasons of Leaving:
         <input type="text" name="ROL">
@@ -78,12 +80,16 @@
         <%= f.radio_button :is_current_worker, '0', :checked =>!@account.is_current_worker %> No<br />
     </p>
 
-    Department:
-        <input type="text" name="CurrentDep">
-        <br />
-    Position:
-        <input type="text" name="CurrentPOS">
-        
+    <%= f.fields_for  :current_worker do |cf| %>
+            <!-- input type="text" name="CurrentDep" -->
+            <%=cf.label :department, 'Department'%>
+            <%= cf.text_field :department, :value => @account.current_worker.department %>
+            <br />
+        Position:
+            <input type="text" name="CurrentPOS">
+     
+    <% end %>    
+    
     <p>
         <b>4.Do you come here to do community service because of criminal conviction?</b><br />
         <%= f.radio_button :has_convictions, '1', :checked =>@account.has_convictions %> Yes<br />
