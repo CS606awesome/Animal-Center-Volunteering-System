@@ -22,7 +22,7 @@ class AdminsController < ApplicationController
   end
   
   def show
-    @admin = Admin.new
+    @accounts = Account.all
   end
   def admin_params
    params.require(:admin).permit(:email,:password, :password_confirmation,:key)

@@ -1,1 +1,26 @@
-%h1 You are the Admin!
+%h1
+ Wellcome Administrator 
+
+%table#accounts
+ %thead
+  %tr
+   %th Firstname
+   %th Middlename
+   %th Maidenname
+   %th Lastname
+   %th Date of Birth
+   %th Email
+   %th Cellphone
+   %th Homephone
+   %th Address
+ %tbody
+  - @accounts.each do |account|
+   %tr
+    %td= account.firstname
+    %td= account.middlename
+    %td= account.lastname
+    %td= account.DOB 
+    %td= account.email
+    %td= account.cellphone
+    %td= account.homephone
+    %td= account.current_address
