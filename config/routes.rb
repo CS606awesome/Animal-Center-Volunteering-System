@@ -20,7 +20,11 @@ Rails.application.routes.draw do
   
   get 'profiles' => 'accounts#profiles'
   get 'profiles/:id' => 'accounts#profiles'
-   
+
+  #administrator login
+  get 'adminlogin' => 'admin_sessions#new'
+  post 'adminlogin' => 'admin_sessions#create'
+  resources :admins
     resources :accounts do
       resources :applications 
   end
