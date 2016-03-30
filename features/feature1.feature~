@@ -1,12 +1,24 @@
 Feature: User can add new article
 
- Scenario: Add an article
-    Given I am on the articles page
-    When follow "New article"
-    Then I should be on the new article page
-    When I fill in "Title" with "Personal Introduction"
-    When I fill in "Text"  with "My name is Sky"
-    When I press "submit"
-    Then I should be on helloworld articles page
-    And  I should see "Personal Introduction"
+Scenario: Add a registration page
+As a volunteer administrator,
+I want to add a registration page to our website
+So that those volunteers can register 
+
+
+Scenario:Edit user's profile
+As a volunteer
+So that I can edit my account profiles
+I want to add and save some personal information into my profile
+
+Scenario:Add a application
+As a volunteer
+So that I can apply for volunteering
+I want to submit my application form
+
+Scenario: login as Admin Manager
+As a administrator of volunteer system
+I want be able to manage volunteer's applications
+So that I can filter, select qualified volunteer applicants
+Add a administrator manager page
   
