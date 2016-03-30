@@ -169,8 +169,10 @@
     </p>
   
    Write the accomodation you need below <br>
-       <textarea name="AccomRequests",cols="66" rows="6">
-       </textarea>
+        <%= f.fields_for :accommodation do |a| %>
+            <%=ff.label :date_of_conviction, 'Date of Conviction'%>
+            <%= ff.text_field :date_of_conviction, :value => @account.former_criminal.date_of_conviction %>
+        
    <br> 
         
   <%= f.submit 'Save Changes'%>
