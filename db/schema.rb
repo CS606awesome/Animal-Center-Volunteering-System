@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160328031932) do
+ActiveRecord::Schema.define(version: 20160330214509) do
 
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name"
@@ -78,7 +78,10 @@ ActiveRecord::Schema.define(version: 20160328031932) do
     t.string   "disposition_of_case"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.integer  "account_id"
   end
+
+  add_index "former_criminals", ["account_id"], name: "index_former_criminals_on_account_id"
 
   create_table "minor_applications", force: :cascade do |t|
     t.binary   "parent_signature"
@@ -91,7 +94,10 @@ ActiveRecord::Schema.define(version: 20160328031932) do
     t.string   "relationship"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "account_id"
   end
+
+  add_index "related_councilmembers", ["account_id"], name: "index_related_councilmembers_on_account_id"
 
   create_table "student_applications", force: :cascade do |t|
     t.string   "student_program"
@@ -109,6 +115,9 @@ ActiveRecord::Schema.define(version: 20160328031932) do
     t.string   "interested_area"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.integer  "account_id"
   end
+
+  add_index "user_formerworkers", ["account_id"], name: "index_user_formerworkers_on_account_id"
 
 end
