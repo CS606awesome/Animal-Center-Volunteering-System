@@ -12,9 +12,9 @@ class CreateAccount < ActiveRecord::Migration
       t.string :emergency_phone
       t.string :emergency_phone_alternate
       t.date    :DOB
-      t.boolean :is_former_worker
+      t.boolean :is_formal_worker
       t.boolean :has_convictions
-      t.boolean :need_accommodations
+      t.boolean :need_accomendations
       t.boolean :related_to_councilmember
       t.boolean :is_current_worker
       t.column(:picture, :binary, limit: 2.megabytes)

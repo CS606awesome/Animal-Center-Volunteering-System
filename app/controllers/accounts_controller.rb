@@ -46,7 +46,7 @@ class AccountsController < ApplicationController
   end  
   
   def account_params
-   params.require(:account).permit(:email,:password, :password_confirmation,:firstname,:lastname, :middlename,:current_address,:homephone,:cellphone,:DOB)
+   params.require(:account).permit(:email,:password, :password_confirmation,:firstname,:lastname,:maidenname, :middlename,:gender,:current_address,:homephone,:cellphone,:DOB)
   end
   
   def account_update_params
