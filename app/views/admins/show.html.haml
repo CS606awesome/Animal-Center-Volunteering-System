@@ -1,12 +1,17 @@
-%h1
- Wellcome Administrator 
-
+%h1 Admin Data Management System
+%br
+%h3 Wellcome Administrator !
+%fieldset
+ =form_for admin_path, :method => :get do 
+  Age	
+  =text_field_tag :agemin,nil,placeholder:'older than'
+  =text_field_tag :agemax,nil,placeholder:'younger than'
+  =submit_tag 'select'
 %table#accounts
  %thead
   %tr
    %th Firstname
    %th Middlename
-   %th Maidenname
    %th Lastname
    %th Date of Birth
    %th Email
