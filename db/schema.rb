@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160318003939) do
+ActiveRecord::Schema.define(version: 20160330223454) do
 
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20160318003939) do
     t.binary  "driver_license"
     t.integer "SSN"
     t.string  "middlename"
+    t.string  "former_cri"
   end
 
   create_table "application_forms", force: :cascade do |t|
