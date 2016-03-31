@@ -41,6 +41,7 @@ group :development, :test do
     gem 'autotest'
     gem 'capybara', '2.4.4'
     gem 'launchy'
+    gem 'sqlite3'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
