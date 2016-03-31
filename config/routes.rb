@@ -20,10 +20,15 @@ Rails.application.routes.draw do
   
   get 'profiles' => 'accounts#profiles'
   get 'profiles/:id' => 'accounts#profiles'
+  
+  get 'app_demo' => 'accounts#app_demo'
+  
+  get 'submit_app' => 'application_forms#submit_app'
    
     resources :accounts do
-      resources :applications 
-  end
+    end
+  resources :application_forms
+  
   
   get '/save_change' => 'accounts#save_change'
   

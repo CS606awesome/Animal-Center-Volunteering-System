@@ -1,0 +1,48 @@
+<strong>Notice: application form submitted! Please Review.</strong>
+<h1>Application Form</h1>
+
+<h2>Volunteer Acknowledgement</h2>
+<p>
+    I understand the City operates the Bryan Animal Center (BAC), a facility that houses animals picked up by animal control personnel/citizens, assists with recovery of lost animals, and finds homes for animals that can be adopted. I understand the City allows volunteers to assist with the operation of the facility in an effort to provide more care, encourage adoption, and reduce rates of euthanasia. 
+
+I am aware of the inherent risks associated with working with animals, and while the City takes every reasonable precaution above and beyond the requirements of state law, those risks can never be wholly eliminated. I voluntarily assume full responsibility for any risk of loss, property damage, or personal injury that may be sustained by me, as a result of being engaged in such activity. In consideration for being permitted to volunteer, I hereby release, indemnify, and hold harmless the City, and its officers, servants, agents, or employees from any and all liability, claims, demands, actions, and causes of action (including claims for court costs and attorney’s fees) whatsoever arising out of or related to any loss, damage or injury, including death, that may be sustained by me or to any property belonging to me, whether caused by the negligence of the City or otherwise, while volunteering at the BAC, or while in, on or upon the premises. 
+
+I acknowledge that the statements made by me in this application are true and complete to the best of my knowledge, and I understand the contents of the application are subject to verification by the City of Bryan. I understand that any false information, omissions of facts or misrepresentations may disqualify me from volunteer work with the City of Bryan or immediate release from volunteer work. I understand that a criminal history check will be administered as well as verification of any information provided as part of the volunteer process, such as reference checks, driving record checks etc. 
+
+In the event that I am placed as a volunteer with the City of Bryan, I understand that I shall be required to comply with all of the City’s rules, policies and regulations. I agree to abide by the standard operating procedures of the BAC, the instructions given by staff of the BAC, and any instructions from other City employees or officers. Specifically, I acknowledge that: 
+</p><br /><p>
+
+1. Volunteers under the age of 14 must be accompanied by a parent/guardian at all times. </p><p><br />
+
+2. Only adult volunteers, or minors over the age of 14 and accompanied by a parent, may physically interact with animals. </p><p><br />
+
+3. When at the BAC, volunteers must wear ankle length pants and closed toed shoes. </p><p><br />
+
+4. Outside pets are not permitted. </p><p><br />
+
+I understand that the City has the right to terminate my services as volunteer at any time, with or without notice and with or without cause. By signing below, I certify that I have read and agree with these statements.
+</p>
+
+<div id='@application_form'  style = "margin-top:10px">
+    
+    
+    <%= form_for @application_form do |f| %>
+    <p>
+        <strong>What is your interested area?</strong>
+    </p>
+        <%=f.label :interested_areas, 'Please fill it out'%>
+        <%= f.text_field :interested_areas, :value => @application_form.interested_areas %>
+    <br />
+    <br />
+    <p>
+        <strong>What is your volunteering status?</strong>
+    </p>
+        <%=f.label :volunteering_status, 'Please fill it out'%>
+        <%= f.text_field :volunteering_status, :value => @application_form.volunteering_status %>
+    <br />
+    <br />
+    
+    
+    <% end %>
+    
+    <%= link_to 'Back to profiles', profiles_path(:id => 1) %>

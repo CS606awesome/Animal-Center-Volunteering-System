@@ -31,6 +31,9 @@ class AccountsController < ApplicationController
       #@accounts = Account.all
   end
   
+  def app_demo
+      @application_form = ApplicationForm.new
+  end
   
   def update
      @account = Account.find(params[:id])
