@@ -9912,3 +9912,184 @@ Processing by AccountsController#profiles as HTML
   [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 3]]
   Rendered accounts/profiles.html.erb within layouts/application (6.1ms)
 Completed 200 OK in 59ms (Views: 56.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 165.91.13.13 at 2016-03-31 04:34:15 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (22.1ms)
+Completed 200 OK in 469ms (Views: 443.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.13 at 2016-03-31 04:34:18 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.13 at 2016-03-31 04:34:18 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (27.5ms)
+  Rendered accounts/new.html.haml within layouts/application (89.3ms)
+Completed 200 OK in 195ms (Views: 159.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/input_your_email" for 165.91.13.13 at 2016-03-31 04:34:19 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#inputyouremail as HTML
+  Rendered accounts/inputyouremail.html.haml within layouts/application (25.9ms)
+Completed 200 OK in 81ms (Views: 78.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input_your_email?utf8=%E2%9C%93&email=&commit=Reset" for 165.91.13.13 at 2016-03-31 04:34:22 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#inputyouremail as HTML
+  Parameters: {"utf8"=>"✓", "email"=>"", "commit"=>"Reset"}
+  [1m[35mAccount Load (0.7ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered accounts/inputyouremail.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 98ms (Views: 54.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/input_your_email?utf8=%E2%9C%93&email=&commit=Reset" for 165.91.13.13 at 2016-03-31 04:34:53 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#inputyouremail as HTML
+  Parameters: {"utf8"=>"✓", "email"=>"", "commit"=>"Reset"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", ""]]
+  Rendered accounts/inputyouremail.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/accounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.13 at 2016-03-31 04:34:53 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 165.91.13.13 at 2016-03-31 04:34:53 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/index.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.13 at 2016-03-31 04:34:53 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.13.13 at 2016-03-31 04:34:53 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 165.91.13.13 at 2016-03-31 04:34:53 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.13 at 2016-03-31 04:34:53 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.13.13 at 2016-03-31 04:34:53 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 165.91.13.13 at 2016-03-31 04:34:53 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.13.13 at 2016-03-31 04:34:53 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.13.13 at 2016-03-31 04:34:53 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.13.13 at 2016-03-31 04:34:53 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/input_your_email?utf8=%E2%9C%93&email=&commit=Reset" for 165.91.13.13 at 2016-03-31 04:35:04 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#inputyouremail as HTML
+  Parameters: {"utf8"=>"✓", "email"=>"", "commit"=>"Reset"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered accounts/inputyouremail.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 71ms (Views: 67.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/index.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.13 at 2016-03-31 04:35:04 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/accounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.13 at 2016-03-31 04:35:04 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.13 at 2016-03-31 04:35:04 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 165.91.13.13 at 2016-03-31 04:35:04 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.13.13 at 2016-03-31 04:35:04 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 165.91.13.13 at 2016-03-31 04:35:04 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 165.91.13.13 at 2016-03-31 04:35:04 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.13.13 at 2016-03-31 04:35:04 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.13.13 at 2016-03-31 04:35:04 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.13.13 at 2016-03-31 04:35:04 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.13.13 at 2016-03-31 04:35:04 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 165.91.13.13 at 2016-03-31 04:35:16 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 121ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.13 at 2016-03-31 04:35:16 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 63ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.13 at 2016-03-31 04:35:18 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.13 at 2016-03-31 04:35:18 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.8ms)
+  Rendered accounts/new.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input_your_email" for 165.91.13.13 at 2016-03-31 04:35:20 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#inputyouremail as HTML
+  Rendered accounts/inputyouremail.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 54ms (Views: 53.3ms | ActiveRecord: 0.0ms)
