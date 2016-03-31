@@ -84,7 +84,7 @@ class AccountsController < ApplicationController
     
   def reset_your_password
              @account = Account.find(session[:id])
-             @account.updatepassword(account_password_params)
+             @account.update(account_password_params)
              
              #if !@account.update(account_password_params)
              #  flash.now[:danger] = 'Password reset is not successful!' 

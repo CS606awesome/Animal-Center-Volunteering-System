@@ -8861,3 +8861,277 @@ Processing by SessionsController#new as HTML
   Rendered sessions/_signin.html.haml (2.9ms)
   Rendered sessions/new.html.haml within layouts/application (5.3ms)
 Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.13 at 2016-03-31 04:06:19 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (28.3ms)
+Completed 200 OK in 539ms (Views: 512.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.13 at 2016-03-31 04:06:22 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.13 at 2016-03-31 04:06:22 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (25.7ms)
+  Rendered accounts/new.html.haml within layouts/application (79.8ms)
+Completed 200 OK in 189ms (Views: 162.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/input_your_email" for 165.91.13.13 at 2016-03-31 04:06:23 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#inputyouremail as HTML
+  Rendered accounts/inputyouremail.html.haml within layouts/application (36.2ms)
+Completed 200 OK in 143ms (Views: 142.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.13 at 2016-03-31 04:06:34 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BWrBDNCRVkvRwVNOx1qWlaxuEdHSPotBmNPnVeZTCFvUnPavjbMoTdxSy1QKYEBNWgTyDca8Qg2M9mry+DXODw==", "session"=>{"email"=>"670348828@qq.com", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (0.6ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "670348828@qq.com"]]
+Redirected to https://project606-juliaaaa2015.c9users.io/profiles?id=3
+Completed 302 Found in 108ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/profiles?id=3" for 165.91.13.13 at 2016-03-31 04:06:34 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAccount Load (0.6ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered accounts/profiles.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/login" for 165.91.13.13 at 2016-03-31 04:06:39 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d3/bLV3kdLDfwvhKtr+rg5BSnDch+v2gml2Upikm+X2mieyOAMYKttJRYFB7hX1bZjh/6zV4NOyOeBkBN0A/KQ==", "session"=>{"email"=>"670348828@qq.com", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "670348828@qq.com"]]
+  Rendered sessions/_signin.html.haml (6.4ms)
+  Rendered accounts/show.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 131ms (Views: 56.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/input_your_email" for 165.91.13.13 at 2016-03-31 04:06:42 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#inputyouremail as HTML
+  Rendered accounts/inputyouremail.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 98ms (Views: 96.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input_your_email?utf8=%E2%9C%93&email=670348828%40qq.com&commit=Reset" for 165.91.13.13 at 2016-03-31 04:06:49 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#inputyouremail as HTML
+  Parameters: {"utf8"=>"✓", "email"=>"670348828@qq.com", "commit"=>"Reset"}
+  [1m[36mAccount Load (0.6ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
+  Rendered accounts/resetyourpassword.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 52ms (Views: 49.0ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/accounts/3" for 165.91.13.13 at 2016-03-31 04:07:16 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+AbstractController::ActionNotFound (The action 'update' could not be found for AccountsController):
+  actionpack (4.2.1) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (3.2ms)
+
+
+Started PATCH "/accounts/3" for 165.91.13.13 at 2016-03-31 04:07:47 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kuNVjz8G2Bx6WTMlsiS4Kbt3hWS6M2Vbvq5QNDniFB1DFWIsYiSmGnfKqz9/Hm7xTR1muK6xrBeqi92TJ4TSSQ==", "account"=>{"password"=>"[FILTERED]"}, "commit"=>"Continue", "id"=>"3"}
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "accounts" SET "password_digest" = ? WHERE "accounts"."id" = ?  [["password_digest", "$2a$10$5mNtwhnTMN8hyxdfZK2jsO1EspFUH1c3b.79igt6gaer88dUGPydm"], ["id", 3]]
+  [1m[36m (14.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://project606-juliaaaa2015.c9users.io/login
+Completed 302 Found in 141ms (ActiveRecord: 17.1ms)
+
+
+Started GET "/login" for 165.91.13.13 at 2016-03-31 04:07:48 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (2.2ms)
+  Rendered sessions/new.html.haml within layouts/application (14.3ms)
+Completed 200 OK in 71ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/accounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.13 at 2016-03-31 04:07:48 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 165.91.13.13 at 2016-03-31 04:07:48 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/index.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.13 at 2016-03-31 04:07:48 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.13 at 2016-03-31 04:07:48 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 165.91.13.13 at 2016-03-31 04:07:48 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.13.13 at 2016-03-31 04:07:48 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 165.91.13.13 at 2016-03-31 04:07:48 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.13.13 at 2016-03-31 04:07:48 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.13.13 at 2016-03-31 04:07:48 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.13.13 at 2016-03-31 04:07:48 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.13.13 at 2016-03-31 04:07:48 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/input_your_email" for 165.91.13.13 at 2016-03-31 04:07:50 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#inputyouremail as HTML
+  Rendered accounts/inputyouremail.html.haml within layouts/application (15.2ms)
+Completed 200 OK in 222ms (Views: 220.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input_your_email?utf8=%E2%9C%93&email=670348828%40qq.com&commit=Reset" for 165.91.13.13 at 2016-03-31 04:07:54 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#inputyouremail as HTML
+  Parameters: {"utf8"=>"✓", "email"=>"670348828@qq.com", "commit"=>"Reset"}
+  [1m[35mAccount Load (0.6ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "670348828@qq.com"]]
+  Rendered accounts/resetyourpassword.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 51ms (Views: 47.6ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/accounts/3" for 165.91.13.13 at 2016-03-31 04:08:00 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lAwA5zM2AEmBwR83+wwKheiyHITb9eHItnfyQskW8lFF+jdEbhR+T4xShy02NtxdHtj/WM93KISiUn/l13A0BQ==", "account"=>{"password"=>"[FILTERED]"}, "commit"=>"Continue", "id"=>"3"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "accounts" SET "password_digest" = ? WHERE "accounts"."id" = ?[0m  [["password_digest", "$2a$10$ErYZZY0mabwJkWFmhqkBf.4Rx6IM2Vv8uDhBrffjvlyx/VPTb8dze"], ["id", 3]]
+  [1m[35m (13.0ms)[0m  commit transaction
+Redirected to https://project606-juliaaaa2015.c9users.io/login
+Completed 302 Found in 97ms (ActiveRecord: 14.7ms)
+
+
+Started GET "/login" for 165.91.13.13 at 2016-03-31 04:08:00 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.6ms)
+  Rendered sessions/new.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.13 at 2016-03-31 04:08:06 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"55HLm+NkS8BIK6TRvPEkzDK14gmnc1ySLNfIjosowY02Z/w4vkY1xkW4PMtxy/IUxN8B1bPxld448kUplU4H2Q==", "session"=>{"email"=>"670348828@qq.com", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
+Redirected to https://project606-juliaaaa2015.c9users.io/profiles?id=3
+Completed 302 Found in 165ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/profiles?id=3" for 165.91.13.13 at 2016-03-31 04:08:07 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered accounts/profiles.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 49ms (Views: 46.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 165.91.13.13 at 2016-03-31 04:08:08 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.8ms)
+  Rendered sessions/new.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 91ms (Views: 90.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.13 at 2016-03-31 04:08:13 +0000
+Cannot render console from 165.91.13.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H9z5m5Scwn9Hrr8TexLb8Rnypdy2/slvITXZAj6XyQzOKs44yb68eUo9Jwm2KA0p75hGAKJ8ACM1EFSlIPEPWA==", "session"=>{"email"=>"670348828@qq.com", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
+  Rendered sessions/_signin.html.haml (1.6ms)
+  Rendered accounts/show.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 119ms (Views: 43.6ms | ActiveRecord: 0.4ms)
