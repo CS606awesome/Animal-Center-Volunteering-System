@@ -4,5 +4,5 @@
 =form_for input_your_email_path, :method => :get do
 
   =label :email,'Please input your email'
-  =text_field_tag :email
+  =text_field_tag :email,nil, placeholder: 'email'
   =submit_tag 'Reset' 
