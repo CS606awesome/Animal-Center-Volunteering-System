@@ -14,8 +14,9 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
    post 'accounts/:account_id/articles/:article_id' => 'comments#create'
    
-  get    'forget_your_password' => 'accounts#forgetyourpassword'
-  get    'receive_your_email' => 'accounts#checkyouremail'
+  get    'input_your_email' => 'accounts#inputyouremail'
+  get    'reset_your_password'  => 'accounts#resetyourpassword'
+  post    'reset_your_password'  => 'accounts#resetyourpassword'
    
   
   get 'profiles' => 'accounts#profiles'

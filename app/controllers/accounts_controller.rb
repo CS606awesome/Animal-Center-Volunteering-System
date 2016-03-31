@@ -54,4 +54,40 @@ class AccountsController < ApplicationController
                                   :emergency_phone,:emergency_phone_alternate,:related_to_councilmember,
                                   :has_convictions, :need_accommodations)
   end
+  
+  def forgetyourpassword
+      redirect_to  input_your_email_path
+  end
+  
+  def inputyouremail
+      if params[:email]
+        @account = Account.find_by(email: params[:email])
+        if @account
+          session[:id]= @account.id
+          render  'resetyourpassword'
+      else
+        flash.now[:danger] = 'Your email is not valid or it has not been registered, please try again!'
+         render 'inputyouremail'
+     end
+   end
+  end
+    
+    
+  def reset_your_password
+     
+            # @account = Account.find(session[:id])
+           #if  @account.update(account_password_params)
+            #   render 'sessions/_signin'
+           #else 
+            #  flash.now[:danger] = 'Password reset is not successful!' 
+            #  render 'resetyourpassword'
+          
+      #end
+  end
+
+private
+  def account_password_params
+     params.require(:account).permit(:password, :password_confirmation)
+  end
+ 
 end
