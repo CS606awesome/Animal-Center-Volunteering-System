@@ -35,20 +35,14 @@ class AccountsController < ApplicationController
   def update
      @account = Account.find(params[:id])
      if @account.update_attributes(account_password_params)
-         flash[:success] = "you have already updated"
+         flash[:success] = "You have reset your password successfully."
          redirect_to login_path
      else
+         flash.now[:failed] = 'Two passwords do not match or passwords are void.'
          render 'resetyourpassword'
      end
- end
+  end
      
-     #@account.update_attributes!(account_update_params)
-     #@account.attributes = account_update_params
-     #@account.save(:validate => false)
-     #redirect_to save_change_path :id => @account.id
-     #profiles_path
-     
-  
   
   def save_change
       @account = Account.find(params[:id])
@@ -85,11 +79,6 @@ class AccountsController < ApplicationController
   def reset_your_password
              @account = Account.find(session[:id])
              @account.update(account_password_params)
-             
-             #if !@account.update(account_password_params)
-             #  flash.now[:danger] = 'Password reset is not successful!' 
-             #  render 'resetyourpassword'
-             #end
   end
 
 private
