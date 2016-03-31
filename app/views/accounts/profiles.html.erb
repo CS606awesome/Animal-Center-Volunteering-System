@@ -130,7 +130,10 @@
             <%= ff.text_field :name_of_court, :value => @account.former_criminal.name_of_court %>
             <br />
             <%=ff.label :disposition_of_case, 'Disposition of Case' %>
-            <%= ff.label :disposition_of_case, :value => @account.former_criminal.disposition_of_case %>
+            <%=ff.text_field :disposition_of_case, :value => @account.former_criminal.disposition_of_case %>
+            <br />
+            <%=ff.label :former_crime, 'Please Write Your Former Crimes' %>
+            <%=ff.text_field :former_crime, :value => @account.former_criminal.former_crime %>
             <br />
     <% end %>   
     
@@ -168,13 +171,13 @@
         <%= f.radio_button :need_accommodations, '0', :checked =>!@account.need_accommodations %> No<br />
     </p>
   
-   Write the accomodation you need below <br>
+   <strong>Write the accomodation you need below</strong> <br>
     <%= f.fields_for  :accomodation do |a| %>
         <%=a.label :accommodation_name, 'Please Fill' %>
         <%=a.text_field :accommodation_name, :value => @account.accommodation.accommodation_name %>
     <% end %>
         
-   <br--> 
+   <br /><br /> 
         
   <%= f.submit 'Save Changes'%>
   
