@@ -57,7 +57,8 @@ class AccountsController < ApplicationController
                                   current_worker_attributes: [:id, :department, :name],
                                   user_formerworker_attributes: [:id, :date_of_employment, :reason_for_leaving, :position_or_department],
                                   former_criminal_attributes: [:id, :date_of_conviction, :nature_of_offense, :name_of_court, :disposition_of_case],
-                                  related_councilmember_attributes: [:id, :name, :relationship])
+                                  related_councilmember_attributes: [:id, :name, :relationship],
+                                  accommodation_attributes: [:id, :accomodation_name])
                                 
   end
   

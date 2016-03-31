@@ -4,11 +4,13 @@ class Account < ActiveRecord::Base
     has_one :former_criminal
     has_one :related_councilmember
     has_one :user_formerworker
+    has_one :accommodation
     
     accepts_nested_attributes_for :current_worker, allow_destroy: true
     accepts_nested_attributes_for :former_criminal, allow_destroy: true
     accepts_nested_attributes_for :related_councilmember, allow_destroy: true
     accepts_nested_attributes_for :user_formerworker, allow_destroy: true
+    accepts_nested_attributes_for :accommodation, allow_destroy: true
     
 before_validation :ensure_has_value
 has_secure_password

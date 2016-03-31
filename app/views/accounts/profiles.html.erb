@@ -169,11 +169,12 @@
     </p>
   
    Write the accomodation you need below <br>
-        <%= f.fields_for :accommodation do |a| %>
-            <%=ff.label :date_of_conviction, 'Date of Conviction'%>
-            <%= ff.text_field :date_of_conviction, :value => @account.former_criminal.date_of_conviction %>
+    <%= f.fields_for  :accomodation do |a| %>
+        <%=a.label :accommodation_name, 'Please Fill' %>
+        <%=a.text_field :accommodation_name, :value => @account.accommodation.accommodation_name %>
+    <% end %>
         
-   <br> 
+   <br--> 
         
   <%= f.submit 'Save Changes'%>
   
@@ -190,4 +191,3 @@
     </tr>
    
 </table>
-

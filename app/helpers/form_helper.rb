@@ -4,6 +4,7 @@ module FormHelper
     account.former_criminal ||= FormerCriminal.new
     account.related_councilmember ||= RelatedCouncilmember.new
     account.user_formerworker ||= UserFormerworker.new
+    account.accommodation ||= Accommodation.new
     account
   end
 end
