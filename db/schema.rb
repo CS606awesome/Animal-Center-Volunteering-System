@@ -13,6 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20160331075538) do
 
+
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name"
     t.datetime "created_at",         null: false
