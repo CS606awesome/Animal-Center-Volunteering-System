@@ -13,7 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20160331075538) do
 
-
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name"
     t.datetime "created_at",         null: false
@@ -24,26 +23,33 @@ ActiveRecord::Schema.define(version: 20160331075538) do
   add_index "accommodations", ["account_id"], name: "index_accommodations_on_account_id"
 
   create_table "accounts", force: :cascade do |t|
-    t.string  "email"
-    t.string  "firstname"
-    t.string  "lastname"
-    t.string  "password_digest"
-    t.string  "current_address"
-    t.string  "homephone"
-    t.string  "cellphone"
-    t.string  "emergency_contact_name"
-    t.string  "emergency_phone"
-    t.string  "emergency_phone_alternate"
-    t.date    "DOB"
-    t.boolean "is_former_worker"
-    t.boolean "has_convictions"
-    t.boolean "need_accommodations"
-    t.boolean "related_to_councilmember"
-    t.boolean "is_current_worker"
-    t.binary  "picture"
-    t.binary  "driver_license"
-    t.integer "SSN"
-    t.string  "middlename"
+    t.string   "email"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "password_digest"
+    t.string   "current_address"
+    t.string   "homephone"
+    t.string   "cellphone"
+    t.string   "emergency_contact_name"
+    t.string   "emergency_phone"
+    t.string   "emergency_phone_alternate"
+    t.date     "DOB"
+    t.boolean  "is_former_worker"
+    t.boolean  "has_convictions"
+    t.boolean  "need_accommodations"
+    t.boolean  "related_to_councilmember"
+    t.boolean  "is_current_worker"
+    t.binary   "picture"
+    t.binary   "driver_license"
+    t.integer  "SSN"
+    t.string   "middlename"
+    t.string   "reset_digest"
+    t.datetime "reset_sent_at"
+    t.string   "password_reset_token"
+    t.datetime "password_reset_sent_at"
+    t.string   "maidenname"
+    t.string   "string"
+    t.string   "gender"
   end
 
   create_table "application_forms", force: :cascade do |t|
