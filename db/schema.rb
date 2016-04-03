@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160331075538) do
-
+ActiveRecord::Schema.define(version: 20160331074651) do
 
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name"
@@ -89,8 +88,8 @@ ActiveRecord::Schema.define(version: 20160331075538) do
     t.string   "disposition_of_case"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
-    t.string   "former_crime"
     t.integer  "account_id"
+    t.string   "former_crime"
   end
 
   add_index "former_criminals", ["account_id"], name: "index_former_criminals_on_account_id"
