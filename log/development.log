@@ -6893,3 +6893,5 @@ Processing by AdminsController#show as HTML
   [1m[36mAccount Load (0.5ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
   Rendered admins/show.html.haml within layouts/application (1.1ms)
 Completed 200 OK in 44ms (Views: 32.7ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
