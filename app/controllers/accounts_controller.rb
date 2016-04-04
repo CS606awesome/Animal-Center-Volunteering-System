@@ -69,11 +69,11 @@ class AccountsController < ApplicationController
         if @account
           session[:id]= @account.id
           render  'resetyourpassword'
-      else
-        flash.now[:danger] = 'Your email is not valid or it has not been registered, please try again!'
-         render 'inputyouremail'
-     end
-   end
+        else
+          flash.now[:danger] = 'Your email is not valid or it has not been registered, please try again!'
+          render 'inputyouremail'
+        end
+      end
   end
     
     
