@@ -23,7 +23,11 @@ Rails.application.routes.draw do
   get 'profiles/:id' => 'accounts#profiles'
    
     resources :accounts do
-      resources :applications 
+      resources :applications
+      resources :current_workers
+      resources :accomodations
+      resources :former_criminals
+      resources :student_applications
   end
   
   get '/save_change' => 'accounts#save_change'

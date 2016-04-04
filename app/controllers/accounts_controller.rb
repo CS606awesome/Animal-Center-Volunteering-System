@@ -14,6 +14,7 @@ class AccountsController < ApplicationController
   
   def create
     @account = Account.new(account_params)
+    #@current_worker = @account.current_workers.create(current_worker_params)
     if @account.save
      redirect_to @account 
     else  
@@ -59,9 +60,15 @@ class AccountsController < ApplicationController
   def account_update_params
    params.require(:account).permit(:is_former_worker,:is_current_worker, :emergency_contact_name,
                                   :emergency_phone,:emergency_phone_alternate,:related_to_councilmember,
-                                  :has_convictions, :need_accommodations)
+                                  :has_convictions, :need_accommodations, 
+                                  current_worker_attributes: [:id, :department, :name],
+                                  user_formerworker_attributes: [:id, :date_of_employment, :reason_for_leaving, :position_or_department],
+                                  former_criminal_attributes: [:id, :date_of_conviction, :nature_of_offense, :name_of_court, :disposition_of_case, :former_crime],
+                                  related_councilmember_attributes: [:id, :name, :relationship],
+                                  accommodation_attributes: [:id, :accomodation_name])
+                                
   end
-  
+
   def forgetyourpassword
       redirect_to  input_your_email_path
   end
@@ -84,10 +91,9 @@ class AccountsController < ApplicationController
       @account = Account.find(session[:id])
       @account.update(account_password_params)
   end
-
 private
   def account_password_params
      params.require(:account).permit(:password, :password_confirmation)
   end
- 
+
 end

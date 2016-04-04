@@ -11,35 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160318003939) do
+ActiveRecord::Schema.define(version: 20160331074651) do
 
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.integer  "account_id"
   end
 
+  add_index "accommodations", ["account_id"], name: "index_accommodations_on_account_id"
+
   create_table "accounts", force: :cascade do |t|
-    t.string  "email"
-    t.string  "firstname"
-    t.string  "lastname"
-    t.string  "password_digest"
-    t.string  "current_address"
-    t.string  "homephone"
-    t.string  "cellphone"
-    t.string  "emergency_contact_name"
-    t.string  "emergency_phone"
-    t.string  "emergency_phone_alternate"
-    t.date    "DOB"
-    t.boolean "is_former_worker"
-    t.boolean "has_convictions"
-    t.boolean "need_accommodations"
-    t.boolean "related_to_councilmember"
-    t.boolean "is_current_worker"
-    t.binary  "picture"
-    t.binary  "driver_license"
-    t.integer "SSN"
-    t.string  "middlename"
+    t.string   "email"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "password_digest"
+    t.string   "current_address"
+    t.string   "homephone"
+    t.string   "cellphone"
+    t.string   "emergency_contact_name"
+    t.string   "emergency_phone"
+    t.string   "emergency_phone_alternate"
+    t.date     "DOB"
+    t.boolean  "is_former_worker"
+    t.boolean  "has_convictions"
+    t.boolean  "need_accommodations"
+    t.boolean  "related_to_councilmember"
+    t.boolean  "is_current_worker"
+    t.binary   "picture"
+    t.binary   "driver_license"
+    t.integer  "SSN"
+    t.string   "middlename"
+    t.string   "reset_digest"
+    t.datetime "reset_sent_at"
+    t.string   "password_reset_token"
+    t.datetime "password_reset_sent_at"
+    t.string   "maidenname"
+    t.string   "string"
+    t.string   "gender"
   end
 
   create_table "application_forms", force: :cascade do |t|
@@ -66,7 +76,10 @@ ActiveRecord::Schema.define(version: 20160318003939) do
     t.string   "department"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "account_id"
   end
+
+  add_index "current_workers", ["account_id"], name: "index_current_workers_on_account_id"
 
   create_table "former_criminals", force: :cascade do |t|
     t.datetime "date_of_conviction"
@@ -75,7 +88,11 @@ ActiveRecord::Schema.define(version: 20160318003939) do
     t.string   "disposition_of_case"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.integer  "account_id"
+    t.string   "former_crime"
   end
+
+  add_index "former_criminals", ["account_id"], name: "index_former_criminals_on_account_id"
 
   create_table "minor_applications", force: :cascade do |t|
     t.binary   "parent_signature"
@@ -88,7 +105,10 @@ ActiveRecord::Schema.define(version: 20160318003939) do
     t.string   "relationship"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "account_id"
   end
+
+  add_index "related_councilmembers", ["account_id"], name: "index_related_councilmembers_on_account_id"
 
   create_table "student_applications", force: :cascade do |t|
     t.string   "student_program"
@@ -106,6 +126,9 @@ ActiveRecord::Schema.define(version: 20160318003939) do
     t.string   "interested_area"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.integer  "account_id"
   end
+
+  add_index "user_formerworkers", ["account_id"], name: "index_user_formerworkers_on_account_id"
 
 end

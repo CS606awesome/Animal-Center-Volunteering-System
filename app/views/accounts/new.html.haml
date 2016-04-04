@@ -7,7 +7,10 @@
  =form_for @account do |f|
   =f.text_field :firstname, {:placeholder => 'Firstname'}
   =f.text_field :middlename, {:placeholder => 'Middlename'}
+  =f.text_field :maidenname, {:placeholder => 'Maidenname'}
   =f.text_field :lastname,  {:placeholder => 'Lastname'}
+  %div{:style => "margin-bottom:10px"}
+  =f.text_field :gender, {:placeholder => 'Gender'}
   %div{:style => "margin-bottom:10px"}
   =f.text_field :DOB, {:placeholder => 'Date of Birth'}
   %div{:style => "margin-bottom:10px"}
