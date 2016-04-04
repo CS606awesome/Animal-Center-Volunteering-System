@@ -1,0 +1,45 @@
+%h1 Admin Data Management System
+%br
+%h3 Wellcome Administrator !
+%fieldset
+ =form_for admin_path, :method => :get do 
+  Age	
+  =text_field_tag :agemin,nil,placeholder:'older than'
+  =text_field_tag :agemax,nil,placeholder:'younger than'
+  %div{:style => "margin-bottom:10px"}
+  Firstname
+  =text_field_tag :firstname,nil,placeholder: 'first name'
+  %div{:style => "margin-bottom:10px"}
+  Lastname
+  =text_field_tag :lastname,nil,placeholder: 'last name'
+  %div{:style => "margin-bottom:10px"}
+  Email
+  =text_field_tag :email,nil,placeholder: 'email'
+  =submit_tag 'select'
+
+%table#accounts
+ %thead
+  %tr
+   %th Firstname
+   %th Middlename
+   %th Maidenname
+   %th Lastname
+   %th Gender
+   %th Date of Birth
+   %th Email
+   %th Cellphone
+   %th Homephone
+   %th Address
+ %tbody
+  - @accounts.each do |account|
+   %tr
+    %td= account.firstname
+    %td= account.middlename
+    %td= account.maidenname
+    %td= account.lastname
+    %td= account.gender
+    %td= account.DOB 
+    %td= account.email
+    %td= account.cellphone
+    %td= account.homephone
+    %td= account.current_address
