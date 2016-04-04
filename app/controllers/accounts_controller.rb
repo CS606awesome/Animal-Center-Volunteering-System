@@ -42,6 +42,9 @@ class AccountsController < ApplicationController
          flash[:requirement] = 'Your password must be 6-20 characters.'
          render 'resetyourpassword'
      end
+     @account.attributes = account_update_params
+      @account.save(:validate => false)
+      redirect_to save_change_path :id => @account.id
   end
      
   
