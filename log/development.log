@@ -10124,3 +10124,53 @@ Processing by AdminsController#show as HTML
   [1m[36mAccount Load (0.3ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."firstname" = ?[0m  [["firstname", "eve"]]
   Rendered admins/show.html.haml within layouts/application (2.8ms)
 Completed 200 OK in 98ms (Views: 44.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 209.189.254.6 at 2016-04-04 18:14:15 +0000
+Cannot render console from 209.189.254.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 576ms (Views: 551.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins" for 209.189.254.6 at 2016-04-04 18:14:18 +0000
+Cannot render console from 209.189.254.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminsController#index as HTML
+Redirected to https://administrator-sabrinadai.c9users.io/admins/new
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/new" for 209.189.254.6 at 2016-04-04 18:14:18 +0000
+Cannot render console from 209.189.254.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminsController#new as HTML
+  Rendered admin_sessions/_signin.html.haml (27.5ms)
+  Rendered admins/new.html.haml within layouts/application (60.8ms)
+Completed 200 OK in 183ms (Views: 172.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/adminlogin" for 209.189.254.6 at 2016-04-04 18:14:23 +0000
+Cannot render console from 209.189.254.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vj+o8T2xPuJRETWUSsLIPrpeQ/ySVqxGfsPLg5+QBnPFJexY4dQuXfL9Wh5xCp97U5oIBVAgqfWdSfQ8Pb3Pcw==", "session"=>{"email"=>"sasa@1111.com", "password"=>"[FILTERED]", "key"=>"123456", "keep_me_logged_in"=>"0"}, "commit"=>"I am Alma Garcia!"}
+  [1m[35mAdmin Load (0.5ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT 1  [["email", "sasa@1111.com"]]
+Redirected to https://administrator-sabrinadai.c9users.io/admins/1
+Completed 302 Found in 120ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/admins/1" for 209.189.254.6 at 2016-04-04 18:14:23 +0000
+Cannot render console from 209.189.254.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.7ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered admins/show.html.haml within layouts/application (62.9ms)
+Completed 200 OK in 107ms (Views: 101.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admins/1?utf8=%E2%9C%93&agemin=20&agemax=25&firstname=Sikai&lastname=&email=&commit=select" for 209.189.254.6 at 2016-04-04 18:14:43 +0000
+Cannot render console from 209.189.254.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminsController#show as HTML
+  Parameters: {"utf8"=>"✓", "agemin"=>"20", "agemax"=>"25", "firstname"=>"Sikai", "lastname"=>"", "email"=>"", "commit"=>"select", "id"=>"1"}
+  [1m[35mAccount Load (0.5ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."firstname" = ?  [["firstname", "Sikai"]]
+  Rendered admins/show.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.5ms)
