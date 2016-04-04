@@ -35,12 +35,19 @@ class AccountsController < ApplicationController
   
   def update
      @account = Account.find(params[:id])
-     #@account.update_attributes!(account_update_params)
+     if @account.update_attributes(account_password_params)
+         flash[:success] = "You have reset your password successfully."
+         redirect_to login_path
+     else
+         flash[:failed] = 'Two passwords do not match or passwords are not satisfied the requirement.'
+         flash[:requirement] = 'Your password must be 6-20 characters.'
+         render 'resetyourpassword'
+     end
      @account.attributes = account_update_params
-     @account.save(:validate => false)
-     redirect_to save_change_path :id => @account.id
-     #profiles_path
+      @account.save(:validate => false)
+      redirect_to save_change_path :id => @account.id
   end
+     
   
   def save_change
       @account = Account.find(params[:id])
@@ -61,8 +68,32 @@ class AccountsController < ApplicationController
                                   accommodation_attributes: [:id, :accomodation_name])
                                 
   end
-  
 
-  #def current_worker_params
-     # params.require(:current_worker).permit(:)
+  def forgetyourpassword
+      redirect_to  input_your_email_path
+  end
+  
+  def inputyouremail
+      if params[:email]
+        @account = Account.find_by(email: params[:email])
+        if @account
+          session[:id]= @account.id
+          render  'resetyourpassword'
+        else
+          flash.now[:danger] = 'Your email is not valid or it has not been registered, please try again!'
+          render 'inputyouremail'
+        end
+      end
+  end
+    
+    
+  def reset_your_password
+      @account = Account.find(session[:id])
+      @account.update(account_password_params)
+  end
+private
+  def account_password_params
+     params.require(:account).permit(:password, :password_confirmation)
+  end
+
 end

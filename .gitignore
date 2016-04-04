@@ -1,8 +1,5 @@
-
-*.cache
-
-<<<<<<< HEAD
 tmp/pids/server.pid
-=======
 *.cache
->>>>>>> master
+
+
+*.cache

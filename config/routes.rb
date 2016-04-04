@@ -12,10 +12,18 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+<<<<<<< HEAD
+   post 'accounts/:account_id/articles/:article_id' => 'comments#create'
+   
+  get    'input_your_email' => 'accounts#inputyouremail'
+  get    'reset_your_password'  => 'accounts#resetyourpassword'
+  post    'reset_your_password'  => 'accounts#resetyourpassword'
+=======
   post 'accounts/:account_id/articles/:article_id' => 'comments#create'
   #forget password
   get    'forget_your_password' => 'accounts#forgetyourpassword'
   get    'receive_your_email' => 'accounts#checkyouremail'
+>>>>>>> master
    
   #Show user's workspace
   get 'profiles' => 'accounts#profiles'
