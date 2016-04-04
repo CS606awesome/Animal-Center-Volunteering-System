@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160329025113) do
+ActiveRecord::Schema.define(version: 20160403040230) do
 
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name"
@@ -31,9 +31,9 @@ ActiveRecord::Schema.define(version: 20160329025113) do
     t.string   "emergency_phone"
     t.string   "emergency_phone_alternate"
     t.date     "DOB"
-    t.boolean  "is_formal_worker"
+    t.boolean  "is_former_worker"
     t.boolean  "has_convictions"
-    t.boolean  "need_accomendations"
+    t.boolean  "need_accommodations"
     t.boolean  "related_to_councilmember"
     t.boolean  "is_current_worker"
     t.binary   "picture"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 20160329025113) do
     t.datetime "reset_sent_at"
     t.string   "password_reset_token"
     t.datetime "password_reset_sent_at"
+    t.string   "maidenname"
+    t.string   "gender"
   end
 
   create_table "admins", force: :cascade do |t|

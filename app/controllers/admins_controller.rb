@@ -13,24 +13,53 @@ class AdminsController < ApplicationController
   
   def create
     @admin = Admin.new(admin_params)
-       if @admin.save
+      if @admin.save
         redirect_to adminlogin_path
-       else  
+      else  
       flash.now[:danger] = 'Registration failed, some inforamtion is missing!'  
       render 'new'
-     end  
+      end  
   end
   
   def show
     @accounts = Account.all
     agemin = params[:agemin].to_i
     agemax = params[:agemax].to_i
-    if agemin > 0     
+    firstname = params[:firstname].to_s
+    lastname = params[:lastname].to_s
+    email = params[:email].to_s
+    
+    if (firstname != '') && (lastname != '') && (email != '')
+      @accounts_find = Account.where(:firstname => firstname, :lastname => lastname, :email => email)
+    elsif (firstname != '') && (lastname != '') && (email == '')
+      @accounts_find = Account.where(:firstname => firstname, :lastname => lastname)
+    elsif (lastname != '') && (email != '') && (firstname == '')
+      @accounts_find = Account.where(:lastname => lastname, :email => email)
+    elsif (firstname != '') && (email != '') && (lastname == '')
+      @accounts_find = Account.where(:firstname => firstname, :email => email)
+    elsif (firstname != '') && (lastname == '') && (email == '')
+      @accounts_find = Account.where(:firstname => firstname)
+    elsif (lastname != '') && (firstname == '') && (email == '')
+      @accounts_find = Account.where(:lastname => lastname)
+    elsif (email != '') && (firstname == '') && (lastname == '')
+      @accounts_find = Account.where(:email => email)
+    else @accounts_find = Account.all
+    end
+    
+    if (agemin > 0) && ((firstname != '') || (lastname != '') || (email != ''))
+      @accounts = people_older_than(@accounts_find,agemin)
+    elsif (agemin > 0) && (firstname == '') && (lastname == '') && (email == '')
       @accounts = people_older_than(@accounts,agemin)
+    elsif agemin <= 0
+      @accounts = @accounts_find
     end
 
-    if agemax > 0    
+    if (agemax > 0) && ((firstname != '') || (lastname != '') || (email != ''))
+      @accounts = people_younger_than(@accounts_find,agemax)
+    elsif (agemax > 0) && (firstname == '') && (lastname == '') && (email == '')
       @accounts = people_younger_than(@accounts,agemax)
+    elsif agemax <= 0
+      @accounts = @accounts_find
     end
   end
 
