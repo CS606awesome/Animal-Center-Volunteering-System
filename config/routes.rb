@@ -20,15 +20,19 @@ Rails.application.routes.draw do
   #Show user's workspace
   get 'profiles' => 'accounts#profiles'
   get 'profiles/:id' => 'accounts#profiles'
-  
+
   #administrator login
   get 'adminlogin' => 'admin_sessions#new'
   post 'adminlogin' => 'admin_sessions#create'
   resources :admins
   
-  #accounts has many applicaitons
-  resources :accounts do
-    resources :applications 
+  #accounts has many applicaitons   
+    resources :accounts do
+      resources :applications
+      resources :current_workers
+      resources :accomodations
+      resources :former_criminals
+      resources :student_applications
   end
   
   get '/save_change' => 'accounts#save_change'
