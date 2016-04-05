@@ -51,7 +51,35 @@ class AccountsController < ApplicationController
      if(params[:account][:need_accommodations] == "1") 
        @account.accommodation ||= Accommodation.new   
      end
+     
      @account.attributes = account_update_params
+     
+     if(params[:account][:is_former_worker] == "0")
+         if(@account.user_formerworker != nil)
+             @account.user_formerworker.destroy
+         end
+     end
+     if(params[:account][:related_to_councilmember] == "0") 
+       if @account.related_councilmember != nil
+           @account.related_councilmember.destroy
+       end
+     end
+     if(params[:account][:is_current_worker] == "0") 
+       if @account.current_worker != nil  
+           @account.current_worker.destroy
+       end
+     end
+     if(params[:account][:has_convictions] == "0") 
+       if @account.former_criminal != nil  
+           @account.former_criminal.destroy
+       end
+     end
+     if(params[:account][:need_accommodations] == "0") 
+       if @account.accommodation != nil   
+           @account.accommodation.destroy
+       end
+     end
+     
      @account.save(:validate => false)
      flash[:notice] = 'Changes Saved!'
      redirect_to profiles_path :id => @account.id
