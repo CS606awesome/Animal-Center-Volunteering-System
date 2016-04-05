@@ -83,7 +83,6 @@ class AccountsController < ApplicationController
      @account.save(:validate => false)
      flash[:notice] = 'Changes Saved!'
      redirect_to profiles_path :id => @account.id
-     #profiles_path
   end
   
   def save_change
