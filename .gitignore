@@ -1,9 +1,27 @@
 tmp/pids/server.pid
 *.cache
 
+<<<<<<< HEAD
 
 *.cache
+<<<<<<< HEAD
 
 *.log
 
 *.cache
+=======
+=======
+>>>>>>> master
+
+*.cache
+
+*.cache
+
+*.cache
+
+*.log
+>>>>>>> deploy
+
+*.cache
+
+*.log
