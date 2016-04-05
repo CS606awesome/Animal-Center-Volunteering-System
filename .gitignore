@@ -3,3 +3,7 @@ tmp/pids/server.pid
 
 
 *.cache
+
+*.log
+
+*.cache
