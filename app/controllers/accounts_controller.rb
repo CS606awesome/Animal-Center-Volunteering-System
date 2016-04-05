@@ -53,7 +53,8 @@ class AccountsController < ApplicationController
      end
      @account.attributes = account_update_params
      @account.save(:validate => false)
-     redirect_to save_change_path :id => @account.id
+     flash[:notice] = 'Changes Saved!'
+     redirect_to profiles_path :id => @account.id
      #profiles_path
   end
   
