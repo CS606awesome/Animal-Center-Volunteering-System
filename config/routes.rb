@@ -13,9 +13,11 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
-  get    'input_your_email' => 'accounts#inputyouremail'
-  get    'reset_your_password'  => 'accounts#resetyourpassword'
-  post    'reset_your_password'  => 'accounts#resetyourpassword'
+  get    'input_your_email' => 'accounts#input_your_email'
+  post    'input_your_email' => 'accounts#input_your_email'
+
+  get    'reset_your_password'  => 'accounts#reset_your_password'
+  post    'reset_your_password'  => 'accounts#save_password_change'
 
   #forget password
   get    'forget_your_password' => 'accounts#forgetyourpassword'

@@ -35,15 +35,6 @@ class AccountsController < ApplicationController
   
   
   def update
-     @account = Account.find(params[:id])
-     if @account.update_attributes(account_password_params)
-         flash[:success] = "You have reset your password successfully."
-         redirect_to login_path
-     else
-         flash[:failed] = 'Two passwords do not match or passwords are not satisfied the requirement.'
-         flash[:requirement] = 'Your password must be 6-20 characters.'
-       
-     end
      @account.attributes = account_update_params
      @account.save(:validate => false)
      redirect_to save_change_path :id => @account.id
@@ -70,16 +61,13 @@ class AccountsController < ApplicationController
                                 
   end
 
-  def forgetyourpassword
-      redirect_to  input_your_email_path
-  end
-  
-  def inputyouremail
+  #change password
+  def input_your_email
       if params[:email]
         @account = Account.find_by(email: params[:email])
         if @account
           session[:id]= @account.id
-          render  'resetyourpassword'
+          redirect_to reset_your_password_path
         else
           flash.now[:danger] = 'Your email is not valid or it has not been registered, please try again!'
           render 'inputyouremail'
@@ -89,9 +77,19 @@ class AccountsController < ApplicationController
     
     
   def reset_your_password
+     @account = Account.find(session[:id])
+   end
+   def save_password_change
       @account = Account.find(session[:id])
-      @account.update(account_password_params)
-  end
+     if @account.update_attributes(account_password_params)
+         flash[:success] = "You have reset your password successfully."
+         redirect_to login_path
+     else
+         flash[:failed] = 'Two passwords do not match or passwords are not satisfied the requirement.'
+         flash[:requirement] = 'Your password must be 6-20 characters.'
+        render 'resetyourpassword'
+     end
+   end
 private
   def account_password_params
      params.require(:account).permit(:password, :password_confirmation)
