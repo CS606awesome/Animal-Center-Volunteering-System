@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20160403040230) do
     t.integer  "account_id"
   end
 
-  add_index "accommodations", ["account_id"], name: "index_accommodations_on_account_id"
+  add_index "accommodations", ["account_id"], name: "index_accommodations_on_account_id", using: :btree
 
   create_table "accounts", force: :cascade do |t|
     t.string  "email"
@@ -48,8 +48,6 @@ ActiveRecord::Schema.define(version: 20160403040230) do
     t.string  "middlename"
     t.string  "maidenname"
     t.string  "gender"
-<<<<<<< HEAD
-=======
   end
 
   create_table "admins", force: :cascade do |t|
@@ -58,7 +56,6 @@ ActiveRecord::Schema.define(version: 20160403040230) do
     t.string   "key"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
->>>>>>> master
   end
 
   create_table "application_forms", force: :cascade do |t|
@@ -85,7 +82,6 @@ ActiveRecord::Schema.define(version: 20160403040230) do
     t.string   "department"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "account_id"
   end
 
   create_table "former_criminals", force: :cascade do |t|
@@ -99,7 +95,7 @@ ActiveRecord::Schema.define(version: 20160403040230) do
     t.string   "former_crime"
   end
 
-  add_index "former_criminals", ["account_id"], name: "index_former_criminals_on_account_id"
+  add_index "former_criminals", ["account_id"], name: "index_former_criminals_on_account_id", using: :btree
 
   create_table "minor_applications", force: :cascade do |t|
     t.binary   "parent_signature"
@@ -115,7 +111,7 @@ ActiveRecord::Schema.define(version: 20160403040230) do
     t.integer  "account_id"
   end
 
-  add_index "related_councilmembers", ["account_id"], name: "index_related_councilmembers_on_account_id"
+  add_index "related_councilmembers", ["account_id"], name: "index_related_councilmembers_on_account_id", using: :btree
 
   create_table "student_applications", force: :cascade do |t|
     t.string   "student_program"
@@ -133,10 +129,13 @@ ActiveRecord::Schema.define(version: 20160403040230) do
     t.string   "interested_area"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
-    t.integer  "accounts_id"
     t.integer  "account_id"
   end
 
-  add_index "user_formerworkers", ["account_id"], name: "index_user_formerworkers_on_account_id"
+  add_index "user_formerworkers", ["account_id"], name: "index_user_formerworkers_on_account_id", using: :btree
 
+  add_foreign_key "accommodations", "accounts"
+  add_foreign_key "former_criminals", "accounts"
+  add_foreign_key "related_councilmembers", "accounts"
+  add_foreign_key "user_formerworkers", "accounts"
 end
