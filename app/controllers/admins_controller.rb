@@ -22,6 +22,7 @@ class AdminsController < ApplicationController
   end
   
   def show
+    if admin_logged_in
     @accounts = Account.all
     agemin = params[:agemin].to_i
     agemax = params[:agemax].to_i

@@ -24,13 +24,17 @@ class AccountsController < ApplicationController
   end
   
   def show
-    flash.now[:success] = 'Congradulations!now go ahead and login'  
+    flash[:success] = 'Congradulations!now go ahead and login'  
     @account = Account.new
   end
   
   def profiles 
+      if logged_in
       @account = Account.find(params[:id])  
       #@accounts = Account.all
+      else
+      redirect_to login_path
+      end
   end
   
   

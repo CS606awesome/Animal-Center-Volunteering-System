@@ -10675,3 +10675,1179 @@ Processing by AccountsController#show as HTML
   Rendered sessions/_signin.html.haml (1.8ms)
   Rendered accounts/show.html.haml within layouts/application (5.1ms)
 Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2016-04-04 23:46:34 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (8.4ms)
+  Rendered accounts/new.html.haml within layouts/application (44.6ms)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    2:  Animal Center 
+    3: =render 'sessions/signin'
+    4: %fieldset
+    5:  -if @guider.errors.any?
+    6:   %div{:id=>"error_explanations"}
+    7:   =pluralize(@guider.errors.count, "error") #count the amount of errors(error)
+    8:   has been found!
+  app/views/accounts/new.html.haml:5:in `_app_views_accounts_new_html_haml___870835524623351509_70204648884400'
+
+
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.2ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (84.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (172.0ms)
+
+
+Started GET "/signup" for ::1 at 2016-04-04 23:47:04 -0500
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.0ms)
+  Rendered accounts/new.html.haml within layouts/application (33.4ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `password' for #<Account:0x007fb3963009e8>
+Did you mean?  password_digest):
+    23:   =f.text_field :DOB, {:placeholder => 'Date of Birth'}
+    24:   %div{:style => "margin-bottom:10px"}
+    25:   =f.text_field :email, {:placeholder => 'E-mail'}
+    26:   =f.text_field :password, {:type=>'password',:placeholder => 'password'}
+    27:   %div{:style => "margin-bottom:10px"}
+    28:   =f.text_field :homephone, {:placeholder => 'Homephone'}
+    29:   =f.text_field :cellphone, {:placeholder => 'Cellphone'}
+  app/views/accounts/new.html.haml:26:in `block in _app_views_accounts_new_html_haml___870835524623351509_70204630406600'
+  app/views/accounts/new.html.haml:15:in `_app_views_accounts_new_html_haml___870835524623351509_70204630406600'
+
+
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.9ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (52.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (117.3ms)
+
+
+Started GET "/signup" for ::1 at 2016-04-04 23:48:23 -0500
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.2ms)
+  Rendered accounts/new.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 921ms (Views: 903.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/accounts" for ::1 at 2016-04-04 23:48:26 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DpjLMdbc7bSjhVNp4qoYfXYsKR3W7YXD16ex4I6Z/5hHocTGmgVuF6/sgzEIAujRCjsfhvpryrsNdPRTbO62rQ==", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "gender"=>"", "DOB"=>"", "email"=>"", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "current_address"=>""}, "commit"=>"Join us now!"}
+Unpermitted parameters: maidenname, gender
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered sessions/_signin.html.haml (1.4ms)
+  Rendered accounts/new.html.haml within layouts/application (9.6ms)
+Completed 200 OK in 89ms (Views: 48.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/accounts" for ::1 at 2016-04-04 23:49:09 -0500
+Processing by AccountsController#index as HTML
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2016-04-04 23:49:09 -0500
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (2.3ms)
+  Rendered accounts/new.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 76ms (Views: 74.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2016-04-04 23:49:31 -0500
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (2.0ms)
+  Rendered accounts/new.html.haml within layouts/application (16.5ms)
+Completed 200 OK in 90ms (Views: 88.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2016-04-04 23:49:45 -0500
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (5.3ms)
+  Rendered accounts/new.html.haml within layouts/application (26.4ms)
+Completed 200 OK in 91ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2016-04-04 23:50:09 -0500
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.4ms)
+  Rendered accounts/new.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 60ms (Views: 59.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2016-04-04 23:50:36 -0500
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.3ms)
+  Rendered accounts/new.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/accounts" for ::1 at 2016-04-04 23:50:39 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o/vyRvY3KHeL8oIQK5OFh9daKPc+2lTQ31tSRWrXHvzqwv2xuu6r1IebUkjBO3Urq00ebBJcG6gFiBf2iKBXyQ==", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "gender"=>"", "DOB"=>"", "email"=>"", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "current_address"=>""}, "commit"=>"Join us now!"}
+Unpermitted parameters: maidenname, gender
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered sessions/_signin.html.haml (1.5ms)
+  Rendered accounts/new.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 55ms (Views: 44.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/accounts" for ::1 at 2016-04-04 23:50:56 -0500
+Processing by AccountsController#index as HTML
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2016-04-04 23:50:56 -0500
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.5ms)
+  Rendered accounts/new.html.haml within layouts/application (10.5ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/accounts" for ::1 at 2016-04-04 23:50:58 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LXsFXbanSlgpKRuX57F+vm34caKBGGg7vcy71fkfLnhkQgqq+n7J+yVAy88NGY4SEe9HOa2eJ0NnH/5mG2hnTQ==", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "gender"=>"", "DOB"=>"", "email"=>"", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "current_address"=>""}, "commit"=>"Join us now!"}
+Unpermitted parameters: maidenname, gender
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered sessions/_signin.html.haml (1.3ms)
+  Rendered accounts/new.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 47ms (Views: 36.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/accounts" for ::1 at 2016-04-04 23:52:58 -0500
+Processing by AccountsController#index as HTML
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2016-04-04 23:52:58 -0500
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (2.2ms)
+  Rendered accounts/new.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 91ms (Views: 90.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/accounts" for ::1 at 2016-04-04 23:53:10 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a8fPci7MjVvUlbt8WIhwK0P2owL40xlveCOoaRzpTCIi/sCFYhUO+Nj8aySyIICHP+GVmdRVVhei8O3a/p4FFw==", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "gender"=>"", "DOB"=>"", "email"=>"", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "current_address"=>""}, "commit"=>"Join us now!"}
+Unpermitted parameters: maidenname, gender
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered sessions/_signin.html.haml (1.5ms)
+  Rendered accounts/new.html.haml within layouts/application (11.6ms)
+Completed 200 OK in 112ms (Views: 99.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/accounts" for ::1 at 2016-04-04 23:53:25 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oB9YghmbbzdEbpgyRYjfL5bRBikKtDHaK8DrA4mO+bjpJld1VULslEgHSGqvIC+D6sYwsiYyfqLxE66wa/mwjQ==", "account"=>{"firstname"=>"123", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "gender"=>"", "DOB"=>"", "email"=>"", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "current_address"=>""}, "commit"=>"Join us now!"}
+Unpermitted parameters: maidenname, gender
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered sessions/_signin.html.haml (1.0ms)
+  Rendered accounts/new.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 66ms (Views: 54.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/accounts" for ::1 at 2016-04-04 23:53:37 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PxRdXbA7OQIx8qujv/Vuga5219nKw0bgS0Dq96punU52LVKq/OK6oT2be/tVXZ4t0mHhQuZFCZiRk69ESBnUew==", "account"=>{"firstname"=>"sikai", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "gender"=>"", "DOB"=>"", "email"=>"", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "current_address"=>""}, "commit"=>"Join us now!"}
+Unpermitted parameters: maidenname, gender
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAccount Exists (0.6ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered sessions/_signin.html.haml (1.1ms)
+  Rendered accounts/new.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 61ms (Views: 50.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/accounts" for ::1 at 2016-04-04 23:53:40 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GqiD4myrJMqIJ7Okzqj+E9zYHsIVhuP7rlekBXV0yOhTkYwVIHKnaYROY/wkAA6/oM8oWTkArIN0hOG2lwOB3Q==", "account"=>{"firstname"=>"sikai", "middlename"=>"", "maidenname"=>"", "lastname"=>"zhang", "gender"=>"", "DOB"=>"", "email"=>"", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "current_address"=>""}, "commit"=>"Join us now!"}
+Unpermitted parameters: maidenname, gender
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered sessions/_signin.html.haml (1.2ms)
+  Rendered accounts/new.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 55ms (Views: 45.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/accounts" for ::1 at 2016-04-04 23:53:52 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QrjCgPI3+vxU01gbI3dIXMSyXInt/JEnwwiAJuM+q/MLgc13vu55X1i6iEPJ37jwuKVqEsF63l8Z28WVAUnixg==", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "gender"=>"", "DOB"=>"", "email"=>"", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "current_address"=>""}, "commit"=>"Join us now!"}
+Unpermitted parameters: maidenname, gender
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered sessions/_signin.html.haml (2.6ms)
+  Rendered accounts/new.html.haml within layouts/application (10.5ms)
+Completed 200 OK in 51ms (Views: 41.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/accounts" for ::1 at 2016-04-04 23:54:03 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B5vR2Quu9/BNax7gn9df13Ok1sjM/jh/Jkuvi2smSepOot4uR3d0U0ECzrh1f697D7PgU+B4dwf8mOo4iVEA3w==", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "gender"=>"", "DOB"=>"", "email"=>"", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "current_address"=>""}, "commit"=>"Join us now!"}
+Unpermitted parameters: maidenname, gender
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered sessions/_signin.html.haml (1.8ms)
+  Rendered accounts/new.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 129ms (Views: 33.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/accounts" for ::1 at 2016-04-04 23:54:13 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hCycWvgoy4zQoQ7fhzF24C/xTVsnrXVN+n1J2B4itCDNFZOttPFIL9zI3odtmYZMU+Z7wAsrOjUgrgxr/FX9FQ==", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "gender"=>"", "DOB"=>"", "email"=>"zhang@yahoo.com", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "current_address"=>""}, "commit"=>"Join us now!"}
+Unpermitted parameters: maidenname, gender
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAccount Exists (0.4ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'zhang@yahoo.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered sessions/_signin.html.haml (0.9ms)
+  Rendered accounts/new.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 43ms (Views: 33.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/accounts" for ::1 at 2016-04-04 23:54:25 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yUHZmxcebL0/y+Go92c3hIDafFbSZQ3e6RWr6TQ/AjKAeNZsW8fvHjOiMfAdz8co/M1Kzf7jQqYzxu5a1khLBw==", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "gender"=>"", "DOB"=>"", "email"=>"zhangyahoo.com", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "current_address"=>""}, "commit"=>"Join us now!"}
+Unpermitted parameters: maidenname, gender
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'zhangyahoo.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered sessions/_signin.html.haml (1.1ms)
+  Rendered accounts/new.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 51ms (Views: 42.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for ::1 at 2016-04-04 23:55:04 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yl2PhIudvkJRMX1ExXqcKoEvFTWr954vr93wb/KzG3SDZIBzx0Q94V1YrRwv0myG/Tgjrodx0Vd1DrXcEMRSQQ==", "session"=>{"email"=>"zhangsikai123@tamu.edu", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "zhangsikai123@tamu.edu"]]
+Redirected to http://localhost:3000/profiles?id=1
+Completed 302 Found in 136ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-04 23:55:04 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-04-04 23:55:04 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.6ms)
+  Rendered sessions/new.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 55ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-04-04 23:55:16 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jvr2ILEfiC1V7jPKZaBMU2X1tSkKEZiGQLU8gzzIJzjHw/nX/cYLjlmH45KPCLz/GeKDsiaX1/6aZnkw3r9uDQ==", "session"=>{"email"=>"zhangsikai123@tamu.edu", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "zhangsikai123@tamu.edu"]]
+Redirected to http://localhost:3000/profiles?id=1
+Completed 302 Found in 98ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-04 23:55:16 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-04-04 23:55:16 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.4ms)
+  Rendered sessions/new.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-04-04 23:56:46 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (2.6ms)
+  Rendered sessions/new.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 80ms (Views: 63.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-04-04 23:56:49 -0500
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for ::1 at 2016-04-04 23:56:51 -0500
+Processing by AccountsController#index as HTML
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2016-04-04 23:56:51 -0500
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (3.2ms)
+  Rendered accounts/new.html.haml within layouts/application (17.6ms)
+Completed 200 OK in 60ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-04-04 23:56:52 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gArruvHJ7v/V5uqjO+S1HfNfMC9NFV0c/vgY4ycf9yvJM+RNvRBtXNmPOvvRTEWxj0gGtGGTEmQkK11QxWi+Hg==", "session"=>{"email"=>"", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (2.7ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", ""]]
+  Rendered sessions/_signin.html.haml (1.0ms)
+  Rendered sessions/new.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 53ms (Views: 44.3ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/login" for ::1 at 2016-04-04 23:56:55 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ctg8xkEBGCZmE9LLmGiSHXIlQ4OTEpaKuIpGAqrWMM5D4TMxDdibhWp6ApNywGKxDjJ1GL+U2fJiWQOxSKF5+w==", "session"=>{"email"=>"", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered sessions/_signin.html.haml (1.2ms)
+  Rendered sessions/new.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for ::1 at 2016-04-04 23:56:57 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3oIKc1dk68WG4dhvfioNfl1USgB+spmDyjtfkpYpA7qXuwWEG71oZoqICDeUgv3SIUN8m1I01vsQ6BohdF5Kjw==", "session"=>{"email"=>"", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", ""]]
+  Rendered sessions/_signin.html.haml (1.7ms)
+  Rendered sessions/new.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup" for ::1 at 2016-04-04 23:57:02 -0500
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.2ms)
+  Rendered accounts/new.html.haml within layouts/application (9.6ms)
+Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/accounts" for ::1 at 2016-04-04 23:57:21 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XJu7Mgr4QmpBCML+/1QsTmDZOe4Zfq000RV5WHpqiiMVorTFRiHByU1hEqYV/NziHM4PdTX44kwLxjzrmB3DFg==", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "gender"=>"", "DOB"=>"", "email"=>"", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "current_address"=>""}, "commit"=>"Join us now!"}
+Unpermitted parameters: maidenname, gender
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered sessions/_signin.html.haml (1.6ms)
+  Rendered accounts/new.html.haml within layouts/application (11.4ms)
+Completed 200 OK in 146ms (Views: 68.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/login" for ::1 at 2016-04-04 23:57:24 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QCPr4HyMT56NmB0RiRq/EY9FsQMOGCauq2R2dt0YU8EJGuQXMFXMPYHxzUljsk+981KHmCKeadZxtzPFP28a9A==", "session"=>{"email"=>"", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", ""]]
+  Rendered sessions/_signin.html.haml (1.3ms)
+  Rendered sessions/new.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for ::1 at 2016-04-04 23:57:25 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JHQ+EPDEHr13eYiXMoBK9YJqfoA8+BQ8JnpaIFXVAgRtTTHnvB2dHnsQWM/YKLpZ/n1IGxB+W0T8qR+Tt6JLMQ==", "session"=>{"email"=>"", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered sessions/_signin.html.haml (2.0ms)
+  Rendered sessions/new.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 65ms (Views: 62.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for ::1 at 2016-04-04 23:57:37 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EX1XgZJfZM8u3L9W+EBKb8LCNtdPa20CNDjxogSnYP9YRFh23obnbCK1bw4S6LrDvtUATGPtInru67QR5tApyg==", "session"=>{"email"=>"zhangsikai123@tamu.edu", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "zhangsikai123@tamu.edu"]]
+Redirected to http://localhost:3000/profiles?id=1
+Completed 302 Found in 95ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-04 23:57:37 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-04-04 23:57:37 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.7ms)
+  Rendered sessions/new.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 67ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-04-04 23:59:50 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.8ms)
+  Rendered sessions/new.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 106ms (Views: 70.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/accounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-04 23:59:51 -0500
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-04 23:59:51 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-04 23:59:51 -0500
+
+
+Started GET "/assets/admin_session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-04 23:59:51 -0500
+
+
+Started GET "/assets/index.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-04 23:59:51 -0500
+
+
+Started GET "/assets/current_workers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-04 23:59:51 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-04 23:59:51 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-04 23:59:51 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-04 23:59:51 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-04 23:59:51 -0500
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-04 23:59:51 -0500
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-04 23:59:51 -0500
+
+
+Started GET "/assets/admin_session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-04 23:59:51 -0500
+
+
+Started GET "/assets/current_workers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-04 23:59:51 -0500
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-04 23:59:51 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-04 23:59:51 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-04 23:59:51 -0500
+
+
+Started GET "/login" for ::1 at 2016-04-04 23:59:52 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.9ms)
+  Rendered sessions/new.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-04 23:59:52 -0500
+
+
+Started GET "/assets/accounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-04 23:59:52 -0500
+
+
+Started GET "/assets/index.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-04 23:59:52 -0500
+
+
+Started GET "/assets/current_workers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-04 23:59:52 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-04 23:59:53 -0500
+
+
+Started GET "/assets/admin_session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-04 23:59:53 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-04 23:59:53 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-04 23:59:53 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-04 23:59:53 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-04 23:59:53 -0500
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-04 23:59:53 -0500
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-04 23:59:53 -0500
+
+
+Started GET "/assets/admin_session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-04 23:59:53 -0500
+
+
+Started GET "/assets/current_workers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-04 23:59:53 -0500
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-04 23:59:53 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-04 23:59:53 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-04 23:59:53 -0500
+
+
+Started POST "/login" for ::1 at 2016-04-04 23:59:55 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gsYjOz+juHgoiuF8Psz/Bb8LuvCpVDhOS53drQ6MvMnL/yzMc3o72yTjMSTUZA+pwxyMa4XSdzaRTpge7Pv1/A==", "session"=>{"email"=>"", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered sessions/_signin.html.haml (1.1ms)
+  Rendered sessions/new.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for ::1 at 2016-04-04 23:59:56 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IDUHA8M2TWOUfD80b014Gs57iSy2g/gGtjTQFhbi6M9pDAj0j+/OwJgV72yF5Yi2smy/t5oFt35s55Wl9JWh+g==", "session"=>{"email"=>"", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", ""]]
+  Rendered sessions/_signin.html.haml (1.1ms)
+  Rendered sessions/new.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for ::1 at 2016-04-05 00:00:12 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ewn0M1RPZw5tfQ8GEeX/Cixe2bj34uIagm+VA5A/DWdaMPvEGJbkrWEU3177TQ+mUEnvI9tkrWJYvNCwckhEUg==", "session"=>{"email"=>"zhangsikai123@tamu.edu", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "zhangsikai123@tamu.edu"]]
+  Rendered sessions/_signin.html.haml (1.8ms)
+  Rendered sessions/new.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 130ms (Views: 34.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for ::1 at 2016-04-05 00:00:24 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4qxj2f9PuuOfSpGt11KwnE95Hnrb5vCo+poLrADaTF6rlWwus5Y5QJMjQfU9+kAwM24o4fdgv9AgSU4f4q0Faw==", "session"=>{"email"=>"zhangsikai123@tamu.edu", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "zhangsikai123@tamu.edu"]]
+Redirected to http://localhost:3000/profiles?id=1
+Completed 302 Found in 100ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-05 00:00:24 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-04-05 00:00:24 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.7ms)
+  Rendered sessions/new.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-04-05 00:01:32 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.4ms)
+  Rendered sessions/new.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 97ms (Views: 66.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/login" for ::1 at 2016-04-05 00:01:42 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jimjmX6BpMonWvmTXDcF2+2ooBBtN0sI0zK9/SFW20vHEKxuMlgnaSszKcu2n/V3kb+Wi0GxBHAJ4fhOwyGSfg==", "session"=>{"email"=>"zhangsikai123@tamu.edu", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "zhangsikai123@tamu.edu"]]
+Redirected to http://localhost:3000/profiles?id=1
+Completed 302 Found in 102ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-05 00:01:43 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-04-05 00:01:43 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.1ms)
+  Rendered sessions/new.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 50ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-04-05 00:01:46 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B9Fgr0TF5WXpEtdLVa59IcECar5iewwKv4gFe1m62JFO6G9YCBxmxuV7BxO/Bo2NvRVcJU79Q3JlW0DIu82RpA==", "session"=>{"email"=>"", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", ""]]
+  Rendered sessions/_signin.html.haml (1.0ms)
+  Rendered sessions/new.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for ::1 at 2016-04-05 00:02:21 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.5ms)
+  Rendered sessions/new.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 102ms (Views: 72.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/login" for ::1 at 2016-04-05 00:02:31 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lGRxQWslp3ldKu6H/rLsUtRJVeJE7pH5EFIH0e/qZgrdXX62J/wk2lFDPt8UGhz+qF5jeWho3oHKgUJiDZ0vPw==", "session"=>{"email"=>"zhangsikai123@tamu.edu", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "zhangsikai123@tamu.edu"]]
+Redirected to http://localhost:3000/profiles?id=1
+Completed 302 Found in 95ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-05 00:02:31 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCurrentWorker Load (0.2ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 1]]
+  [1m[36mFormerCriminal Load (0.2ms)[0m  [1mSELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1[0m  [["account_id", 1]]
+  [1m[35mRelatedCouncilmember Load (0.2ms)[0m  SELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1  [["account_id", 1]]
+  [1m[36mUserFormerworker Load (0.4ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 1]]
+  [1m[35mAccommodation Load (0.3ms)[0m  SELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1  [["account_id", 1]]
+  Rendered accounts/profiles.html.erb within layouts/application (158.1ms)
+Completed 200 OK in 212ms (Views: 205.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-05 00:02:57 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-04-05 00:02:57 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.1ms)
+  Rendered sessions/new.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 98ms (Views: 97.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/accounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-05 00:02:57 -0500
+
+
+Started GET "/assets/current_workers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-05 00:02:57 -0500
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-05 00:02:57 -0500
+
+
+Started GET "/assets/admin_session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-05 00:02:57 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-05 00:02:57 -0500
+
+
+Started GET "/assets/index.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-05 00:02:57 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-05 00:02:57 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-05 00:02:57 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-05 00:02:57 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-05 00:02:57 -0500
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-05 00:02:57 -0500
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-05 00:02:57 -0500
+
+
+Started GET "/assets/admin_session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-05 00:02:57 -0500
+
+
+Started GET "/assets/current_workers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-05 00:02:57 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-05 00:02:57 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-05 00:02:57 -0500
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-05 00:02:57 -0500
+
+
+Started GET "/login" for ::1 at 2016-04-05 00:04:09 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (3.8ms)
+  Rendered sessions/new.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 123ms (Views: 79.2ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/login" for ::1 at 2016-04-05 00:04:11 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hPMJyujmRUK3l1DH0Jn4yU4CrzFJa2FXUoAV6WCQlCW9lEX2NWRZ5H2rJPnP/l2B99EucRZ8yQudR74qYfugZA==", "session"=>{"email"=>"", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", ""]]
+  Rendered sessions/_signin.html.haml (1.2ms)
+  Rendered sessions/new.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 40ms (Views: 36.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for ::1 at 2016-04-05 00:04:18 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r2g1XRQmc5FebeXtDa7QpYkB6zEoEZeMy0aLBupRn1+WD3lhyaRvN5RRkdMSyXXtMNJqcXcGP9AEgSDF6zqrHg==", "session"=>{"email"=>"zhangsikai123@tamu.edu", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "zhangsikai123@tamu.edu"]]
+Redirected to http://localhost:3000/profiles?id=1
+Completed 302 Found in 97ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-05 00:04:18 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCurrentWorker Load (0.3ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 1]]
+  [1m[36mFormerCriminal Load (0.2ms)[0m  [1mSELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1[0m  [["account_id", 1]]
+  [1m[35mRelatedCouncilmember Load (0.2ms)[0m  SELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1  [["account_id", 1]]
+  [1m[36mUserFormerworker Load (0.3ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 1]]
+  [1m[35mAccommodation Load (0.2ms)[0m  SELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1  [["account_id", 1]]
+  Rendered accounts/profiles.html.erb within layouts/application (66.7ms)
+Completed 200 OK in 112ms (Views: 106.7ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/login" for ::1 at 2016-04-05 00:06:31 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r2g1XRQmc5FebeXtDa7QpYkB6zEoEZeMy0aLBupRn1+WD3lhyaRvN5RRkdMSyXXtMNJqcXcGP9AEgSDF6zqrHg==", "session"=>{"email"=>"zhangsikai123@tamu.edu", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "zhangsikai123@tamu.edu"]]
+Redirected to http://localhost:3000/profiles?id=1
+Completed 302 Found in 107ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-05 00:06:31 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  app/helpers/admin_sessions_helper.rb:2:in `log_in'
+  app/controllers/accounts_controller.rb:32:in `profiles'
+
+
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (142.9ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-05 00:07:11 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  app/helpers/admin_sessions_helper.rb:2:in `log_in'
+  app/controllers/accounts_controller.rb:32:in `profiles'
+
+
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.3ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (70.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (150.8ms)
+
+
+Started POST "/login" for ::1 at 2016-04-05 00:07:23 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r2g1XRQmc5FebeXtDa7QpYkB6zEoEZeMy0aLBupRn1+WD3lhyaRvN5RRkdMSyXXtMNJqcXcGP9AEgSDF6zqrHg==", "session"=>{"email"=>"zhangsikai123@tamu.edu", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "zhangsikai123@tamu.edu"]]
+Redirected to http://localhost:3000/profiles?id=1
+Completed 302 Found in 128ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-05 00:07:24 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  app/helpers/admin_sessions_helper.rb:2:in `log_in'
+  app/controllers/accounts_controller.rb:32:in `profiles'
+
+
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.0ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (72.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (158.3ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-05 00:07:39 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  app/helpers/admin_sessions_helper.rb:2:in `log_in'
+  app/controllers/accounts_controller.rb:32:in `profiles'
+
+
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (55.2ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (128.8ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 00:07:47 -0500
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 64ms (Views: 62.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-04-05 00:07:49 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.2ms)
+  Rendered sessions/new.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 84ms (Views: 44.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/login" for ::1 at 2016-04-05 00:08:00 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yku4f3E+VZi83kLvchBiJpnLmLe1BI8vGHNn+bjzTV9bLPRDrLxJPnbiNtFtd8duIBgZ9+oTJ3PXtMw6uZh5Hg==", "session"=>{"email"=>"zhangsikai123@tamu.edu", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "zhangsikai123@tamu.edu"]]
+Redirected to http://localhost:3000/profiles?id=1
+Completed 302 Found in 93ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-05 00:08:00 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  app/helpers/admin_sessions_helper.rb:2:in `log_in'
+  app/controllers/accounts_controller.rb:32:in `profiles'
+
+
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (70.1ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (143.6ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 00:09:43 -0500
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 76ms (Views: 74.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-04-05 00:09:45 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.2ms)
+  Rendered sessions/new.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 78ms (Views: 41.9ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/login" for ::1 at 2016-04-05 00:09:59 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5eZ046UGLE1427YtC4PSUq92nZqeKrc+3Min6BgAUMbcgTjfeIQw67LnwhMU5HcaFqUc2sE9H2ITDwwrGWtkhw==", "session"=>{"email"=>"zhangsikai123@tamu.edu", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "zhangsikai123@tamu.edu"]]
+Redirected to http://localhost:3000/profiles?id=1
+Completed 302 Found in 93ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-05 00:09:59 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCurrentWorker Load (0.2ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 1]]
+  [1m[36mFormerCriminal Load (0.2ms)[0m  [1mSELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1[0m  [["account_id", 1]]
+  [1m[35mRelatedCouncilmember Load (0.2ms)[0m  SELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1  [["account_id", 1]]
+  [1m[36mUserFormerworker Load (0.3ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 1]]
+  [1m[35mAccommodation Load (0.3ms)[0m  SELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1  [["account_id", 1]]
+  Rendered accounts/profiles.html.erb within layouts/application (77.3ms)
+Completed 200 OK in 129ms (Views: 122.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-05 00:10:30 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/helpers/sessions_helper.rb:3:in `log_in'
+  app/controllers/accounts_controller.rb:32:in `profiles'
+
+
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.9ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (71.0ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (154.1ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-05 00:15:18 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-04-05 00:15:19 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (17.2ms)
+  Rendered sessions/new.html.haml within layouts/application (45.1ms)
+Completed 200 OK in 435ms (Views: 281.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/admin_session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-05 00:15:20 -0500
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-05 00:15:20 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-05 00:15:20 -0500
+
+
+Started GET "/assets/current_workers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-05 00:15:20 -0500
+
+
+Started GET "/assets/accounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-05 00:15:20 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-05 00:15:20 -0500
+
+
+Started GET "/assets/index.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-05 00:15:20 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-05 00:15:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-05 00:15:20 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-05 00:15:20 -0500
+
+
+Started GET "/assets/current_workers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-05 00:15:21 -0500
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-05 00:15:21 -0500
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-05 00:15:21 -0500
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-05 00:15:21 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-05 00:15:21 -0500
+
+
+Started GET "/assets/admin_session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-05 00:15:21 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-05 00:15:21 -0500
+
+
+Started GET "/" for ::1 at 2016-04-05 00:15:35 -0500
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 182ms (Views: 179.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-05 00:15:39 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-04-05 00:15:39 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (6.0ms)
+  Rendered sessions/new.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 173ms (Views: 169.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-04-05 00:15:53 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IB3kK6Gnzxm2Zj6f6dTqyg33jJCMGhwK3dy+ct04J17MPbe31c5wqCRIwcAfzx5wzfVOSh+bcEw5xjseyXIRDQ==", "session"=>{"email"=>"zhangsikai123@tamu.edu", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (1.4ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "zhangsikai123@tamu.edu"]]
+Completed 500 Internal Server Error in 438ms (ActiveRecord: 1.4ms)
+
+NoMethodError (undefined method `login' for #<SessionsController:0x007fb39d19d270>
+Did you mean?  log_in):
+  app/controllers/sessions_controller.rb:9:in `create'
+
+
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.3ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.7ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.9ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (259.1ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.1ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (324.2ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.7ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (690.4ms)
+
+
+Started POST "/login" for ::1 at 2016-04-05 00:16:19 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IB3kK6Gnzxm2Zj6f6dTqyg33jJCMGhwK3dy+ct04J17MPbe31c5wqCRIwcAfzx5wzfVOSh+bcEw5xjseyXIRDQ==", "session"=>{"email"=>"zhangsikai123@tamu.edu", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (0.6ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "zhangsikai123@tamu.edu"]]
+Redirected to http://localhost:3000/profiles?id=1
+Completed 302 Found in 349ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-05 00:16:19 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCurrentWorker Load (0.5ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 1]]
+  [1m[36mFormerCriminal Load (0.5ms)[0m  [1mSELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1[0m  [["account_id", 1]]
+  [1m[35mRelatedCouncilmember Load (0.5ms)[0m  SELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1  [["account_id", 1]]
+  [1m[36mUserFormerworker Load (1.0ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 1]]
+  [1m[35mAccommodation Load (0.7ms)[0m  SELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1  [["account_id", 1]]
+  Rendered accounts/profiles.html.erb within layouts/application (200.1ms)
+Completed 200 OK in 327ms (Views: 314.5ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/current_workers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-05 00:16:20 -0500
+
+
+Started GET "/assets/accounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-05 00:16:20 -0500
+
+
+Started GET "/assets/index.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-05 00:16:20 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-05 00:16:20 -0500
+
+
+Started GET "/assets/admin_session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-05 00:16:20 -0500
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-05 00:16:20 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-05 00:16:20 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-05 00:16:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-05 00:16:20 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-05 00:16:20 -0500
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-05 00:16:20 -0500
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-05 00:16:20 -0500
+
+
+Started GET "/assets/admin_session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-05 00:16:20 -0500
+
+
+Started GET "/assets/current_workers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-05 00:16:20 -0500
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-05 00:16:20 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-05 00:16:20 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-05 00:16:20 -0500
+
+
+Started GET "/" for ::1 at 2016-04-05 00:16:33 -0500
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 139ms (Views: 137.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profiles?id=1" for ::1 at 2016-04-05 00:16:36 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.8ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCurrentWorker Load (0.9ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 1]]
+  [1m[36mFormerCriminal Load (0.4ms)[0m  [1mSELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1[0m  [["account_id", 1]]
+  [1m[35mRelatedCouncilmember Load (0.3ms)[0m  SELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1  [["account_id", 1]]
+  [1m[36mUserFormerworker Load (0.3ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 1]]
+  [1m[35mAccommodation Load (0.2ms)[0m  SELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1  [["account_id", 1]]
+  Rendered accounts/profiles.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 147ms (Views: 141.2ms | ActiveRecord: 2.8ms)
