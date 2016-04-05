@@ -38,7 +38,8 @@ Rails.application.routes.draw do
       resources :current_workers
       resources :accomodations
       resources :former_criminals
-      resources :student_applications
+      resources :student_application
+      resources :user_formerworkers
   end
   
   get '/save_change' => 'accounts#save_change'
