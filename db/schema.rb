@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160330223350) do
+ActiveRecord::Schema.define(version: 20160403040230) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,10 @@ ActiveRecord::Schema.define(version: 20160330223350) do
     t.string   "accommodation_name"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.integer  "account_id"
   end
+
+  add_index "accommodations", ["account_id"], name: "index_accommodations_on_account_id"
 
   create_table "accounts", force: :cascade do |t|
     t.string  "email"
@@ -45,6 +48,17 @@ ActiveRecord::Schema.define(version: 20160330223350) do
     t.string  "middlename"
     t.string  "maidenname"
     t.string  "gender"
+<<<<<<< HEAD
+=======
+  end
+
+  create_table "admins", force: :cascade do |t|
+    t.string   "password_digest"
+    t.string   "email"
+    t.string   "key"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+>>>>>>> master
   end
 
   create_table "application_forms", force: :cascade do |t|
@@ -71,6 +85,7 @@ ActiveRecord::Schema.define(version: 20160330223350) do
     t.string   "department"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "account_id"
   end
 
   create_table "former_criminals", force: :cascade do |t|
@@ -80,7 +95,11 @@ ActiveRecord::Schema.define(version: 20160330223350) do
     t.string   "disposition_of_case"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.integer  "account_id"
+    t.string   "former_crime"
   end
+
+  add_index "former_criminals", ["account_id"], name: "index_former_criminals_on_account_id"
 
   create_table "minor_applications", force: :cascade do |t|
     t.binary   "parent_signature"
@@ -93,7 +112,10 @@ ActiveRecord::Schema.define(version: 20160330223350) do
     t.string   "relationship"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "account_id"
   end
+
+  add_index "related_councilmembers", ["account_id"], name: "index_related_councilmembers_on_account_id"
 
   create_table "student_applications", force: :cascade do |t|
     t.string   "student_program"
@@ -111,6 +133,10 @@ ActiveRecord::Schema.define(version: 20160330223350) do
     t.string   "interested_area"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.integer  "accounts_id"
+    t.integer  "account_id"
   end
+
+  add_index "user_formerworkers", ["account_id"], name: "index_user_formerworkers_on_account_id"
 
 end

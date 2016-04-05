@@ -10,7 +10,7 @@ def new
       redirect_to profiles_path :id => @account.id
     else
     flash.now[:danger] = 'Wrong email/password combination!'  
-       render 'accounts/show'
+    render 'new'
     end
   end
   
