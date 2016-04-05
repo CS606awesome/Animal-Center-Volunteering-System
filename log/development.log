@@ -10634,3 +10634,44 @@ Migrating to RenameColumnXinTableAccountstoY (20160403040230)
             FROM sqlite_temp_master
             WHERE name='index_user_formerworkers_on_account_id' AND type='index'
 [0m
+
+
+Started GET "/signup" for ::1 at 2016-04-04 21:08:57 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (9.8ms)
+  Rendered accounts/new.html.haml within layouts/application (33.2ms)
+Completed 200 OK in 457ms (Views: 420.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/input_your_email" for ::1 at 2016-04-04 21:09:01 -0500
+Processing by AccountsController#inputyouremail as HTML
+  Rendered accounts/inputyouremail.html.haml within layouts/application (23.0ms)
+Completed 200 OK in 90ms (Views: 88.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input_your_email?utf8=%E2%9C%93&email=123&commit=Reset" for ::1 at 2016-04-04 21:09:05 -0500
+Processing by AccountsController#inputyouremail as HTML
+  Parameters: {"utf8"=>"✓", "email"=>"123", "commit"=>"Reset"}
+  [1m[35mAccount Load (0.7ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "123"]]
+  Rendered accounts/inputyouremail.html.haml within layouts/application (14.4ms)
+Completed 200 OK in 85ms (Views: 66.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/accounts" for ::1 at 2016-04-04 21:09:31 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZkKWXmfzypig/ETY9/AbUDStzxTdpmaf9Gaze9p+in79Mniu2e1wkBufDEksYJMfyY4yl4wGHChKyI7GZyOSwA==", "account"=>{"firstname"=>"Sikai", "middlename"=>"M", "maidenname"=>"", "lastname"=>"Zhang", "gender"=>"Male", "DOB"=>"1992-03-06", "email"=>"zhangsikai123@tamu.edu", "password"=>"[FILTERED]", "homephone"=>"123456", "cellphone"=>"", "current_address"=>"What ever"}, "commit"=>"Join us now!"}
+Unpermitted parameters: maidenname, gender
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "accounts" ("email", "password_digest", "firstname", "lastname", "middlename", "current_address", "homephone", "cellphone", "DOB") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "zhangsikai123@tamu.edu"], ["password_digest", "$2a$10$C7nAKkaOwVjWjD78yKN//uP1HZ77vL9pPtlg12EoJClYiFSp7NWdW"], ["firstname", "Sikai"], ["lastname", "Zhang"], ["middlename", "M"], ["current_address", "What ever"], ["homephone", "123456"], ["cellphone", ""], ["DOB", "1992-03-06"]]
+  [1m[36m (9.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/accounts/1
+Completed 302 Found in 128ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/accounts/1" for ::1 at 2016-04-04 21:09:31 -0500
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered sessions/_signin.html.haml (1.8ms)
+  Rendered accounts/show.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.0ms)

@@ -24,6 +24,7 @@ class AccountsController < ApplicationController
   end
   
   def show
+    flash.now[:success] = 'Congradulations!now go ahead and login'  
     @account = Account.new
   end
   
