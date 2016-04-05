@@ -3,24 +3,36 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-     root 'index#index'
+  root 'index#index'
+  #account login
   get    'help'    => 'static_pages#help'
   get    'about'   => 'static_pages#about'
   get    'contact' => 'static_pages#contact'
   get    'signup'  => 'accounts#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
-  
   delete 'logout'  => 'sessions#destroy'
-   post 'accounts/:account_id/articles/:article_id' => 'comments#create'
-   
+
+  get    'input_your_email' => 'accounts#input_your_email'
+  post    'input_your_email' => 'accounts#input_your_email'
+
+  get    'reset_your_password'  => 'accounts#reset_your_password'
+  post    'reset_your_password'  => 'accounts#save_password_change'
+
+  #forget password
   get    'forget_your_password' => 'accounts#forgetyourpassword'
   get    'receive_your_email' => 'accounts#checkyouremail'
-   
-  
+
+  #Show user's workspace
   get 'profiles' => 'accounts#profiles'
   get 'profiles/:id' => 'accounts#profiles'
-   
+
+  #administrator login
+  get 'adminlogin' => 'admin_sessions#new'
+  post 'adminlogin' => 'admin_sessions#create'
+  resources :admins
+  
+  #accounts has many applicaitons   
     resources :accounts do
       resources :applications
       resources :current_workers

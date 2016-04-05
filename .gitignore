@@ -1,2 +1,5 @@
+tmp/pids/server.pid
+*.cache
+
 
 *.cache

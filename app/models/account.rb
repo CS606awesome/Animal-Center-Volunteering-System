@@ -12,17 +12,35 @@ class Account < ActiveRecord::Base
     accepts_nested_attributes_for :user_formerworker, allow_destroy: true
     accepts_nested_attributes_for :accommodation, allow_destroy: true
     
-before_validation :ensure_has_value
 has_secure_password
-validates :password, 
-             presence: true,
-             length: { in: 6..20,
+validates :email,:firstname,:lastname,:homephone,
+  presence: true,
+  :on => [ :create ]
+  validates :password,
+  length: { in: 6..20,
              to_short: "your password should be at least %{count} characters",
-             to_long: "your password should be at most %{count} characters" }
-protected 
-    def ensure_has_value
-      self.email = 'blank' if email.blank?
-    end 
+             to_long: "your password should be at most %{count} characters" },
+  :on => [ :create ]
+  #validates :email
+  validates :email, email: true
+  ##validates_email_realness_of :email
+  EmailVerifier.config do |config|
+   config.verifier_email = "realname@realdomain.com"
+  end
+  ###################################
+  #validates :name validator
+  INVALID_NAME_REGEX = /[^a-zA-Z     ]/
+  validates :firstname,:lastname,
+  length: { maximum: 20 },
+  format: { without: INVALID_NAME_REGEX }
+  #validates :unique email                                  
+  validates  :email,
+  uniqueness: { case_sensitive: true, on: [:create] }
+  #####################################
+  #validates :number validator 
+  INVALID_NUMBER_REGEX = /[^0-9     ]/
+  validates :homephone,
+  length: { maximum: 20 },
+  format: { without: INVALID_NUMBER_REGEX }
    
-      
 end
