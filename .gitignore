@@ -1,7 +1,16 @@
 tmp/pids/server.pid
 *.cache
 
+<<<<<<< HEAD
+
+*.cache
+=======
+>>>>>>> master
 
 *.cache
 
 *.cache
+
+*.cache
+
+*.log
