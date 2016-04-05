@@ -36,6 +36,21 @@ class AccountsController < ApplicationController
   def update
      @account = Account.find(params[:id])
      #@account.update_attributes!(account_update_params)
+     if(params[:account][:is_former_worker] == "1") 
+       @account.user_formerworker ||= UserFormerworker.new   
+     end
+     if(params[:account][:related_to_councilmember] == "1") 
+       @account.related_councilmember ||= RelatedCouncilmember.new   
+     end
+     if(params[:account][:is_current_worker] == "1") 
+       @account.current_worker ||= CurrentWorker.new   
+     end
+     if(params[:account][:has_convictions] == "1") 
+       @account.former_criminal ||= FormerCriminal.new   
+     end
+     if(params[:account][:need_accommodations] == "1") 
+       @account.accommodation ||= Accommodation.new   
+     end
      @account.attributes = account_update_params
      @account.save(:validate => false)
      redirect_to save_change_path :id => @account.id
@@ -58,7 +73,7 @@ class AccountsController < ApplicationController
                                   user_formerworker_attributes: [:id, :date_of_employment, :reason_for_leaving, :position_or_department],
                                   former_criminal_attributes: [:id, :date_of_conviction, :nature_of_offense, :name_of_court, :disposition_of_case, :former_crime],
                                   related_councilmember_attributes: [:id, :name, :relationship],
-                                  accommodation_attributes: [:id, :accomodation_name])
+                                  accommodation_attributes: [:id, :accommodation_name])
                                 
   end
   

@@ -13,7 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20160331075538) do
 
-
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name"
     t.datetime "created_at",         null: false
@@ -89,8 +88,8 @@ ActiveRecord::Schema.define(version: 20160331075538) do
     t.string   "disposition_of_case"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
-    t.string   "former_crime"
     t.integer  "account_id"
+    t.string   "former_crime"
   end
 
   add_index "former_criminals", ["account_id"], name: "index_former_criminals_on_account_id"
