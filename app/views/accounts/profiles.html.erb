@@ -36,7 +36,6 @@
       </p>
     </div>
 </div>
-
   <%= form_for @account do |f| %>
   <!-- **************************************************************************** -->
   <!-- add all form contents within this helper -->
@@ -48,13 +47,13 @@
   f.text_field :field_name
   radio dot has other f. method name
   -->
-    <p>
-        <b>1.Are you a former worker of the city of Bryan?</b><br />
-        <%= f.radio_button :is_former_worker, "1", :checked => @account.is_former_worker  %> Yes<br />
-        <%= f.radio_button :is_former_worker, "0", :checked => !@account.is_former_worker %> No<br />
-    </p>
-    
-    <%= f.fields_for  :user_formerworker do |uf| %>
+      <p>
+       <b id = "checkboxlink">1.Are you a former worker of the city of Bryan?</b><br />    
+        <%= f.radio_button :is_former_worker, "1", :checked => @account.is_former_worker, :onclick=>"clickYes()" %> Yes<br />
+        <%= f.radio_button :is_former_worker, "0", :checked => !@account.is_former_worker,:onclick=>"clickNo()"%> No<br />
+      </p> 
+      <div class="hidden" id="checkbox"> 
+        <%= f.fields_for  :user_formerworker do |uf| %>
             <!-- input type="text" name="CurrentDep" -->
             <%=uf.label :date_of_employment, 'Date of Employment' %>
             <%= uf.text_field :date_of_employment, :value => @account.user_formerworker.date_of_employment %>
@@ -64,8 +63,8 @@
             <br />
             <%=uf.label :position_or_department, 'Position or Department' %>
             <%=uf.text_field :position_or_department, :value => @account.user_formerworker.position_or_department %>
-    <% end %>    
-
+        <% end %>    
+      </div>
     <!--Date of Employment:
         <input type="text" name="DOE"  >
         <!--%=f.label :date_of_employment, 'Date of Employment'%>  -->
