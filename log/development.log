@@ -10174,3 +10174,463 @@ Processing by AdminsController#show as HTML
   [1m[35mAccount Load (0.5ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."firstname" = ?  [["firstname", "Sikai"]]
   Rendered admins/show.html.haml within layouts/application (1.7ms)
 Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAccountToCurrentWorker (20160328031932)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "current_workers" ADD "account_id" integer[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_current_workers_on_account_id" ON "current_workers" ("account_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160328031932"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAdmins (20160329025113)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "password_digest" varchar, "email" varchar, "key" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160329025113"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddAccountToFormerCriminal (20160330213734)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "former_criminals" ADD "account_id" integer[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_former_criminals_on_account_id" ON "former_criminals" ("account_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160330213734"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to AddAccountToRelatedCouncilmember (20160330213938)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "related_councilmembers" ADD "account_id" integer
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_related_councilmembers_on_account_id" ON "related_councilmembers" ("account_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160330213938"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddAccountToUserFormerworker (20160330214509)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "user_formerworkers" ADD "account_id" integer[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_user_formerworkers_on_account_id" ON "user_formerworkers" ("account_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160330214509"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to RenameColumnAinTableAccountstoB (20160330223350)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAccountToAccommodation (20160330230442)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "accommodations" ADD "account_id" integer[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_accommodations_on_account_id" ON "accommodations" ("account_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160330230442"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to AddFormerCrimeToFormerCriminals (20160331074651)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "former_criminals" ADD "former_crime" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160331074651"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to AddMaidennameToAccounts (20160403040024)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "accounts" ADD "maidenname" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "accounts" ADD "gender" varchar
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160403040024"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to RenameColumnXinTableAccountstoY (20160403040230)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateApplicationForms (20160307230508)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "application_forms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "interested_area" varchar, "volunteering_status" varchar, "signature" blob(2097152), "application_date" datetime, "available_time_begin" datetime, "available_time_end" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307230508"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Migrating to CreateUserFormalworkers (20160307230545)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "user_formalworkers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date_of_employment" datetime, "reason_for_leaving" varchar, "position_or_department" varchar, "interested_area" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "accounts_id" integer) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307230545"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to CreateAccount (20160307230636)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "current_address" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_formal_worker" boolean, "has_convictions" boolean, "need_accomendations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob(2097152), "driver_license" blob(2097152), "SSN" integer) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307230636"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to CreateMinorApplications (20160307230644)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "minor_applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "parent_signature" blob(2097152), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307230644"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to CreateCriminalApplications (20160307230914)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "criminal_applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mandatory_hours" integer, "mandatory_area" varchar, "deadlin" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307230914"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to CreateStudentApplications (20160307231010)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "student_applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "student_program" varchar, "required_time" integer, "required_area" varchar, "deadline" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307231010"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to CreateFormalCriminals (20160307231032)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "formal_criminals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date_of_conviction" datetime, "nature_of_offense" varchar, "name_of_court" varchar, "disposition_of_case" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307231032"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to CreateAccommodations (20160307231100)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "accommodations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "accommodation_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307231100"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to CreateCurrentWorkers (20160307231131)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "current_workers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "department" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "account_id" integer) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307231131"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to CreateRelatedCouncilmembers (20160307231157)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "related_councilmembers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "relationship" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307231157"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to ChangeColumnName (20160307231855)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TEMPORARY TABLE "aapplication_forms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "interested_areas" varchar, "volunteering_status" varchar, "signature" blob, "application_date" datetime, "available_time_begin" datetime, "available_time_end" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "application_forms"[0m
+  [1m[35m (0.8ms)[0m  DROP TABLE "application_forms"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "application_forms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "interested_areas" varchar, "volunteering_status" varchar, "signature" blob, "application_date" datetime, "available_time_begin" datetime, "available_time_end" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aapplication_forms"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "aapplication_forms"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160307231855"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to AddMiddlenameToAccounts (20160309021705)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "accounts" ADD "middlename" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160309021705"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to ChangeFormalCriminalsToFormerCriminals (20160318003517)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "formal_criminals" RENAME TO "former_criminals"[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160318003517"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to ChangeUserformalworkersToUserformerworkers (20160318003939)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "user_formalworkers" RENAME TO "user_formerworkers"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160318003939"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddAccountToCurrentWorker (20160328031932)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "current_workers" ADD "account_id" integer[0m
+SQLite3::SQLException: duplicate column name: account_id: ALTER TABLE "current_workers" ADD "account_id" integer
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAdmins (20160329025113)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "password_digest" varchar, "email" varchar, "key" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160329025113"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddAccountToFormerCriminal (20160330213734)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "former_criminals" ADD "account_id" integer[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.5ms)[0m  [1mCREATE  INDEX "index_former_criminals_on_account_id" ON "former_criminals" ("account_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160330213734"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddAccountToRelatedCouncilmember (20160330213938)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "related_councilmembers" ADD "account_id" integer[0m
+  [1m[35m (0.5ms)[0m  CREATE  INDEX "index_related_councilmembers_on_account_id" ON "related_councilmembers" ("account_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160330213938"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to AddAccountToUserFormerworker (20160330214509)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "user_formerworkers" ADD "account_id" integer
+  [1m[36m (0.5ms)[0m  [1mCREATE  INDEX "index_user_formerworkers_on_account_id" ON "user_formerworkers" ("account_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160330214509"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to RenameColumnAinTableAccountstoB (20160330223350)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TEMPORARY TABLE "aaccounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "current_address" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_formal_worker" boolean, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar) [0m
+  [1m[35m (0.5ms)[0m  SELECT * FROM "accounts"
+  [1m[36m (0.7ms)[0m  [1mDROP TABLE "accounts"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "current_address" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_formal_worker" boolean, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "aaccounts"[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "aaccounts"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160330223350"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Migrating to AddAccountToAccommodation (20160330230442)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "accommodations" ADD "account_id" integer
+  [1m[36m (0.5ms)[0m  [1mCREATE  INDEX "index_accommodations_on_account_id" ON "accommodations" ("account_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160330230442"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddFormerCrimeToFormerCriminals (20160331074651)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "former_criminals" ADD "former_crime" varchar[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160331074651"]]
+  [1m[36m (4.7ms)[0m  [1mcommit transaction[0m
+Migrating to AddMaidennameToAccounts (20160403040024)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "accounts" ADD "maidenname" varchar[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "accounts" ADD "gender" varchar
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160403040024"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Migrating to RenameColumnXinTableAccountstoY (20160403040230)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TEMPORARY TABLE "aaccounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "current_address" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_former_worker" boolean, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "accounts"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "accounts"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "current_address" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_former_worker" boolean, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aaccounts"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "aaccounts"[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RenameColumnXinTableAccountstoY (20160403040230)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TEMPORARY TABLE "aaccounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "current_address" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_former_worker" boolean, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "accounts"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "accounts"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "current_address" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_former_worker" boolean, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "aaccounts"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "aaccounts"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160403040230"]]
+  [1m[35m (8.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_accommodations_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_accommodations_on_account_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_former_criminals_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_former_criminals_on_account_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_related_councilmembers_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_related_councilmembers_on_account_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_formerworkers_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_formerworkers_on_account_id' AND type='index'
+[0m
+
+
+Started GET "/" for ::1 at 2016-04-04 21:05:24 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 803ms (Views: 787.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for ::1 at 2016-04-04 21:05:32 -0500
+Processing by AccountsController#index as HTML
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2016-04-04 21:05:32 -0500
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (12.5ms)
+  Rendered accounts/new.html.haml within layouts/application (29.1ms)
+Completed 200 OK in 92ms (Views: 59.6ms | ActiveRecord: 2.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAccountToFormerCriminal (20160330213734)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "former_criminals" ADD "account_id" integer[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_former_criminals_on_account_id" ON "former_criminals" ("account_id")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160330213734"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddAccountToRelatedCouncilmember (20160330213938)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "related_councilmembers" ADD "account_id" integer[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_related_councilmembers_on_account_id" ON "related_councilmembers" ("account_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160330213938"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to AddAccountToUserFormerworker (20160330214509)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "user_formerworkers" ADD "account_id" integer
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_user_formerworkers_on_account_id" ON "user_formerworkers" ("account_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160330214509"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to RenameColumnAinTableAccountstoB (20160330223350)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (9.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateApplicationForms (20160307230508)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "application_forms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "interested_area" varchar, "volunteering_status" varchar, "signature" blob(2097152), "application_date" datetime, "available_time_begin" datetime, "available_time_end" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307230508"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to CreateUserFormalworkers (20160307230545)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "user_formalworkers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date_of_employment" datetime, "reason_for_leaving" varchar, "position_or_department" varchar, "interested_area" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "accounts_id" integer) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307230545"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateAccount (20160307230636)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "current_address" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_formal_worker" boolean, "has_convictions" boolean, "need_accomendations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob(2097152), "driver_license" blob(2097152), "SSN" integer) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307230636"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to CreateMinorApplications (20160307230644)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "minor_applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "parent_signature" blob(2097152), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307230644"]]
+  [1m[35m (3.4ms)[0m  commit transaction
+Migrating to CreateCriminalApplications (20160307230914)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "criminal_applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mandatory_hours" integer, "mandatory_area" varchar, "deadlin" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307230914"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Migrating to CreateStudentApplications (20160307231010)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "student_applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "student_program" varchar, "required_time" integer, "required_area" varchar, "deadline" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307231010"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+Migrating to CreateFormalCriminals (20160307231032)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "formal_criminals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date_of_conviction" datetime, "nature_of_offense" varchar, "name_of_court" varchar, "disposition_of_case" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307231032"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Migrating to CreateAccommodations (20160307231100)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "accommodations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "accommodation_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307231100"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to CreateCurrentWorkers (20160307231131)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "current_workers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "department" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "account_id" integer) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307231131"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to CreateRelatedCouncilmembers (20160307231157)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "related_councilmembers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "relationship" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307231157"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to ChangeColumnName (20160307231855)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TEMPORARY TABLE "aapplication_forms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "interested_areas" varchar, "volunteering_status" varchar, "signature" blob, "application_date" datetime, "available_time_begin" datetime, "available_time_end" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "application_forms"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "application_forms"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "application_forms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "interested_areas" varchar, "volunteering_status" varchar, "signature" blob, "application_date" datetime, "available_time_begin" datetime, "available_time_end" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "aapplication_forms"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "aapplication_forms"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160307231855"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddMiddlenameToAccounts (20160309021705)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "accounts" ADD "middlename" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160309021705"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to ChangeFormalCriminalsToFormerCriminals (20160318003517)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "formal_criminals" RENAME TO "former_criminals"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160318003517"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to ChangeUserformalworkersToUserformerworkers (20160318003939)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "user_formalworkers" RENAME TO "user_formerworkers"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160318003939"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAdmins (20160329025113)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "password_digest" varchar, "email" varchar, "key" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160329025113"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddAccountToFormerCriminal (20160330213734)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "former_criminals" ADD "account_id" integer[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_former_criminals_on_account_id" ON "former_criminals" ("account_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160330213734"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to AddAccountToRelatedCouncilmember (20160330213938)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "related_councilmembers" ADD "account_id" integer
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_related_councilmembers_on_account_id" ON "related_councilmembers" ("account_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160330213938"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddAccountToUserFormerworker (20160330214509)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "user_formerworkers" ADD "account_id" integer[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_user_formerworkers_on_account_id" ON "user_formerworkers" ("account_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160330214509"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to RenameColumnAinTableAccountstoB (20160330223350)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TEMPORARY TABLE "aaccounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "current_address" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_formal_worker" boolean, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "accounts"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "accounts"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "current_address" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_formal_worker" boolean, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aaccounts"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "aaccounts"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160330223350"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Migrating to AddAccountToAccommodation (20160330230442)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "accommodations" ADD "account_id" integer[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_accommodations_on_account_id" ON "accommodations" ("account_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160330230442"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to AddFormerCrimeToFormerCriminals (20160331074651)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "former_criminals" ADD "former_crime" varchar
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160331074651"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to AddMaidennameToAccounts (20160403040024)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "accounts" ADD "maidenname" varchar
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "accounts" ADD "gender" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160403040024"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Migrating to RenameColumnXinTableAccountstoY (20160403040230)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "aaccounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "current_address" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_former_worker" boolean, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "accounts"
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "accounts"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "current_address" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_former_worker" boolean, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "aaccounts"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "aaccounts"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160403040230"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_accommodations_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_accommodations_on_account_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_former_criminals_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_former_criminals_on_account_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_related_councilmembers_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_related_councilmembers_on_account_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_formerworkers_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_formerworkers_on_account_id' AND type='index'
+[0m
