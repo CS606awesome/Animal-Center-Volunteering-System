@@ -122,7 +122,7 @@ class AccountsController < ApplicationController
           redirect_to reset_your_password_path
         else
           flash.now[:danger] = 'Your email is not valid or it has not been registered, please try again!'
-          render 'inputyouremail'
+          render 'input_your_email'
         end
       end
   end
