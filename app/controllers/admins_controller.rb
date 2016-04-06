@@ -1,4 +1,5 @@
 class AdminsController < ApplicationController
+  
   def index
    redirect_to action: 'new'  
   end
@@ -27,22 +28,28 @@ class AdminsController < ApplicationController
     agemax = params[:agemax].to_i
     firstname = params[:firstname].to_s
     lastname = params[:lastname].to_s
-    email = params[:email].to_s
+    email = params[:email]
+    
     
     if (firstname != '') && (lastname != '') && (email != '')
-      @accounts_find = Account.where(:firstname => firstname, :lastname => lastname, :email => email)
+      @accounts_find_firstname = Account.where('lower(firstname) = ?', firstname.downcase)
+      @accounts_find_lastname = @accounts_find_firstname.where('lower(lastname) = ?', lastname.downcase)
+      @accounts_find = @accounts_find_lastname.where("lower(email) LIKE lower(?)", "#{email}%")
     elsif (firstname != '') && (lastname != '') && (email == '')
-      @accounts_find = Account.where(:firstname => firstname, :lastname => lastname)
+      @accounts_find_firstname = Account.where('lower(firstname) = ?', firstname.downcase)
+      @accounts_find = @accounts_find_firstname.where('lower(lastname) = ?', lastname.downcase)
     elsif (lastname != '') && (email != '') && (firstname == '')
-      @accounts_find = Account.where(:lastname => lastname, :email => email)
+      @accounts_find_lastname = Account.where('lower(lastname) = ?', lastname.downcase)
+      @accounts_find = @accounts_find_lastname.where("lower(email) LIKE lower(?)", "#{email}%")
     elsif (firstname != '') && (email != '') && (lastname == '')
-      @accounts_find = Account.where(:firstname => firstname, :email => email)
+      @accounts_find_firstname = Account.where('lower(firstname) = ?', firstname.downcase)
+      @accounts_find = @accounts_find_firstname.where("lower(email) LIKE lower(?)", "#{email}%")
     elsif (firstname != '') && (lastname == '') && (email == '')
-      @accounts_find = Account.where(:firstname => firstname)
+      @accounts_find = Account.where('lower(firstname) = ?', firstname.downcase)
     elsif (lastname != '') && (firstname == '') && (email == '')
-      @accounts_find = Account.where(:lastname => lastname)
+      @accounts_find = Account.where('lower(lastname) = ?', lastname.downcase)
     elsif (email != '') && (firstname == '') && (lastname == '')
-      @accounts_find = Account.where(:email => email)
+      @accounts_find = Account.where("lower(email) LIKE lower(?)", "#{email}%")
     else @accounts_find = Account.all
     end
     
@@ -87,5 +94,7 @@ class AdminsController < ApplicationController
     end
     res
   end
+  
+
 
 end
