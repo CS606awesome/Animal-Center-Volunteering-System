@@ -15,7 +15,7 @@ class AdminsController < ApplicationController
   def create
     @admin = Admin.new(admin_params)
       if @admin.save
-        redirect_to adminlogin_path
+        redirect_to adminlogin_path :id => @admin.id
       else  
       flash.now[:danger] = 'Registration failed, some inforamtion is missing!'  
       render 'new'
