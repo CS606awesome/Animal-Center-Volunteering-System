@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'actionmailer'
 gem 'email_verifier'
 gem 'email_validator'
 gem 'bcrypt'
