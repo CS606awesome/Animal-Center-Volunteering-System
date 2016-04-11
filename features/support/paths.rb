@@ -10,18 +10,27 @@ module NavigationHelpers
   #
   # step definition in web_steps.rb
   #
+  
   def path_to(page_name)
+  if page_name =~ /the (.*) for "(.*)"/
+      email_name = $2.to_s
+      page_name  = $1.to_s
+  end  
     case page_name
-
-    when /^the home\s?page$/
-      '/'
-
-    # Add more mappings here.
-    # Here is an example that pulls values out of the Regexp:
-    #
-    #   when /^(.*)'s profile page$/i
-    #     user_profile_path(User.find_by_login($1))
-
+    
+    when /^input_your_email page$/
+       input_your_email_path 
+    when /^log in page$/ 
+       login_path
+  
+   #when /^the reset_your_password page for "(.*)"/
+   when /^reset_your_password page$/ 
+      # id=Account.find_by($1)
+      #"/reset_your_password?id=#{id}" 
+      id=Account.find_by_email(email_name).id.to_s
+     reset_your_password_path(id)
+  
+  
     else
       begin
         page_name =~ /^the (.*) page$/

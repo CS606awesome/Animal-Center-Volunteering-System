@@ -90,7 +90,6 @@ ActiveRecord::Schema.define(version: 20160405142845) do
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.integer  "account_id"
-    t.string   "former_crime"
   end
 
   add_index "former_criminals", ["account_id"], name: "index_former_criminals_on_account_id"
