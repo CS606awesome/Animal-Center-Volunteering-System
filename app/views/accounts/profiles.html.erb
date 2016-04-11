@@ -48,10 +48,10 @@
   radio dot has other f. method name
   -->
       <p>
-       <b id = "checkboxlink">1.Are you a former worker of the city of Bryan?</b><br />    
+       <label><b id = "checkboxlink">1.Are you a former worker of the city of Bryan?</b><br />
         <%= f.radio_button :is_former_worker, "1", :checked => @account.is_former_worker, :onclick=>"clickYes()" %> Yes<br />
         <%= f.radio_button :is_former_worker, "0", :checked => !@account.is_former_worker,:onclick=>"clickNo()"%> No<br />
-      </p> 
+      </p></label>
       <div class="hidden" id="checkbox"> 
         <%= f.fields_for  :user_formerworker do |uf| %>
             <!-- input type="text" name="CurrentDep" -->

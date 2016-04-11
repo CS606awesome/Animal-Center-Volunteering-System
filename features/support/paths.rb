@@ -11,10 +11,15 @@ module NavigationHelpers
   # step definition in web_steps.rb
   #
   def path_to(page_name)
+    if page_name =~ /the (.*) for "(.*)"/
+      email_name = $2.to_s
+      page_name = $1.to_s
+    end
     case page_name
 
-    when /^the home\s?page$/
-      '/'
+    when /^profiles page$/ then
+      profiles_path(:id => Account.find_by_email(email_name).id)
+
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
