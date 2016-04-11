@@ -140,7 +140,7 @@ class AccountsController < ApplicationController
      else
          flash[:failed] = 'Two passwords do not match or passwords are not satisfied the requirement.'
          flash[:requirement] = 'Your password must be 6-20 characters.'
-        render 'resetyourpassword'
+        render 'reset_your_password'
      end
    end
 private
