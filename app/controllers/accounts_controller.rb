@@ -120,7 +120,7 @@ class AccountsController < ApplicationController
         if @account
           session[:id]= @account.id
           Mailer.welcome_email(@account).deliver_now
-          redirect_to login_path
+          redirect_to check_your_email_path
         else
           flash.now[:danger] = 'Your email is not valid or it has not been registered, please try again!'
           render 'input_your_email'
@@ -132,6 +132,7 @@ class AccountsController < ApplicationController
   def reset_your_password
      @account = Account.find(session[:id])
    end
+   
    def save_password_change
       @account = Account.find(session[:id])
      if @account.update_attributes(account_password_params)
