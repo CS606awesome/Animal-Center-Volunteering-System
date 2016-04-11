@@ -29,12 +29,12 @@ class AccountsController < ApplicationController
   end
   
   def profiles 
-      #if logged_in
+      if logged_in
       @account = Account.find(params[:id])  
-      #@accounts = Account.all
-      #else
-      #redirect_to login_path
-      #end
+      @accounts = Account.all
+      else
+      redirect_to login_path
+      end
   end
   
   
