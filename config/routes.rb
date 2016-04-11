@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   get    'reset_your_password'  => 'accounts#reset_your_password'
   post    'reset_your_password'  => 'accounts#save_password_change'
+  
 
   #forget password
   get    'forget_your_password' => 'accounts#forgetyourpassword'

@@ -119,19 +119,19 @@ class AccountsController < ApplicationController
         @account = Account.find_by(email: params[:email])
         if @account
           session[:id]= @account.id
-          redirect_to reset_your_password_path
+          redirect_to reset_your_password_path :id => @account.id  
         else
           flash.now[:danger] = 'Your email is not valid or it has not been registered, please try again!'
           render 'input_your_email'
         end
       end
   end
-    
-    
+  
   def reset_your_password
      @account = Account.find(session[:id])
-   end
-   def save_password_change
+  end
+  
+  def save_password_change
       @account = Account.find(session[:id])
      if @account.update_attributes(account_password_params)
          flash[:success] = "You have reset your password successfully."
@@ -139,12 +139,15 @@ class AccountsController < ApplicationController
      else
          flash[:failed] = 'Two passwords do not match or passwords are not satisfied the requirement.'
          flash[:requirement] = 'Your password must be 6-20 characters.'
-        render 'resetyourpassword'
+         render 'reset_your_password'
      end
-   end
-private
+  end
+
+ private
   def account_password_params
      params.require(:account).permit(:password, :password_confirmation)
   end
 
 end
+ 
+
