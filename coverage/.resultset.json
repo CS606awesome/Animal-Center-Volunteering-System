@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/ubuntu/workspace/app/controllers/accounts_controller.rb": [
+      "/Users/zhangsikai/GitHub/Project1/app/controllers/accounts_controller.rb": [
         1,
         1,
         0,
@@ -71,7 +71,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/controllers/application_controller.rb": [
+      "/Users/zhangsikai/GitHub/Project1/app/controllers/application_controller.rb": [
         1,
         1,
         1,
@@ -81,50 +81,24 @@
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/application_helper.rb": [
+      "/Users/zhangsikai/GitHub/Project1/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/accounts_helper.rb": [
+      "/Users/zhangsikai/GitHub/Project1/app/helpers/accounts_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/admin_sessions_helper.rb": [
+      "/Users/zhangsikai/GitHub/Project1/app/helpers/admin_sessions_helper.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/admins_helper.rb": [
+      "/Users/zhangsikai/GitHub/Project1/app/helpers/admins_helper.rb": [
         1,
         null,
-        1,
-        0,
-        null,
-        1,
-        0,
-        null,
-        null
-      ],
-      "/home/ubuntu/workspace/app/helpers/form_helper.rb": [
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null
-      ],
-      "/home/ubuntu/workspace/app/helpers/index_helper.rb": [
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/app/helpers/sessions_helper.rb": [
-        1,
         1,
         0,
         null,
@@ -133,7 +107,33 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/models/account.rb": [
+      "/Users/zhangsikai/GitHub/Project1/app/helpers/form_helper.rb": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/zhangsikai/GitHub/Project1/app/helpers/index_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/zhangsikai/GitHub/Project1/app/helpers/sessions_helper.rb": [
+        1,
+        1,
+        0,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/zhangsikai/GitHub/Project1/app/models/account.rb": [
         1,
         null,
         1,
@@ -163,7 +163,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/controllers/sessions_controller.rb": [
+      "/Users/zhangsikai/GitHub/Project1/app/controllers/sessions_controller.rb": [
         1,
         1,
         1,
@@ -190,7 +190,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/controllers/admins_controller.rb": [
+      "/Users/zhangsikai/GitHub/Project1/app/controllers/admins_controller.rb": [
         1,
         null,
         1,
@@ -292,12 +292,12 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/models/admin.rb": [
+      "/Users/zhangsikai/GitHub/Project1/app/models/admin.rb": [
         1,
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/controllers/admin_sessions_controller.rb": [
+      "/Users/zhangsikai/GitHub/Project1/app/controllers/admin_sessions_controller.rb": [
         1,
         1,
         1,
@@ -315,13 +315,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/controllers/index_controller.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/app/controllers/current_workers_controller.rb": [
+      "/Users/zhangsikai/GitHub/Project1/app/controllers/current_workers_controller.rb": [
         0,
         0,
         0,
@@ -341,48 +335,54 @@
         0,
         0
       ],
-      "/home/ubuntu/workspace/app/models/current_worker.rb": [
+      "/Users/zhangsikai/GitHub/Project1/app/controllers/index_controller.rb": [
         0,
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/app/models/minor_application.rb": [
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/app/models/student_application.rb": [
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/app/models/accommodation.rb": [
         0,
         0,
         0
       ],
-      "/home/ubuntu/workspace/app/models/related_councilmember.rb": [
+      "/Users/zhangsikai/GitHub/Project1/app/models/accommodation.rb": [
         0,
         0,
         0
       ],
-      "/home/ubuntu/workspace/app/models/former_criminal.rb": [
+      "/Users/zhangsikai/GitHub/Project1/app/models/application_form.rb": [
+        0,
+        0
+      ],
+      "/Users/zhangsikai/GitHub/Project1/app/models/criminal_application.rb": [
+        0,
+        0
+      ],
+      "/Users/zhangsikai/GitHub/Project1/app/models/current_worker.rb": [
         0,
         0,
         0
       ],
-      "/home/ubuntu/workspace/app/models/application_form.rb": [
+      "/Users/zhangsikai/GitHub/Project1/app/models/former_criminal.rb": [
+        0,
         0,
         0
       ],
-      "/home/ubuntu/workspace/app/models/criminal_application.rb": [
+      "/Users/zhangsikai/GitHub/Project1/app/models/minor_application.rb": [
         0,
         0
       ],
-      "/home/ubuntu/workspace/app/models/user_formerworker.rb": [
+      "/Users/zhangsikai/GitHub/Project1/app/models/related_councilmember.rb": [
+        0,
+        0,
+        0
+      ],
+      "/Users/zhangsikai/GitHub/Project1/app/models/student_application.rb": [
+        0,
+        0
+      ],
+      "/Users/zhangsikai/GitHub/Project1/app/models/user_formerworker.rb": [
         0,
         0,
         0
       ]
     },
-    "timestamp": 1460087090
+    "timestamp": 1460404454
   }
 }
