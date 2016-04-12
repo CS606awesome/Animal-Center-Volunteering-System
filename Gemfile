@@ -41,8 +41,7 @@ group :development, :test do
     gem 'cucumber-rails-training-wheels'
     gem 'database_cleaner'
     gem 'rspec-rails'
-    gem 'simplecov'
-    
+    gem 'simplecov'    
     gem 'capybara', '2.4.4'
     gem 'launchy'
   # Access an IRB console on exception pages or by using <%= console %> in views
