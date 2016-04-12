@@ -1,5 +1,5 @@
 class AdminsController < ApplicationController
-  
+
   def index
    redirect_to action: 'new'  
   end
@@ -30,50 +30,33 @@ class AdminsController < ApplicationController
     lastname = params[:lastname].to_s
     email = params[:email]
     
-    
-    if (firstname != '') && (lastname != '') && (email != '')
-      @accounts_find_firstname = Account.where('lower(firstname) = ?', firstname.downcase)
-      @accounts_find_lastname = @accounts_find_firstname.where('lower(lastname) = ?', lastname.downcase)
-      @accounts_find = @accounts_find_lastname.where("lower(email) LIKE lower(?)", "#{email}%")
-    elsif (firstname != '') && (lastname != '') && (email == '')
-      @accounts_find_firstname = Account.where('lower(firstname) = ?', firstname.downcase)
-      @accounts_find = @accounts_find_firstname.where('lower(lastname) = ?', lastname.downcase)
-    elsif (lastname != '') && (email != '') && (firstname == '')
-      @accounts_find_lastname = Account.where('lower(lastname) = ?', lastname.downcase)
-      @accounts_find = @accounts_find_lastname.where("lower(email) LIKE lower(?)", "#{email}%")
-    elsif (firstname != '') && (email != '') && (lastname == '')
-      @accounts_find_firstname = Account.where('lower(firstname) = ?', firstname.downcase)
-      @accounts_find = @accounts_find_firstname.where("lower(email) LIKE lower(?)", "#{email}%")
-    elsif (firstname != '') && (lastname == '') && (email == '')
-      @accounts_find = Account.where('lower(firstname) = ?', firstname.downcase)
-    elsif (lastname != '') && (firstname == '') && (email == '')
-      @accounts_find = Account.where('lower(lastname) = ?', lastname.downcase)
-    elsif (email != '') && (firstname == '') && (lastname == '')
-      @accounts_find = Account.where("lower(email) LIKE lower(?)", "#{email}%")
-    else @accounts_find = Account.all
-    end
-    
-    if (agemin > 0) && ((firstname != '') || (lastname != '') || (email != ''))
-      @accounts = people_older_than(@accounts_find,agemin)
-    elsif (agemin > 0) && (firstname == '') && (lastname == '') && (email == '')
-      @accounts = people_older_than(@accounts,agemin)
-    elsif agemin <= 0
-      @accounts = @accounts_find
-    end
-
-    if (agemax > 0) && ((firstname != '') || (lastname != '') || (email != ''))
-      @accounts = people_younger_than(@accounts_find,agemax)
-    elsif (agemax > 0) && (firstname == '') && (lastname == '') && (email == '')
+    if agemax > 0
       @accounts = people_younger_than(@accounts,agemax)
-    elsif agemax <= 0
-      @accounts = @accounts_find
+    end
+    
+    if agemin > 0
+      @accounts = people_older_than(@accounts,agemin)
+    end
+    
+    if firstname != ''
+      @accounts = firstname_filter(@accounts,firstname)
+    end
+    
+    if lastname != ''
+      @accounts = lastname_filter(@accounts,lastname)
+    end
+    
+    if email != '' 
+      @accounts = email_filter(@accounts,email)
     end
   end
-
+    
   def admin_params
    params.require(:admin).permit(:email,:password, :password_confirmation,:key)
   end
-
+  
+ 
+      
   #compare the age
   def people_older_than(accounts, n) 
     res = []
@@ -95,6 +78,17 @@ class AdminsController < ApplicationController
     res
   end
   
-
-
+  def firstname_filter(accounts,firstname)
+    @accounts = Account.where('lower(firstname) = ?', firstname.downcase)
+  end
+  
+  def lastname_filter(accounts,lastname)
+    @accounts = Account.where('lower(lastname) = ?', lastname.downcase)
+  end
+  
+  def email_filter(accounts,email)
+    @accounts = Account.where("lower(email) LIKE lower(?)", "#{email}%")
+  end
+  
 end
+

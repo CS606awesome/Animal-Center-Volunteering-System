@@ -3452,3 +3452,112 @@ Processing by AdminsController#show as HTML
   Rendered admins/show.html.haml within layouts/application (1.9ms)
 Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.5ms)
   [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2016-04-11 21:07:30 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (25.6ms)
+  Rendered accounts/new.html.haml within layouts/application (64.9ms)
+Completed 200 OK in 490ms (Views: 404.1ms | ActiveRecord: 0.9ms)
+Started POST "/accounts" for 127.0.0.1 at 2016-04-11 21:07:31 +0000
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "gender"=>"", "DOB"=>"", "email"=>"sabrina@gmail.com", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "current_address"=>""}, "commit"=>"Join us now!"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered sessions/_signin.html.haml (1.6ms)
+  Rendered accounts/new.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 22ms (Views: 6.5ms | ActiveRecord: 0.4ms)
+Started POST "/accounts" for 127.0.0.1 at 2016-04-11 21:07:31 +0000
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "gender"=>"", "DOB"=>"", "email"=>"sabrina@gmail.com", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "current_address"=>""}, "commit"=>"Join us now!"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "accounts" ("email", "password_digest", "firstname", "lastname", "middlename", "maidenname", "gender", "current_address", "homephone", "cellphone") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "sabrina@gmail.com"], ["password_digest", "$2a$04$1EEKtbrisI3EgvueTeXkD./MYnxOn4ASJ1u2IiedQPP3hsuMaotNu"], ["firstname", ""], ["lastname", ""], ["middlename", ""], ["maidenname", ""], ["gender", ""], ["current_address", ""], ["homephone", ""], ["cellphone", ""]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/accounts/1
+Completed 302 Found in 21ms (ActiveRecord: 1.3ms)
+Started GET "/accounts/1" for 127.0.0.1 at 2016-04-11 21:07:31 +0000
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered sessions/_signin.html.haml (1.6ms)
+  Rendered accounts/show.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2016-04-11 21:07:31 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.5ms)
+  Rendered sessions/new.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2016-04-11 21:07:31 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"sabrina@gmail.com", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (0.5ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "sabrina@gmail.com"]]
+  Rendered sessions/_signin.html.haml (1.3ms)
+  Rendered accounts/show.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 4.9ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/adminsignup" for 127.0.0.1 at 2016-04-11 21:07:31 +0000
+Processing by AdminsController#new as HTML
+  Rendered admin_sessions/_signin.html.haml (4.8ms)
+  Rendered admins/new.html.haml within layouts/application (20.4ms)
+Completed 200 OK in 94ms (Views: 29.0ms | ActiveRecord: 0.5ms)
+Started POST "/admins" for 127.0.0.1 at 2016-04-11 21:07:31 +0000
+Processing by AdminsController#create as HTML
+  Parameters: {"utf8"=>"✓", "admin"=>{"email"=>"wyf1111@gmail.com", "password"=>"[FILTERED]", "key"=>"123456"}, "commit"=>"Join us now!"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "wyf1111@gmail.com"], ["password_digest", "$2a$04$1uQ67mPHHsjE.lo0iLpWfedy78XEYOfHtBD9Phtm78n5yWIDDZCem"], ["key", "123456"], ["created_at", "2016-04-11 21:07:31.806038"], ["updated_at", "2016-04-11 21:07:31.806038"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/adminlogin?id=1
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms)
+Started GET "/adminlogin?id=1" for 127.0.0.1 at 2016-04-11 21:07:31 +0000
+Processing by AdminSessionsController#new as HTML
+  Parameters: {"id"=>"1"}
+  Rendered admin_sessions/_signin.html.haml (2.2ms)
+  Rendered admin_sessions/new.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+Started GET "/adminsignup" for 127.0.0.1 at 2016-04-11 21:07:31 +0000
+Processing by AdminsController#new as HTML
+  Rendered admin_sessions/_signin.html.haml (1.6ms)
+  Rendered admins/new.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+Started POST "/adminlogin" for 127.0.0.1 at 2016-04-11 21:07:31 +0000
+Processing by AdminSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"wyf1111@gmail.com", "password"=>"[FILTERED]", "key"=>"12345", "keep_me_logged_in"=>"0"}, "commit"=>"I am Alma Garcia!"}
+  [1m[35mAdmin Load (0.4ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT 1  [["email", "wyf1111@gmail.com"]]
+  Rendered admin_sessions/_signin.html.haml (1.6ms)
+  Rendered admin_sessions/new.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+Started GET "/adminsignup" for 127.0.0.1 at 2016-04-11 21:07:31 +0000
+Processing by AdminsController#new as HTML
+  Rendered admin_sessions/_signin.html.haml (1.5ms)
+  Rendered admins/new.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+Started POST "/adminlogin" for 127.0.0.1 at 2016-04-11 21:07:31 +0000
+Processing by AdminSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"wyf1111@gmail.com", "password"=>"[FILTERED]", "key"=>"123456", "keep_me_logged_in"=>"0"}, "commit"=>"I am Alma Garcia!"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT 1[0m  [["email", "wyf1111@gmail.com"]]
+Redirected to http://www.example.com/admins/1
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+Started GET "/admins/1" for 127.0.0.1 at 2016-04-11 21:07:31 +0000
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAccount Load (0.5ms)[0m  SELECT "accounts".* FROM "accounts" WHERE (lower(email) LIKE lower('%'))
+  Rendered admins/show.html.haml within layouts/application (11.3ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.5ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT 1[0m  [["email", "wyf1111@gmail.com"]]
+Started GET "/admins/1" for 127.0.0.1 at 2016-04-11 21:07:31 +0000
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts" WHERE (lower(email) LIKE lower('%'))
+  Rendered admins/show.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+Started GET "/admins/1?utf8=%E2%9C%93&agemin=23&agemax=26&firstname=sasa&lastname=wang&email=sa123&commit=select" for 127.0.0.1 at 2016-04-11 21:07:31 +0000
+Processing by AdminsController#show as HTML
+  Parameters: {"utf8"=>"✓", "agemin"=>"23", "agemax"=>"26", "firstname"=>"sasa", "lastname"=>"wang", "email"=>"sa123", "commit"=>"select", "id"=>"1"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (lower(firstname) = 'sasa') AND (lower(lastname) = 'wang') AND (lower(email) LIKE lower('sa123%'))[0m
+  Rendered admins/show.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
