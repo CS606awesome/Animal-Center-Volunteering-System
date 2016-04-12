@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160412014631) do
+ActiveRecord::Schema.define(version: 20160412170304) do
 
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20160412014631) do
     t.string  "firstname"
     t.string  "lastname"
     t.string  "password_digest"
-    t.string  "current_address"
     t.string  "homephone"
     t.string  "cellphone"
     t.string  "emergency_contact_name"
@@ -45,6 +44,11 @@ ActiveRecord::Schema.define(version: 20160412014631) do
     t.string  "middlename"
     t.string  "maidenname"
     t.string  "gender"
+    t.string  "country"
+    t.string  "state"
+    t.string  "city"
+    t.string  "street"
+    t.string  "zip"
   end
 
   create_table "admins", force: :cascade do |t|

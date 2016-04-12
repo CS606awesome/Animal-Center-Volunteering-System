@@ -29,6 +29,11 @@
    =f.text_field :homephone, {:placeholder => 'Homephone'}
    =f.text_field :cellphone, {:placeholder => 'Cellphone'}
   %div{:style => "margin-bottom:10px"}
-   =f.text_field :current_address, {:placeholder => 'Address'}
+   =f.text_field :country, {:placeholder => 'Country'}
+   =f.text_field :state, {:placeholder => 'State'}
+   =f.text_field :city, {:placeholder => 'City'}
+   =f.text_field :street, {:placeholder => 'Street'}
+  %div{:style => "margin-bottom:10px"}
+   =f.text_field :zip, {:placeholder => 'Zip'}
   %p
    =f.submit 'Join us now!'
