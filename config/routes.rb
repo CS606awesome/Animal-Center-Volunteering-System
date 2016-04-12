@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   #Show user's workspace
   get 'profiles' => 'accounts#profiles'
   get 'profiles/:id' => 'accounts#profiles'
+  
+  get 'application' => 'accounts#application'
 
   #administrator login
   get 'adminlogin' => 'admin_sessions#new'

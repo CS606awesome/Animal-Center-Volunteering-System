@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160405142845) do
+ActiveRecord::Schema.define(version: 20160412014631) do
 
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name"
@@ -64,15 +64,21 @@ ActiveRecord::Schema.define(version: 20160405142845) do
     t.datetime "available_time_end"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.integer  "account_id"
   end
+
+  add_index "application_forms", ["account_id"], name: "index_application_forms_on_account_id"
 
   create_table "criminal_applications", force: :cascade do |t|
     t.integer  "mandatory_hours"
     t.string   "mandatory_area"
-    t.datetime "deadlin"
+    t.datetime "deadline"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "account_id"
   end
+
+  add_index "criminal_applications", ["account_id"], name: "index_criminal_applications_on_account_id"
 
   create_table "current_workers", force: :cascade do |t|
     t.string   "name"
@@ -99,7 +105,10 @@ ActiveRecord::Schema.define(version: 20160405142845) do
     t.binary   "parent_signature"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "account_id"
   end
+
+  add_index "minor_applications", ["account_id"], name: "index_minor_applications_on_account_id"
 
   create_table "related_councilmembers", force: :cascade do |t|
     t.string   "name"
@@ -118,7 +127,10 @@ ActiveRecord::Schema.define(version: 20160405142845) do
     t.datetime "deadline"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "account_id"
   end
+
+  add_index "student_applications", ["account_id"], name: "index_student_applications_on_account_id"
 
   create_table "user_formerworkers", force: :cascade do |t|
     t.datetime "date_of_employment"
