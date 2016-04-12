@@ -22,13 +22,16 @@ module NavigationHelpers
        input_your_email_path 
     when /^log in page$/ 
        login_path
+    when /^check_your_email page$/
+       check_your_email_path
   
-   #when /^the reset_your_password page for "(.*)"/
+   
    when /^reset_your_password page$/ 
       # id=Account.find_by($1)
       #"/reset_your_password?id=#{id}" 
-      id=Account.find_by_email(email_name).id.to_s
-     reset_your_password_path(id)
+      #@account = Account.find_by_email('670348828@qq.com')
+      #id = @account.id
+      reset_your_password_path(Account.find_by_email(email_name))
   
   
     else
