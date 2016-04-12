@@ -7,4 +7,12 @@ module FormHelper
     account.accommodation ||= Accommodation.new
     account
   end
+  
+  def setup_app_account(account)
+    account.application_form ||= ApplicationForm.new
+    account.criminal_application ||= CriminalApplication.new
+    account.student_application ||= StudentApplication.new
+    account.minor_application ||= MinorApplication.new
+    account
+  end
 end
