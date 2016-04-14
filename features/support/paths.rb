@@ -3,6 +3,7 @@
 # This file is used by web_steps.rb, which you should also delete
 #
 # You have been warned
+require "rack_session_access/capybara"
 module NavigationHelpers
   # Maps a name to a path. Used by the
   #
@@ -27,10 +28,10 @@ module NavigationHelpers
   
    
    when /^reset_your_password page$/ 
-      #@account = Account.find_by_email('670348828@qq.com')
-      #id = @account.id
-      reset_your_password_path(Account.find_by_email(email_name))
-  
+        id = Account.find_by_email(email_name).id
+        page.set_rack_session(id: id)
+        reset_your_password_path
+    
   
     else
       begin

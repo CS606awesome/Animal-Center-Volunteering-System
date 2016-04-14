@@ -20,11 +20,11 @@ Scenario: forget your password
 
 Scenario: reset your password with email
   Given I am on the reset_your_password page for "670348828@qq.com" 
-  And I fill in "Create new password" with "111111"
-  And I fill in "Re-enter new password" with "111111"
+  And I type "654321" in "Create new password"
+  And I type "654321" in "Re-enter new password"
   When I press "Continue"
   Then I should be on the login page 
-  And I should see "You have reset your password successfully."
+  
 
  
 Scenario: reset your password with a wrong email (sad path)
