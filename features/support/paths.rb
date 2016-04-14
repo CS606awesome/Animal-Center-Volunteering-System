@@ -16,8 +16,12 @@ module NavigationHelpers
       page_name = $1.to_s
     end
     case page_name
-
+    
+    when /^sign up page$/ then signup_path
+    when /^log in page$/ then login_path #signin_path
     when /^profiles page$/ then
+      #@account = Account.find_by_email(email_name)
+      #log_in(@account)
       profiles_path(:id => Account.find_by_email(email_name).id)
 
 

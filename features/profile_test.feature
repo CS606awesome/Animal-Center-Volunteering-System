@@ -10,7 +10,15 @@ Background: accounts in database
 
     
   Scenario: Fill new profile
-    Given I am on the profiles page for "zy@zy.com"
+    Given I am on the sign up page for "sign up"
+    When I fill in "E-mail" with "zy@zy.com" 
+    And I fill in "Password" with "1234567" 
+    When I press "Join us now!" 
+    Then I should on the log in page for "sign up"
+    When I fill in "E-mail" with "zy@zy.com"
+    And I fill in "Password" with "1234567"
+    When I press "I am already a volunteer!"
+    Then I should on the profiles page for "zy@zy.com"
     When  I fill in "Emergency Contact Name" with "zhou"
     And   I press "Save Changes"
     Then  I should see "Changes Saved!"

@@ -5,6 +5,11 @@ Given /the following accounts exist/ do |accounts_table|
   end
 end
 
+#Given /I am logged in/ do
+#  session[:id] = 1
+#end
+
+
 #Then /^(?:|I )should see "([^"]*)"$/ do |text|
 #    page.should have_content(text)
 #end
