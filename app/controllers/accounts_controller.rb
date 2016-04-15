@@ -135,14 +135,19 @@ class AccountsController < ApplicationController
    
    def save_password_change
       @account = Account.find(session[:id])
-       if @account.update_attributes(account_password_params)  
+      if (params [:account][:password] == params[:account][:password_confirmation])
+        if @account.update_attributes(account_password_params)  
             flash[:success] = "You have reset your password successfully."
             redirect_to login_path
-       else
+        else
          flash[:failed] = 'Two passwords do not match or passwords are not satisfied the requirement.'
          flash[:requirement] = 'Your password must be 6-20 characters.'
-        render 'reset_your_password'
-       end
+         render 'reset_your_password'
+        end
+      else
+          flash[:alert]="the passwords you entered must be the same!"
+          redirect_to 'reset_your_password'
+      end
   end
 private
   def account_password_params

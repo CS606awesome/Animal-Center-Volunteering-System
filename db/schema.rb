@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160405142845) do
+ActiveRecord::Schema.define(version: 20160415003655) do
 
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20160405142845) do
     t.string  "firstname"
     t.string  "lastname"
     t.string  "password_digest"
-    t.string  "current_address"
     t.string  "homephone"
     t.string  "cellphone"
     t.string  "emergency_contact_name"
@@ -45,6 +44,12 @@ ActiveRecord::Schema.define(version: 20160405142845) do
     t.string  "middlename"
     t.string  "maidenname"
     t.string  "gender"
+    t.string  "country"
+    t.string  "state"
+    t.string  "city"
+    t.string  "street"
+    t.string  "zip"
+    t.boolean "status"
   end
 
   create_table "admins", force: :cascade do |t|
@@ -64,15 +69,21 @@ ActiveRecord::Schema.define(version: 20160405142845) do
     t.datetime "available_time_end"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.integer  "account_id"
   end
+
+  add_index "application_forms", ["account_id"], name: "index_application_forms_on_account_id"
 
   create_table "criminal_applications", force: :cascade do |t|
     t.integer  "mandatory_hours"
     t.string   "mandatory_area"
-    t.datetime "deadlin"
+    t.datetime "deadline"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "account_id"
   end
+
+  add_index "criminal_applications", ["account_id"], name: "index_criminal_applications_on_account_id"
 
   create_table "current_workers", force: :cascade do |t|
     t.string   "name"
@@ -90,6 +101,7 @@ ActiveRecord::Schema.define(version: 20160405142845) do
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.integer  "account_id"
+    t.string   "former_crime"
   end
 
   add_index "former_criminals", ["account_id"], name: "index_former_criminals_on_account_id"
@@ -98,7 +110,10 @@ ActiveRecord::Schema.define(version: 20160405142845) do
     t.binary   "parent_signature"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "account_id"
   end
+
+  add_index "minor_applications", ["account_id"], name: "index_minor_applications_on_account_id"
 
   create_table "related_councilmembers", force: :cascade do |t|
     t.string   "name"
@@ -117,7 +132,10 @@ ActiveRecord::Schema.define(version: 20160405142845) do
     t.datetime "deadline"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "account_id"
   end
+
+  add_index "student_applications", ["account_id"], name: "index_student_applications_on_account_id"
 
   create_table "user_formerworkers", force: :cascade do |t|
     t.datetime "date_of_employment"
