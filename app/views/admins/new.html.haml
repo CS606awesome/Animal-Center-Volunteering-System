@@ -5,10 +5,10 @@
  %flash
   =flash[:danger] 
  =form_for @admin do |f|
-  =f.text_field :email, {:placeholder => 'E-mail'}
+  =f.text_field :email, {:placeholder => 'email'}
   =f.text_field :password, {:type=>'password',:placeholder => 'password'}
   %div{:style => "margin-bottom:10px"}
-  =f.text_field :key, {:placeholder => 'TheMagicKey'}
+  =f.text_field :key, {:placeholder => 'themagickey'}
   %div{:style => "margin-bottom:10px"}
   %p
   =f.submit 'Join us now!'

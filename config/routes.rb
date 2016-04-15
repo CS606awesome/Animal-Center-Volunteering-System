@@ -30,6 +30,9 @@ Rails.application.routes.draw do
   get 'application' => 'accounts#application'
 
   #administrator login
+  get 'manage' => 'admins#show'
+  get 'adminsignup' => 'admins#new'
+  post 'adminsignup' => 'admins#create'
   get 'adminlogin' => 'admin_sessions#new'
   post 'adminlogin' => 'admin_sessions#create'
   resources :admins
