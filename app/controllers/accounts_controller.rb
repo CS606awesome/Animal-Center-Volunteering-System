@@ -37,6 +37,14 @@ class AccountsController < ApplicationController
       end
   end
   
+  def application
+      if logged_in
+      @account = Account.find(params[:id])  
+      #@accounts = Account.all
+      else
+      redirect_to login_path
+      end
+  end
   
   def update
 
@@ -98,7 +106,8 @@ class AccountsController < ApplicationController
   end  
   
   def account_params
-   params.require(:account).permit(:email,:password, :password_confirmation,:firstname,:lastname, :middlename,:current_address,:homephone,:cellphone,:DOB)
+
+   params.require(:account).permit(:email,:password, :password_confirmation,:firstname,:lastname, :middlename,:country,:state,:city,:street,:zip,:homephone,:cellphone,:DOB)
   end
   
   def account_update_params
@@ -109,7 +118,11 @@ class AccountsController < ApplicationController
                                   user_formerworker_attributes: [:id, :date_of_employment, :reason_for_leaving, :position_or_department],
                                   former_criminal_attributes: [:id, :date_of_conviction, :nature_of_offense, :name_of_court, :disposition_of_case, :former_crime],
                                   related_councilmember_attributes: [:id, :name, :relationship],
-                                  accommodation_attributes: [:id, :accommodation_name])
+                                  accommodation_attributes: [:id, :accommodation_name],
+                                  application_form_attributes: [:id, :signature, :interested_areas, :volunteering_status, :application_date, :available_time_begin, :available_time_end],
+                                  criminal_application_attributes: [:id, :mandatory_hours, :mandatory_area, :deadline],
+                                  student_application_attributes: [:id, :required_area, :required_time, :deadline],
+                                  minor_application_attributes: [:id, :parent_signature])
                                 
   end
 

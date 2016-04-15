@@ -29,7 +29,7 @@
    %th Email
    %th Cellphone
    %th Homephone
-   %th Address
+   %th Mailing Address
  %tbody
   - @accounts.each do |account|
    %tr
@@ -42,4 +42,10 @@
     %td= account.email
     %td= account.cellphone
     %td= account.homephone
-    %td= account.current_address
+    %td= account.country
+    %td= account.state
+    %td= account.city
+    %td= account.street
+    %td= account.zip
+
+
