@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   get 'application' => 'accounts#application'
 
   #administrator login
+  get 'managemore' => 'admins#moreshow'
   get 'manage' => 'admins#show'
   get 'adminsignup' => 'admins#new'
   post 'adminsignup' => 'admins#create'

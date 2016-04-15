@@ -25,14 +25,13 @@ class AdminsController < ApplicationController
   def show
     if !admin_logged_in
       redirect_to adminlogin_path
-    else
-    @accounts = Account.all
+    else  
+    @accounts = Account.where('status is NULL')
     agemin = params[:agemin].to_i
     agemax = params[:agemax].to_i
     firstname = params[:firstname].to_s
     lastname = params[:lastname].to_s
     email = params[:email]
-    
     if agemax > 0
       @accounts = people_younger_than(@accounts,agemax)
     end
@@ -41,6 +40,27 @@ class AdminsController < ApplicationController
       @accounts = people_older_than(@accounts,agemin)
     end
     
+    if firstname != ''
+      @accounts = firstname_filter(@accounts,firstname)
+    end
+    
+    if lastname != ''
+      @accounts = lastname_filter(@accounts,lastname)
+    end
+    
+    if email != '' 
+      @accounts = email_filter(@accounts,email)
+    end
+   end
+  end
+  def moreshow
+   if !admin_logged_in
+      redirect_to adminlogin_path
+   else  
+    @accounts = Account.where("is_volunteering='t'")
+    firstname = params[:firstname].to_s
+    lastname = params[:lastname].to_s
+    email = params[:email] 
     if firstname != ''
       @accounts = firstname_filter(@accounts,firstname)
     end
@@ -83,15 +103,15 @@ class AdminsController < ApplicationController
   end
   
   def firstname_filter(accounts,firstname)
-    @accounts = Account.where('lower(firstname) = ?', firstname.downcase)
+    @accounts = @accounts.where('lower(firstname) = ?', firstname.downcase)
   end
   
   def lastname_filter(accounts,lastname)
-    @accounts = Account.where('lower(lastname) = ?', lastname.downcase)
+    @accounts = @accounts.where('lower(lastname) = ?', lastname.downcase)
   end
   
   def email_filter(accounts,email)
-    @accounts = Account.where("lower(email) LIKE lower(?)", "#{email}%")
+    @accounts = @accounts.where("lower(email) LIKE lower(?)", "#{email}%")
   end
   
 end
