@@ -1,6 +1,9 @@
 %h1 Online volunteering Management System
 %br
-%h3 Wellcome Administrator !
+%h3 Wellcome Administrator !  
+%flash
+ =flash[:danger]
+ =flash[:notice]
 %fieldset
  =form_for admin_path, :method => :get do 
   Age	
@@ -30,12 +33,13 @@
    %th Cellphone
    %th Homephone
    %th Mailing Address
+   %th Your decision
  %tbody
   - @accounts.each do |account|
    %tr
     %td= account.firstname
     %td= account.middlename
-    %td= account.maidenname
+    %td= account.maidenname 
     %td= account.lastname
     %td= account.gender
     %td= account.DOB 
@@ -47,5 +51,7 @@
     %td= account.city
     %td= account.street
     %td= account.zip
-
-=link_to 'Manage the qualified volunteer',managemore_path
+    %td= link_to "Approve", :controller => "admins", :action =>"approve", :id => account.id
+    %td= link_to 'reject',  :controller => "admins", :action =>"reject", :id => account.id
+ 
+= link_to 'Manage the qualified volunteer',managemore_path

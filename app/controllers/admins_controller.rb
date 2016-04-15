@@ -23,15 +23,19 @@ class AdminsController < ApplicationController
   end
   
   def show
+    #verify user logged in
     if !admin_logged_in
       redirect_to adminlogin_path
     else  
-    @accounts = Account.where('status is NULL')
+    ##find accounts who has already submitted the applications  
+    @accounts = Account.where("is_former_worker is not NULL and status is NULL")
+   
     agemin = params[:agemin].to_i
     agemax = params[:agemax].to_i
     firstname = params[:firstname].to_s
     lastname = params[:lastname].to_s
     email = params[:email]
+    
     if agemax > 0
       @accounts = people_younger_than(@accounts,agemax)
     end
@@ -74,11 +78,29 @@ class AdminsController < ApplicationController
     end
    end
   end
-    
-  def admin_params
-   params.require(:admin).permit(:email,:password, :password_confirmation,:key)
-  end
   
+
+
+   def approve
+    @account = Account.find(params[:id])
+    if @account.update(:status => 't')
+      flash[:notice] = 'Approvement is successful!'
+      redirect_to action: 'show'
+    else
+      flash[:danger] = 'Approvement is failed!'
+      redirect_to action: 'show'
+    end
+   end
+   def reject
+     @account = Account.find(params[:id])
+    if @account.update(:status => 'f')
+      flash[:notice] = 'Rejection is successful!'
+      redirect_to action: 'show'
+    else
+      flash[:danger] = 'Rejection is failed!'
+      redirect_to action: 'show'
+    end
+   end
  
       
   #compare the age
@@ -114,5 +136,11 @@ class AdminsController < ApplicationController
     @accounts = @accounts.where("lower(email) LIKE lower(?)", "#{email}%")
   end
   
+
+
+
+  def admin_params
+   params.require(:admin).permit(:email,:password, :password_confirmation,:key)
+  end
 end
 
