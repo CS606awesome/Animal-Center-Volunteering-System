@@ -6,7 +6,6 @@ class CreateUserFormalworkers < ActiveRecord::Migration
       t.string :position_or_department
       t.string :interested_area
       t.timestamps null: false
-      t.references :accounts
     end
   end
 end

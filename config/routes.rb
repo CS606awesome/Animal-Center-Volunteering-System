@@ -12,14 +12,22 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
-  post 'accounts/:account_id/articles/:article_id' => 'comments#create'
+
+  get    'input_your_email' => 'accounts#input_your_email'
+  post    'input_your_email' => 'accounts#input_your_email'
+
+  get    'reset_your_password'  => 'accounts#reset_your_password'
+  post    'reset_your_password'  => 'accounts#save_password_change'
+
   #forget password
   get    'forget_your_password' => 'accounts#forgetyourpassword'
   get    'receive_your_email' => 'accounts#checkyouremail'
-   
+
   #Show user's workspace
   get 'profiles' => 'accounts#profiles'
   get 'profiles/:id' => 'accounts#profiles'
+  
+  get 'application' => 'accounts#application'
 
   #administrator login
   get 'manage' => 'admins#show'
@@ -35,7 +43,8 @@ Rails.application.routes.draw do
       resources :current_workers
       resources :accomodations
       resources :former_criminals
-      resources :student_applications
+      resources :student_application
+      resources :user_formerworkers
   end
   
   get '/save_change' => 'accounts#save_change'

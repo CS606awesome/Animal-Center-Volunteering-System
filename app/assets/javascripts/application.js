@@ -14,3 +14,43 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+    function FWclickYes()
+    {
+        $('#FWcheckbox').show();
+    }
+    function FWclickNo()
+    {
+        $('#FWcheckbox').hide();
+    } 
+    function RCclickYes()
+    {
+        $('#RCcheckbox').show();
+    }
+    function RCclickNo()
+    {
+        $('#RCcheckbox').hide();
+    }
+     function CWclickYes()
+    {
+        $('#CWcheckbox').show();
+    }
+    function CWclickNo()
+    {
+        $('#CWcheckbox').hide();
+    }
+     function FCclickYes()
+    {
+        $('#FCcheckbox').show();
+    }
+    function FCclickNo()
+    {
+        $('#FCcheckbox').hide();
+    }
+    function NAclickYes()
+    {
+        $('#NAcheckbox').show();
+    }
+    function NAclickNo()
+    {
+        $('#NAcheckbox').hide();
+    }

@@ -2,24 +2,38 @@
  Animal Center 
 =render 'sessions/signin'
 %fieldset
+ -if @account.errors.any?
+  %div{:id=>"error_explanations"}
+  =pluralize(@account.errors.count, "error") #count the amount of errors(error)
+  has been found!
+  %ul
+   -@account.errors.full_messages.each do |msg|
+    %li
+     =msg
  %flash
   =flash[:danger] 
  =form_for @account do |f|
-  =f.text_field :firstname, {:placeholder => 'Firstname'}
-  =f.text_field :middlename, {:placeholder => 'Middlename'}
-  =f.text_field :maidenname, {:placeholder => 'Maidenname'}
-  =f.text_field :lastname,  {:placeholder => 'Lastname'}
   %div{:style => "margin-bottom:10px"}
-  =f.text_field :gender, {:placeholder => 'Gender'}
+   =f.text_field :firstname, {:placeholder => 'Firstname'}
+   =f.text_field :middlename, {:placeholder => 'Middlename'}
   %div{:style => "margin-bottom:10px"}
-  =f.text_field :DOB, {:placeholder => 'Date of Birth'}
+   =f.text_field :maidenname, {:placeholder => 'Maidenname'}
+   =f.text_field :lastname,  {:placeholder => 'Lastname'}
   %div{:style => "margin-bottom:10px"}
-  =f.text_field :email, {:placeholder => 'E-mail'}
-  =f.text_field :password, {:type=>'password',:placeholder => 'password'}
+   =f.text_field :gender, {:placeholder => 'Gender'}
+   =f.text_field :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'}
   %div{:style => "margin-bottom:10px"}
-  =f.text_field :homephone, {:placeholder => 'Homephone'}
-  =f.text_field :cellphone, {:placeholder => 'Cellphone'}
+   =f.text_field :email, {:placeholder => 'E-mail'}
+   =f.text_field :password, {:type=>'password',:placeholder => 'password'}
   %div{:style => "margin-bottom:10px"}
-  =f.text_field :current_address, {:placeholder => 'Address'}
+   =f.text_field :homephone, {:placeholder => 'Homephone'}
+   =f.text_field :cellphone, {:placeholder => 'Cellphone'}
+  %div{:style => "margin-bottom:10px"}
+   =f.text_field :country, {:placeholder => 'Country'}
+   =f.text_field :state, {:placeholder => 'State'}
+   =f.text_field :city, {:placeholder => 'City'}
+   =f.text_field :street, {:placeholder => 'Street'}
+  %div{:style => "margin-bottom:10px"}
+   =f.text_field :zip, {:placeholder => 'Zip'}
   %p
-  =f.submit 'Join us now!'
+   =f.submit 'Join us now!'

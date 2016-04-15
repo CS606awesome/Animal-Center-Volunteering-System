@@ -1,8 +1,31 @@
-
+tmp/pids/server.pid
 *.cache
 
 <<<<<<< HEAD
-tmp/pids/server.pid
-=======
+
 *.cache
+<<<<<<< HEAD
+
+*.log
+
+*.cache
+=======
+=======
 >>>>>>> master
+
+*.cache
+
+*.cache
+
+*.cache
+
+*.log
+>>>>>>> deploy
+
+*.cache
+
+*.log
+
+*.cache
+
+*.cache

@@ -23,6 +23,9 @@ class AdminsController < ApplicationController
   end
   
   def show
+    if !admin_logged_in
+      redirect_to adminlogin_path
+    else
     @accounts = Account.all
     agemin = params[:agemin].to_i
     agemax = params[:agemax].to_i
@@ -49,6 +52,7 @@ class AdminsController < ApplicationController
     if email != '' 
       @accounts = email_filter(@accounts,email)
     end
+   end
   end
     
   def admin_params

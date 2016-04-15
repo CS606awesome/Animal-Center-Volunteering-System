@@ -1,8 +1,11 @@
 <h1> Profile </h1>
+<% if flash[:notice] %>
+    <div class="notice"><strong><%= flash[:notice] %></strong></div>
+<% end %>
 
 <div id='@account'  style = "margin-top:10px">
     <div class='left column' style = "margin-bottom:10px">
-        <img src="http://i2.hdslb.com/video/31/31fd26b6842ef1fe811c020324d80a1e.jpg" alt="HTML5 Icon" style="width:300px;height:222px;">   
+        <img src="http://www.ollarate.com/images/original/missing.jpg" alt="HTML5 Icon" style="width:320px;height:330px;">   
         <!-- option, need discussion -->
         <p>photo</p>
     </div>
@@ -29,12 +32,12 @@
       </p>
       <p>
           <strong>Home Address</strong>
-          <%= @account.current_address%>
+          <%= @account.street%>
+          <%= @account.city %>
       </p>
     </div>
 </div>
-
-  <%= form_for setup_account(@account) do |f| %>
+  <%= form_for @account do |f| %>
   <!-- **************************************************************************** -->
   <!-- add all form contents within this helper -->
   
@@ -45,13 +48,13 @@
   f.text_field :field_name
   radio dot has other f. method name
   -->
-    <p>
-        <b>1.Are you a former worker of the city of Bryan?</b><br />
-        <%= f.radio_button :is_former_worker, "1", :checked => @account.is_former_worker  %> Yes<br />
-        <%= f.radio_button :is_former_worker, "0", :checked => !@account.is_former_worker %> No<br />
-    </p>
-    
-    <%= f.fields_for  :user_formerworker do |uf| %>
+      <p>
+       <b id = "checkboxlink">1.Are you a former worker of the city of Bryan?</b><br />    
+        <%= f.radio_button :is_former_worker, "1", :checked => @account.is_former_worker, :onclick=>"FWclickYes()" %> Yes<br />
+        <%= f.radio_button :is_former_worker, "0", :checked => !@account.is_former_worker,:onclick=>"FWclickNo()"%> No<br />
+      </p> 
+      <div class="hidden" id="FWcheckbox"> 
+        <%= f.fields_for  :user_formerworker do |uf| %>
             <!-- input type="text" name="CurrentDep" -->
             <%=uf.label :date_of_employment, 'Date of Employment' %>
             <%= uf.text_field :date_of_employment, :value => @account.user_formerworker.date_of_employment %>
@@ -61,8 +64,8 @@
             <br />
             <%=uf.label :position_or_department, 'Position or Department' %>
             <%=uf.text_field :position_or_department, :value => @account.user_formerworker.position_or_department %>
-    <% end %>    
-
+        <% end %>    
+      </div>
     <!--Date of Employment:
         <input type="text" name="DOE"  >
         <!--%=f.label :date_of_employment, 'Date of Employment'%>  -->
@@ -76,11 +79,11 @@
         
     <p>
         <b>2.Are you a relative of any council members?</b><br />
-        <%= f.radio_button :related_to_councilmember, '1', :checked => @account.related_to_councilmember %> Yes<br />
-        <%= f.radio_button :related_to_councilmember, '0', :checked =>!@account.related_to_councilmember %> No<br />
+        <%= f.radio_button :related_to_councilmember, '1', :checked => @account.related_to_councilmember, :onclick=>"RCclickYes()" %> Yes<br />
+        <%= f.radio_button :related_to_councilmember, '0', :checked =>!@account.related_to_councilmember, :onclick=>"RCclickNo()" %> No<br />
     </p>
-    
-    <%= f.fields_for  :related_councilmember do |rf| %>
+    <div class="hidden" id="RCcheckbox">  
+     <%= f.fields_for  :related_councilmember do |rf| %>
             <!-- input type="text" name="CurrentDep" -->
             <%=rf.label :name, 'The council member\'s name' %>
             <%= rf.text_field :name, :value => @account.related_councilmember.name %>
@@ -88,8 +91,8 @@
             <%=rf.label :relationship, 'Relationship' %>
             <%=rf.text_field :relationship, :value => @account.related_councilmember.relationship %>
             <br />
-    <% end %>    
-    
+     <% end %>    
+    </div>
      <!--The council member's Name:
         <input type="text" name="CMname">
     <br>
@@ -98,10 +101,10 @@
     
     <p>
         <b>3.Are you a current worker of the city of Bryan?</b><br />
-        <%= f.radio_button :is_current_worker, '1', :checked =>@account.is_current_worker %> Yes<br />
-        <%= f.radio_button :is_current_worker, '0', :checked =>!@account.is_current_worker %> No<br />
+        <%= f.radio_button :is_current_worker, '1', :checked =>@account.is_current_worker, :onclick=>"CWclickYes()" %> Yes<br />
+        <%= f.radio_button :is_current_worker, '0', :checked =>!@account.is_current_worker, :onclick=>"CWclickNo()" %> No<br />
     </p>
-
+    <div class="hidden" id="CWcheckbox"> 
     <%= f.fields_for  :current_worker do |cf| %>
             <!-- input type="text" name="CurrentDep" -->
             <%=cf.label :department, 'Department'%>
@@ -111,13 +114,13 @@
             <%= cf.text_field :name, :value => @account.current_worker.name %>
             <br />
     <% end %>    
-    
+    </div>
     <p>
         <b>4.Do you come here to do community service because of criminal conviction?</b><br />
-        <%= f.radio_button :has_convictions, '1', :checked =>@account.has_convictions %> Yes<br />
-        <%= f.radio_button :has_convictions, '0', :checked =>!@account.has_convictions %> No<br />
+        <%= f.radio_button :has_convictions, '1', :checked =>@account.has_convictions, :onclick=>"FCclickYes()" %> Yes<br />
+        <%= f.radio_button :has_convictions, '0', :checked =>!@account.has_convictions, :onclick=>"FCclickNo()"  %> No<br />
     </p>  
-    
+    <div class="hidden" id="FCcheckbox"> 
     <%= f.fields_for  :former_criminal do |ff| %>
             <!-- input type="text" name="CurrentDep" -->
             <%=ff.label :date_of_conviction, 'Date of Conviction'%>
@@ -136,7 +139,7 @@
             <%=ff.text_field :former_crime, :value => @account.former_criminal.former_crime %>
             <br />
     <% end %>   
-    
+    </div>
     <!--Date of Conviction:
         <input type="text" name="DOCon">
     <br />
@@ -167,15 +170,16 @@
         
     <p>
         <b>6.Do you need any accommodations?</b><br />
-        <%= f.radio_button :need_accommodations, '1', :checked =>@account.need_accommodations %> Yes<br />
-        <%= f.radio_button :need_accommodations, '0', :checked =>!@account.need_accommodations %> No<br />
+        <%= f.radio_button :need_accommodations, '1', :checked =>@account.need_accommodations, :onclick=>"NAclickYes()" %> Yes<br />
+        <%= f.radio_button :need_accommodations, '0', :checked =>!@account.need_accommodations, :onclick=>"NAclickNo()" %> No<br />
     </p>
-  
-   <strong>Write the accomodation you need below</strong> <br>
-    <%= f.fields_for  :accomodation do |a| %>
-        <%=a.label :accommodation_name, 'Please Fill' %>
+    
+     <div class="hidden" id="NAcheckbox"> 
+    <%= f.fields_for  :accommodation do |a| %>
+        <%=a.label :accommodation_name, 'Write the accomodation you need below' %>
         <%=a.text_field :accommodation_name, :value => @account.accommodation.accommodation_name %>
     <% end %>
+  </div>
         
    <br /><br /> 
         
@@ -189,7 +193,7 @@
 <table>
     <tr>
         <tb>
-            <a href="http://www.tamu.edu"><Strong>Next Page</strong></a>
+            <%= link_to 'New Application', application_path(:id => @account.id) %>
         </tb>
     </tr>
    

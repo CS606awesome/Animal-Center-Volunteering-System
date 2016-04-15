@@ -11,41 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160403040230) do
+ActiveRecord::Schema.define(version: 20160415000710) do
 
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.integer  "account_id"
   end
 
+  add_index "accommodations", ["account_id"], name: "index_accommodations_on_account_id"
+
   create_table "accounts", force: :cascade do |t|
-    t.string   "email"
-    t.string   "firstname"
-    t.string   "lastname"
-    t.string   "password_digest"
-    t.string   "current_address"
-    t.string   "homephone"
-    t.string   "cellphone"
-    t.string   "emergency_contact_name"
-    t.string   "emergency_phone"
-    t.string   "emergency_phone_alternate"
-    t.date     "DOB"
-    t.boolean  "is_former_worker"
-    t.boolean  "has_convictions"
-    t.boolean  "need_accommodations"
-    t.boolean  "related_to_councilmember"
-    t.boolean  "is_current_worker"
-    t.binary   "picture"
-    t.binary   "driver_license"
-    t.integer  "SSN"
-    t.string   "middlename"
-    t.string   "reset_digest"
-    t.datetime "reset_sent_at"
-    t.string   "password_reset_token"
-    t.datetime "password_reset_sent_at"
-    t.string   "maidenname"
-    t.string   "gender"
+    t.string  "email"
+    t.string  "firstname"
+    t.string  "lastname"
+    t.string  "password_digest"
+    t.string  "homephone"
+    t.string  "cellphone"
+    t.string  "emergency_contact_name"
+    t.string  "emergency_phone"
+    t.string  "emergency_phone_alternate"
+    t.date    "DOB"
+    t.boolean "is_former_worker"
+    t.boolean "has_convictions"
+    t.boolean "need_accommodations"
+    t.boolean "related_to_councilmember"
+    t.boolean "is_current_worker"
+    t.binary  "picture"
+    t.binary  "driver_license"
+    t.integer "SSN"
+    t.string  "middlename"
+    t.string  "maidenname"
+    t.string  "gender"
+    t.string  "country"
+    t.string  "state"
+    t.string  "city"
+    t.string  "street"
+    t.string  "zip"
+    t.boolean "status"
   end
 
   create_table "admins", force: :cascade do |t|
@@ -65,21 +69,28 @@ ActiveRecord::Schema.define(version: 20160403040230) do
     t.datetime "available_time_end"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.integer  "account_id"
   end
+
+  add_index "application_forms", ["account_id"], name: "index_application_forms_on_account_id"
 
   create_table "criminal_applications", force: :cascade do |t|
     t.integer  "mandatory_hours"
     t.string   "mandatory_area"
-    t.datetime "deadlin"
+    t.datetime "deadline"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "account_id"
   end
+
+  add_index "criminal_applications", ["account_id"], name: "index_criminal_applications_on_account_id"
 
   create_table "current_workers", force: :cascade do |t|
     t.string   "name"
     t.string   "department"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "account_id"
   end
 
   create_table "former_criminals", force: :cascade do |t|
@@ -89,20 +100,30 @@ ActiveRecord::Schema.define(version: 20160403040230) do
     t.string   "disposition_of_case"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.integer  "account_id"
+    t.string   "former_crime"
   end
+
+  add_index "former_criminals", ["account_id"], name: "index_former_criminals_on_account_id"
 
   create_table "minor_applications", force: :cascade do |t|
     t.binary   "parent_signature"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "account_id"
   end
+
+  add_index "minor_applications", ["account_id"], name: "index_minor_applications_on_account_id"
 
   create_table "related_councilmembers", force: :cascade do |t|
     t.string   "name"
     t.string   "relationship"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "account_id"
   end
+
+  add_index "related_councilmembers", ["account_id"], name: "index_related_councilmembers_on_account_id"
 
   create_table "student_applications", force: :cascade do |t|
     t.string   "student_program"
@@ -111,7 +132,10 @@ ActiveRecord::Schema.define(version: 20160403040230) do
     t.datetime "deadline"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "account_id"
   end
+
+  add_index "student_applications", ["account_id"], name: "index_student_applications_on_account_id"
 
   create_table "user_formerworkers", force: :cascade do |t|
     t.datetime "date_of_employment"
@@ -120,6 +144,9 @@ ActiveRecord::Schema.define(version: 20160403040230) do
     t.string   "interested_area"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.integer  "account_id"
   end
+
+  add_index "user_formerworkers", ["account_id"], name: "index_user_formerworkers_on_account_id"
 
 end
