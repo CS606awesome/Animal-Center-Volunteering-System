@@ -106,6 +106,7 @@ class AccountsController < ApplicationController
   end  
   
   def account_params
+
    params.require(:account).permit(:email,:password, :password_confirmation,:firstname,:lastname, :middlename,:country,:state,:city,:street,:zip,:homephone,:cellphone,:DOB)
   end
   
