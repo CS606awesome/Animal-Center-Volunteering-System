@@ -127,7 +127,6 @@ class AccountsController < ApplicationController
         end
       end
   end
-    
   
   def reset_your_password
      @account = Account.find(session[:id])
@@ -141,8 +140,8 @@ class AccountsController < ApplicationController
             flash[:success] = "You have reset your password successfully."
             redirect_to login_path
          else
-           flash[:failed] = 'Two passwords do not match or passwords are not satisfied the requirement.'
-           flash[:requirement] = 'Your password must be 6-20 characters and cannot be blank.'
+           flash[:failed] = "passwords are not satisfied the requirement."
+           flash[:requirement] = "Your password must be 6-20 characters and cannot be blank."
            render 'reset_your_password'
          end
        else
