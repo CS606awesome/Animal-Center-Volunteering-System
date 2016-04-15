@@ -1,0 +1,42 @@
+%h1 Application Data Management System
+%br
+%h3 Wellcome Administrator !
+%fieldset
+ =form_for managemore_path, :method => :get do 
+  Firstname
+  =text_field_tag :firstname,nil,placeholder: 'first name'
+  %div{:style => "margin-bottom:10px"}
+  Lastname
+  =text_field_tag :lastname,nil,placeholder: 'last name'
+  %div{:style => "margin-bottom:10px"}
+  Email
+  =text_field_tag :email,nil,placeholder: 'email'
+  =submit_tag 'select'
+
+%table#accounts
+ %thead
+  %tr
+   %th Firstname
+   %th Lastname
+   %th DOB
+   %th Volunteering Status
+   %th Interested Area
+   %th Time Beginning
+   %th Time End
+   %th Applicaiton Date
+
+ %tbody
+  - @accounts.each do |account|
+   %tr
+    %td= account.firstname
+    %td= account.lastname
+    %td= account.DOB
+    %td= account.application_form.volunteering_status
+    %td= account.application_form.interested_areas
+    %td= account.application_form.available_time_begin
+    %td= account.application_form.available_time_end
+    %td= account.application_form.created_at
+
+
+=link_to 'Manage the application',admin_path(session[:id])
+
