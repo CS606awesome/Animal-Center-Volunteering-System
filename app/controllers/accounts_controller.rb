@@ -141,6 +141,12 @@ class AccountsController < ApplicationController
       end
   end
   
+  def resend_your_email
+     @account = Account.find(session[:id])
+     Mailer.welcome_email(@account).deliver_now
+     flash[:notice] = "email has been resent again, please check it!"
+  end
+ 
   def reset_your_password
      @account = Account.find(session[:id])
   end
@@ -153,13 +159,8 @@ class AccountsController < ApplicationController
             flash[:success] = "You have reset your password successfully."
             redirect_to login_path
          else
-<<<<<<< HEAD
            flash[:failed] = "passwords are not satisfied the requirement."
            flash[:requirement] = "Your password must be 6-20 characters and cannot be blank."
-=======
-           flash[:failed] = 'passwords are not satisfied the requirement.'
-           flash[:requirement] = 'Your password must be 6-20 characters and cannot be blank.'
->>>>>>> c2edd36f3fd4c9dc8cbddee7812b2bac8b69e754
            render 'reset_your_password'
          end
        else
