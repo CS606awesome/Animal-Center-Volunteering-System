@@ -13,7 +13,6 @@ module NavigationHelpers
   #
   
   def path_to(page_name)
-<<<<<<< HEAD
   if page_name =~ /the (.*) for "(.*)"/
       email_name = $2.to_s
       page_name  = $1.to_s
@@ -28,19 +27,10 @@ module NavigationHelpers
        check_your_email_path
   
    
-   when /^reset_your_password page$/ 
+    when /^reset_your_password page$/ 
         id = Account.find_by_email(email_name).id
         page.set_rack_session(id: id)
         reset_your_password_path
-    
-  
-=======
-    if page_name =~ /the (.*) for "(.*)"/
-      email_name = $2.to_s
-      page_name  = $1.to_s
-  
-    end
-    case page_name
 
     when /^sign up page$/ then signup_path
     when /^log in page$/ then login_path
@@ -51,8 +41,6 @@ module NavigationHelpers
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
-
->>>>>>> master
     else
       begin
         page_name =~ /^the (.*) page$/
