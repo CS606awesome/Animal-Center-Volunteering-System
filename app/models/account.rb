@@ -26,7 +26,7 @@ has_secure_password
 validates :email,:firstname,:lastname,:homephone,
   presence: true,
   :on => [ :create ]
-  validates :password,
+  validates :password, :password_confirmation,
   length: { in: 6..20,
              to_short: "your password should be at least %{count} characters",
              to_long: "your password should be at most %{count} characters" },

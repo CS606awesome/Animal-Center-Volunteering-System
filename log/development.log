@@ -15805,3 +15805,341 @@ Processing by AccountsController#save_password_change as HTML
   [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 2]]
   Rendered accounts/reset_your_password.html.haml within layouts/application (1.3ms)
 Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 19:49:49 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 19:49:52 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.163 at 2016-04-15 19:49:53 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5CMo78SJvGpgLV8dCdIuqAzEE8P91irWDkWljcuOvbfrFZjRL62jZVLCUHja7fJSRp637ykHIsuS6//FJ7NEHA==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to https://project606-juliaaaa2015.c9users.io/login
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 165.91.13.163 at 2016-04-15 19:49:53 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.1ms)
+  Rendered sessions/new.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 19:49:55 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:01:27 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.5ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 88ms (Views: 43.6ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:01:29 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SKXcYxCj34YU7ryraToKuQDxfxzl0Y4ryoO62eNynkVHk2xd+4fAiSYBs866BdZDSqvbMDEAhjZWLeCRD09n7g==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://project606-juliaaaa2015.c9users.io/login
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 165.91.13.163 at 2016-04-15 20:01:29 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.2ms)
+  Rendered sessions/new.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:01:31 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:02:25 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"92oNLz+hXjOfXglxgONlDTwkXizu1i/Y/V+3FEg2+rH4XL0R1IVBPK2xBhRT3Ln3dn76ADoHJ8Vh8e1cpAsDGg==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.4ms)
+
+NoMethodError (undefined method `blank' for "":String
+Did you mean?  blank?):
+  app/controllers/accounts_controller.rb:151:in `save_password_change'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.1ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:02:39 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.5ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 76ms (Views: 35.7ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:02:41 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3MKPRTawCZT8fl3uTtGGfwziOOln/UZ+kZF3yIIwc0bT9D973ZQWm86RUoud7lqFRricxbMsTmMNPy2Abg2K7Q==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://project606-juliaaaa2015.c9users.io/login
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 165.91.13.163 at 2016-04-15 20:02:41 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.5ms)
+  Rendered sessions/new.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:02:58 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 71ms (Views: 36.4ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:03:00 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aeL5eCSN1H/xrq7DLTj/LPNqM/ibzVuFV/5nH/XTlpFm1ElGz6nLcMNBoab+ByPWuTCX1E8cU5jLUD1XGe5vOg==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://project606-juliaaaa2015.c9users.io/login
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 165.91.13.163 at 2016-04-15 20:03:00 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.2ms)
+  Rendered sessions/new.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:03:01 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:03:51 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 66ms (Views: 35.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:03:52 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wCYqDm5763k5peOW+9+ImGk0t3Ui0XCzM0WeHWHjRdnPEJowhV/0dgtK7PMo4FRiI24TWfYAeK6v68RVjd68cg==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.6ms)
+
+NoMethodError (undefined method `empty?' for true:TrueClass):
+  app/controllers/accounts_controller.rb:153:in `save_password_change'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.4ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:04:07 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wCYqDm5763k5peOW+9+ImGk0t3Ui0XCzM0WeHWHjRdnPEJowhV/0dgtK7PMo4FRiI24TWfYAeK6v68RVjd68cg==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.6ms)
+
+NoMethodError (undefined method `empty?' for true:TrueClass):
+  app/controllers/accounts_controller.rb:153:in `save_password_change'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (99.7ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:04:22 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 102ms (Views: 26.6ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:04:24 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fPCsYiVTrHGz/9U6BN735g4SkzYQMt812LgFGIPvOyhzxhxcznezfoEQ2l/X4SscREg3GsTj1yhEFl9Qb9LCgw==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://project606-juliaaaa2015.c9users.io/login
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 165.91.13.163 at 2016-04-15 20:04:24 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.5ms)
+  Rendered sessions/new.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:04:26 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 142ms (Views: 140.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:04:43 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z0Nt7zk3fHMGtGi50CERMny8d12xIeVAC0sWmfYPKlNodd3R0hNjfDRbZ9wDHs3INubTcWXw7V2X5UzRGjLT+A==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  Rendered accounts/reset_your_password.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 82ms (Views: 43.8ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:05:01 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vVYGEEAulFRTDHXk6BXRKc0Cg9dTngRDaoiSGH+Kw3yyYLYuqwqLW2HjeoE7Kg3Th1gn+4dPDF72JshQk7c61w==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to https://project606-juliaaaa2015.c9users.io/login
+Completed 302 Found in 49ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/login" for 165.91.13.163 at 2016-04-15 20:05:02 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.1ms)
+  Rendered sessions/new.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:05:07 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:05:09 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mtf847ihD5//co584troU2YULYjGUzbOqib2pkiEIdU94UzdU4UQkM2dgRkx5TSpLE6JpBKCPtM2iKzupLnYfg==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to https://project606-juliaaaa2015.c9users.io/login
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 165.91.13.163 at 2016-04-15 20:05:09 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.6ms)
+  Rendered sessions/new.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:05:10 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:05:18 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 67ms (Views: 37.4ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:05:20 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fNLXgspmo+EM1gWUCWSS6mgWftc1tRG3iH9NPQ3CY11z5Ge8IUK87j45CvHaW04QIkza++FkGaoU0Rd14f+a9g==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  Rendered accounts/reset_your_password.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 91ms (Views: 84.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:07:05 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 64ms (Views: 31.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:07:08 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (172.2ms)
+Completed 200 OK in 209ms (Views: 206.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:07:09 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uJ/UlHmGQvrhfmnWbTq3wp5DgunCW+ZsY6ogq3ys4Ua3qWSqkqJd9dORZrO+BWs41BkmxRaK7nH/BHrjkJEY7Q==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  Rendered accounts/reset_your_password.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 45ms (Views: 38.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:07:57 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[36mAccount Load (0.6ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (22.7ms)
+Completed 200 OK in 125ms (Views: 46.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:08:05 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:08:07 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kPAvtZx6ijNRYHA/IuqJL8LveE3fKXLrIhhRIGkzubefxp+Ld16VPGOPf1rx1VXViLXcYQv4eva+tgtohQ5AHA==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  Rendered accounts/reset_your_password.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 125ms (Views: 120.3ms | ActiveRecord: 0.4ms)
