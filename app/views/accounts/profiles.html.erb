@@ -33,11 +33,8 @@
       <p>
           <strong>Home Address</strong><br />
           Street<%= @account.street%><br />
-          Ciry<%= @account.city %><br />
+          City<%= @account.city %><br />
           State<%= @account.state %><br />
-          <strong>Home Address</strong>
-          <%= @account.street%>
-          <%= @account.city %>  
       </p>
     </div>
 </div>
@@ -187,11 +184,12 @@
         
    <br /><br /> 
         
-  <%= f.submit 'Save Changes'%>
-  
+  <%= f.submit 'Save Changes'%>    <!-- this is used to save change -->
   
   <% end %>
-
+  <br />
+  <%= button_to "Save and Submit for Approve", action: "save_and_submit" %>
+<br /><br />
 
 
 <table>

@@ -27,6 +27,9 @@ Rails.application.routes.draw do
   get 'profiles/:id' => 'accounts#profiles'
   
   get 'application' => 'accounts#application'
+  
+  post 'saveandsubmit' => 'accounts#save_and_submit'
+  post 'saveandsubmit/:id' => 'accounts#save_and_submit'
 
   #administrator login
   get 'managemore' => 'admins#moreshow'

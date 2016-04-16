@@ -39,8 +39,8 @@ class AccountsController < ApplicationController
   
   def application
       if logged_in
-      @account = Account.find(params[:id])  
-          if @account.status == (false || nil)
+      @account = Account.find(params[:id]) 
+          if @account.status == false || @account.status == nil
               redirect_to profiles_path(:id => @account.id)
           end
       #@accounts = Account.all
@@ -101,6 +101,14 @@ class AccountsController < ApplicationController
      flash[:notice] = 'Changes Saved!'
      redirect_to profiles_path :id => @account.id
 
+  end
+  
+  def save_and_submit
+      @account = Account.find(session[:id])
+      @account.status = false
+      @account.save(:validate => false)
+      flash[:notice] = 'Your profile has been sent to the administrator'
+      redirect_to profiles_path :id => @account.id
   end
      
   
