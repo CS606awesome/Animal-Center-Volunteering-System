@@ -20,8 +20,7 @@ Rails.application.routes.draw do
   post    'reset_your_password'  => 'accounts#save_password_change'
 
   #forget password
-  get    'forget_your_password' => 'accounts#forgetyourpassword'
-  get    'receive_your_email' => 'accounts#checkyouremail'
+  get    'check_your_email' => 'accounts#check_your_email'
 
   #Show user's workspace
   get 'profiles' => 'accounts#profiles'
