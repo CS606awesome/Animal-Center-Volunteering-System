@@ -17112,6 +17112,7 @@ Processing by AccountsController#save_password_change as HTML
   [1m[35m (0.2ms)[0m  rollback transaction
   Rendered accounts/reset_your_password.html.haml within layouts/application (2.3ms)
 Completed 200 OK in 164ms (Views: 35.3ms | ActiveRecord: 0.5ms)
+<<<<<<< HEAD
 
 
 Started GET "/" for 165.91.12.56 at 2016-04-15 22:43:21 +0000
@@ -19261,3 +19262,71 @@ Content-Transfer-Encoding: 7bit
 
   Rendered accounts/resend_your_email.html.haml within layouts/application (3.2ms)
 Completed 200 OK in 857ms (Views: 45.4ms | ActiveRecord: 0.4ms)
+=======
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_accommodations_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_accommodations_on_account_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_forms_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_forms_on_account_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_criminal_applications_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_criminal_applications_on_account_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_former_criminals_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_former_criminals_on_account_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_minor_applications_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_minor_applications_on_account_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_related_councilmembers_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_related_councilmembers_on_account_id' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_student_applications_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_student_applications_on_account_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_formerworkers_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_formerworkers_on_account_id' AND type='index'
+
+>>>>>>> 96d152c0923b9939cc89c1835f4675927175c6d0
