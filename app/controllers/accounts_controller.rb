@@ -105,10 +105,16 @@ class AccountsController < ApplicationController
   
   def save_and_submit
       @account = Account.find(session[:id])
-      @account.status = false
-      @account.save(:validate => false)
-      flash[:notice] = 'Your profile has been sent to the administrator'
-      redirect_to profiles_path :id => @account.id
+      if @account.status == nil       #if never submit, then save and submit
+          
+          @account.status = false
+          @account.save(:validate => false)
+          flash[:notice] = 'Your profile has been sent to the administrator'
+          redirect_to profiles_path :id => @account.id
+      else                                                   # if have submitted, return to page and do nothing
+          redirect_to profiles_path :id => @account.id
+      end
+      
   end
      
   
