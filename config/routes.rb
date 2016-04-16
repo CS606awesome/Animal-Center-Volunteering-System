@@ -20,8 +20,7 @@ Rails.application.routes.draw do
   post    'reset_your_password'  => 'accounts#save_password_change'
 
   #forget password
-  get    'forget_your_password' => 'accounts#forgetyourpassword'
-  get    'receive_your_email' => 'accounts#checkyouremail'
+  get    'check_your_email' => 'accounts#check_your_email'
 
   #Show user's workspace
   get 'profiles' => 'accounts#profiles'
@@ -30,6 +29,7 @@ Rails.application.routes.draw do
   get 'application' => 'accounts#application'
 
   #administrator login
+  get 'managemore' => 'admins#moreshow'
   get 'manage' => 'admins#show'
   get 'adminsignup' => 'admins#new'
   post 'adminsignup' => 'admins#create'
@@ -38,6 +38,8 @@ Rails.application.routes.draw do
   resources :admins
   
   #accounts has many applicaitons   
+  get 'reject/:id' => 'admins#reject'
+  get 'approve/:id' => 'admins#approve'
     resources :accounts do
       resources :applications
       resources :current_workers

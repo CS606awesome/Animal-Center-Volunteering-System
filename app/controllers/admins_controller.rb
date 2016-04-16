@@ -23,10 +23,13 @@ class AdminsController < ApplicationController
   end
   
   def show
+    #verify user logged in
     if !admin_logged_in
       redirect_to adminlogin_path
-    else
-    @accounts = Account.all
+    else  
+    ##find accounts who has already submitted the applications  
+    @accounts = Account.where("is_former_worker is not NULL and status is NULL")
+   
     agemin = params[:agemin].to_i
     agemax = params[:agemax].to_i
     firstname = params[:firstname].to_s
@@ -54,11 +57,50 @@ class AdminsController < ApplicationController
     end
    end
   end
+  def moreshow
+   if !admin_logged_in
+      redirect_to adminlogin_path
+   else  
+    @accounts = Account.where("is_volunteering='t'")
+    firstname = params[:firstname].to_s
+    lastname = params[:lastname].to_s
+    email = params[:email] 
+    if firstname != ''
+      @accounts = firstname_filter(@accounts,firstname)
+    end
     
-  def admin_params
-   params.require(:admin).permit(:email,:password, :password_confirmation,:key)
+    if lastname != ''
+      @accounts = lastname_filter(@accounts,lastname)
+    end
+    
+    if email != '' 
+      @accounts = email_filter(@accounts,email)
+    end
+   end
   end
   
+
+
+   def approve
+    @account = Account.find(params[:id])
+    if @account.update(:status => 't')
+      flash[:notice] = 'Approvement is successful!'
+      redirect_to action: 'show'
+    else
+      flash[:danger] = 'Approvement is failed!'
+      redirect_to action: 'show'
+    end
+   end
+   def reject
+     @account = Account.find(params[:id])
+    if @account.update(:status => 'f')
+      flash[:notice] = 'Rejection is successful!'
+      redirect_to action: 'show'
+    else
+      flash[:danger] = 'Rejection is failed!'
+      redirect_to action: 'show'
+    end
+   end
  
       
   #compare the age
@@ -83,16 +125,22 @@ class AdminsController < ApplicationController
   end
   
   def firstname_filter(accounts,firstname)
-    @accounts = Account.where('lower(firstname) = ?', firstname.downcase)
+    @accounts = @accounts.where('lower(firstname) = ?', firstname.downcase)
   end
   
   def lastname_filter(accounts,lastname)
-    @accounts = Account.where('lower(lastname) = ?', lastname.downcase)
+    @accounts = @accounts.where('lower(lastname) = ?', lastname.downcase)
   end
   
   def email_filter(accounts,email)
-    @accounts = Account.where("lower(email) LIKE lower(?)", "#{email}%")
+    @accounts = @accounts.where("lower(email) LIKE lower(?)", "#{email}%")
   end
   
+
+
+
+  def admin_params
+   params.require(:admin).permit(:email,:password, :password_confirmation,:key)
+  end
 end
 
