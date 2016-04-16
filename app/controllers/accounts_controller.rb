@@ -40,7 +40,7 @@ class AccountsController < ApplicationController
   def application
       if logged_in
       @account = Account.find(params[:id]) 
-          if @account.status == (false || nil)
+          if @account.status == false || @account.status == nil
               redirect_to profiles_path(:id => @account.id)
           end
       #@accounts = Account.all
