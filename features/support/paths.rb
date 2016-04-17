@@ -3,6 +3,7 @@
 # This file is used by web_steps.rb, which you should also delete
 #
 # You have been warned
+require "rack_session_access/capybara"
 module NavigationHelpers
   # Maps a name to a path. Used by the
   #
@@ -10,13 +11,26 @@ module NavigationHelpers
   #
   # step definition in web_steps.rb
   #
+  
   def path_to(page_name)
-    if page_name =~ /the (.*) for "(.*)"/
+  if page_name =~ /the (.*) for "(.*)"/
       email_name = $2.to_s
       page_name  = $1.to_s
-  
-    end
+  end  
     case page_name
+    
+    when /^input_your_email page$/
+       input_your_email_path 
+    when /^log in page$/ 
+       login_path
+    when /^check_your_email page$/
+       check_your_email_path
+  
+   
+    when /^reset_your_password page$/ 
+        id = Account.find_by_email(email_name).id
+        page.set_rack_session(id: id)
+        reset_your_password_path
 
     when /^sign up page$/ then signup_path
     when /^log in page$/ then login_path
@@ -27,7 +41,6 @@ module NavigationHelpers
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
-
     else
       begin
         page_name =~ /^the (.*) page$/
