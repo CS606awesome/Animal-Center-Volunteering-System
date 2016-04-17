@@ -67,28 +67,29 @@ I understand that the City has the right to terminate my services as volunteer a
             <%= cf.text_field :mandatory_hours, :value => @account.criminal_application.mandatory_hours %>
             <br />
             <br />
-            <%= cf.label :mandatory_area, 'Mandatory Area'%>
-            <%= cf.text_field :mandatory_area, :value => @account.criminal_application.mandatory_area %>
+            <!--%= cf.label :mandatory_area, 'Mandatory Area'%>
+             cf.text_field :mandatory_area, :value => @account.criminal_application.mandatory_area %>
             <br />
+            <br /> 
+            = cf.label :deadline, 'Deadline'%>
+             cf.text_field :deadline, :value => @account.criminal_application.deadline %>
             <br />
-            <%= cf.label :deadline, 'Deadline'%>
-            <%= cf.text_field :deadline, :value => @account.criminal_application.deadline %>
-            <br />
-            <br />
+            <br />-->
         <% end %>
         
         <%= f.fields_for :student_application do |sf| %>
             <p>
-                <strong>If you are a student, please fill the blanks below.</strong>
+                <strong>If you are a student completing hours organization, please fill the blanks below.</strong>
             </p>
             <%= sf.label :student_program, 'What is the program that requires you to be volunteer'%>
             <%= sf.text_field :student_program, :value => @account.student_application.student_program %>
             <br />
             <br />
-            <%= sf.label :required_time, 'Required Time'%>
-            <%= sf.text_field :required_time, :value => @account.student_application.required_time %>
+            <!--%= sf.label :required_time, 'Required Time'%>
+             sf.text_field :required_time, :value => @account.student_application.required_time >% 
             <br />
             <br />
+            -->
             <%= sf.label :required_area, 'Required Area'%>
             <%= sf.text_field :required_area, :value => @account.student_application.required_area %>
             <br />

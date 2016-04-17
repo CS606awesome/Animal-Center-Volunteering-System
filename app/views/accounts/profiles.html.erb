@@ -58,7 +58,7 @@
       <div class="hidden" id="FWcheckbox"> 
         <%= f.fields_for  :user_formerworker do |uf| %>
             <!-- input type="text" name="CurrentDep" -->
-            <%=uf.label :date_of_employment, 'Date of Employment' %>
+            <%=uf.label :date_of_employment, 'Dates of Employment' %>
             <%= uf.text_field :date_of_employment, :value => @account.user_formerworker.date_of_employment %>
             <br />
             <%=uf.label :reason_for_leaving, 'Reasons for Leaving' %>
