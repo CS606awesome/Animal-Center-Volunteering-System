@@ -49,6 +49,18 @@ class AccountsController < ApplicationController
       end
   end
   
+  def viewapplication
+    if logged_in
+      @account = Account.find(session[:id])
+     # if @account.is_volunteering == false || @account.is_volunteering == nil
+      #  redirect_to profiles_path :id => @account.id
+       # flash[:notice] = "Your have no approved application, please wait or contact the administrator."
+    #  end
+    else
+      redirect_to login_path
+    end
+  end
+  
   def update
 
      @account = Account.find(params[:id])
@@ -104,8 +116,8 @@ class AccountsController < ApplicationController
         flash[:notice] = 'Changes Saved!'
     
      else
-        flash[:notice] = 'Your application has been approved, you can not submit a new one until you complete this one.'
         redirect_to application_path :id => @account.id
+        flash[:alert] = 'Your application has been approved, you can not submit a new one until you complete this one.'
      end
 
   end
