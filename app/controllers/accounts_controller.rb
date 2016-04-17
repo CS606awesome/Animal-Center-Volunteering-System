@@ -40,7 +40,7 @@ class AccountsController < ApplicationController
   def application
       if logged_in
       @account = Account.find(params[:id]) 
-          if @account.status == false || @account.status == nil
+          if @account.status == nil #|| @account.status == false
               redirect_to profiles_path(:id => @account.id)
           end
       #@accounts = Account.all
@@ -52,54 +52,60 @@ class AccountsController < ApplicationController
   def update
 
      @account = Account.find(params[:id])
+     if @account.is_volunteering == false || @account.is_volunteering == nil
      #@account.update_attributes!(account_update_params)
-     if(params[:account][:is_former_worker] == "1") 
-       @account.user_formerworker ||= UserFormerworker.new   
-     end
-     if(params[:account][:related_to_councilmember] == "1") 
-       @account.related_councilmember ||= RelatedCouncilmember.new   
-     end
-     if(params[:account][:is_current_worker] == "1") 
-       @account.current_worker ||= CurrentWorker.new   
-     end
-     if(params[:account][:has_convictions] == "1") 
-       @account.former_criminal ||= FormerCriminal.new   
-     end
-     if(params[:account][:need_accommodations] == "1") 
-       @account.accommodation ||= Accommodation.new   
-     end
+        if(params[:account][:is_former_worker] == "1") 
+          @account.user_formerworker ||= UserFormerworker.new   
+        end
+        if(params[:account][:related_to_councilmember] == "1") 
+          @account.related_councilmember ||= RelatedCouncilmember.new   
+        end
+        if(params[:account][:is_current_worker] == "1") 
+          @account.current_worker ||= CurrentWorker.new   
+        end
+        if(params[:account][:has_convictions] == "1") 
+          @account.former_criminal ||= FormerCriminal.new   
+        end
+        if(params[:account][:need_accommodations] == "1") 
+          @account.accommodation ||= Accommodation.new   
+        end
      
-     @account.attributes = account_update_params
+        @account.attributes = account_update_params
      
-     if(params[:account][:is_former_worker] == "0")
-         if(@account.user_formerworker != nil)
-             @account.user_formerworker.destroy
-         end
-     end
-     if(params[:account][:related_to_councilmember] == "0") 
-       if @account.related_councilmember != nil
-           @account.related_councilmember.destroy
-       end
-     end
-     if(params[:account][:is_current_worker] == "0") 
-       if @account.current_worker != nil  
-           @account.current_worker.destroy
-       end
-     end
-     if(params[:account][:has_convictions] == "0") 
-       if @account.former_criminal != nil  
-           @account.former_criminal.destroy
-       end
-     end
-     if(params[:account][:need_accommodations] == "0") 
-       if @account.accommodation != nil   
-           @account.accommodation.destroy
-       end
-     end
+        if(params[:account][:is_former_worker] == "0")
+            if(@account.user_formerworker != nil)
+                @account.user_formerworker.destroy
+            end
+        end
+        if(params[:account][:related_to_councilmember] == "0") 
+          if @account.related_councilmember != nil
+              @account.related_councilmember.destroy
+          end
+        end
+        if(params[:account][:is_current_worker] == "0") 
+          if @account.current_worker != nil  
+              @account.current_worker.destroy
+          end
+        end
+        if(params[:account][:has_convictions] == "0") 
+          if @account.former_criminal != nil  
+              @account.former_criminal.destroy
+          end
+        end
+        if(params[:account][:need_accommodations] == "0") 
+          if @account.accommodation != nil   
+              @account.accommodation.destroy
+          end
+        end
      
-     @account.save(:validate => false)
-     flash[:notice] = 'Changes Saved!'
-     redirect_to profiles_path :id => @account.id
+        @account.save(:validate => false)
+        flash[:notice] = 'Changes Saved!'
+        redirect_to profiles_path :id => @account.id
+    
+     else
+        flash[:notice] = 'Your application has been approved, you can not submit a new one until you complete this one.'
+        redirect_to application_path :id => @account.id
+     end
 
   end
   
