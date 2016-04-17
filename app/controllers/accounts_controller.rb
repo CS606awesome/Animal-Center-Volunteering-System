@@ -99,8 +99,9 @@ class AccountsController < ApplicationController
         end
      
         @account.save(:validate => false)
-        flash[:notice] = 'Changes Saved!'
+        
         redirect_to profiles_path :id => @account.id
+        flash[:notice] = 'Changes Saved!'
     
      else
         flash[:notice] = 'Your application has been approved, you can not submit a new one until you complete this one.'
