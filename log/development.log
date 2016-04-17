@@ -17112,3 +17112,17 @@ Processing by AccountsController#save_password_change as HTML
   [1m[35m (0.2ms)[0m  rollback transaction
   Rendered accounts/reset_your_password.html.haml within layouts/application (2.3ms)
 Completed 200 OK in 164ms (Views: 35.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:59:05 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 59ms (Views: 31.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.163 at 2016-04-15 20:59:07 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.2ms)
