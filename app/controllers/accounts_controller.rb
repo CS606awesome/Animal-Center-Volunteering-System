@@ -144,12 +144,12 @@ class AccountsController < ApplicationController
             flash[:success] = "You have reset your password successfully."
             redirect_to login_path
          else
-           flash[:failed] = "passwords are not satisfied the requirement."
-           flash[:requirement] = "Your password must be 6-20 characters and cannot be blank."
+           flash[:warning] = "passwords are not satisfied the requirement."
+           flash[:info] = "Your password must be 6-20 characters and cannot be blank."
            render 'reset_your_password'
          end
        else
-          flash[:alert]="The passwords you entered must be the same!"
+          flash[:warning]="The passwords you entered must be the same!"
           render 'reset_your_password'
        end
    end

@@ -18,7 +18,7 @@
   %div{:style => "margin-bottom:10px"}
   Email
   =text_field_tag :email,nil,placeholder: 'email'
-  =submit_tag 'select'
+  =submit_tag 'select',class: 'btn btn-success'
 
 %table#accounts
  %thead
@@ -54,4 +54,4 @@
     %td= link_to "Approve", :controller => "admins", :action =>"approve", :id => account.id
     %td= link_to 'reject',  :controller => "admins", :action =>"reject", :id => account.id
  
-= link_to 'Manage the qualified volunteer',managemore_path
+= link_to 'Manage the qualified volunteer',managemore_path,class: 'btn btn-success'

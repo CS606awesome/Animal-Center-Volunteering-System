@@ -11,7 +11,7 @@
   %div{:style => "margin-bottom:10px"}
   Email
   =text_field_tag :email,nil,placeholder: 'email'
-  =submit_tag 'select'
+  =submit_tag 'select',class: 'btn btn-success'
 
 %table#accounts
  %thead
@@ -38,5 +38,5 @@
     %td= account.application_form.created_at
 
 
-=link_to 'Manage the application',admin_path(session[:id])
+=link_to 'Manage the application',admin_path(session[:id]),class: 'btn btn-success'
 
