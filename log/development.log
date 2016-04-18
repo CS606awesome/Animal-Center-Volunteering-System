@@ -38239,3 +38239,489 @@ Processing by IndexController#index as HTML
   Rendered layouts/_header.html.erb (0.2ms)
   Rendered layouts/_footer.html.erb (0.1ms)
 Completed 200 OK in 153ms (Views: 151.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.74 at 2016-04-18 03:33:57 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 573ms (Views: 549.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.74 at 2016-04-18 03:48:03 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 2172ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Invalid @import: expected end of line, was ";".):
+    2: <html>
+    3:   <head>
+    4:    <title>App</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:     <%= render 'layouts/shim' %>
+  app/assets/stylesheets/custom.css.sass:1
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1290206491155498218_69917575685400'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (119.0ms)
+
+
+Started GET "/" for 165.91.13.74 at 2016-04-18 03:48:28 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 4753ms (Views: 4751.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-3761c96a961e8033e926480cde296b97972061b97114f9d143f0f28b086c52cc.css?body=1" for 165.91.13.74 at 2016-04-18 03:48:33 +0000
+
+
+Started GET "/" for 165.91.13.74 at 2016-04-18 03:49:44 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4101ms (Views: 4100.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-066142174fff309151d54b46ef92d87978d1b445c8deb4ca86647384768d9784.css?body=1" for 165.91.13.74 at 2016-04-18 03:49:49 +0000
+
+
+Started GET "/" for 165.91.13.74 at 2016-04-18 03:51:26 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (64.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4853ms (Views: 4852.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-e3576944bb93b840689d305130b51c1acccb3fb8c9146e6a96911141a7c268eb.css?body=1" for 165.91.13.74 at 2016-04-18 03:51:31 +0000
+
+
+Started GET "/" for 165.91.13.74 at 2016-04-18 03:51:57 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 5212ms (Views: 5210.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.74 at 2016-04-18 03:59:48 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.74 at 2016-04-18 03:59:49 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (12.0ms)
+  Rendered accounts/new.html.haml within layouts/application (30.7ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (2.2ms)
+Completed 200 OK in 175ms (Views: 132.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for 165.91.13.74 at 2016-04-18 03:59:59 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.4ms)
+  Rendered sessions/new.html.haml within layouts/application (5.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 125ms (Views: 124.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins" for 165.91.13.74 at 2016-04-18 04:00:02 +0000
+Processing by AdminsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/adminsignup
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/adminsignup" for 165.91.13.74 at 2016-04-18 04:00:02 +0000
+Processing by AdminsController#new as HTML
+  Rendered admin_sessions/_signin.html.haml (3.8ms)
+  Rendered admins/new.html.haml within layouts/application (9.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 118ms (Views: 107.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 165.91.13.74 at 2016-04-18 04:01:05 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.erb (0.9ms)
+  Rendered sessions/new.html.haml within layouts/application (3.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 114ms (Views: 113.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input_your_email" for 165.91.13.74 at 2016-04-18 04:01:07 +0000
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (15.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 117ms (Views: 116.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/input_your_email" for 165.91.13.74 at 2016-04-18 04:01:09 +0000
+Processing by AccountsController#input_your_email as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4ooLXljbZK79xjacUzZLqVp3KTfUM3Hj6wrOEdIumaLtvLtgs/97oc8pOfmACZdTEC2NGwDief53pJRZPhNgCQ==", "email"=>"", "commit"=>"Reset"}
+  [1m[35mAccount Load (1.6ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered accounts/input_your_email.html.haml within layouts/application (2.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 114ms (Views: 88.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.74 at 2016-04-18 04:01:15 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=1):
+  app/controllers/accounts_controller.rb:136:in `reset_your_password'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (106.2ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.74 at 2016-04-18 04:01:16 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=1):
+  app/controllers/accounts_controller.rb:136:in `reset_your_password'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.5ms)
+
+
+Started POST "/input_your_email" for 165.91.13.74 at 2016-04-18 04:01:23 +0000
+Processing by AccountsController#input_your_email as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WBG95BpfjKitV3dV2/iS2rTRgqrHYJa5C8hIY6dEBSdXJw3a8XuTp5+4eDAIx04g/osmhhOxnqSXZhIrS3n8jA==", "email"=>"670348828@qq.com", "commit"=>"Reset"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
+  Rendered accounts/input_your_email.html.haml within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 102ms (Views: 100.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/input_your_email" for 165.91.13.74 at 2016-04-18 04:01:29 +0000
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 92ms (Views: 91.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.74 at 2016-04-18 04:01:35 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=1):
+  app/controllers/accounts_controller.rb:136:in `reset_your_password'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.5ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.74 at 2016-04-18 04:01:35 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=1):
+  app/controllers/accounts_controller.rb:136:in `reset_your_password'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (94.5ms)
+
+
+Started GET "/login" for 165.91.13.74 at 2016-04-18 04:01:41 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.0ms)
+  Rendered sessions/new.html.haml within layouts/application (2.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 103ms (Views: 102.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.74 at 2016-04-18 04:01:42 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 222ms (Views: 219.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins" for 165.91.13.74 at 2016-04-18 04:01:44 +0000
+Processing by AdminsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/adminsignup
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/adminsignup" for 165.91.13.74 at 2016-04-18 04:01:44 +0000
+Processing by AdminsController#new as HTML
+  Rendered admin_sessions/_signin.html.haml (2.7ms)
+  Rendered admins/new.html.haml within layouts/application (7.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 203ms (Views: 200.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 165.91.13.74 at 2016-04-18 04:01:49 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.1ms)
+  Rendered sessions/new.html.haml within layouts/application (3.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 116ms (Views: 113.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.74 at 2016-04-18 04:01:53 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.74 at 2016-04-18 04:01:53 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.2ms)
+  Rendered accounts/new.html.haml within layouts/application (7.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 139ms (Views: 137.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/accounts" for 165.91.13.74 at 2016-04-18 04:02:02 +0000
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KOnrJHu5EwqwhBMA0MGsCm5son0V46IU9LZnPgQre3En31sakJ0MBYJrHGUD/nDwJDYGUcEyqgloGD126BaC2g==", "account"=>{"firstname"=>"Dongni", "middlename"=>"", "maidenname"=>"", "lastname"=>"Han", "gender"=>"", "DOB"=>"", "email"=>"670348828@qq.com", "password"=>"[FILTERED]", "homephone"=>"0979 571 4506", "cellphone"=>"0979 571 4506", "country"=>"", "state"=>"Texas", "city"=>"College Station", "street"=>"950 Colgate Drive Apt310", "zip"=>"77840"}, "commit"=>"Join us now!"}
+Unpermitted parameter: maidenname
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "accounts" ("gender", "email", "password_digest", "firstname", "lastname", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["gender", ""], ["email", "670348828@qq.com"], ["password_digest", "$2a$10$jEORTDWZpPfkUwGbmQSSp.TE62KNeCK92SFfFEAn6L8DjFR42K2Ie"], ["firstname", "Dongni"], ["lastname", "Han"], ["middlename", ""], ["country", ""], ["state", "Texas"], ["city", "College Station"], ["street", "950 Colgate Drive Apt310"], ["zip", "77840"], ["homephone", "0979 571 4506"], ["cellphone", "0979 571 4506"]]
+  [1m[36m (14.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://project606-juliaaaa2015.c9users.io/accounts/609
+Completed 302 Found in 135ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/accounts/609" for 165.91.13.74 at 2016-04-18 04:02:03 +0000
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"609"}
+  Rendered sessions/_signin.html.erb (1.5ms)
+  Rendered accounts/show.html.haml within layouts/application (3.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 116ms (Views: 115.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.74 at 2016-04-18 04:02:10 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SQtEizoiorPpvQRVIQ0VexLk/utqdp5Fu38BOHQQD5NGPfS10Qa9vNtSCzDyMsmBWL5ax76nllgn0VtwmC32OA==", "session"=>{"email"=>"", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered sessions/_signin.html.erb (1.9ms)
+  Rendered sessions/new.html.haml within layouts/application (8.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 180ms (Views: 177.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 165.91.13.74 at 2016-04-18 04:02:16 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EOY0XCKU1/8PEprPYMgHRuTgjPWCwLGXQGKu7fCk5nkf0IRiybDI8D39laqz99u8rroo2VYRuYrczPSlHJkf0g==", "session"=>{"email"=>"670348828@qq.com", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
+  Rendered sessions/_signin.html.erb (0.9ms)
+  Rendered sessions/new.html.haml within layouts/application (2.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 354ms (Views: 126.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for 165.91.13.74 at 2016-04-18 04:02:26 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bcQSyM+eRu9Jo+mrKH4BGjYsRdvEtU5KfTuiaRzp8CVi8qL2JLpZ4HtM5s77Qd3gfHbh9xBkRlfhlfgh8NQJjg==", "session"=>{"email"=>"670348828@qq.com", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "670348828@qq.com"]]
+  Rendered sessions/_signin.html.erb (1.0ms)
+  Rendered sessions/new.html.haml within layouts/application (2.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 189ms (Views: 109.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/input_your_email" for 165.91.13.74 at 2016-04-18 04:02:28 +0000
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 122ms (Views: 121.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/input_your_email" for 165.91.13.74 at 2016-04-18 04:02:31 +0000
+Processing by AccountsController#input_your_email as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jkNYO3SHQgf9fT8VcLy+ykG0ys99THrKYp4bmCCmXaCBdegFn6NdCM+SMHCjg2IwC+5u46mdctf+MEHQzJukCw==", "email"=>"670348828@qq.com", "commit"=>"Reset"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
+  Rendered mailer/welcome_email.html.erb within layouts/mailer (1.1ms)
+  Rendered mailer/welcome_email.text.erb within layouts/mailer (0.7ms)
+
+Mailer#welcome_email: processed outbound mail in 351.9ms
+
+Sent mail to 670348828@qq.com (928.0ms)
+Date: Mon, 18 Apr 2016 04:02:32 +0000
+From: zhangsikai123@tamu.edu
+To: 670348828@qq.com
+Message-ID: <57145c5848d31_1e211afca84474b@juliaaaa2015-project606-2907712.mail>
+Subject: Reset password from Animal Center Volunteering System
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_57145c5844603_1e211afca84469c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_57145c5844603_1e211afca84469c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome to example.com, Dongni
+===============================================
+
+You have successfully signed up to example.com,
+
+To login to the site, just follow this link: ~/reset_your_password.
+
+Thanks for joining and have a great day!
+
+----==_mimepart_57145c5844603_1e211afca84469c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<hmtl>
+  <body>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+      </head>
+      <body>
+        <p><strong>Welcome to Bryan Animal Center volunteering system, Dongni Han</strong></p>
+        <p>
+          We received a request to reset the password associated with this e-mail address. If you made this request, please follow the instructions below.
+        </p>
+         
+        <p>
+          Click the link below to reset your password using our secure server:
+          <br>
+        </p>
+        
+        <p>
+         <a href="https://mailer-liuliu0510.c9users.io/reset_your_password">Reset my password now!</a>
+        </p>
+        
+        <p>If you did not request to have your password reset you can safely ignore this email. Reset assured your account is safe.
+           If clicking the link doesn't seem to work, you can copy and paste the link into your browser's address window, or retype it there. 
+           Once you have returned to Bryan Animal Center, we will give instructions for resetting your password.</p>
+      </body>
+    </html>
+  </body>
+</hmtl>
+
+----==_mimepart_57145c5844603_1e211afca84469c--
+
+Redirected to https://project606-juliaaaa2015.c9users.io/check_your_email
+Completed 302 Found in 1375ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/check_your_email" for 165.91.13.74 at 2016-04-18 04:02:33 +0000
+Processing by AccountsController#check_your_email as HTML
+  Rendered accounts/check_your_email.html.haml within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 91ms (Views: 90.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.74 at 2016-04-18 04:02:40 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 609]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (2.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 259ms (Views: 257.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.74 at 2016-04-18 04:02:40 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 609]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (1.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 85ms (Views: 83.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.74 at 2016-04-18 04:02:48 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w6oQMHEbhthcsMl9MV1JzFG7farkjYMYuffU5v6AIrjMnKAOmj+Z125fxhjiYpU2G+HZhjBciwUlWY6uEr3bEw==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 609]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to https://project606-juliaaaa2015.c9users.io/login
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 165.91.13.74 at 2016-04-18 04:02:48 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.0ms)
+  Rendered sessions/new.html.haml within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 104ms (Views: 103.2ms | ActiveRecord: 0.0ms)
