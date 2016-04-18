@@ -28,7 +28,7 @@ class AdminsController < ApplicationController
       redirect_to adminlogin_path
     else  
     ##find accounts who has already submitted the applications  
-    @accounts = Account.where("is_former_worker is not NULL and status is NULL")
+    @accounts = Account.where("status is 'f'")
    
     agemin = params[:agemin].to_i
     agemax = params[:agemax].to_i
