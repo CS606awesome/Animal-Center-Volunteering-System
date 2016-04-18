@@ -18710,3 +18710,319 @@ Migrating to AddIsVolunteeringToAccounts (20160415062014)
             FROM sqlite_temp_master
             WHERE name='index_user_formerworkers_on_account_id' AND type='index'
 
+
+
+Started GET "/" for 165.91.13.74 at 2016-04-18 03:27:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 369ms (Views: 352.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.74 at 2016-04-18 03:27:33 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.74 at 2016-04-18 03:27:33 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (14.4ms)
+  Rendered accounts/new.html.haml within layouts/application (40.6ms)
+Completed 200 OK in 136ms (Views: 85.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/input_your_email" for 165.91.13.74 at 2016-04-18 03:27:34 +0000
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (16.6ms)
+Completed 200 OK in 179ms (Views: 178.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/input_your_email" for 165.91.13.74 at 2016-04-18 03:27:37 +0000
+Processing by AccountsController#input_your_email as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6dk5jK5F715PZvWxH2XPb0XJDARTeg6EzyiUwuFdbsvm74myRWHwUX2J+tTMWhOVD5OoKIerBplThs6KDWCXYA==", "email"=>"670348828@qq.com", "commit"=>"Reset"}
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "670348828@qq.com"]]
+  Rendered accounts/input_your_email.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 107ms (Views: 80.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.74 at 2016-04-18 03:27:43 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=1):
+  app/controllers/accounts_controller.rb:131:in `reset_your_password'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (26.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (17.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (152.2ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.74 at 2016-04-18 03:27:44 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=1):
+  app/controllers/accounts_controller.rb:131:in `reset_your_password'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (137.4ms)
+
+
+Started POST "/input_your_email" for 165.91.13.74 at 2016-04-18 03:27:50 +0000
+Processing by AccountsController#input_your_email as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tgE3av5OB1hfGE3GoNyAjpFINFFx48ck+AICWmZ3xPS5N4dUFWoYV233QqNz41x02xKQfaUyzzlkrFgSiko9Xw==", "email"=>"670348828@qq.com", "commit"=>"Reset"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
+  Rendered accounts/input_your_email.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 101ms (Views: 99.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/input_your_email" for 165.91.13.74 at 2016-04-18 03:27:52 +0000
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.74 at 2016-04-18 03:27:54 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.7ms)
+  Rendered accounts/new.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/accounts" for 165.91.13.74 at 2016-04-18 03:28:01 +0000
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SDmtSUwDlV776FQRIzTXtQDoS5KWkoOz5eItbNX4b3FHDx13pyeKUckHW3TwCwtPSrLvvkJDi655THckOcWW2g==", "account"=>{"firstname"=>"Dongni", "middlename"=>"", "maidenname"=>"", "lastname"=>"Han", "gender"=>"", "DOB"=>"", "email"=>"670348828@qq.com", "password"=>"[FILTERED]", "homephone"=>"0979 571 4506", "cellphone"=>"0979 571 4506", "country"=>"", "state"=>"Texas", "city"=>"College Station", "street"=>"950 Colgate Drive Apt310", "zip"=>"77840"}, "commit"=>"Join us now!"}
+Unpermitted parameter: maidenname
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "accounts" ("gender", "email", "password_digest", "firstname", "lastname", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["gender", ""], ["email", "670348828@qq.com"], ["password_digest", "$2a$10$ed5vzBPCbVvZA.xwRhQoV.VDowcDcFAl.gZK361DyOgr2IMs7dB9."], ["firstname", "Dongni"], ["lastname", "Han"], ["middlename", ""], ["country", ""], ["state", "Texas"], ["city", "College Station"], ["street", "950 Colgate Drive Apt310"], ["zip", "77840"], ["homephone", "0979 571 4506"], ["cellphone", "0979 571 4506"]]
+  [1m[36m (25.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://project606-juliaaaa2015.c9users.io/accounts/1
+Completed 302 Found in 190ms (ActiveRecord: 26.7ms)
+
+
+Started GET "/accounts/1" for 165.91.13.74 at 2016-04-18 03:28:01 +0000
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered sessions/_signin.html.haml (4.3ms)
+  Rendered accounts/show.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input_your_email" for 165.91.13.74 at 2016-04-18 03:28:02 +0000
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/input_your_email" for 165.91.13.74 at 2016-04-18 03:28:05 +0000
+Processing by AccountsController#input_your_email as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HUlH0xHkbli5xIdh1PuPb/CvjNSxZXj53C9hMD4ffiwSf/ft+sBxV4sriAQHxFOVuvUo+GW0cORAgTt40iKHhw==", "email"=>"670348828@qq.com", "commit"=>"Reset"}
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "670348828@qq.com"]]
+  Rendered mailer/welcome_email.html.erb within layouts/mailer (1.1ms)
+  Rendered mailer/welcome_email.text.erb within layouts/mailer (0.8ms)
+
+Mailer#welcome_email: processed outbound mail in 262.8ms
+
+Sent mail to 670348828@qq.com (930.7ms)
+Date: Mon, 18 Apr 2016 03:28:05 +0000
+From: zhangsikai123@tamu.edu
+To: 670348828@qq.com
+Message-ID: <57145445b8bcb_1a1d3fb4945275c8497e0@juliaaaa2015-project606-2907712.mail>
+Subject: Reset password from Animal Center Volunteering System
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_57145445b348f_1a1d3fb4945275c8496bd";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_57145445b348f_1a1d3fb4945275c8496bd
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome to example.com, Dongni
+===============================================
+
+You have successfully signed up to example.com,
+
+To login to the site, just follow this link: ~/reset_your_password.
+
+Thanks for joining and have a great day!
+
+----==_mimepart_57145445b348f_1a1d3fb4945275c8496bd
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<hmtl>
+  <body>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+      </head>
+      <body>
+        <p><strong>Welcome to Bryan Animal Center volunteering system, Dongni Han</strong></p>
+        <p>
+          We received a request to reset the password associated with this e-mail address. If you made this request, please follow the instructions below.
+        </p>
+         
+        <p>
+          Click the link below to reset your password using our secure server:
+          <br>
+        </p>
+        
+        <p>
+         <a href="https://project606-juliaaaa2015.c9users.io/reset_your_password">Reset my password now!</a>
+        </p>
+        
+        <p>If you did not request to have your password reset you can safely ignore this email. Reset assured your account is safe.
+           If clicking the link doesn't seem to work, you can copy and paste the link into your browser's address window, or retype it there. 
+           Once you have returned to Bryan Animal Center, we will give instructions for resetting your password.</p>
+      </body>
+    </html>
+  </body>
+</hmtl>
+
+----==_mimepart_57145445b348f_1a1d3fb4945275c8496bd--
+
+Redirected to https://project606-juliaaaa2015.c9users.io/check_your_email
+Completed 302 Found in 1248ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/check_your_email" for 165.91.13.74 at 2016-04-18 03:28:06 +0000
+Processing by AccountsController#check_your_email as HTML
+  Rendered accounts/check_your_email.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/resend_your_email" for 165.91.13.74 at 2016-04-18 03:28:09 +0000
+Processing by AccountsController#resend_your_email as HTML
+  Parameters: {"authenticity_token"=>"T/tgNtQdWoPMz0dokcAwkCkfT8TG8NkM2Zc9fRImWRZAzdAIPzlFjP4gSA1C/+xqY0Xr6BIh0RFFOWc1/hugvQ=="}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered mailer/welcome_email.html.erb within layouts/mailer (0.2ms)
+  Rendered mailer/welcome_email.text.erb within layouts/mailer (0.1ms)
+
+Mailer#welcome_email: processed outbound mail in 16.9ms
+
+Sent mail to 670348828@qq.com (707.7ms)
+Date: Mon, 18 Apr 2016 03:28:10 +0000
+From: zhangsikai123@tamu.edu
+To: 670348828@qq.com
+Message-ID: <5714544a18d14_1a1d1e19884499fe@juliaaaa2015-project606-2907712.mail>
+Subject: Reset password from Animal Center Volunteering System
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_57145449eeba7_1a1d1e198844983f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_57145449eeba7_1a1d1e198844983f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome to example.com, Dongni
+===============================================
+
+You have successfully signed up to example.com,
+
+To login to the site, just follow this link: ~/reset_your_password.
+
+Thanks for joining and have a great day!
+
+----==_mimepart_57145449eeba7_1a1d1e198844983f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<hmtl>
+  <body>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+      </head>
+      <body>
+        <p><strong>Welcome to Bryan Animal Center volunteering system, Dongni Han</strong></p>
+        <p>
+          We received a request to reset the password associated with this e-mail address. If you made this request, please follow the instructions below.
+        </p>
+         
+        <p>
+          Click the link below to reset your password using our secure server:
+          <br>
+        </p>
+        
+        <p>
+         <a href="https://project606-juliaaaa2015.c9users.io/reset_your_password">Reset my password now!</a>
+        </p>
+        
+        <p>If you did not request to have your password reset you can safely ignore this email. Reset assured your account is safe.
+           If clicking the link doesn't seem to work, you can copy and paste the link into your browser's address window, or retype it there. 
+           Once you have returned to Bryan Animal Center, we will give instructions for resetting your password.</p>
+      </body>
+    </html>
+  </body>
+</hmtl>
+
+----==_mimepart_57145449eeba7_1a1d1e198844983f--
+
+  Rendered accounts/resend_your_email.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 883ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.74 at 2016-04-18 03:29:36 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.74 at 2016-04-18 03:29:38 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6W+KY9zOCWSJj+g63hP0/kmHPw9WwtU/gTkhMWxC02zmWTpdN+oWa7tg518NLCgEA92bI4IT3SIdl3t5gH8qxw==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered accounts/reset_your_password.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 36ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.74 at 2016-04-18 03:29:43 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+iJfVoxhNPZ5I2P4MkzxqHG/gDmEaOJDe7Gnfg60riz1FO9oZ0Ur+UvMbJ3hcy1SO+UkFVC56l7nH/024olXhw==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered accounts/reset_your_password.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 134ms (Views: 23.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.74 at 2016-04-18 03:29:48 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f84HRB1F5sa4ZBoCC+9cWFkw2FA5SUA6Un1IQjbRPzpw+Ld69mH5yYqLFWfY0ICiE2p8fO2YSCfO0xIK2uzGkQ==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "accounts" SET "password_digest" = ? WHERE "accounts"."id" = ?[0m  [["password_digest", "$2a$10$hKOWUeHUiRCO3HB9aT4n8ODQxXbv/gDjFAibKIROQPwB/iALmpgWS"], ["id", 1]]
+  [1m[35m (101.1ms)[0m  commit transaction
+Redirected to https://project606-juliaaaa2015.c9users.io/login
+Completed 302 Found in 183ms (ActiveRecord: 101.8ms)
+
+
+Started GET "/login" for 165.91.13.74 at 2016-04-18 03:29:49 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.1ms)
+  Rendered sessions/new.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms)
