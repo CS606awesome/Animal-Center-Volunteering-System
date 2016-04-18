@@ -38725,3 +38725,2380 @@ Processing by SessionsController#new as HTML
   Rendered layouts/_header.html.erb (0.1ms)
   Rendered layouts/_footer.html.erb (0.1ms)
 Completed 200 OK in 104ms (Views: 103.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 20:14:03 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 500ms (Views: 483.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 20:14:14 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:14:14 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (13.8ms)
+  Rendered accounts/new.html.haml within layouts/application (30.9ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (1.9ms)
+Completed 200 OK in 228ms (Views: 152.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 20:14:22 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:14:22 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.9ms)
+  Rendered accounts/new.html.haml within layouts/application (10.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 215ms (Views: 214.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 20:15:48 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:15:48 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.4ms)
+  Rendered accounts/new.html.haml within layouts/application (15.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 128ms (Views: 127.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 20:21:15 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:21:15 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (0.9ms)
+  Rendered accounts/new.html.haml within layouts/application (4.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 89ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:30:01 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.8ms)
+  Rendered accounts/new.html.haml within layouts/application (18.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 152ms (Views: 151.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:30:28 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (2.8ms)
+  Rendered accounts/new.html.haml within layouts/application (13.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 159ms (Views: 158.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:30:36 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (2.4ms)
+  Rendered accounts/new.html.haml within layouts/application (8.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 154ms (Views: 153.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:30:43 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (2.5ms)
+  Rendered accounts/new.html.haml within layouts/application (7.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 147ms (Views: 145.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:31:49 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (2.4ms)
+  Rendered accounts/new.html.haml within layouts/application (8.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 245ms (Views: 243.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:31:52 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.2ms)
+  Rendered accounts/new.html.haml within layouts/application (8.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 158ms (Views: 157.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:32:00 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (2.0ms)
+  Rendered accounts/new.html.haml within layouts/application (5.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 121ms (Views: 120.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:35:41 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 98ms (Views: 97.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:35:45 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 99ms (Views: 98.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:36:14 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 108ms (Views: 107.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:36:24 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 119ms (Views: 118.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:36:40 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.1ms)
+  Rendered accounts/new.html.haml within layouts/application (9.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 115ms (Views: 113.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:37:56 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:10: syntax error, unexpected '<', expecting ')'
+    <ul>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:14: syntax error, unexpected '<', expecting ')'
+        </li>
+         ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: unknown regexp option - l
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected '<', expecting ')'
+  </flash>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:25: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected '<'
+    <div style="margin-bottom:10px">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Maidenname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+...me,  {:placeholder => 'Lastname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:29: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:33: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:34: syntax error, unexpected '<'
+    <div style="margin-bottom:10px">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :email, {:placeholder => 'E-mail'} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...mail, {:placeholder => 'E-mail'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :password, {:type=>'password',:placeholder => 'password'}...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+...word',:placeholder => 'password'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:37: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+    <div style="margin-bottom:10px">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:43: syntax error, unexpected tCONSTANT, expecting ')'
+...ntry, {:placeholder => 'Country'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:44: syntax error, unexpected tCONSTANT, expecting ')'
+...:state, {:placeholder => 'State'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:45: syntax error, unexpected tCONSTANT, expecting ')'
+...d :city, {:placeholder => 'City'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:46: syntax error, unexpected tCONSTANT, expecting ')'
+...treet, {:placeholder => 'Street'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:47: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:50: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:51: syntax error, unexpected '<'
+    <p>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:52: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append=( f.submit 'Join us now!',class: 'btn btn-suc...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:52: syntax error, unexpected tIDENTIFIER, expecting ')'
+...bmit 'Join us now!',class: 'btn btn-success' );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:52: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... now!',class: 'btn btn-success' );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:53: syntax error, unexpected '<', expecting ')'
+    </p>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:55: unknown regexp options - fldt
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:56: unterminated string meets end of file
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:56: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/accounts/new.html.erb:10: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:14: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: unknown regexp option - l
+  app/views/accounts/new.html.erb:20: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:25: unknown regexp options - dv
+  app/views/accounts/new.html.erb:26: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:29: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:33: unknown regexp options - dv
+  app/views/accounts/new.html.erb:34: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:35: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:35: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:37: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:41: unknown regexp options - dv
+  app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:43: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:44: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:45: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:46: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:47: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:50: unknown regexp options - dv
+  app/views/accounts/new.html.erb:51: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:52: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:52: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:52: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:53: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:55: unknown regexp options - fldt
+  app/views/accounts/new.html.erb:56: unterminated string meets end of file
+  app/views/accounts/new.html.erb:56: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (97.4ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:39:07 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+    <div style="margin-bottom:10px">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+...me, {:placeholder => 'Firstname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Middlename'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected '<'
+    <div style="margin-bottom:10px">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...ender, {:placeholder => 'Gender'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'} );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tSTRING_BEG, expecting ')'
+...laceholder => 'yyyy-mm-dd(DOB)'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected '<'
+    <div style="margin-bottom:10px">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:33: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Homephone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:34: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Cellphone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+    <div style="margin-bottom:10px">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:43: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :zip, {:placeholder => 'Zip'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:44: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:47: unknown regexp option - p
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:49: unterminated regexp meets end of file
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:49: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:23: unknown regexp options - dv
+  app/views/accounts/new.html.erb:24: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tSTRING_BEG, expecting ')'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:31: unknown regexp options - dv
+  app/views/accounts/new.html.erb:32: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:33: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:34: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:41: unknown regexp options - dv
+  app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:43: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:44: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:47: unknown regexp option - p
+  app/views/accounts/new.html.erb:49: unterminated regexp meets end of file
+  app/views/accounts/new.html.erb:49: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (23.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (107.4ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:40:03 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+    <div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+...me, {:placeholder => 'Firstname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Middlename'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected '<'
+    <div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...ender, {:placeholder => 'Gender'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'} );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tSTRING_BEG, expecting ')'
+...laceholder => 'yyyy-mm-dd(DOB)'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected '<'
+    <div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:33: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Homephone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:34: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Cellphone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+    <div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:43: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :zip, {:placeholder => 'Zip'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:44: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:47: unknown regexp option - p
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:49: unterminated regexp meets end of file
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:49: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:23: unknown regexp options - dv
+  app/views/accounts/new.html.erb:24: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tSTRING_BEG, expecting ')'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:31: unknown regexp options - dv
+  app/views/accounts/new.html.erb:32: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:33: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:34: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:41: unknown regexp options - dv
+  app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:43: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:44: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:47: unknown regexp option - p
+  app/views/accounts/new.html.erb:49: unterminated regexp meets end of file
+  app/views/accounts/new.html.erb:49: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (108.9ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:40:06 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+    <div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+...me, {:placeholder => 'Firstname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Middlename'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected '<'
+    <div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...ender, {:placeholder => 'Gender'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'} );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tSTRING_BEG, expecting ')'
+...laceholder => 'yyyy-mm-dd(DOB)'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected '<'
+    <div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:33: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Homephone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:34: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Cellphone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+    <div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:43: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :zip, {:placeholder => 'Zip'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:44: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:47: unknown regexp option - p
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:49: unterminated regexp meets end of file
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:49: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:23: unknown regexp options - dv
+  app/views/accounts/new.html.erb:24: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tSTRING_BEG, expecting ')'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:31: unknown regexp options - dv
+  app/views/accounts/new.html.erb:32: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:33: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:34: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:41: unknown regexp options - dv
+  app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:43: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:44: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:47: unknown regexp option - p
+  app/views/accounts/new.html.erb:49: unterminated regexp meets end of file
+  app/views/accounts/new.html.erb:49: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (93.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:40:58 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+...me, {:placeholder => 'Firstname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Middlename'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Maidenname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+...me,  {:placeholder => 'Lastname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+...ender, {:placeholder => 'Gender'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'} );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tSTRING_BEG, expecting ')'
+...laceholder => 'yyyy-mm-dd(DOB)'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :email, {:placeholder => 'E-mail'} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...mail, {:placeholder => 'E-mail'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :password, {:type=>'password',:placeholder => 'password'}...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected tIDENTIFIER, expecting ')'
+...word',:placeholder => 'password'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Homephone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Cellphone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+...ntry, {:placeholder => 'Country'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:33: syntax error, unexpected tCONSTANT, expecting ')'
+...:state, {:placeholder => 'State'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:34: syntax error, unexpected tCONSTANT, expecting ')'
+...d :city, {:placeholder => 'City'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: syntax error, unexpected tCONSTANT, expecting ')'
+...treet, {:placeholder => 'Street'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:37: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :zip, {:placeholder => 'Zip'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: syntax error, unexpected '<', expecting ')'
+    <p>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append=( f.submit 'Join us now!',class: 'btn btn-suc...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: syntax error, unexpected tIDENTIFIER, expecting ')'
+...bmit 'Join us now!',class: 'btn btn-success' );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... now!',class: 'btn btn-success' );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: syntax error, unexpected '<', expecting ')'
+    </p>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:43: unknown regexp options - fldt
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:44: unterminated string meets end of file
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:44: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tSTRING_BEG, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:27: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:33: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:34: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:35: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:37: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:39: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:40: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:40: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:40: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:41: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:43: unknown regexp options - fldt
+  app/views/accounts/new.html.erb:44: unterminated string meets end of file
+  app/views/accounts/new.html.erb:44: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (22.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (94.3ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:41:45 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected tCONSTANT, expecting ')'
+...me, {:placeholder => 'Firstname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Middlename'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Maidenname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+...me,  {:placeholder => 'Lastname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+...ender, {:placeholder => 'Gender'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'} );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tSTRING_BEG, expecting ')'
+...laceholder => 'yyyy-mm-dd(DOB)'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :email, {:placeholder => 'E-mail'} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...mail, {:placeholder => 'E-mail'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :password, {:type=>'password',:placeholder => 'password'}...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...word',:placeholder => 'password'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Homephone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Cellphone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...ntry, {:placeholder => 'Country'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+...:state, {:placeholder => 'State'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+...d :city, {:placeholder => 'City'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+...treet, {:placeholder => 'Street'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :zip, {:placeholder => 'Zip'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected '<', expecting ')'
+    <p>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append=( f.submit 'Join us now!',class: 'btn btn-suc...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+...bmit 'Join us now!',class: 'btn btn-success' );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... now!',class: 'btn btn-success' );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:33: syntax error, unexpected '<', expecting ')'
+    </p>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: unknown regexp options - fldt
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:36: unterminated string meets end of file
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:36: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/accounts/new.html.erb:16: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tSTRING_BEG, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:33: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:35: unknown regexp options - fldt
+  app/views/accounts/new.html.erb:36: unterminated string meets end of file
+  app/views/accounts/new.html.erb:36: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (22.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (136.7ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:42:46 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected tCONSTANT, expecting ')'
+...me, {:placeholder => 'Firstname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Middlename'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Maidenname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+...me,  {:placeholder => 'Lastname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+...ender, {:placeholder => 'Gender'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'} );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tSTRING_BEG, expecting ')'
+...laceholder => 'yyyy-mm-dd(DOB)'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :email, {:placeholder => 'E-mail'} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...mail, {:placeholder => 'E-mail'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :password, {:type=>'password',:placeholder => 'password'}...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...word',:placeholder => 'password'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Homephone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Cellphone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...ntry, {:placeholder => 'Country'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+...:state, {:placeholder => 'State'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+...d :city, {:placeholder => 'City'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+...treet, {:placeholder => 'Street'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :zip, {:placeholder => 'Zip'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected '<', expecting ')'
+    <p>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append=( f.submit 'Join us now!',class: 'btn btn-suc...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+...bmit 'Join us now!',class: 'btn btn-success' );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... now!',class: 'btn btn-success' );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:33: syntax error, unexpected '<', expecting ')'
+    </p>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: unknown regexp options - fldt
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:36: unterminated string meets end of file
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:36: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/accounts/new.html.erb:16: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tSTRING_BEG, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:33: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:35: unknown regexp options - fldt
+  app/views/accounts/new.html.erb:36: unterminated string meets end of file
+  app/views/accounts/new.html.erb:36: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (142.3ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:44:00 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class = "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+     <div class = "row">
+      ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class = "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class = "col-xs-3"></div>
+                                ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:37: unknown regexp option - p
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: unknown regexp options - fldt
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:43: unterminated string meets end of file
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:43: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:37: unknown regexp option - p
+  app/views/accounts/new.html.erb:40: unknown regexp options - dv
+  app/views/accounts/new.html.erb:41: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:42: unknown regexp options - fldt
+  app/views/accounts/new.html.erb:43: unterminated string meets end of file
+  app/views/accounts/new.html.erb:43: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.9ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:44:38 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class = "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+     <div class = "row">
+      ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class = "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class = "col-xs-3"></div>
+                                ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:37: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+     </div> 
+      ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:37: unknown regexp options - dv
+  app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:39: unknown regexp options - dv
+  app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (116.2ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:45:26 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class = "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+     <div class = "row">
+      ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class = "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class = "col-xs-3"></div>
+                                ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:37: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+     </div> 
+      ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:37: unknown regexp options - dv
+  app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:39: unknown regexp options - dv
+  app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (121.9ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:48:05 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class = "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+     <div class = "row">
+      ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class = "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class = "col-xs-3"></div>
+                                ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:37: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+     </div> 
+      ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:37: unknown regexp options - dv
+  app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:39: unknown regexp options - dv
+  app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.6ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:48:43 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class = "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+     <div class = "row">
+      ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class = "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class = "col-xs-3"></div>
+                                ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:37: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+     </div> 
+      ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:37: unknown regexp options - dv
+  app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:39: unknown regexp options - dv
+  app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (106.9ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 20:52:44 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 130ms (Views: 129.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 20:52:46 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:52:46 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class = "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+     <div class = "row">
+      ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class = "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class = "col-xs-3"></div>
+                                ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:37: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+     </div> 
+      ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:37: unknown regexp options - dv
+  app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:39: unknown regexp options - dv
+  app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (113.4ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 20:52:47 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:52:47 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class = "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+     <div class = "row">
+      ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class = "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class = "col-xs-3"></div>
+                                ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:37: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+     </div> 
+      ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:37: unknown regexp options - dv
+  app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:39: unknown regexp options - dv
+  app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (98.3ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:53:03 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+...me, {:placeholder => 'Firstname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Middlename'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Maidenname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+...me,  {:placeholder => 'Lastname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+...ender, {:placeholder => 'Gender'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'} );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
+...laceholder => 'yyyy-mm-dd(DOB)'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :email, {:placeholder => 'E-mail'} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...mail, {:placeholder => 'E-mail'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :password, {:type=>'password',:placeholder => 'password'}...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...word',:placeholder => 'password'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Homephone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Cellphone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+...ntry, {:placeholder => 'Country'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+...:state, {:placeholder => 'State'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+...d :city, {:placeholder => 'City'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...treet, {:placeholder => 'Street'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :zip, {:placeholder => 'Zip'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append=( f.submit 'Join us now!',class: 'btn btn-suc...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+...bmit 'Join us now!',class: 'btn btn-success' );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... now!',class: 'btn btn-success' );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:35: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (95.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:53:25 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+...me, {:placeholder => 'Firstname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Middlename'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Maidenname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+...me,  {:placeholder => 'Lastname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+...ender, {:placeholder => 'Gender'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'} );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
+...laceholder => 'yyyy-mm-dd(DOB)'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :email, {:placeholder => 'E-mail'} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...mail, {:placeholder => 'E-mail'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :password, {:type=>'password',:placeholder => 'password'}...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...word',:placeholder => 'password'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Homephone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Cellphone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+...ntry, {:placeholder => 'Country'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+...:state, {:placeholder => 'State'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+...d :city, {:placeholder => 'City'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...treet, {:placeholder => 'Street'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :zip, {:placeholder => 'Zip'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append=( f.submit 'Join us now!',class: 'btn btn-suc...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+...bmit 'Join us now!',class: 'btn btn-success' );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... now!',class: 'btn btn-success' );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:35: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.2ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:53:46 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+...me, {:placeholder => 'Firstname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Middlename'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Maidenname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+...me,  {:placeholder => 'Lastname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+...ender, {:placeholder => 'Gender'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'} );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
+...laceholder => 'yyyy-mm-dd(DOB)'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :email, {:placeholder => 'E-mail'} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...mail, {:placeholder => 'E-mail'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :password, {:type=>'password',:placeholder => 'password'}...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...word',:placeholder => 'password'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Homephone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Cellphone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+...ntry, {:placeholder => 'Country'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+...:state, {:placeholder => 'State'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+...d :city, {:placeholder => 'City'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...treet, {:placeholder => 'Street'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :zip, {:placeholder => 'Zip'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append=( f.submit 'Join us now!',class: 'btn btn-suc...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+...bmit 'Join us now!',class: 'btn btn-success' );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... now!',class: 'btn btn-success' );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:35: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.2ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:54:19 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+...me, {:placeholder => 'Firstname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Middlename'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Maidenname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+...me,  {:placeholder => 'Lastname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+...ender, {:placeholder => 'Gender'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'} );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
+...laceholder => 'yyyy-mm-dd(DOB)'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :email, {:placeholder => 'E-mail'} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...mail, {:placeholder => 'E-mail'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :password, {:type=>'password',:placeholder => 'password'}...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...word',:placeholder => 'password'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Homephone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Cellphone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+...ntry, {:placeholder => 'Country'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+...:state, {:placeholder => 'State'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+...d :city, {:placeholder => 'City'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...treet, {:placeholder => 'Street'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :zip, {:placeholder => 'Zip'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append=( f.submit 'Join us now!',class: 'btn btn-suc...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+...bmit 'Join us now!',class: 'btn btn-success' );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... now!',class: 'btn btn-success' );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:35: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (165.1ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:54:23 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+...me, {:placeholder => 'Firstname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Middlename'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Maidenname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+...me,  {:placeholder => 'Lastname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+...ender, {:placeholder => 'Gender'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'} );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
+...laceholder => 'yyyy-mm-dd(DOB)'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :email, {:placeholder => 'E-mail'} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...mail, {:placeholder => 'E-mail'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :password, {:type=>'password',:placeholder => 'password'}...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...word',:placeholder => 'password'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Homephone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Cellphone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+...ntry, {:placeholder => 'Country'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+...:state, {:placeholder => 'State'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+...d :city, {:placeholder => 'City'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...treet, {:placeholder => 'Street'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :zip, {:placeholder => 'Zip'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append=( f.submit 'Join us now!',class: 'btn btn-suc...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+...bmit 'Join us now!',class: 'btn btn-success' );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... now!',class: 'btn btn-success' );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:35: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (126.5ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:54:35 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+...me, {:placeholder => 'Firstname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Middlename'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Maidenname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+...me,  {:placeholder => 'Lastname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+...ender, {:placeholder => 'Gender'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'} );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
+...laceholder => 'yyyy-mm-dd(DOB)'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :email, {:placeholder => 'E-mail'} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...mail, {:placeholder => 'E-mail'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :password, {:type=>'password',:placeholder => 'password'}...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...word',:placeholder => 'password'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Homephone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Cellphone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+...ntry, {:placeholder => 'Country'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+...:state, {:placeholder => 'State'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+...d :city, {:placeholder => 'City'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...treet, {:placeholder => 'Street'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :zip, {:placeholder => 'Zip'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append=( f.submit 'Join us now!',class: 'btn btn-suc...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+...bmit 'Join us now!',class: 'btn btn-success' );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... now!',class: 'btn btn-success' );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:35: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.5ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:55:24 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+...me, {:placeholder => 'Firstname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Middlename'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Maidenname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+...me,  {:placeholder => 'Lastname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+...ender, {:placeholder => 'Gender'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'} );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
+...laceholder => 'yyyy-mm-dd(DOB)'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :email, {:placeholder => 'E-mail'} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...mail, {:placeholder => 'E-mail'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :password, {:type=>'password',:placeholder => 'password'}...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...word',:placeholder => 'password'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Homephone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Cellphone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+...ntry, {:placeholder => 'Country'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+...:state, {:placeholder => 'State'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+...d :city, {:placeholder => 'City'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...treet, {:placeholder => 'Street'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :zip, {:placeholder => 'Zip'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append=( f.submit 'Join us now!',class: 'btn btn-suc...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+...bmit 'Join us now!',class: 'btn btn-success' );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... now!',class: 'btn btn-success' );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:35: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (95.7ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 20:55:29 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:55:30 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class = "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+     <div class = "row">
+      ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class = "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class = "col-xs-3"></div>
+                                ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:37: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+     </div> 
+      ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:37: unknown regexp options - dv
+  app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:39: unknown regexp options - dv
+  app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.2ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 20:55:30 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:55:30 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+...me, {:placeholder => 'Firstname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Middlename'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Maidenname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+...me,  {:placeholder => 'Lastname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+...ender, {:placeholder => 'Gender'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'} );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
+...laceholder => 'yyyy-mm-dd(DOB)'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :email, {:placeholder => 'E-mail'} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...mail, {:placeholder => 'E-mail'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :password, {:type=>'password',:placeholder => 'password'}...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...word',:placeholder => 'password'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Homephone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Cellphone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+...ntry, {:placeholder => 'Country'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+...:state, {:placeholder => 'State'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+...d :city, {:placeholder => 'City'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...treet, {:placeholder => 'Street'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :zip, {:placeholder => 'Zip'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append=( f.submit 'Join us now!',class: 'btn btn-suc...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+...bmit 'Join us now!',class: 'btn btn-success' );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... now!',class: 'btn btn-success' );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:35: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:35: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:35: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (21.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.4ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 20:56:10 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (15.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 652ms (Views: 620.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 20:56:13 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 20:56:13 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (13.7ms)
+  Rendered accounts/new.html.haml within layouts/application (62.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 235ms (Views: 193.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:05:19 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (3.6ms)
+  Rendered accounts/new.html.haml within layouts/application (33.3ms)
+Completed 200 OK in 237ms (Views: 235.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:05:51 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (3.8ms)
+  Rendered accounts/new.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 120ms (Views: 118.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.23 at 2016-04-18 21:06:26 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jjcNbtmtseVx30jQ435Ors49bMHjO407FJXseWzgN96BAb1QMomu6kMwR7UwQZJUhGfI7TfqhSaIO7YxgN3OdQ==", "session"=>{"email"=>"", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (5.4ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered sessions/_signin.html.erb (1.1ms)
+  Rendered sessions/new.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 251ms (Views: 82.4ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/login" for 165.91.13.23 at 2016-04-18 21:09:11 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.erb (2.5ms)
+  Rendered sessions/new.html.haml within layouts/application (48.8ms)
+Completed 200 OK in 154ms (Views: 152.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 21:09:31 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 96ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:13:36 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div id = "main-container" class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected keyword_class, expecting ')'
+    <div id = "main-container" class= "container">
+                                    ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class= "col-xs-3">
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       </div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:15: syntax error, unexpected keyword_class, expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:38: unknown regexp options - dv
+  app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unknown regexp options - dv
+  app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:42: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (98.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:19:22 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div id = "main-container" class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected keyword_class, expecting ')'
+    <div id = "main-container" class= "container">
+                                    ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class= "col-xs-3">
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       </div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:15: syntax error, unexpected keyword_class, expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:38: unknown regexp options - dv
+  app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unknown regexp options - dv
+  app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:42: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (26.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (111.8ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:21:33 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div id = "main-container" class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected keyword_class, expecting ')'
+    <div id = "main-container" class= "container">
+                                    ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class= "col-xs-3">
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       </div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:15: syntax error, unexpected keyword_class, expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:38: unknown regexp options - dv
+  app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unknown regexp options - dv
+  app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:42: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (96.3ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 21:21:57 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (6.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 655ms (Views: 630.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 21:22:00 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:22:00 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (15.6ms)
+  Rendered accounts/new.html.haml within layouts/application (78.4ms)
+Completed 200 OK in 294ms (Views: 232.4ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/accounts" for 165.91.13.23 at 2016-04-18 21:22:14 +0000
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2E0kk26ml7QhENoBE38o6h9IIcRw16KxlG4NXyCrM7fXe5SthYKIuxP/1WTAQPQQVRKF6KQGqqwIwFcXzJbKHA==", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "gender"=>"", "DOB"=>"", "email"=>"", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "country"=>"", "state"=>"", "city"=>"", "street"=>"", "zip"=>""}, "commit"=>"Join us now!"}
+Unpermitted parameter: maidenname
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mAccount Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered sessions/_signin.html.erb (2.2ms)
+  Rendered accounts/new.html.haml within layouts/application (26.0ms)
+Completed 200 OK in 284ms (Views: 188.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/input_your_email" for 165.91.13.23 at 2016-04-18 21:22:26 +0000
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (12.2ms)
+Completed 200 OK in 117ms (Views: 115.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input_your_email" for 165.91.13.23 at 2016-04-18 21:22:32 +0000
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 107ms (Views: 105.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:24:05 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.1ms)
+  Rendered accounts/new.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 136ms (Views: 134.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:24:07 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.1ms)
+  Rendered accounts/new.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 85ms (Views: 81.2ms | ActiveRecord: 0.0ms)
