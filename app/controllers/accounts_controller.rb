@@ -105,9 +105,57 @@ class AccountsController < ApplicationController
       @account = Account.find(params[:id])
   end  
   
+
+  #change password
+  def input_your_email
+      if params[:email]
+        @account = Account.find_by(email: params[:email])
+        if @account
+          session[:id]= @account.id
+          Mailer.welcome_email(@account).deliver_now
+          redirect_to check_your_email_path
+        else
+          flash.now[:danger] = 'Your email is not valid or it has not been registered, please try again!'
+          render 'input_your_email'
+        end
+      end
+  end
+  
+  def resend_your_email
+     @account = Account.find(session[:id])
+     Mailer.welcome_email(@account).deliver_now
+     flash[:notice] = "email has been resent again, please check it!"
+  end
+ 
+  def reset_your_password
+     @account = Account.find(session[:id])
+  end
+   
+   def save_password_change
+      @account = Account.find(session[:id])
+     
+       if (params[:account][:password] == params[:account][:password_confirmation])
+         if @account.update_attributes(account_password_params)   
+            flash[:success] = "You have reset your password successfully."
+            redirect_to login_path
+         else
+           flash[:failed] = "passwords are not satisfied the requirement."
+           flash[:requirement] = "Your password must be 6-20 characters and cannot be blank."
+           render 'reset_your_password'
+         end
+       else
+          flash[:alert]="The passwords you entered must be the same!"
+          render 'reset_your_password'
+       end
+   end
+
+private
+  def account_password_params
+     params.require(:account).permit(:password, :password_confirmation)
+  end
   def account_params
 
-   params.require(:account).permit(:email,:password, :password_confirmation,:firstname,:lastname, :middlename,:country,:state,:city,:street,:zip,:homephone,:cellphone,:DOB)
+   params.require(:account).permit(:gender, :email,:password, :password_confirmation,:firstname,:lastname, :middlename,:country,:state,:city,:street,:zip,:homephone,:cellphone,:DOB)
   end
   
   def account_update_params
@@ -126,47 +174,5 @@ class AccountsController < ApplicationController
                                 
   end
 
-  #change password
-  def input_your_email
-      if params[:email]
-        @account = Account.find_by(email: params[:email])
-        if @account
-          session[:id]= @account.id
-          Mailer.welcome_email(@account).deliver_now
-          redirect_to check_your_email_path
-        else
-          flash.now[:danger] = 'Your email is not valid or it has not been registered, please try again!'
-          render 'input_your_email'
-        end
-      end
-  end
-    
-  
-  def reset_your_password
-     @account = Account.find(session[:id])
-  end
-   
-   def save_password_change
-      @account = Account.find(session[:id])
-     
-       if (params[:account][:password] == params[:account][:password_confirmation])
-         if @account.update_attributes(account_password_params)   
-            flash[:success] = "You have reset your password successfully."
-            redirect_to login_path
-         else
-           flash[:failed] = 'Two passwords do not match or passwords are not satisfied the requirement.'
-           flash[:requirement] = 'Your password must be 6-20 characters and cannot be blank.'
-           render 'reset_your_password'
-         end
-       else
-          flash[:alert]="The passwords you entered must be the same!"
-          render 'reset_your_password'
-       end
-   end
-   
-private
-  def account_password_params
-     params.require(:account).permit(:password, :password_confirmation)
-  end
 
 end
