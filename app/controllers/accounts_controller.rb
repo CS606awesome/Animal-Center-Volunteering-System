@@ -124,7 +124,7 @@ class AccountsController < ApplicationController
   def resend_your_email
      @account = Account.find(session[:id])
      Mailer.welcome_email(@account).deliver_now
-     flash[:notice] = "email has been resent again, please check it!"
+     flash[:notice] = "Email has been resent, please check it!"
   end
  
   def reset_your_password
