@@ -40,7 +40,7 @@ class AccountsController < ApplicationController
   def application
       if logged_in
       @account = Account.find(params[:id]) 
-          if @account.status == nil #|| @account.status == false
+          if @account.status == nil || @account.status == false
               redirect_to profiles_path(:id => @account.id)
           end
       #@accounts = Account.all
@@ -52,10 +52,10 @@ class AccountsController < ApplicationController
   def viewapplication
     if logged_in
       @account = Account.find(session[:id])
-     # if @account.is_volunteering == false || @account.is_volunteering == nil
-      #  redirect_to profiles_path :id => @account.id
-       # flash[:notice] = "Your have no approved application, please wait or contact the administrator."
-    #  end
+      if @account.is_volunteering == false || @account.is_volunteering == nil
+        redirect_to profiles_path :id => @account.id
+        flash[:notice] = "Your have no submitted application, please wait or contact the administrator."
+      end
     else
       redirect_to login_path
     end
