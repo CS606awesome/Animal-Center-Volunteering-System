@@ -41102,3 +41102,2545 @@ Processing by AccountsController#new as HTML
   Rendered sessions/_signin.html.erb (1.1ms)
   Rendered accounts/new.html.haml within layouts/application (5.1ms)
 Completed 200 OK in 85ms (Views: 81.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:26:53 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.0ms)
+  Rendered accounts/new.html.haml within layouts/application (4.7ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 166ms (Views: 101.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 21:27:55 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 124ms (Views: 123.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 21:27:57 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:27:57 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.0ms)
+  Rendered accounts/new.html.haml within layouts/application (5.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 125ms (Views: 124.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:32:47 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div id = "main-container" class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected keyword_class, expecting ')'
+    <div id = "main-container" class= "container">
+                                    ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class= "col-xs-3">
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       </div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:15: syntax error, unexpected keyword_class, expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:38: unknown regexp options - dv
+  app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unknown regexp options - dv
+  app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:42: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.8ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:34:10 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class= "col-xs-3">
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       </div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:38: unknown regexp options - dv
+  app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unknown regexp options - dv
+  app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:42: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (29.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (142.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:37:56 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:37: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:37: unknown regexp options - dv
+  app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:39: unknown regexp options - dv
+  app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.5ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:41:30 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+<div class= "container">
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:37: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:37: unknown regexp options - dv
+  app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:39: unknown regexp options - dv
+  app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (95.3ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 21:42:20 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 88ms (Views: 87.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 21:42:22 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:42:22 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  <div class= "container">
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:37: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:37: unknown regexp options - dv
+  app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:39: unknown regexp options - dv
+  app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (108.2ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 21:42:23 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:42:23 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  <div class= "container">
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:37: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+    </div>
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:37: unknown regexp options - dv
+  app/views/accounts/new.html.erb:38: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:39: unknown regexp options - dv
+  app/views/accounts/new.html.erb:40: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.8ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 21:49:08 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 103ms (Views: 102.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 21:49:09 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:49:09 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.haml within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    11:     %li
+    12:      =msg
+    13:      <div class= "container">
+    14:       <div class= "row">
+    15:        <div class= "col-xs-3"></div>
+    16:        <div class= "col-xs-9">
+    17:  %flash
+  app/views/accounts/new.html.haml:14
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (80.3ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 21:49:10 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:49:10 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.haml within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    11:     %li
+    12:      =msg
+    13:      <div class= "container">
+    14:       <div class= "row">
+    15:        <div class= "col-xs-3"></div>
+    16:        <div class= "col-xs-9">
+    17:  %flash
+  app/views/accounts/new.html.haml:14
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (98.6ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 21:52:25 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 108ms (Views: 107.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 21:52:27 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:52:27 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.haml within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    11:     %li
+    12:      =msg
+    13:      <div class= "container">
+    14:       <div class= "row">
+    15:        <div class= "col-xs-3"><div/>
+    16:        <div class= "col-xs-9">
+    17:  %flash
+  app/views/accounts/new.html.haml:14
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (96.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 21:52:28 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:52:28 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.haml within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    11:     %li
+    12:      =msg
+    13:      <div class= "container">
+    14:       <div class= "row">
+    15:        <div class= "col-xs-3"><div/>
+    16:        <div class= "col-xs-9">
+    17:  %flash
+  app/views/accounts/new.html.haml:14
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (113.9ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:54:28 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.haml within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    11:     %li
+    12:      =msg
+    13:      <div class= "container">
+    14:       <div class= "row">
+    15:        <div class= "col-xs-3"><div/>
+    16:        <div class= "col-xs-9">
+    17:  %flash
+  app/views/accounts/new.html.haml:14
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (88.2ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:54:37 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.haml within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    11:     %li
+    12:      =msg
+    13:      <div class= "container">
+    14:       <div class= "row">
+    15:        <div class= "col-xs-3"><div/>
+    16:        <div class= "col-xs-9">
+    17:  %flash
+  app/views/accounts/new.html.haml:14
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (87.0ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 21:54:57 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 434ms (Views: 419.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 21:54:59 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:54:59 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.haml within layouts/application (32.4ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    11:     %li
+    12:      =msg
+    13:      <div class= "container">
+    14:       <div class= "row">
+    15:        <div class= "col-xs-3"><div/>
+    16:        <div class= "col-xs-9">
+    17:  %flash
+  app/views/accounts/new.html.haml:14
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (29.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (99.9ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 21:55:00 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:55:00 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.haml within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    11:     %li
+    12:      =msg
+    13:      <div class= "container">
+    14:       <div class= "row">
+    15:        <div class= "col-xs-3"><div/>
+    16:        <div class= "col-xs-9">
+    17:  %flash
+  app/views/accounts/new.html.haml:14
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (96.4ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 21:57:21 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 171ms (Views: 169.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 21:57:23 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:57:23 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (10.8ms)
+  Rendered accounts/new.html.haml within layouts/application (29.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 113ms (Views: 112.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:59:38 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.4ms)
+  Rendered accounts/new.html.haml within layouts/application (8.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 253ms (Views: 252.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 21:59:41 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 104ms (Views: 103.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 21:59:42 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 153ms (Views: 152.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 21:59:44 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 21:59:44 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.3ms)
+  Rendered accounts/new.html.haml within layouts/application (13.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 130ms (Views: 129.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 22:00:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 622ms (Views: 589.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 22:00:17 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:00:17 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (13.8ms)
+  Rendered accounts/new.html.haml within layouts/application (59.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 220ms (Views: 172.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 22:00:39 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 479ms (Views: 466.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 22:00:42 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:00:42 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (19.9ms)
+  Rendered accounts/new.html.haml within layouts/application (100.9ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 334ms (Views: 281.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:02:10 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div id = "main-container" class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected keyword_class, expecting ')'
+    <div id = "main-container" class= "container">
+                                    ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class= "col-xs-3">
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       </div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:15: syntax error, unexpected keyword_class, expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:38: unknown regexp options - dv
+  app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unknown regexp options - dv
+  app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:42: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (99.7ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:02:22 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class= "col-xs-3">
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       </div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:38: unknown regexp options - dv
+  app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unknown regexp options - dv
+  app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:42: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.1ms)
+
+
+Started GET "/login" for 165.91.13.23 at 2016-04-18 22:06:36 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.erb (2.0ms)
+  Rendered sessions/new.html.haml within layouts/application (43.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 151ms (Views: 150.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:07:14 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+       <div class= "col-xs-3">
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       </div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:38: unknown regexp options - dv
+  app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unknown regexp options - dv
+  app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:42: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (151.9ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:12:41 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+          <!-- 
+           ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:44: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:45: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:45: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:41: unknown regexp options - dv
+  app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:44: unknown regexp options - dv
+  app/views/accounts/new.html.erb:45: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:45: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (159.0ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 22:13:11 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 533ms (Views: 500.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 22:13:39 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:13:39 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (33.7ms)
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 0.7ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+          <!-- 
+           ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:44: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:45: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:45: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:41: unknown regexp options - dv
+  app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:44: unknown regexp options - dv
+  app/views/accounts/new.html.erb:45: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:45: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (26.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (118.5ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 22:13:40 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:13:40 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+          <!-- 
+           ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:44: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:45: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:45: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:41: unknown regexp options - dv
+  app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:44: unknown regexp options - dv
+  app/views/accounts/new.html.erb:45: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:45: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.5ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:15:54 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+          <!-- 
+           ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:44: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:45: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:45: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:41: unknown regexp options - dv
+  app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:44: unknown regexp options - dv
+  app/views/accounts/new.html.erb:45: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:45: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (113.5ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 22:16:48 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 433ms (Views: 414.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 22:17:13 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:17:13 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 1.3ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:38: unknown regexp options - dv
+  app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unknown regexp options - dv
+  app/views/accounts/new.html.erb:41: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:41: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (27.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.6ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 22:17:13 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:17:13 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:38: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: syntax error, unexpected '<'
+</fieldset>
+ ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:38: unknown regexp options - dv
+  app/views/accounts/new.html.erb:39: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unknown regexp options - dv
+  app/views/accounts/new.html.erb:41: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:41: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.1ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:19:29 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+      <!--
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:43: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:44: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unknown regexp options - dv
+  app/views/accounts/new.html.erb:41: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:42: unknown regexp options - dv
+  app/views/accounts/new.html.erb:43: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+  app/views/accounts/new.html.erb:44: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.9ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:19:31 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <div class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+      <!--
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:43: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:44: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unknown regexp options - dv
+  app/views/accounts/new.html.erb:41: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:42: unknown regexp options - dv
+  app/views/accounts/new.html.erb:43: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+  app/views/accounts/new.html.erb:44: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (119.5ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:21:02 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <!--
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+    <div class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:43: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:44: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unknown regexp options - dv
+  app/views/accounts/new.html.erb:41: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:42: unknown regexp options - dv
+  app/views/accounts/new.html.erb:43: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+  app/views/accounts/new.html.erb:44: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.9ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:21:43 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <!--
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+    <div class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:40: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:43: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:44: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:15: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:16: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:40: unknown regexp options - dv
+  app/views/accounts/new.html.erb:41: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:42: unknown regexp options - dv
+  app/views/accounts/new.html.erb:43: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+  app/views/accounts/new.html.erb:44: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:23:45 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<', expecting ')'
+    <!--
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+    <div class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:43: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:44: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:45: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:46: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:42: unknown regexp options - dv
+  app/views/accounts/new.html.erb:43: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:44: unknown regexp options - dv
+  app/views/accounts/new.html.erb:45: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+  app/views/accounts/new.html.erb:46: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (23.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (123.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:25:23 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<', expecting ')'
+    <!--  <div class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+    <!--  <div class= "container">
+           ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:41: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:43: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:44: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:45: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<', expecting ')'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:41: unknown regexp options - dv
+  app/views/accounts/new.html.erb:42: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:43: unknown regexp options - dv
+  app/views/accounts/new.html.erb:44: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+  app/views/accounts/new.html.erb:45: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.3ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:27:45 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+    <div class= "container">
+     ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+      <div class= "row">
+       ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+        ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected '<'
+       <div class= "col-xs-3"></div>
+                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:42: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:43: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:44: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:45: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:46: unterminated regexp meets end of file):
+  app/views/accounts/new.html.erb:18: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:42: unknown regexp options - dv
+  app/views/accounts/new.html.erb:43: syntax error, unexpected '<'
+  app/views/accounts/new.html.erb:44: unknown regexp options - dv
+  app/views/accounts/new.html.erb:45: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+  app/views/accounts/new.html.erb:46: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (31.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (124.6ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:29:17 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected tCONSTANT, expecting ')'
+...me, {:placeholder => 'Firstname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Middlename'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Maidenname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+...me,  {:placeholder => 'Lastname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+...ender, {:placeholder => 'Gender'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'} );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tSTRING_BEG, expecting ')'
+...laceholder => 'yyyy-mm-dd(DOB)'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :email, {:placeholder => 'E-mail'} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...mail, {:placeholder => 'E-mail'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :password, {:type=>'password',:placeholder => 'password'}...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...word',:placeholder => 'password'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Homephone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Cellphone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...ntry, {:placeholder => 'Country'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+...:state, {:placeholder => 'State'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+...d :city, {:placeholder => 'City'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+...treet, {:placeholder => 'Street'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :zip, {:placeholder => 'Zip'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append=( f.submit 'Join us now!',class: 'btn btn-suc...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+...bmit 'Join us now!',class: 'btn btn-success' );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... now!',class: 'btn btn-success' );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:33: unterminated regexp meets end of file
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:33: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/accounts/new.html.erb:16: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tSTRING_BEG, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:33: unterminated regexp meets end of file
+  app/views/accounts/new.html.erb:33: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (157.5ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 22:29:45 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 871ms (Views: 843.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 22:29:48 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:29:48 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (103.9ms)
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 1.3ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected tCONSTANT, expecting ')'
+...me, {:placeholder => 'Firstname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Middlename'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Maidenname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+...me,  {:placeholder => 'Lastname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+...ender, {:placeholder => 'Gender'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'} );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tSTRING_BEG, expecting ')'
+...laceholder => 'yyyy-mm-dd(DOB)'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :email, {:placeholder => 'E-mail'} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...mail, {:placeholder => 'E-mail'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :password, {:type=>'password',:placeholder => 'password'}...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...word',:placeholder => 'password'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Homephone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Cellphone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...ntry, {:placeholder => 'Country'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+...:state, {:placeholder => 'State'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+...d :city, {:placeholder => 'City'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+...treet, {:placeholder => 'Street'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :zip, {:placeholder => 'Zip'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append=( f.submit 'Join us now!',class: 'btn btn-suc...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+...bmit 'Join us now!',class: 'btn btn-success' );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... now!',class: 'btn btn-success' );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:33: unterminated regexp meets end of file
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:33: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/accounts/new.html.erb:16: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tSTRING_BEG, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:33: unterminated regexp meets end of file
+  app/views/accounts/new.html.erb:33: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (130.3ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 22:29:50 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 23ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:29:50 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected tCONSTANT, expecting ')'
+...me, {:placeholder => 'Firstname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Middlename'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Maidenname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+...me,  {:placeholder => 'Lastname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+...ender, {:placeholder => 'Gender'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'} );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tSTRING_BEG, expecting ')'
+...laceholder => 'yyyy-mm-dd(DOB)'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :email, {:placeholder => 'E-mail'} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...mail, {:placeholder => 'E-mail'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :password, {:type=>'password',:placeholder => 'password'}...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...word',:placeholder => 'password'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Homephone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Cellphone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...ntry, {:placeholder => 'Country'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+...:state, {:placeholder => 'State'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+...d :city, {:placeholder => 'City'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+...treet, {:placeholder => 'Street'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :zip, {:placeholder => 'Zip'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append=( f.submit 'Join us now!',class: 'btn btn-suc...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+...bmit 'Join us now!',class: 'btn btn-success' );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... now!',class: 'btn btn-success' );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:33: unterminated regexp meets end of file
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:33: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/accounts/new.html.erb:16: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tSTRING_BEG, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:33: unterminated regexp meets end of file
+  app/views/accounts/new.html.erb:33: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (128.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:30:23 +0000
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/accounts/new.html.erb:16: syntax error, unexpected tCONSTANT, expecting ')'
+...me, {:placeholder => 'Firstname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Middlename'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+...e, {:placeholder => 'Maidenname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+...me,  {:placeholder => 'Lastname'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+...ender, {:placeholder => 'Gender'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'} );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:21: syntax error, unexpected tSTRING_BEG, expecting ')'
+...laceholder => 'yyyy-mm-dd(DOB)'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :email, {:placeholder => 'E-mail'} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...mail, {:placeholder => 'E-mail'} );@output_buffer.safe_appen...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ld :password, {:type=>'password',:placeholder => 'password'}...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...word',:placeholder => 'password'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Homephone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...ne, {:placeholder => 'Cellphone'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...ntry, {:placeholder => 'Country'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+...:state, {:placeholder => 'State'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+...d :city, {:placeholder => 'City'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+...treet, {:placeholder => 'Street'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...eld :zip, {:placeholder => 'Zip'} );@output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append=( f.submit 'Join us now!',class: 'btn btn-suc...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+...bmit 'Join us now!',class: 'btn btn-success' );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:31: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... now!',class: 'btn btn-success' );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:33: unterminated regexp meets end of file
+/home/ubuntu/workspace/app/views/accounts/new.html.erb:33: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/accounts/new.html.erb:16: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:18: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:19: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:20: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:21: syntax error, unexpected tSTRING_BEG, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.erb:31: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/accounts/new.html.erb:33: unterminated regexp meets end of file
+  app/views/accounts/new.html.erb:33: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.6ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 22:30:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 522ms (Views: 495.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 22:30:57 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:30:57 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (16.4ms)
+  Rendered accounts/new.html.haml within layouts/application (80.4ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 282ms (Views: 227.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:34:07 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (3.0ms)
+  Rendered accounts/new.html.haml within layouts/application (24.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 240ms (Views: 239.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:35:03 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (3.4ms)
+  Rendered accounts/new.html.haml within layouts/application (10.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 167ms (Views: 166.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input_your_email" for 165.91.13.23 at 2016-04-18 22:35:54 +0000
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (91.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 205ms (Views: 204.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:36:22 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.7ms)
+  Rendered accounts/new.html.haml within layouts/application (7.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 137ms (Views: 135.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.23 at 2016-04-18 22:40:15 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"21vXGerVe1PJkjc4GDHi2iGkWI/U3JLUVnUgQEcRcofUbWcnAfFkXPt9OF3LDj4ga/78owANmsnK23oIqyyLLA==", "session"=>{"email"=>"670348828@qq.com", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (4.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "670348828@qq.com"]]
+Redirected to https://project606-juliaaaa2015.c9users.io/profiles?id=609
+Completed 302 Found in 122ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/profiles?id=609" for 165.91.13.23 at 2016-04-18 22:40:15 +0000
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"609"}
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 609]]
+  [1m[35mUserFormerworker Load (1.6ms)[0m  SELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1  [["account_id", 609]]
+  [1m[36mRelatedCouncilmember Load (0.2ms)[0m  [1mSELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1[0m  [["account_id", 609]]
+  [1m[35mCurrentWorker Load (1.0ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 609]]
+  [1m[36mFormerCriminal Load (0.3ms)[0m  [1mSELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1[0m  [["account_id", 609]]
+  [1m[35mAccommodation Load (0.2ms)[0m  SELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1  [["account_id", 609]]
+  Rendered accounts/profiles.html.erb within layouts/application (77.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 208ms (Views: 201.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:43:31 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.7ms)
+  Rendered accounts/new.html.haml within layouts/application (7.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 211ms (Views: 210.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 22:43:38 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 111ms (Views: 110.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 165.91.13.23 at 2016-04-18 22:43:40 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.5ms)
+  Rendered sessions/new.html.haml within layouts/application (3.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 99ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 165.91.13.23 at 2016-04-18 22:44:14 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.erb (0.8ms)
+  Rendered sessions/new.html.haml within layouts/application (3.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 108ms (Views: 106.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 22:44:17 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 132ms (Views: 131.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 22:44:18 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 77ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:44:18 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.6ms)
+  Rendered accounts/new.html.haml within layouts/application (7.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 149ms (Views: 147.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:44:33 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (2.5ms)
+  Rendered accounts/new.html.haml within layouts/application (9.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 267ms (Views: 266.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:44:35 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.5ms)
+  Rendered accounts/new.html.haml within layouts/application (6.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 193ms (Views: 191.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:44:45 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.7ms)
+  Rendered accounts/new.html.haml within layouts/application (5.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 114ms (Views: 112.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:44:59 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.5ms)
+  Rendered accounts/new.html.haml within layouts/application (5.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 81ms (Views: 80.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:45:18 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.6ms)
+  Rendered accounts/new.html.haml within layouts/application (5.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 133ms (Views: 131.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:45:37 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.4ms)
+  Rendered accounts/new.html.haml within layouts/application (4.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 84ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:45:43 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.5ms)
+  Rendered accounts/new.html.haml within layouts/application (4.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 191ms (Views: 190.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:46:10 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (2.3ms)
+  Rendered accounts/new.html.haml within layouts/application (7.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 153ms (Views: 151.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:46:26 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (2.0ms)
+  Rendered accounts/new.html.haml within layouts/application (6.7ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 218ms (Views: 216.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:49:03 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.2ms)
+  Rendered accounts/new.html.haml within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/sessions/_signin.html.erb:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ffer.append=( f.label 'Email' f.text_field :email, {:placeho...
+...                               ^):
+  app/views/sessions/_signin.html.erb:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/accounts/new.html.haml:3:in `_app_views_accounts_new_html_haml___2646099525644176366_21277940'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (94.1ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:49:23 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.0ms)
+  Rendered accounts/new.html.haml within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/sessions/_signin.html.erb:15: syntax error, unexpected tSYMBEG, expecting ')'
+...f.label 'Email', f.text_field :email, {:placeholder => 'emai...
+...                               ^):
+  app/views/sessions/_signin.html.erb:15: syntax error, unexpected tSYMBEG, expecting ')'
+  app/views/accounts/new.html.haml:3:in `_app_views_accounts_new_html_haml___2646099525644176366_21277940'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.2ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:50:17 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (2.1ms)
+  Rendered accounts/new.html.haml within layouts/application (5.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 104ms (Views: 102.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:51:22 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (2.0ms)
+  Rendered accounts/new.html.haml within layouts/application (5.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 227ms (Views: 219.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:52:12 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (3.2ms)
+  Rendered accounts/new.html.haml within layouts/application (7.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 199ms (Views: 197.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.23 at 2016-04-18 22:52:15 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 98ms (Views: 96.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.23 at 2016-04-18 22:52:17 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:52:18 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (3.2ms)
+  Rendered accounts/new.html.haml within layouts/application (6.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 93ms (Views: 92.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:53:28 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (2.4ms)
+  Rendered accounts/new.html.haml within layouts/application (6.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 123ms (Views: 121.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:53:48 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (3.0ms)
+  Rendered accounts/new.html.haml within layouts/application (9.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 174ms (Views: 173.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.23 at 2016-04-18 22:54:55 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BUN3N25Q7aiLnykwDdXNJN46VVvXPQekV1hBXI0ow6AKdccJhXTyp7lwJlXe6hHelGDxdwPsD7nL9hsUYRU6Cw==", "session"=>{"email"=>"670348828@qq.com", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
+Redirected to https://project606-juliaaaa2015.c9users.io/profiles?id=609
+Completed 302 Found in 83ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/profiles?id=609" for 165.91.13.23 at 2016-04-18 22:54:55 +0000
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"609"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 609]]
+  [1m[36mUserFormerworker Load (0.1ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 609]]
+  [1m[35mRelatedCouncilmember Load (0.2ms)[0m  SELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1  [["account_id", 609]]
+  [1m[36mCurrentWorker Load (0.1ms)[0m  [1mSELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1[0m  [["account_id", 609]]
+  [1m[35mFormerCriminal Load (0.1ms)[0m  SELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1  [["account_id", 609]]
+  [1m[36mAccommodation Load (0.1ms)[0m  [1mSELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1[0m  [["account_id", 609]]
+  Rendered accounts/profiles.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 84ms (Views: 81.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:56:09 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.1ms)
+  Rendered accounts/new.html.haml within layouts/application (9.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 158ms (Views: 157.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:58:03 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.2ms)
+  Rendered accounts/new.html.haml within layouts/application (11.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 131ms (Views: 129.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 22:59:49 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.6ms)
+  Rendered accounts/new.html.haml within layouts/application (20.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 140ms (Views: 138.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 23:00:58 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.6ms)
+  Rendered accounts/new.html.haml within layouts/application (19.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 182ms (Views: 180.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 23:01:08 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (2.0ms)
+  Rendered accounts/new.html.haml within layouts/application (18.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 227ms (Views: 226.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 23:01:18 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.4ms)
+  Rendered accounts/new.html.haml within layouts/application (18.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 155ms (Views: 154.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 23:01:34 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.5ms)
+  Rendered accounts/new.html.haml within layouts/application (18.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 131ms (Views: 129.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 23:01:47 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.2ms)
+  Rendered accounts/new.html.haml within layouts/application (17.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 109ms (Views: 108.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 23:01:55 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.3ms)
+  Rendered accounts/new.html.haml within layouts/application (16.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 208ms (Views: 207.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 23:05:08 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.9ms)
+  Rendered accounts/new.html.haml within layouts/application (24.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 162ms (Views: 160.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 23:05:19 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (2.3ms)
+  Rendered accounts/new.html.haml within layouts/application (19.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 112ms (Views: 110.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 23:06:08 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.3ms)
+  Rendered accounts/new.html.haml within layouts/application (17.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 116ms (Views: 115.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 23:07:33 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.9ms)
+  Rendered accounts/new.html.haml within layouts/application (18.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 125ms (Views: 124.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 23:07:59 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.3ms)
+  Rendered accounts/new.html.haml within layouts/application (15.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 161ms (Views: 159.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 23:08:25 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.5ms)
+  Rendered accounts/new.html.haml within layouts/application (16.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 110ms (Views: 109.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 23:08:46 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.1ms)
+  Rendered accounts/new.html.haml within layouts/application (13.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 103ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 23:08:49 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.3ms)
+  Rendered accounts/new.html.haml within layouts/application (9.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 134ms (Views: 133.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 23:08:54 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.3ms)
+  Rendered accounts/new.html.haml within layouts/application (15.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 108ms (Views: 107.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.23 at 2016-04-18 23:09:08 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.7ms)
+  Rendered accounts/new.html.haml within layouts/application (20.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 112ms (Views: 111.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/accounts" for 165.91.13.23 at 2016-04-18 23:11:15 +0000
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R7BzB2PuGR8NdiJzBsz+jWQK/N5n+6aKgTVvjleAKGdIhsM5iMoGED+ZLRbV8yJ3LlBY8rMqrpcdmzXGu73RzA==", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "gender"=>"", "DOB"=>"", "email"=>"", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "country"=>"", "state"=>"", "city"=>"", "street"=>"", "zip"=>""}, "commit"=>"Join us now!"}
+Unpermitted parameter: maidenname
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mAccount Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered sessions/_signin.html.erb (1.5ms)
+  Rendered accounts/new.html.haml within layouts/application (15.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 259ms (Views: 106.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.23 at 2016-04-18 23:11:51 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 609]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (3.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 98ms (Views: 96.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.23 at 2016-04-18 23:11:52 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 609]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (1.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 189ms (Views: 186.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.23 at 2016-04-18 23:11:53 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEaRsBXw6ggCMkEBh4/P51P9Tr6FJNzWsiHg+v/HPz0zcCGO/tT1BzDdTmRUsBMdGafqklH11Msuj7qyE/rGlg==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 609]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://project606-juliaaaa2015.c9users.io/login
+Completed 302 Found in 190ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 165.91.13.23 at 2016-04-18 23:11:54 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.5ms)
+  Rendered sessions/new.html.haml within layouts/application (3.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 107ms (Views: 104.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.23 at 2016-04-18 23:11:57 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 609]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 106ms (Views: 104.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.23 at 2016-04-18 23:12:04 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KvoKm1VgvdgzmW3PURcR6/S13rUivAOeddsUTkJuXaolzLqlvkSi1wF2YqqCKM0Rvu96mfZtC4PpdU4GrlOkAQ==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 609]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://project606-juliaaaa2015.c9users.io/login
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 165.91.13.23 at 2016-04-18 23:12:05 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.4ms)
+  Rendered sessions/new.html.haml within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 97ms (Views: 95.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.23 at 2016-04-18 23:12:09 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 609]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 149ms (Views: 145.0ms | ActiveRecord: 0.3ms)
