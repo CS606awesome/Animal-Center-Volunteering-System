@@ -1,5 +1,38 @@
 <h1>Your Application</h1>
 
+
+<p>
+          <strong>Name</strong> 
+          <%= @account.firstname%> <%= @account.lastname%>
+      </p>
+      <p>
+          <strong>Date of Birth</strong> 
+          <%= @account.DOB%>               <!-- why DOB is orange? -->
+      </p>
+      <p>
+          <strong>Email</strong>
+          <%= @account.email%>
+      </p>
+      <p>
+          <strong>Home Phone</strong>
+          <%= @account.homephone%>
+      </p>
+      <p>
+          <strong>Cell phone</strong>
+          <%= @account.cellphone%>
+      </p>
+      <p>
+          <strong>Home Address</strong><br />
+          <strong>Street</strong>
+          <%= @account.street%><br />
+          <strong>City</strong>
+          <%= @account.city %><br />
+          <strong>State</strong>
+          <%= @account.state %><br />
+          <strong>Zip</strong>
+          <%= @account.zip %><br />
+      </p>
+
 <%= form_for @account do |f| %>
 
   <%= fields_for :application_form do |af| %>

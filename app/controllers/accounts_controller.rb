@@ -65,6 +65,8 @@ class AccountsController < ApplicationController
 
      @account = Account.find(params[:id])
      if @account.is_volunteering == false || @account.is_volunteering == nil
+      # if @account.status
+       
      #@account.update_attributes!(account_update_params)
         if(params[:account][:is_former_worker] == "1") 
           @account.user_formerworker ||= UserFormerworker.new   
@@ -112,12 +114,12 @@ class AccountsController < ApplicationController
      
         @account.save(:validate => false)
         
-        redirect_to profiles_path :id => @account.id
+        redirect_to viewapplication_path :id => @account.id
         flash[:notice] = 'Changes Saved!'
     
      else
         redirect_to application_path :id => @account.id
-        flash[:alert] = 'Your application has been approved, you can not submit a new one until you complete this one.'
+        flash[:alert] = 'Your last application has been approved, you can not submit a new one until you complete this one.'
      end
 
   end
@@ -191,7 +193,7 @@ private
   def account_update_params
    params.require(:account).permit(:is_former_worker,:is_current_worker, :emergency_contact_name,
                                   :emergency_phone,:emergency_phone_alternate,:related_to_councilmember,
-                                  :has_convictions, :need_accommodations, 
+                                  :has_convictions, :need_accommodations, :is_volunteering,  
                                   current_worker_attributes: [:id, :department, :name],
                                   user_formerworker_attributes: [:id, :date_of_employment, :reason_for_leaving, :position_or_department],
                                   former_criminal_attributes: [:id, :date_of_conviction, :nature_of_offense, :name_of_court, :disposition_of_case, :former_crime],
@@ -199,7 +201,7 @@ private
                                   accommodation_attributes: [:id, :accommodation_name],
                                   application_form_attributes: [:id, :signature, :interested_areas, :volunteering_status, :application_date, :available_time_begin, :available_time_end],
                                   criminal_application_attributes: [:id, :mandatory_hours, :mandatory_area, :deadline],
-                                  student_application_attributes: [:id, :required_area, :required_time, :deadline],
+                                  student_application_attributes: [:id, :student_program, :required_area, :required_time, :deadline],
                                   minor_application_attributes: [:id, :parent_signature])
                                 
   end

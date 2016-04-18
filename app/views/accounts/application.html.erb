@@ -27,6 +27,9 @@ I understand that the City has the right to terminate my services as volunteer a
     
     <%= form_for setup_app_account @account do |f| %>
     
+        <%= f.label :is_volunteering, 'is_vol'%>
+        <%= f.text_field :is_volunteering, :value => true %>
+    
         <%= f.fields_for :application_form do |af| %>
             <p>
                 <strong>What is your interested area?</strong>
@@ -120,6 +123,8 @@ I understand that the City has the right to terminate my services as volunteer a
             <br />
             <br />
         <% end %>
+        
+        
     
     
     <strong>Attention: once your application is submitted and approved, you can not change and submit again</strong><br />
