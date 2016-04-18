@@ -18133,3 +18133,263 @@ Content-Transfer-Encoding: 7bit
 
   Rendered accounts/resend_your_email.html.haml within layouts/application (2.3ms)
 Completed 200 OK in 953ms (Views: 41.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 165.91.13.74 at 2016-04-18 02:55:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 358ms (Views: 337.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 165.91.13.74 at 2016-04-18 02:55:17 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.74 at 2016-04-18 02:55:17 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (17.8ms)
+  Rendered accounts/new.html.haml within layouts/application (37.2ms)
+Completed 200 OK in 113ms (Views: 70.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/input_your_email" for 165.91.13.74 at 2016-04-18 02:55:19 +0000
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (31.0ms)
+Completed 200 OK in 73ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/input_your_email" for 165.91.13.74 at 2016-04-18 02:55:24 +0000
+Processing by AccountsController#input_your_email as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GUSHOBCKwWnhMTdJEtV/uBjufDGUe+dFjUf24ct8shkWcjcG+67eZtPeOCzB6qNCUrTYHUCq71gR6aypJ0FLsg==", "email"=>"670348828@qq.com", "commit"=>"Reset"}
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "670348828@qq.com"]]
+  Rendered mailer/welcome_email.html.erb within layouts/mailer (0.7ms)
+  Rendered mailer/welcome_email.text.erb within layouts/mailer (1.0ms)
+
+Mailer#welcome_email: processed outbound mail in 459.4ms
+
+Sent mail to 670348828@qq.com (920.1ms)
+Date: Mon, 18 Apr 2016 02:55:24 +0000
+From: zhangsikai123@tamu.edu
+To: 670348828@qq.com
+Message-ID: <57144c9ca89ed_16511e6b74c486c7@juliaaaa2015-project606-2907712.mail>
+Subject: Reset password from Animal Center Volunteering System
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_57144c9ca535e_16511e6b74c48520";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_57144c9ca535e_16511e6b74c48520
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome to example.com, Dongni
+===============================================
+
+You have successfully signed up to example.com,
+
+To login to the site, just follow this link: ~/reset_your_password.
+
+Thanks for joining and have a great day!
+
+----==_mimepart_57144c9ca535e_16511e6b74c48520
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<hmtl>
+  <body>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+      </head>
+      <body>
+        <p><strong>Welcome to Bryan Animal Center volunteering system, Dongni Han</strong></p>
+        <p>
+          We received a request to reset the password associated with this e-mail address. If you made this request, please follow the instructions below.
+        </p>
+         
+        <p>
+          Click the link below to reset your password using our secure server:
+          <br>
+        </p>
+        
+        <p>
+         <a href="https://project606-juliaaaa2015.c9users.io/reset_your_password">Reset my password now!</a>
+        </p>
+        
+        <p>If you did not request to have your password reset you can safely ignore this email. Reset assured your account is safe.
+           If clicking the link doesn't seem to work, you can copy and paste the link into your browser's address window, or retype it there. 
+           Once you have returned to Bryan Animal Center, we will give instructions for resetting your password.</p>
+      </body>
+    </html>
+  </body>
+</hmtl>
+
+----==_mimepart_57144c9ca535e_16511e6b74c48520--
+
+Redirected to https://project606-juliaaaa2015.c9users.io/check_your_email
+Completed 302 Found in 1427ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/check_your_email" for 165.91.13.74 at 2016-04-18 02:55:25 +0000
+Processing by AccountsController#check_your_email as HTML
+  Rendered accounts/check_your_email.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/resend_your_email" for 165.91.13.74 at 2016-04-18 02:55:30 +0000
+Processing by AccountsController#resend_your_email as HTML
+  Parameters: {"authenticity_token"=>"4Y7zHTYl8l/nqLr83GtpSjfrSdsOP8p2U9kIRxQaqGruuEMj3QHtUNVHtZkPVLWwfbHt99ruwmvPd1IP+CdRwQ=="}
+  [1m[36mAccount Load (0.6ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered mailer/welcome_email.html.erb within layouts/mailer (0.2ms)
+  Rendered mailer/welcome_email.text.erb within layouts/mailer (0.1ms)
+
+Mailer#welcome_email: processed outbound mail in 20.6ms
+
+Sent mail to 670348828@qq.com (681.1ms)
+Date: Mon, 18 Apr 2016 02:55:30 +0000
+From: zhangsikai123@tamu.edu
+To: 670348828@qq.com
+Message-ID: <57144ca27a868_16513fa789ab4580488c3@juliaaaa2015-project606-2907712.mail>
+Subject: Reset password from Animal Center Volunteering System
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_57144ca257fbb_16513fa789ab458048739";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_57144ca257fbb_16513fa789ab458048739
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome to example.com, Dongni
+===============================================
+
+You have successfully signed up to example.com,
+
+To login to the site, just follow this link: ~/reset_your_password.
+
+Thanks for joining and have a great day!
+
+----==_mimepart_57144ca257fbb_16513fa789ab458048739
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<hmtl>
+  <body>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+      </head>
+      <body>
+        <p><strong>Welcome to Bryan Animal Center volunteering system, Dongni Han</strong></p>
+        <p>
+          We received a request to reset the password associated with this e-mail address. If you made this request, please follow the instructions below.
+        </p>
+         
+        <p>
+          Click the link below to reset your password using our secure server:
+          <br>
+        </p>
+        
+        <p>
+         <a href="https://project606-juliaaaa2015.c9users.io/reset_your_password">Reset my password now!</a>
+        </p>
+        
+        <p>If you did not request to have your password reset you can safely ignore this email. Reset assured your account is safe.
+           If clicking the link doesn't seem to work, you can copy and paste the link into your browser's address window, or retype it there. 
+           Once you have returned to Bryan Animal Center, we will give instructions for resetting your password.</p>
+      </body>
+    </html>
+  </body>
+</hmtl>
+
+----==_mimepart_57144ca257fbb_16513fa789ab458048739--
+
+  Rendered accounts/resend_your_email.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 996ms (Views: 33.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.74 at 2016-04-18 02:55:40 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.74 at 2016-04-18 02:55:41 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.74 at 2016-04-18 02:55:46 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GfOmTSR0c7Rqoqg2xtBhnvtxQB1agqC8Hlo98Y1zZ7sWxRZzz1Bsu1hNp1MV771ksSvkMY5TqKGC9Ge5YU6eEA==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered accounts/reset_your_password.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 129ms (Views: 38.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.74 at 2016-04-18 02:55:56 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hPs86IDYrDNTeQ2Wbx6hGnIDLK+NWxetGN6TH8XI066LzYzWa/yzPGGWAvO8IX3gOFmIg1mKH7CEcMlXKfUqBQ==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 58ms (Views: 56.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.74 at 2016-04-18 02:56:03 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RT/s12gSN4UMzcehWsdXYNCFQJXGI/wsc2aaD6J/2JdKCVzpgzYoij4iyMSJ+Iuamt/kuRLy9DHvyMBHTkIhPA==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  UPDATE "accounts" SET "password_digest" = ? WHERE "accounts"."id" = ?  [["password_digest", "$2a$10$ldGD4Cf2Lsb9F5OEsQa8UODZTMKaRETd4WXoCeH2mkVZUL50IP2da"], ["id", 1]]
+  [1m[36m (12.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://project606-juliaaaa2015.c9users.io/login
+Completed 302 Found in 131ms (ActiveRecord: 14.1ms)
+
+
+Started GET "/login" for 165.91.13.74 at 2016-04-18 02:56:03 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (2.9ms)
+  Rendered sessions/new.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 64ms (Views: 62.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.74 at 2016-04-18 02:56:09 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 67ms (Views: 64.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reset_your_password" for 165.91.13.74 at 2016-04-18 02:56:11 +0000
+Processing by AccountsController#reset_your_password as HTML
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered accounts/reset_your_password.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/reset_your_password" for 165.91.13.74 at 2016-04-18 02:56:13 +0000
+Processing by AccountsController#save_password_change as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5/rDo78Ta2iKpv1xSUEOSthmywlofCDKz6XI8tE0irTozHOdVDd0Z7hJ8hSaftKwkjxvJbytKNdTC5K6PQlzHw==", "account"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continue"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered accounts/reset_your_password.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 90ms (Views: 84.3ms | ActiveRecord: 0.3ms)
