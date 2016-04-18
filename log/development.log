@@ -24735,3 +24735,48 @@ Processing by AdminsController#show as HTML
   [1m[36mAccount Load (8.3ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (is_former_worker is not NULL and status is NULL) AND (lower(email) LIKE lower('%'))[0m
   Rendered admins/show.html.haml within layouts/application (199.0ms)
 Completed 200 OK in 237ms (Views: 227.9ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/profiles?id=607" for ::1 at 2016-04-18 09:52:21 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"607"}
+  [1m[35mAccount Load (0.7ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 607]]
+  [1m[36mUserFormerworker Load (0.2ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 607]]
+  [1m[35mCurrentWorker Load (0.2ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 607]]
+  [1m[36mRelatedCouncilmember Load (0.3ms)[0m  [1mSELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1[0m  [["account_id", 607]]
+  [1m[35mFormerCriminal Load (0.2ms)[0m  SELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1  [["account_id", 607]]
+  [1m[36mAccommodation Load (0.1ms)[0m  [1mSELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1[0m  [["account_id", 607]]
+  Rendered accounts/profiles.html.erb within layouts/application (139.6ms)
+Completed 200 OK in 227ms (Views: 201.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admins/1" for ::1 at 2016-04-18 09:52:31 -0500
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAccount Load (4.5ms)[0m  SELECT "accounts".* FROM "accounts" WHERE (is_former_worker is not NULL and status is NULL) AND (lower(email) LIKE lower('%'))
+  Rendered admins/show.html.haml within layouts/application (167.1ms)
+Completed 200 OK in 212ms (Views: 206.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/admins/1" for ::1 at 2016-04-18 09:54:52 -0500
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (1.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (status is 'f') AND (lower(email) LIKE lower('%'))[0m
+  Rendered admins/show.html.haml within layouts/application (35.6ms)
+Completed 200 OK in 89ms (Views: 74.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admins/1" for ::1 at 2016-04-18 09:55:03 -0500
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAccount Load (0.4ms)[0m  SELECT "accounts".* FROM "accounts" WHERE (status is 'f') AND (lower(email) LIKE lower('%'))
+  Rendered admins/show.html.haml within layouts/application (15.3ms)
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admins/1" for ::1 at 2016-04-18 10:06:10 -0500
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (18.0ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (status is 'f') AND (lower(email) LIKE lower('%'))[0m
+  Rendered admins/show.html.haml within layouts/application (239.6ms)
+Completed 200 OK in 318ms (Views: 290.6ms | ActiveRecord: 18.0ms)
