@@ -37972,3 +37972,270 @@ Processing by AccountsController#new as HTML
   Rendered layouts/_header.html.erb (1.5ms)
   Rendered layouts/_footer.html.erb (1.0ms)
 Completed 200 OK in 200ms (Views: 198.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.74 at 2016-04-18 00:18:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 13124ms (Views: 13094.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/accounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/index.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/current_workers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/custom.self-322d7273170beccc132cead38daa134cb8447a1e1a224edef9cc40397d17bd20.css?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/admin_session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/assets/application.self-74356fd8235db9fe0fbb7a91bc8b5a0487758e6053b52b6ca00e6dcb7895ad52.js?body=1" for 165.91.13.74 at 2016-04-18 00:18:48 +0000
+
+
+Started GET "/accounts" for 165.91.13.74 at 2016-04-18 00:19:02 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/signup
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.74 at 2016-04-18 00:19:02 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (17.9ms)
+  Rendered accounts/new.html.haml within layouts/application (45.1ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 253ms (Views: 192.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/input_your_email" for 165.91.13.74 at 2016-04-18 00:19:12 +0000
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (22.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 173ms (Views: 172.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/input_your_email" for 165.91.13.74 at 2016-04-18 00:19:30 +0000
+Processing by AccountsController#input_your_email as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"teB6hyV9Qq/E3QZmISFJTXm8t5PrfRs89NHhZXhC5PW61sq5zlldoPYyCQPyHpW3M+YTvz+sEyFof7stlH8dXg==", "email"=>"", "commit"=>"Reset"}
+  [1m[35mAccount Load (1.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered accounts/input_your_email.html.haml within layouts/application (4.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 227ms (Views: 185.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/input_your_email" for 165.91.13.74 at 2016-04-18 00:19:33 +0000
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (1.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 225ms (Views: 223.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input_your_email" for 165.91.13.74 at 2016-04-18 00:19:34 +0000
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 155ms (Views: 154.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.74 at 2016-04-18 00:19:35 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (2.0ms)
+  Rendered accounts/new.html.haml within layouts/application (8.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 192ms (Views: 190.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.13.74 at 2016-04-18 00:47:03 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.erb (2.1ms)
+  Rendered accounts/new.html.haml within layouts/application (12.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 417ms (Views: 261.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.74 at 2016-04-18 00:47:04 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 279ms (Views: 278.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 165.91.13.74 at 2016-04-18 00:49:07 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.2ms)
+  Rendered sessions/new.html.haml within layouts/application (10.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 273ms (Views: 272.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.74 at 2016-04-18 00:49:10 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9DJhYxvIAxQyBmRr5vfnDG9Gp2eJyWvtqEwcB8oOCBj7BNFd8OwcGwDpaw41yDv2JRwDS10YY/A04kZPJjPxsw==", "session"=>{"email"=>"", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", ""]]
+  Rendered sessions/_signin.html.erb (2.0ms)
+  Rendered sessions/new.html.haml within layouts/application (9.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 159ms (Views: 153.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/input_your_email" for 165.91.13.74 at 2016-04-18 00:49:12 +0000
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 310ms (Views: 308.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/input_your_email" for 165.91.13.74 at 2016-04-18 00:49:14 +0000
+Processing by AccountsController#input_your_email as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a0gabuyGtzkl5Voz6TCxGPjLmFvmeBM6uvk0UaVElaxkfqpQB6KoNhcKVVY6D23ispE8dzKpGycmV24ZSXlsBw==", "email"=>"", "commit"=>"Reset"}
+  [1m[35mAccount Load (0.5ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered accounts/input_your_email.html.haml within layouts/application (2.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 235ms (Views: 232.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/input_your_email" for 165.91.13.74 at 2016-04-18 00:49:18 +0000
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 138ms (Views: 137.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 165.91.13.74 at 2016-04-18 00:49:20 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.erb (1.8ms)
+  Rendered sessions/new.html.haml within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 193ms (Views: 192.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.74 at 2016-04-18 00:49:21 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 141ms (Views: 140.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins" for 165.91.13.74 at 2016-04-18 00:49:24 +0000
+Processing by AdminsController#index as HTML
+Redirected to https://project606-juliaaaa2015.c9users.io/adminsignup
+Completed 302 Found in 90ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/adminsignup" for 165.91.13.74 at 2016-04-18 00:49:24 +0000
+Processing by AdminsController#new as HTML
+  Rendered admin_sessions/_signin.html.haml (3.9ms)
+  Rendered admins/new.html.haml within layouts/application (12.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 164ms (Views: 150.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/admins" for 165.91.13.74 at 2016-04-18 00:49:29 +0000
+Processing by AdminsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ex3Yh+wA1LjqNAlm1F0056FJ63/rjvM9tG3kLLmAVbx0K2i5ByTLt9jbBgMHYugd6xNPUz9f+yAow75kVb2sFw==", "admin"=>{"email"=>"", "password"=>"[FILTERED]", "key"=>""}, "commit"=>"Join us now!"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered admin_sessions/_signin.html.haml (4.5ms)
+  Rendered admins/new.html.haml within layouts/application (11.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 179ms (Views: 128.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 165.91.13.74 at 2016-04-18 00:49:33 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 153ms (Views: 151.8ms | ActiveRecord: 0.0ms)
