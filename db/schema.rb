@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160415003655) do
+ActiveRecord::Schema.define(version: 20160415062014) do
 
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20160415003655) do
     t.string  "street"
     t.string  "zip"
     t.boolean "status"
+    t.boolean "is_volunteering",           default: false
   end
 
   create_table "admins", force: :cascade do |t|
