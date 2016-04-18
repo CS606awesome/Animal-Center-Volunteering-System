@@ -24636,3 +24636,102 @@ Processing by AdminsController#show as HTML
   [1m[35mAccount Load (26.6ms)[0m  SELECT "accounts".* FROM "accounts" WHERE (is_former_worker is not NULL and status is NULL) AND (lower(email) LIKE lower('%'))
   Rendered admins/show.html.haml within layouts/application (546.7ms)
 Completed 200 OK in 615ms (Views: 584.4ms | ActiveRecord: 26.6ms)
+
+
+Started PATCH "/accounts/607" for ::1 at 2016-04-18 09:48:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AccountsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VSrUJTuP/sNWBkcoxbgX/zaFqOe4YsSTjEK1tdq7mTRt0yOMLocxuxZMz3h7g3/DVlpNmrOm3uxvtbFYAfR6Mw==", "account"=>{"is_former_worker"=>"0", "is_current_worker"=>"0", "related_to_councilmember"=>"0", "has_convictions"=>"0", "emergency_contact_name"=>"", "emergency_phone"=>"", "emergency_phone_alternate"=>"", "need_accommodations"=>"0"}, "commit"=>"Save Changes", "id"=>"607"}
+  [1m[35mAccount Load (1.0ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 607]]
+  [1m[36mUserFormerworker Load (0.2ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 607]]
+  [1m[35mRelatedCouncilmember Load (0.5ms)[0m  SELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1  [["account_id", 607]]
+  [1m[36mCurrentWorker Load (0.5ms)[0m  [1mSELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1[0m  [["account_id", 607]]
+  [1m[35mFormerCriminal Load (0.7ms)[0m  SELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1  [["account_id", 607]]
+  [1m[36mAccommodation Load (0.6ms)[0m  [1mSELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1[0m  [["account_id", 607]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "accounts" SET "is_former_worker" = ?, "is_current_worker" = ?, "emergency_contact_name" = ?, "emergency_phone" = ?, "emergency_phone_alternate" = ?, "related_to_councilmember" = ?, "has_convictions" = ?, "need_accommodations" = ? WHERE "accounts"."id" = ?[0m  [["is_former_worker", "f"], ["is_current_worker", "f"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""], ["related_to_councilmember", "f"], ["has_convictions", "f"], ["need_accommodations", "f"], ["id", 607]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/profiles?id=607
+Completed 302 Found in 124ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/profiles?id=607" for ::1 at 2016-04-18 09:48:18 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"607"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 607]]
+  [1m[35mUserFormerworker Load (0.2ms)[0m  SELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1  [["account_id", 607]]
+  [1m[36mCurrentWorker Load (0.4ms)[0m  [1mSELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1[0m  [["account_id", 607]]
+  [1m[35mRelatedCouncilmember Load (0.1ms)[0m  SELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1  [["account_id", 607]]
+  [1m[36mFormerCriminal Load (0.1ms)[0m  [1mSELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1[0m  [["account_id", 607]]
+  [1m[35mAccommodation Load (0.1ms)[0m  SELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1  [["account_id", 607]]
+  Rendered accounts/profiles.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 402ms (Views: 399.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-18 09:48:18 -0500
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-18 09:48:18 -0500
+
+
+Started GET "/assets/application.self-67e2cb7955bba7f7045163a86b2dac5088c84f14caf812be56724a80894f007a.css?body=1" for ::1 at 2016-04-18 09:48:18 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-18 09:48:18 -0500
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-18 09:48:18 -0500
+
+
+Started GET "/assets/admin_session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-18 09:48:18 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-18 09:48:18 -0500
+
+
+Started GET "/assets/current_workers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-18 09:48:18 -0500
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-18 09:48:18 -0500
+
+
+Started GET "/assets/application.self-d881ea3eaa8bd59a52c5f723e4a3ee375c0bf81714dc2d6edd4ff3eefc7eac55.js?body=1" for ::1 at 2016-04-18 09:48:18 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-18 09:48:18 -0500
+
+
+Started PATCH "/accounts/607" for ::1 at 2016-04-18 09:48:21 -0500
+Processing by AccountsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iuXagAfDtkyfet6H1HFcGYDFc9m2+ShXVAUTTO10Y5SyHC0pEst5NN8wVtdqSjQl4BqWpL09Mii38hehNjuAkw==", "account"=>{"is_former_worker"=>"0", "is_current_worker"=>"0", "related_to_councilmember"=>"0", "has_convictions"=>"0", "emergency_contact_name"=>"", "emergency_phone"=>"", "emergency_phone_alternate"=>"", "need_accommodations"=>"0"}, "commit"=>"Save Changes", "id"=>"607"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 607]]
+  [1m[35mUserFormerworker Load (0.1ms)[0m  SELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1  [["account_id", 607]]
+  [1m[36mRelatedCouncilmember Load (0.1ms)[0m  [1mSELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1[0m  [["account_id", 607]]
+  [1m[35mCurrentWorker Load (0.1ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 607]]
+  [1m[36mFormerCriminal Load (0.1ms)[0m  [1mSELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1[0m  [["account_id", 607]]
+  [1m[35mAccommodation Load (0.1ms)[0m  SELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1  [["account_id", 607]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/profiles?id=607
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/profiles?id=607" for ::1 at 2016-04-18 09:48:21 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"607"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 607]]
+  [1m[35mUserFormerworker Load (0.1ms)[0m  SELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1  [["account_id", 607]]
+  [1m[36mCurrentWorker Load (0.2ms)[0m  [1mSELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1[0m  [["account_id", 607]]
+  [1m[35mRelatedCouncilmember Load (0.2ms)[0m  SELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1  [["account_id", 607]]
+  [1m[36mFormerCriminal Load (0.2ms)[0m  [1mSELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1[0m  [["account_id", 607]]
+  [1m[35mAccommodation Load (0.1ms)[0m  SELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1  [["account_id", 607]]
+  Rendered accounts/profiles.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admins/1" for ::1 at 2016-04-18 09:48:24 -0500
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (8.3ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (is_former_worker is not NULL and status is NULL) AND (lower(email) LIKE lower('%'))[0m
+  Rendered admins/show.html.haml within layouts/application (199.0ms)
+Completed 200 OK in 237ms (Views: 227.9ms | ActiveRecord: 8.3ms)
