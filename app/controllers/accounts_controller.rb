@@ -40,7 +40,7 @@ class AccountsController < ApplicationController
   def application
       if logged_in
       @account = Account.find(params[:id]) 
-          if @account.status == false || @account.status == nil
+          if @account.status == nil #|| @account.status == false
               redirect_to profiles_path(:id => @account.id)
           end
       #@accounts = Account.all
@@ -52,63 +52,76 @@ class AccountsController < ApplicationController
   def update
 
      @account = Account.find(params[:id])
+     if @account.is_volunteering == false || @account.is_volunteering == nil
      #@account.update_attributes!(account_update_params)
-     if(params[:account][:is_former_worker] == "1") 
-       @account.user_formerworker ||= UserFormerworker.new   
-     end
-     if(params[:account][:related_to_councilmember] == "1") 
-       @account.related_councilmember ||= RelatedCouncilmember.new   
-     end
-     if(params[:account][:is_current_worker] == "1") 
-       @account.current_worker ||= CurrentWorker.new   
-     end
-     if(params[:account][:has_convictions] == "1") 
-       @account.former_criminal ||= FormerCriminal.new   
-     end
-     if(params[:account][:need_accommodations] == "1") 
-       @account.accommodation ||= Accommodation.new   
-     end
+        if(params[:account][:is_former_worker] == "1") 
+          @account.user_formerworker ||= UserFormerworker.new   
+        end
+        if(params[:account][:related_to_councilmember] == "1") 
+          @account.related_councilmember ||= RelatedCouncilmember.new   
+        end
+        if(params[:account][:is_current_worker] == "1") 
+          @account.current_worker ||= CurrentWorker.new   
+        end
+        if(params[:account][:has_convictions] == "1") 
+          @account.former_criminal ||= FormerCriminal.new   
+        end
+        if(params[:account][:need_accommodations] == "1") 
+          @account.accommodation ||= Accommodation.new   
+        end
      
-     @account.attributes = account_update_params
+        @account.attributes = account_update_params
      
-     if(params[:account][:is_former_worker] == "0")
-         if(@account.user_formerworker != nil)
-             @account.user_formerworker.destroy
-         end
-     end
-     if(params[:account][:related_to_councilmember] == "0") 
-       if @account.related_councilmember != nil
-           @account.related_councilmember.destroy
-       end
-     end
-     if(params[:account][:is_current_worker] == "0") 
-       if @account.current_worker != nil  
-           @account.current_worker.destroy
-       end
-     end
-     if(params[:account][:has_convictions] == "0") 
-       if @account.former_criminal != nil  
-           @account.former_criminal.destroy
-       end
-     end
-     if(params[:account][:need_accommodations] == "0") 
-       if @account.accommodation != nil   
-           @account.accommodation.destroy
-       end
-     end
+        if(params[:account][:is_former_worker] == "0")
+            if(@account.user_formerworker != nil)
+                @account.user_formerworker.destroy
+            end
+        end
+        if(params[:account][:related_to_councilmember] == "0") 
+          if @account.related_councilmember != nil
+              @account.related_councilmember.destroy
+          end
+        end
+        if(params[:account][:is_current_worker] == "0") 
+          if @account.current_worker != nil  
+              @account.current_worker.destroy
+          end
+        end
+        if(params[:account][:has_convictions] == "0") 
+          if @account.former_criminal != nil  
+              @account.former_criminal.destroy
+          end
+        end
+        if(params[:account][:need_accommodations] == "0") 
+          if @account.accommodation != nil   
+              @account.accommodation.destroy
+          end
+        end
      
-     @account.save(:validate => false)
-     flash[:notice] = 'Changes Saved!'
-     redirect_to profiles_path :id => @account.id
+        @account.save(:validate => false)
+        
+        redirect_to profiles_path :id => @account.id
+        flash[:notice] = 'Changes Saved!'
+    
+     else
+        flash[:notice] = 'Your application has been approved, you can not submit a new one until you complete this one.'
+        redirect_to application_path :id => @account.id
+     end
 
   end
   
   def save_and_submit
       @account = Account.find(session[:id])
-      @account.status = false
-      @account.save(:validate => false)
-      flash[:notice] = 'Your profile has been sent to the administrator'
-      redirect_to profiles_path :id => @account.id
+      if @account.status == nil       #if never submit, then save and submit
+          
+          @account.status = false
+          @account.save(:validate => false)
+          flash[:notice] = 'Your profile has been sent to the administrator'
+          redirect_to profiles_path :id => @account.id
+      else                                                   # if have submitted, return to page and do nothing
+          redirect_to profiles_path :id => @account.id
+      end
+      
   end
      
   
@@ -132,6 +145,12 @@ class AccountsController < ApplicationController
       end
   end
   
+  def resend_your_email
+     @account = Account.find(session[:id])
+     Mailer.welcome_email(@account).deliver_now
+     flash[:notice] = "Email has been resent, please check it!"
+  end
+ 
   def reset_your_password
      @account = Account.find(session[:id])
   end
@@ -144,7 +163,7 @@ class AccountsController < ApplicationController
             flash[:success] = "You have reset your password successfully."
             redirect_to login_path
          else
-           flash[:failed] = "passwords are not satisfied the requirement."
+           flash[:failed] = "Passwords are not satisfied the requirement."
            flash[:requirement] = "Your password must be 6-20 characters and cannot be blank."
            render 'reset_your_password'
          end

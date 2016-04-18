@@ -30,9 +30,7 @@ validates :email,:firstname,:lastname,:homephone,
   length: { in: 6..20,
              to_short: "your password should be at least %{count} characters",
              to_long: "your password should be at most %{count} characters" },
-  :on => [ :create
-  #,:update 
-  ]
+  :on => [ :create,:update]
   #validates :email
   validates :email, email: true
   ##validates_email_realness_of :email
