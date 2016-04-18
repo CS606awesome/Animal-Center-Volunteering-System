@@ -1,0 +1,4 @@
+class AddColumnSubmitBCheckToAccounts < ActiveRecord::Migration
+  def change
+  end
+end

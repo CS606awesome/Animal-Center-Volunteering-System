@@ -28,7 +28,7 @@ class AdminsController < ApplicationController
       redirect_to adminlogin_path
     else  
     ##find accounts who has already submitted the applications  
-    @accounts = Account.where("status is 'f'")
+    @accounts = Account.where('submit_bcheck = ?', 't')
    
     agemin = params[:agemin].to_i
     agemax = params[:agemax].to_i
@@ -61,7 +61,7 @@ class AdminsController < ApplicationController
    if !admin_logged_in
       redirect_to adminlogin_path
    else  
-    @accounts = Account.where("is_volunteering='t'")
+    @accounts = Account.where('is_volunteering = ?', 't')
     firstname = params[:firstname].to_s
     lastname = params[:lastname].to_s
     email = params[:email] 
@@ -83,7 +83,7 @@ class AdminsController < ApplicationController
 
    def approve
     @account = Account.find(params[:id])
-    if @account.update(:status => 't')
+    if @account.update(:status => 't', :submit_bcheck => 'f')
       flash[:notice] = 'Approvement is successful!'
       redirect_to action: 'show'
     else
@@ -93,7 +93,7 @@ class AdminsController < ApplicationController
    end
    def reject
      @account = Account.find(params[:id])
-    if @account.update(:status => 'f')
+    if @account.update(:status => 'f', :submit_bcheck => 'f')
       flash[:notice] = 'Rejection is successful!'
       redirect_to action: 'show'
     else
