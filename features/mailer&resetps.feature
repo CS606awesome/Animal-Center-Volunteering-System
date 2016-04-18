@@ -1,4 +1,3 @@
-require "rack_session_access/capybara"
 Feature: reset your password
   
   As a user
