@@ -9,40 +9,18 @@
         <!-- option, need discussion -->
         <p>photo</p>
     </div>
-    <div class="right column"  style = "margin-bottom:10px">
-      <p>
-          <strong>Name</strong> 
-          <%= @account.firstname%> <%= @account.lastname%>
-      </p>
-      <p>
-          <strong>Date of Birth</strong> 
-          <%= @account.DOB%>               <!-- why DOB is orange? -->
-      </p>
-      <p>
-          <strong>Email</strong>
-          <%= @account.email%>
-      </p>
-      <p>
-          <strong>Home Phone</strong>
-          <%= @account.homephone%>
-      </p>
-      <p>
-          <strong>Cell phone</strong>
-          <%= @account.cellphone%>
-      </p>
-      <p>
-          <strong>Home Address</strong><br />
-          <strong>Street</strong>
-          <%= @account.street%><br />
-          <strong>City</strong>
-          <%= @account.city %><br />
-          <strong>State</strong>
-          <%= @account.state %><br />
-          <strong>Zip</strong>
-          <%= @account.zip %><br />
-      </p>
-    </div>
+    
 </div>
+
+<table>
+    <tr>
+        <tb>
+            <%= link_to 'View your submitted profiles and application', viewapplication_path(:id => @account.id) %>
+        </tb>
+    </tr>
+   
+</table>
+
   <%= form_for @account do |f| %>
   <!-- **************************************************************************** -->
   <!-- add all form contents within this helper -->
@@ -54,6 +32,48 @@
   f.text_field :field_name
   radio dot has other f. method name
   -->
+      <div class="right column"  style = "margin-bottom:10px">
+      <p>
+          <!--strong>Name</strong><br /--> 
+          <!--= @account.firstname%> <= @account.lastname-->
+          <%=f.label :firstname, 'First Name'%>
+          <%= f.text_field :firstname, :value => @account.firstname %><br />
+          <%=f.label :lastname, 'Last Name'%>
+          <%= f.text_field :lastname, :value => @account.lastname %><br />
+      </p>
+      <p>
+          <%=f.label :DOB, 'Date of Birth'%>
+          <%= f.text_field :DOB, :value => @account.DOB %>   <br />            <!-- why DOB is orange? -->
+      </p>
+      <p>
+          <%=f.label :lastname, 'Last Name'%>
+          <%= f.text_field :lastname, :value => @account.lastname %><br />
+      </p>
+      <p>
+          <%=f.label :homephone, 'Home Phone'%>
+          <%= f.text_field :homephone, :value => @account.homephone %><br />
+      </p>
+      <p>
+          <%=f.label :cellphone, 'Cell Phone'%>
+          <%= f.text_field :cellphone, :value => @account.cellphone %><br />
+      </p>
+      <p>
+          <strong>Home Address</strong><br />
+          <%=f.label :street, 'Street'%>
+          <%= f.text_field :street, :value => @account.street %><br />
+          <%=f.label :city, 'City'%>
+          <%= f.text_field :city, :value => @account.city %><br />
+          <%=f.label :state, 'State'%>
+          <%= f.text_field :state, :value => @account.state %><br />
+          <%=f.label :zip, 'Zip'%>
+          <%= f.text_field :zip, :value => @account.zip %><br />
+      </p>
+    </div>
+  
+  
+      
+  
+  
       <p>
        <b id = "checkboxlink">1.Are you a former worker of the city of Bryan?</b> <b>(If you are still working in Bryan, please check no)</b><br />    
         <%= f.radio_button :is_former_worker, "1", :checked => @account.is_former_worker, :onclick=>"FWclickYes()" %> Yes<br />
@@ -212,11 +232,3 @@
    
 </table>
 
-<table>
-    <tr>
-        <tb>
-            <%= link_to 'View your submitted application', viewapplication_path(:id => @account.id) %>
-        </tb>
-    </tr>
-   
-</table>

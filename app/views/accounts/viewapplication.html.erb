@@ -1,6 +1,6 @@
 <h1>Your Profile and Application</h1>
 
-
+<h2>Submitted Profiles</h2>
 <p>
           <strong>Name</strong> 
           <%= @account.firstname%> <%= @account.lastname%>
@@ -32,7 +32,9 @@
           <strong>Zip</strong>
           <%= @account.zip %><br />
       </p>
+      <p><strong>Has your profile been approved so that you can submit an application?: </strong><%= @account.status%></p>
 
+<h2>Submitted Application</h2>
 <%= form_for @account do |f| %>
  <% if @account.application_form != nil %>
   <%= fields_for :application_form do |af| %>
@@ -71,7 +73,7 @@
          <strong>
              Your application status
          </strong>
-             (true for approved, false for not yet): 
+             (true for submitted, false for not): 
          
              <%= @account.is_volunteering %><br />
             
