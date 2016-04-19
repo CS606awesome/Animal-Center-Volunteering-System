@@ -24,11 +24,17 @@ I understand that the City has the right to terminate my services as volunteer a
 
 <div id='@application'  style = "margin-top:10px">
     
-    <%= form_for setup_app_account @account do |f| %>
+<!--<<<<<<< HEAD
+    <= form_for setup_app_account @account do |f| %>
       
-        <%= f.hidden_field :is_volunteering, :value => true %>
+        <= f.hidden_field :is_volunteering, :value => true %>
       
     
+======= -->
+    
+    <%= form_for @account,url: submit_application_path do |f| %>
+
+
         <%= f.fields_for :application_form do |af| %>
             <p>
                 <strong>What is your interested area?</strong>
@@ -122,10 +128,14 @@ I understand that the City has the right to terminate my services as volunteer a
             <br />
             <br />
         <% end %>
+<!--<<<<<< HEAD
         
         
     
     
+    <strong>Attention: once your application is submitted, you can not change and submit again</strong><br />
+======= -->
+                    
     <strong>Attention: once your application is submitted, you can not change and submit again</strong><br />
     
     <%= f.submit 'Submit the Application' %>

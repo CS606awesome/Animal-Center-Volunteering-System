@@ -24,15 +24,14 @@ Rails.application.routes.draw do
 
   #Show user's workspace
   get 'profiles' => 'accounts#profiles'
-  get 'profiles/:id' => 'accounts#profiles'
-  
+  get 'profiles/:id' => 'accounts#profiles' 
   get 'application' => 'accounts#application'
+  patch 'submit_application' => 'accounts#submit_application'
   
   post 'saveandsubmit' => 'accounts#save_and_submit'
   post 'saveandsubmit/:id' => 'accounts#save_and_submit'
 
   get 'viewapplication' => 'accounts#viewapplication'
-  get 'viewapplication/:id' => 'accounts#viewapplication'
 
   #administrator login
   get 'managemore' => 'admins#moreshow'
