@@ -12,7 +12,6 @@
      =msg
  %flash
   =flash[:danger] 
-<<<<<<< HEAD
   .container
    .row
     .col-xs-3
@@ -57,46 +56,4 @@
       =f.text_field :zip, {:placeholder => 'Zip'}
       %p
       =f.submit 'Join us now!',class: 'btn btn-success'
-=======
- =form_for @account do |f|
-  %div{:style => "margin-bottom:15px", :style => "margin-left:300px"}
-   =f.label 'Firstname'
-   =f.text_field :firstname, {:placeholder => 'Firstname'}
-   =f.label 'Middlename'
-   =f.text_field :middlename, {:placeholder => 'Middlename'}
-  %div{:style => "margin-bottom:15px", :style => "margin-left:300px"}
-   =f.label 'Maidenname'
-   =f.text_field :maidenname, {:placeholder => 'Maidenname'}
-   =f.label 'Lastname'
-   =f.text_field :lastname,  {:placeholder => 'Lastname'}
-  %div{:style => "margin-bottom:15px", :style => "margin-left:300px"}
-   =f.label 'Gender'
-   =f.text_field :gender, {:placeholder => 'Gender'}
-   =f.label 'yyyy-mm-dd(DOB)'
-   =f.text_field :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'}
-  %div{:style => "margin-bottom:15px", :style => "margin-left:300px"}
-   =f.label 'E-mail'
-   =f.text_field :email, {:placeholder => 'E-mail'}
-   =f.label 'password'
-   =f.text_field :password, {:type=>'password',:placeholder => 'password'}
-  %div{:style => "margin-bottom:15px", :style => "margin-left:300px"}
-   =f.label 'Homephone'
-   =f.text_field :homephone, {:placeholder => 'Homephone'}
-   =f.label 'Cellphone'
-   =f.text_field :cellphone, {:placeholder => 'Cellphone'}
-  %div{:style => "margin-bottom:15px", :style => "margin-left:300px"}
-   =f.label 'Country'
-   =f.text_field :country, {:placeholder => 'Country'}
-   =f.label 'State'
-   =f.text_field :state, {:placeholder => 'State'}
-   =f.label 'City'
-   =f.text_field :city, {:placeholder => 'City'}
-   =f.label 'Street'
-   =f.text_field :street, {:placeholder => 'Street'}
-   %div{:style => "margin-bottom:15px", :style => "margin-left:300px"}
-   =f.label 'Zip'
-   =f.text_field :zip, {:placeholder => 'Zip'}
-  %p
-   =f.submit 'Join us now!',class: 'btn btn-success'
-  
->>>>>>> b9ef6fb8b03416b920e306a784958d8cb1d80fdc
+ 
