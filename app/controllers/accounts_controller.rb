@@ -52,10 +52,10 @@ class AccountsController < ApplicationController
   def viewapplication
     if logged_in
       @account = Account.find(session[:id])
-      if @account.is_volunteering == false || @account.is_volunteering == nil
-        redirect_to profiles_path :id => @account.id
-        flash[:notice] = "Your have no submitted application, please wait or contact the administrator."
-      end
+      #if @account.is_volunteering == false || @account.is_volunteering == nil
+        #redirect_to profiles_path :id => @account.id
+        #flash[:notice] = "Your have no submitted application, please wait or contact the administrator."
+      #end
     else
       redirect_to login_path
     end
@@ -64,9 +64,14 @@ class AccountsController < ApplicationController
   def update
 
      @account = Account.find(params[:id])
-     if @account.is_volunteering == false || @account.is_volunteering == nil
-      # if @account.status
-       
+     
+     #@account.is_volunteering = false
+     
+     #if params[:account][:application_form_attributes][signature
+    #    @account.is_volunteering = true
+    # end
+     
+     if @account.is_volunteering == nil || @account.is_volunteering == false
      #@account.update_attributes!(account_update_params)
         if(params[:account][:is_former_worker] == "1") 
           @account.user_formerworker ||= UserFormerworker.new   
@@ -118,8 +123,8 @@ class AccountsController < ApplicationController
         flash[:notice] = 'Changes Saved!'
     
      else
-        redirect_to application_path :id => @account.id
-        flash[:alert] = 'Your last application has been approved, you can not submit a new one until you complete this one.'
+        flash[:notice] = 'Your have already submitted an application, you can not submit change until you complete this one.'
+        redirect_to profiles_path :id => @account.id
      end
 
   end
@@ -132,7 +137,7 @@ class AccountsController < ApplicationController
           @account.save(:validate => false)
           flash[:notice] = 'Your profile has been sent to the administrator'
           redirect_to profiles_path :id => @account.id
-      else                                                   # if have submitted, return to page and do nothing
+      else                                                   # if have already submitted, return to page and do nothing
           redirect_to profiles_path :id => @account.id
       end
       

@@ -1,4 +1,4 @@
-<h1>Your Application</h1>
+<h1>Your Profile and Application</h1>
 
 
 <p>
@@ -34,19 +34,23 @@
       </p>
 
 <%= form_for @account do |f| %>
-
+ <% if @account.application_form != nil %>
   <%= fields_for :application_form do |af| %>
      <p>
          <strong>
              The Application Created at: 
          </strong>
-         <%= @account.application_form.created_at %>
+        
+             <%= @account.application_form.created_at %>
+         
      </p>
      <p>
          <strong>
              Last updated at: 
          </strong>
-         <%= @account.application_form.updated_at %>
+         <% if @account.application_form != nil %>
+             <%= @account.application_form.updated_at %>
+         <% end %>
      </p>
      <p>
          <strong>
@@ -62,6 +66,7 @@
              To: <%= @account.application_form.available_time_end %>
      </p>
      <% end %>
+ <% end %>
      <p>
          <strong>
              Your application status
@@ -77,5 +82,7 @@
 <% end %>
 
 <p>
-    <strong>If you have any question or want to cancel the application, please contact the administrator, thanks.</strong>
+    <strong>If you have any question or want to cancel the application, please contact the administrator, thanks.</strong><br /><br />
 </p>
+
+<%= link_to 'Back to profiles edit', profiles_path(:id => @account.id) %>
