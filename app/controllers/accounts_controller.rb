@@ -14,7 +14,6 @@ class AccountsController < ApplicationController
   
   def create
     @account = Account.new(account_params)
-    #@current_worker = @account.current_workers.create(current_worker_params)
     if @account.save
      redirect_to @account 
     else  
@@ -30,20 +29,51 @@ class AccountsController < ApplicationController
   
   def profiles 
       if logged_in
-      @account = Account.find(params[:id])  
-      #@accounts = Account.all
+      @account = Account.find(session[:id])  
       else
       redirect_to login_path
       end
   end
-  
+  def submit_application
+      @account = Account.find(session[:id])
+      if @account.update(:is_volunteering=>'t')
+       redirect_to viewapplication_path
+      else
+       redirect_to action: 'application'
+      end
+
+  end
   def application
       if logged_in
-      @account = Account.find(params[:id]) 
-          if @account.status == nil || @account.status == false
+      @account = Account.find(session[:id]) 
+          if @account.status == nil|| @account.status==false
+              #if rejected
+              if @account.status ==false
+              flash[:notice] = 'You were rejected by our administrator, we are sorry you can not be a volunteer this time.' 
+              #haven't submit for background check 
+              else           
+              flash[:notice] = 'You have not be approved by our administrator yet, please submit and wait with patience.'
+              end
               redirect_to profiles_path(:id => @account.id)
-          end
-      #@accounts = Account.all
+          else
+          @account.application_form ||= ApplicationForm.new 
+          # if user is a criminal
+           if @account.has_convictions == 't'   
+            @account.criminal_application ||= CriminalApplication.new
+           end  
+           ##if user's DOB is later than 18 years ago(younder than 18)
+
+           ##if user is a student
+         #  if 
+         #   @account.student_application ||= StudentApplication.new 
+         #  end   
+           if to_sec(@account.DOB) > 18.years.ago.to_i    
+            @account.minor_application ||= MinorApplication.new   
+           end
+
+
+          end          
+     
       else
       redirect_to login_path
       end
@@ -64,10 +94,8 @@ class AccountsController < ApplicationController
   def update
 
      @account = Account.find(params[:id])
-     if @account.is_volunteering == false || @account.is_volunteering == nil
-      # if @account.status
-       
-     #@account.update_attributes!(account_update_params)
+     if @account.submit_bcheck == false
+     
         if(params[:account][:is_former_worker] == "1") 
           @account.user_formerworker ||= UserFormerworker.new   
         end
@@ -112,29 +140,36 @@ class AccountsController < ApplicationController
           end
         end
      
-        @account.save(:validate => false)
-        
-        redirect_to viewapplication_path :id => @account.id
+        if @account.save(:validate => false)
         flash[:notice] = 'Changes Saved!'
-    
-     else
-        redirect_to application_path :id => @account.id
+        redirect_to action: 'profiles'
+        else
         flash[:alert] = 'Your last application has been approved, you can not submit a new one until you complete this one.'
+        redirect_to application_path :id => @account.id
+        end
+     else
+         flash[:notice] = 'Your profile is under investigation, please do not make any changes'
+         redirect_to profiles_path
      end
 
   end
   
   def save_and_submit
       @account = Account.find(session[:id])
-      if @account.status == nil       #if never submit, then save and submit
-          
-          @account.status = false
-          @account.save(:validate => false)
+      if @account.submit_bcheck == false && @account.status == nil      #if never submit, then save and submit        
+          if @account.update(:submit_bcheck => 't')
           flash[:notice] = 'Your profile has been sent to the administrator'
-          redirect_to profiles_path :id => @account.id
-      else                                                   # if have submitted, return to page and do nothing
-          redirect_to profiles_path :id => @account.id
+          else
+          flash[:notice] = 'Submission is failed'  
+          end
+      else     
+          if @account.status != nil  
+          flash[:notice] = 'You are approved, no need to bother our administrator right? LOL'# if have submitted, return to page and do nothing
+          else
+          flash[:notice] = 'Your profile is under processing!'
+          end
       end
+      redirect_to profiles_path :id => @account.id
       
   end
      
