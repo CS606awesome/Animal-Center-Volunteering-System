@@ -98,7 +98,7 @@ class AccountsController < ApplicationController
      end
      
      @account.save(:validate => false)
-     flash[:notice] = 'Changes Saved!'
+     flash[:success] = 'Changes Saved!'
      redirect_to profiles_path :id => @account.id
 
   end
@@ -107,7 +107,7 @@ class AccountsController < ApplicationController
       @account = Account.find(session[:id])
       @account.status = false
       @account.save(:validate => false)
-      flash[:notice] = 'Your profile has been sent to the administrator'
+      flash[:success] = 'Your profile has been sent to the administrator'
       redirect_to profiles_path :id => @account.id
   end
      

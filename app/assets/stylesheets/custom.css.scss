@@ -1,11 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 /* universal */
 
 body {
-  padding-top:
-  60px;
+  padding-top: 60px;
+  font-family: Georgia;
 }
 
 section {
@@ -13,10 +14,12 @@ section {
 }
 
 textarea {
+  font-family: Georgia;
   resize: vertical;
 }
 
 .center {
+  font-family: Georgia;
   text-align: center;
 }
 
@@ -28,6 +31,8 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+   font-family: Georgia;
+   
 }
 
 h1 {
@@ -38,7 +43,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.8em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -47,7 +52,8 @@ h2 {
 }
 
 p {
-  font-size: 1.1em;
+  font-size: 1.3em;
+  font-family: Georgia;
   line-height: 1.7em;
 }
 

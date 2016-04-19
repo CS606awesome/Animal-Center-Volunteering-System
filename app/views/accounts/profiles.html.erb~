@@ -1,8 +1,5 @@
 <h1> Profile </h1>
-<% if flash[:notice] %>
-    <div class="notice"><strong><%= flash[:notice] %></strong></div>
-<% end %>
-
+ 
 <div id='@account'  style = "margin-top:10px">
     <div class='left column' style = "margin-bottom:10px">
         <img src="http://www.ollarate.com/images/original/missing.jpg" alt="HTML5 Icon" style="width:320px;height:330px;">   
@@ -11,30 +8,30 @@
     </div>
     <div class="right column"  style = "margin-bottom:10px">
       <p>
-          <strong>Name</strong> 
+          <strong>Name:</strong> 
           <%= @account.firstname%> <%= @account.lastname%>
       </p>
       <p>
-          <strong>Date of Birth</strong> 
+          <strong>Date of Birth:</strong> 
           <%= @account.DOB%>               <!-- why DOB is orange? -->
       </p>
       <p>
-          <strong>Email</strong>
+          <strong>Email:</strong>
           <%= @account.email%>
       </p>
       <p>
-          <strong>Home Phone</strong>
+          <strong>Home Phone:</strong>
           <%= @account.homephone%>
       </p>
       <p>
-          <strong>Cell phone</strong>
+          <strong>Cell phone:</strong>
           <%= @account.cellphone%>
       </p>
       <p>
-          <strong>Home Address</strong><br />
-          Street<%= @account.street%><br />
-          City<%= @account.city %><br />
-          State<%= @account.state %><br />
+          <strong>Home Address:</strong><br />
+          Street:<%= @account.street%><br />
+          City:<%= @account.city %><br />
+          State:<%= @account.state %><br />
       </p>
     </div>
 </div>
@@ -158,15 +155,15 @@
 
     <p><strong>5.Emergency contact</strong></p>
     
-        <%=f.label :emergency_contact_name, 'Emergency Contact Name'%>
+        <%=f.label :emergency_contact_name, 'Emergency Contact Name',:style =>"width:220px"%>
         <%= f.text_field :emergency_contact_name, :value => @account.emergency_contact_name %>
     <br><br>
     
-        <%=f.label :emergency_phone, 'Emergency Contact Phone'%>
+        <%=f.label :emergency_phone, 'Emergency Contact Phone',:style =>"width:220px"%>
         <%= f.text_field :emergency_phone, :value => @account.emergency_phone %>
         
     <br><br>
-        <%=f.label :emergency_phone_alternate, 'Emergency Contact Alt Phone'%>
+        <%=f.label :emergency_phone_alternate, 'Emergency Contact Alt Phone',:style =>"width:220px"%>
         <%= f.text_field :emergency_phone_alternate, :value => @account.emergency_phone_alternate %>
         
     <p>

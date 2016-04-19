@@ -20,4 +20,3 @@
         .checkbox
         = f.check_box :keep_me_logged_in
         keep me logged in
- 
