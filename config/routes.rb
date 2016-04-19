@@ -22,6 +22,10 @@ Rails.application.routes.draw do
   #forget password
   get    'check_your_email' => 'accounts#check_your_email'
 
+ #resend email
+  get   'resend_your_email' => 'accounts#resend_your_email'
+  post  'resend_your_email' => 'accounts#resend_your_email'
+
   #Show user's workspace
   get 'profiles' => 'accounts#profiles'
   get 'profiles/:id' => 'accounts#profiles'

@@ -1,0 +1,16 @@
+%fieldset
+  %legend
+  .container
+    .row
+      .col-xs-3
+      .col-xs-9
+        = form_for(:session, url: login_path) do |f|
+          = f.label 'Email',:style => "width:100px"
+          = f.text_field :email, {:placeholder => 'email' }
+          = f.label 'Password',:style => "width:100px"
+          = f.text_field :password,{:placeholder => 'Password', :type=>'password'}
+          = f.submit 'I am already a volunteer!',class: 'btn btn-success'
+          .checkbox
+          = f.check_box :keep_me_logged_in
+          keep me logged in
+        = link_to "Forget your password?", input_your_email_path, class: 'btn btn-warning btn-xs'
