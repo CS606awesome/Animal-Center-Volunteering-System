@@ -34,6 +34,8 @@ class AccountsController < ApplicationController
       redirect_to login_path
       end
   end
+
+  #submit application 
   def submit_application
       @account = Account.find(session[:id])
       if @account.update(:is_volunteering=>'t')
@@ -58,7 +60,7 @@ class AccountsController < ApplicationController
           else
           @account.application_form ||= ApplicationForm.new 
           # if user is a criminal
-           if @account.has_convictions == 't'   
+           if @account.has_convictions == true   
             @account.criminal_application ||= CriminalApplication.new
            end  
            ##if user's DOB is later than 18 years ago(younder than 18)
@@ -90,6 +92,22 @@ class AccountsController < ApplicationController
       redirect_to login_path
     end
   end
+
+  def destroyapplication
+    @account = Account.find(session[:id])
+    if @account.update(:is_volunteering=>'f') && @account.application_form.destroy
+      flash[:notice] = "Withdrawal succeeded!"
+      redirect_to action: 'profiles'
+    else
+      flash[:notice] = "Withdrawal failed!"  
+      redirect_to action: 'viewapplication'
+    end
+
+  end
+
+
+
+
   
   def update
 
