@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160420202050) do
+ActiveRecord::Schema.define(version: 20160420214140) do
 
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name"
@@ -65,9 +65,7 @@ ActiveRecord::Schema.define(version: 20160420202050) do
 
   create_table "application_forms", force: :cascade do |t|
     t.string   "interested_areas"
-    t.string   "volunteering_status"
     t.binary   "signature"
-    t.datetime "application_date"
     t.datetime "available_time_begin"
     t.datetime "available_time_end"
     t.datetime "created_at",           null: false
