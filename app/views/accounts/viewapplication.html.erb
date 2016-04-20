@@ -2,7 +2,6 @@
 
 <h2>Submitted Profiles</h2>
 <p>
-    <b>test criminal and student</b><%= @account.is_student %><br /><%=@account.has_convictions %><br />
           <strong>Name</strong> 
           <%= @account.firstname%> <%= @account.lastname%>
       </p>
@@ -83,7 +82,7 @@
     
     
 <% end %>
- <%= link_to 'Withdraw your application', withdraw_application_path, :method=>'delete' %>
+
 <p>
     <strong>If you have any question or want to cancel the application, please contact the administrator, thanks.</strong><br /><br />
 </p>
