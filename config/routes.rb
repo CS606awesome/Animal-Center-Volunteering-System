@@ -48,6 +48,8 @@ Rails.application.routes.draw do
   #accounts has many applicaitons   
   get 'reject/:id' => 'admins#reject'
   get 'approve/:id' => 'admins#approve'
+  get 'finish/:id' => 'admins#finish'
+  
     resources :accounts do
       resources :applications
       resources :current_workers
