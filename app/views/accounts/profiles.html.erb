@@ -12,14 +12,7 @@
     
 </div>
 
-<table>
-    <tr>
-        <tb>
-            <%= link_to 'View your submitted profiles and application', viewapplication_path(:id => @account.id) %>
-        </tb>
-    </tr>
-   
-</table>
+
 
   <%= form_for @account do |f| %>
   <!-- **************************************************************************** -->
@@ -240,7 +233,7 @@ Buppy Simank / Jennifer (Yerrington) Simank
   
   <% end %>
   <br />
-  <%= button_to "Save and Submit for Approve", action: "save_and_submit" %> <b>(attention: once you have submit your profile, you can't change it anymore)</b>
+  <%= button_to "Submit for Approve", action: "save_and_submit" %> <b>(attention: please save before you submit, once you have submitted your profile, you can't change it anymore)</b>
 <br /><br />
 
 
