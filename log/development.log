@@ -25889,3 +25889,625 @@ Processing by SessionsController#new as HTML
   Rendered sessions/_signin.html.haml (1.6ms)
   Rendered sessions/new.html.haml within layouts/application (5.5ms)
 Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.12.173 at 2016-04-20 23:12:10 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (16.8ms)
+Completed 200 OK in 459ms (Views: 433.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins" for 165.91.12.173 at 2016-04-20 23:12:13 +0000
+Processing by AdminsController#index as HTML
+Redirected to https://tdd-sabrinadai.c9users.io/adminsignup
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/adminsignup" for 165.91.12.173 at 2016-04-20 23:12:13 +0000
+Processing by AdminsController#new as HTML
+  Rendered admin_sessions/_signin.html.haml (28.8ms)
+  Rendered admins/new.html.haml within layouts/application (52.3ms)
+Completed 200 OK in 137ms (Views: 98.1ms | ActiveRecord: 20.1ms)
+
+
+Started POST "/adminlogin" for 165.91.12.173 at 2016-04-20 23:12:18 +0000
+Processing by AdminSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fsUqsXJJYG6sUEx3gvV32qh87ahL4ftmYtxqaGq+DuoiquiujwP3KkhfAyf/VnDvoAW5yG5cHt16RPBaBQS7xA==", "session"=>{"email"=>"123", "password"=>"[FILTERED]", "key"=>"123", "keep_me_logged_in"=>"0"}, "commit"=>"I am Alma Garcia!"}
+  [1m[35mAdmin Load (0.6ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT 1  [["email", "123"]]
+Redirected to https://tdd-sabrinadai.c9users.io/admins/1
+Completed 302 Found in 199ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/admins/1" for 165.91.12.173 at 2016-04-20 23:12:18 +0000
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (submit_bcheck = 't') AND (lower(email) LIKE lower('%'))[0m
+  Rendered admins/show.html.haml within layouts/application (12.2ms)
+Completed 200 OK in 72ms (Views: 49.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/managemore" for 165.91.12.173 at 2016-04-20 23:12:21 +0000
+Processing by AdminsController#moreshow as HTML
+  [1m[35mAccount Load (0.6ms)[0m  SELECT "accounts".* FROM "accounts" WHERE (is_volunteering = 't') AND (lower(email) LIKE lower('%'))
+  Rendered admins/moreshow.html.haml within layouts/application (62.3ms)
+Completed 200 OK in 148ms (Views: 145.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admins/1" for 165.91.12.173 at 2016-04-20 23:12:22 +0000
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.7ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (submit_bcheck = 't') AND (lower(email) LIKE lower('%'))[0m
+  Rendered admins/show.html.haml within layouts/application (35.5ms)
+Completed 200 OK in 108ms (Views: 105.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admins/1" for 165.91.12.173 at 2016-04-20 23:12:45 +0000
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAccount Load (1.8ms)[0m  SELECT "accounts".* FROM "accounts" WHERE (lower(email) LIKE lower('%'))
+  Rendered admins/show.html.haml within layouts/application (15.8ms)
+Completed 200 OK in 197ms (Views: 91.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.self-67e2cb7955bba7f7045163a86b2dac5088c84f14caf812be56724a80894f007a.css?body=1" for 165.91.12.173 at 2016-04-20 23:12:46 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.12.173 at 2016-04-20 23:12:46 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 165.91.12.173 at 2016-04-20 23:12:46 +0000
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.173 at 2016-04-20 23:12:46 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.173 at 2016-04-20 23:12:46 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 165.91.12.173 at 2016-04-20 23:12:46 +0000
+
+
+Started GET "/assets/admin_session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.173 at 2016-04-20 23:12:46 +0000
+
+
+Started GET "/assets/current_workers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.173 at 2016-04-20 23:12:46 +0000
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.173 at 2016-04-20 23:12:46 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.173 at 2016-04-20 23:12:46 +0000
+
+
+Started GET "/assets/application.self-d881ea3eaa8bd59a52c5f723e4a3ee375c0bf81714dc2d6edd4ff3eefc7eac55.js?body=1" for 165.91.12.173 at 2016-04-20 23:12:46 +0000
+
+
+Started GET "/managemore" for 165.91.12.173 at 2016-04-20 23:12:52 +0000
+Processing by AdminsController#moreshow as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (is_volunteering = 't') AND (lower(email) LIKE lower('%'))[0m
+  Rendered admins/moreshow.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 165.91.12.173 at 2016-04-20 23:12:57 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 165.91.12.173 at 2016-04-20 23:13:02 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (4.8ms)
+  Rendered sessions/new.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 128ms (Views: 70.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/accounts" for 165.91.12.173 at 2016-04-20 23:13:04 +0000
+Processing by AccountsController#index as HTML
+Redirected to https://tdd-sabrinadai.c9users.io/signup
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 165.91.12.173 at 2016-04-20 23:13:04 +0000
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (2.0ms)
+  Rendered accounts/new.html.haml within layouts/application (22.1ms)
+Completed 200 OK in 78ms (Views: 77.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/accounts" for 165.91.12.173 at 2016-04-20 23:13:17 +0000
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j6M68/uSiU+AXTVJECPIcezueIlG5EuG/+ZuR/PRS6bTzPjsBtgeC2RSehltgM9E5Jcs6WNZrj3nfvR1nGv+iA==", "account"=>{"firstname"=>"Yifeng", "middlename"=>"", "maidenname"=>"", "lastname"=>"Wang", "gender"=>"male", "DOB"=>"1999-09-19", "email"=>"wyf1111@gmail.com", "password"=>"[FILTERED]", "homephone"=>"2134794514", "cellphone"=>"2134794514", "country"=>"United States", "state"=>"California", "city"=>"Milpitas", "street"=>"755 E Capitol Ave", "zip"=>"95035"}, "commit"=>"Join us now!"}
+Unpermitted parameter: maidenname
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'wyf1111@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "accounts" ("gender", "email", "password_digest", "firstname", "lastname", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "DOB") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["gender", "male"], ["email", "wyf1111@gmail.com"], ["password_digest", "$2a$10$FgYEv1GjHZ8Enzs0pfXctOrE3kf3MdFYK2vUGenegn6blrJj.bf0m"], ["firstname", "Yifeng"], ["lastname", "Wang"], ["middlename", ""], ["country", "United States"], ["state", "California"], ["city", "Milpitas"], ["street", "755 E Capitol Ave"], ["zip", "95035"], ["homephone", "2134794514"], ["cellphone", "2134794514"], ["DOB", "1999-09-19"]]
+  [1m[36m (18.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://tdd-sabrinadai.c9users.io/accounts/610
+Completed 302 Found in 149ms (ActiveRecord: 20.2ms)
+
+
+Started GET "/accounts/610" for 165.91.12.173 at 2016-04-20 23:13:18 +0000
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"610"}
+  Rendered sessions/_signin.html.haml (3.7ms)
+  Rendered accounts/show.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.12.173 at 2016-04-20 23:13:25 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZdXeSUgKq6EJov4dHcutxZuAnhKHJ9LQTijCiOe35sQ5uhxWtUA85e2tsU1gaKrwk/nKcqKaN2tWsFi6iA1T6g==", "session"=>{"email"=>"wyf1111@gmail.com", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[35mAccount Load (0.5ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "wyf1111@gmail.com"]]
+Redirected to https://tdd-sabrinadai.c9users.io/profiles?id=610
+Completed 302 Found in 253ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/profiles?id=610" for 165.91.12.173 at 2016-04-20 23:13:25 +0000
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"610"}
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 610]]
+  [1m[35mUserFormerworker Load (0.3ms)[0m  SELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1  [["account_id", 610]]
+  [1m[36mCurrentWorker Load (0.3ms)[0m  [1mSELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  [1m[35mRelatedCouncilmember Load (0.3ms)[0m  SELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1  [["account_id", 610]]
+  [1m[36mFormerCriminal Load (0.4ms)[0m  [1mSELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  [1m[35mAccommodation Load (0.4ms)[0m  SELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1  [["account_id", 610]]
+  Rendered accounts/profiles.html.erb within layouts/application (91.1ms)
+Completed 200 OK in 128ms (Views: 122.1ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/saveandsubmit" for 165.91.12.173 at 2016-04-20 23:13:27 +0000
+Processing by AccountsController#save_and_submit as HTML
+  Parameters: {"authenticity_token"=>"1xWnRCOgEn1gWrX8TA9N7gX/JDEAD/nce1e/uyF4K42LemVb3uqFOYRV+qwxrErbDYZwUSWyHGdjzyWJTsKeow=="}
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 610]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "accounts" SET "status" = ? WHERE "accounts"."id" = ?[0m  [["status", "f"], ["id", 610]]
+  [1m[35m (21.1ms)[0m  commit transaction
+Redirected to https://tdd-sabrinadai.c9users.io/profiles?id=610
+Completed 302 Found in 30ms (ActiveRecord: 22.0ms)
+
+
+Started GET "/profiles?id=610" for 165.91.12.173 at 2016-04-20 23:13:28 +0000
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"610"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 610]]
+  [1m[35mUserFormerworker Load (0.2ms)[0m  SELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1  [["account_id", 610]]
+  [1m[36mCurrentWorker Load (0.2ms)[0m  [1mSELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  [1m[35mRelatedCouncilmember Load (0.2ms)[0m  SELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1  [["account_id", 610]]
+  [1m[36mFormerCriminal Load (0.2ms)[0m  [1mSELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  [1m[35mAccommodation Load (0.2ms)[0m  SELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1  [["account_id", 610]]
+  Rendered accounts/profiles.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 50ms (Views: 46.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 165.91.12.173 at 2016-04-20 23:13:32 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 63ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins" for 165.91.12.173 at 2016-04-20 23:13:34 +0000
+Processing by AdminsController#index as HTML
+Redirected to https://tdd-sabrinadai.c9users.io/adminsignup
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/adminsignup" for 165.91.12.173 at 2016-04-20 23:13:34 +0000
+Processing by AdminsController#new as HTML
+  Rendered admin_sessions/_signin.html.haml (1.1ms)
+  Rendered admins/new.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 183ms (Views: 42.4ms | ActiveRecord: 133.2ms)
+
+
+Started POST "/adminlogin" for 165.91.12.173 at 2016-04-20 23:13:41 +0000
+Processing by AdminSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yYhhFjLpdMIlVL6z8k/WSxHHCp0AKXULaNbVeoZGfoiV56MJz6PjhsFb8eOP7NF+Gb5e/SWUkLBwTk9I6fzLpg==", "session"=>{"email"=>"123", "password"=>"[FILTERED]", "key"=>"123", "keep_me_logged_in"=>"0"}, "commit"=>"I am Alma Garcia!"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT 1[0m  [["email", "123"]]
+Redirected to https://tdd-sabrinadai.c9users.io/admins/1
+Completed 302 Found in 83ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/admins/1" for 165.91.12.173 at 2016-04-20 23:13:42 +0000
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAccount Load (0.4ms)[0m  SELECT "accounts".* FROM "accounts" WHERE (lower(email) LIKE lower('%'))
+  Rendered admins/show.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admins/1" for 165.91.12.173 at 2016-04-20 23:15:28 +0000
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.6ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (lower(email) LIKE lower('%'))[0m
+  [1m[35mAccount Load (1.0ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "wyf1111@gmail.com"]]
+  Rendered admins/show.html.haml within layouts/application (118.8ms)
+Completed 200 OK in 164ms (Views: 161.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.self-67e2cb7955bba7f7045163a86b2dac5088c84f14caf812be56724a80894f007a.css?body=1" for 165.91.12.173 at 2016-04-20 23:15:28 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 165.91.12.173 at 2016-04-20 23:15:28 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 165.91.12.173 at 2016-04-20 23:15:28 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.12.173 at 2016-04-20 23:15:28 +0000
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.173 at 2016-04-20 23:15:28 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.173 at 2016-04-20 23:15:28 +0000
+
+
+Started GET "/assets/admin_session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.173 at 2016-04-20 23:15:28 +0000
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.173 at 2016-04-20 23:15:28 +0000
+
+
+Started GET "/assets/current_workers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.173 at 2016-04-20 23:15:28 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.173 at 2016-04-20 23:15:28 +0000
+
+
+Started GET "/assets/application.self-d881ea3eaa8bd59a52c5f723e4a3ee375c0bf81714dc2d6edd4ff3eefc7eac55.js?body=1" for 165.91.12.173 at 2016-04-20 23:15:28 +0000
+
+
+Started GET "/profiles.610" for 165.91.12.173 at 2016-04-20 23:15:31 +0000
+Processing by AccountsController#profiles as 
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
+  app/controllers/accounts_controller.rb:33:in `profiles'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (123.7ms)
+
+
+Started GET "/profiles.610" for 165.91.12.173 at 2016-04-20 23:15:31 +0000
+Processing by AccountsController#profiles as 
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
+  app/controllers/accounts_controller.rb:33:in `profiles'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (23.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (119.7ms)
+
+
+Started GET "/profiles.610" for 165.91.12.173 at 2016-04-20 23:16:35 +0000
+Processing by AccountsController#profiles as 
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
+  app/controllers/accounts_controller.rb:33:in `profiles'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.0ms)
+
+
+Started GET "/profiles.610" for 165.91.12.173 at 2016-04-20 23:17:38 +0000
+Processing by AccountsController#profiles as 
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
+  app/controllers/accounts_controller.rb:33:in `profiles'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.9ms)
+
+
+Started GET "/profiles.610" for 165.91.12.173 at 2016-04-20 23:21:17 +0000
+Processing by AccountsController#profiles as 
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
+  app/controllers/accounts_controller.rb:33:in `profiles'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (122.9ms)
+
+
+Started POST "/adminlogin" for 165.91.12.173 at 2016-04-20 23:21:37 +0000
+Processing by AdminSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a983Go7aW1VRc1ttDCqHhfeH2NTFKpO7ENp1ae2G2IQ3sPUFc5DMEbV8FD1xiYCw//6MtOCXdgAIQu9bgjxtqg==", "session"=>{"email"=>"123", "password"=>"[FILTERED]", "key"=>"123", "keep_me_logged_in"=>"0"}, "commit"=>"I am Alma Garcia!"}
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT 1  [["email", "123"]]
+Redirected to https://tdd-sabrinadai.c9users.io/admins/1
+Completed 302 Found in 85ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admins/1" for 165.91.12.173 at 2016-04-20 23:21:38 +0000
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (lower(email) LIKE lower('%'))[0m
+  Rendered admins/show.html.haml within layouts/application (10.9ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profiles?id=610" for 165.91.12.173 at 2016-04-20 23:21:39 +0000
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"610"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 610]]
+  [1m[36mUserFormerworker Load (0.2ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  [1m[35mCurrentWorker Load (0.2ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 610]]
+  [1m[36mRelatedCouncilmember Load (0.1ms)[0m  [1mSELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  [1m[35mFormerCriminal Load (0.1ms)[0m  SELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1  [["account_id", 610]]
+  [1m[36mAccommodation Load (0.3ms)[0m  [1mSELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  Rendered accounts/profiles.html.erb within layouts/application (146.1ms)
+Completed 200 OK in 179ms (Views: 176.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/profiles?id=610" for 165.91.12.173 at 2016-04-20 23:22:18 +0000
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"610"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 610]]
+  [1m[36mUserFormerworker Load (0.3ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  [1m[35mCurrentWorker Load (0.4ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 610]]
+  [1m[36mRelatedCouncilmember Load (0.2ms)[0m  [1mSELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  [1m[35mFormerCriminal Load (0.2ms)[0m  SELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1  [["account_id", 610]]
+  [1m[36mAccommodation Load (0.2ms)[0m  [1mSELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  Rendered accounts/profiles.html.erb within layouts/application (192.5ms)
+Completed 200 OK in 238ms (Views: 234.9ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/adminlogin" for 165.91.12.173 at 2016-04-20 23:23:23 +0000
+Processing by AdminSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a983Go7aW1VRc1ttDCqHhfeH2NTFKpO7ENp1ae2G2IQ3sPUFc5DMEbV8FD1xiYCw//6MtOCXdgAIQu9bgjxtqg==", "session"=>{"email"=>"123", "password"=>"[FILTERED]", "key"=>"123", "keep_me_logged_in"=>"0"}, "commit"=>"I am Alma Garcia!"}
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT 1  [["email", "123"]]
+Redirected to https://tdd-sabrinadai.c9users.io/admins/1
+Completed 302 Found in 89ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admins/1" for 165.91.12.173 at 2016-04-20 23:23:23 +0000
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (lower(email) LIKE lower('%'))[0m
+  Rendered admins/show.html.haml within layouts/application (12.9ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profiles?id=610" for 165.91.12.173 at 2016-04-20 23:23:25 +0000
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"610"}
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 610]]
+  [1m[36mUserFormerworker Load (0.2ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  [1m[35mCurrentWorker Load (0.2ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 610]]
+  [1m[36mRelatedCouncilmember Load (0.1ms)[0m  [1mSELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  [1m[35mFormerCriminal Load (0.1ms)[0m  SELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1  [["account_id", 610]]
+  [1m[36mAccommodation Load (0.2ms)[0m  [1mSELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  Rendered accounts/profiles.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 1.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_accommodations_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_accommodations_on_account_id' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_forms_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_forms_on_account_id' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_criminal_applications_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_criminal_applications_on_account_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_former_criminals_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_former_criminals_on_account_id' AND type='index'
+
+  [1m[36m (0.5ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_minor_applications_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_minor_applications_on_account_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_related_councilmembers_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_related_councilmembers_on_account_id' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_student_applications_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_student_applications_on_account_id' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_formerworkers_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_formerworkers_on_account_id' AND type='index'
+
+
+
+Started GET "/" for 165.91.12.173 at 2016-04-20 23:27:50 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (20.4ms)
+Completed 200 OK in 625ms (Views: 591.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins" for 165.91.12.173 at 2016-04-20 23:27:54 +0000
+Processing by AdminsController#index as HTML
+Redirected to https://tdd-sabrinadai.c9users.io/adminsignup
+Completed 302 Found in 102ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/adminsignup" for 165.91.12.173 at 2016-04-20 23:27:54 +0000
+Processing by AdminsController#new as HTML
+  Rendered admin_sessions/_signin.html.haml (26.0ms)
+  Rendered admins/new.html.haml within layouts/application (52.0ms)
+Completed 200 OK in 178ms (Views: 121.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/adminlogin" for 165.91.12.173 at 2016-04-20 23:27:59 +0000
+Processing by AdminSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/RwFtrGoHBBgvljbR9kIdPnK+qtZ/5p14cg4momlEU6hc8epTOKLVISxF4s6eg9B8bOuy3xCf875UKKo5h+kYA==", "session"=>{"email"=>"123", "password"=>"[FILTERED]", "key"=>"123", "keep_me_logged_in"=>"0"}, "commit"=>"I am Alma Garcia!"}
+  [1m[35mAdmin Load (0.5ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT 1  [["email", "123"]]
+Redirected to https://tdd-sabrinadai.c9users.io/admins/1
+Completed 302 Found in 149ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/admins/1" for 165.91.12.173 at 2016-04-20 23:27:59 +0000
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (submit_bcheck ='t') AND (lower(email) LIKE lower('%'))[0m
+  Rendered admins/show.html.haml within layouts/application (51.1ms)
+Completed 200 OK in 118ms (Views: 89.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/profiles?id=610" for 165.91.12.173 at 2016-04-20 23:28:02 +0000
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"610"}
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 610]]
+  [1m[36mUserFormerworker Load (0.3ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  [1m[35mCurrentWorker Load (0.2ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 610]]
+  [1m[36mRelatedCouncilmember Load (0.3ms)[0m  [1mSELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  [1m[35mFormerCriminal Load (0.2ms)[0m  SELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1  [["account_id", 610]]
+  [1m[36mAccommodation Load (0.3ms)[0m  [1mSELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  Rendered accounts/profiles.html.erb within layouts/application (127.9ms)
+Completed 200 OK in 166ms (Views: 161.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/profiles?id=610" for 165.91.12.173 at 2016-04-20 23:29:28 +0000
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"610"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 610]]
+  [1m[36mUserFormerworker Load (0.1ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  [1m[35mCurrentWorker Load (0.2ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 610]]
+  [1m[36mRelatedCouncilmember Load (0.1ms)[0m  [1mSELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  [1m[35mFormerCriminal Load (0.1ms)[0m  SELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1  [["account_id", 610]]
+  [1m[36mAccommodation Load (0.3ms)[0m  [1mSELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  Rendered accounts/profiles.html.erb within layouts/application (137.6ms)
+Completed 200 OK in 182ms (Views: 179.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.12.173 at 2016-04-20 23:29:29 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 165.91.12.173 at 2016-04-20 23:29:29 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 165.91.12.173 at 2016-04-20 23:29:29 +0000
+
+
+Started GET "/assets/application.self-67e2cb7955bba7f7045163a86b2dac5088c84f14caf812be56724a80894f007a.css?body=1" for 165.91.12.173 at 2016-04-20 23:29:29 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.173 at 2016-04-20 23:29:29 +0000
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.173 at 2016-04-20 23:29:29 +0000
+
+
+Started GET "/assets/admin_session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.173 at 2016-04-20 23:29:29 +0000
+
+
+Started GET "/assets/current_workers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.173 at 2016-04-20 23:29:29 +0000
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.173 at 2016-04-20 23:29:29 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.173 at 2016-04-20 23:29:29 +0000
+
+
+Started GET "/assets/application.self-d881ea3eaa8bd59a52c5f723e4a3ee375c0bf81714dc2d6edd4ff3eefc7eac55.js?body=1" for 165.91.12.173 at 2016-04-20 23:29:29 +0000
+
+
+Started GET "/" for 165.91.12.173 at 2016-04-20 23:29:35 +0000
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins" for 165.91.12.173 at 2016-04-20 23:30:08 +0000
+Processing by AdminsController#index as HTML
+Redirected to https://tdd-sabrinadai.c9users.io/adminsignup
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/adminsignup" for 165.91.12.173 at 2016-04-20 23:30:08 +0000
+Processing by AdminsController#new as HTML
+  Rendered admin_sessions/_signin.html.haml (3.2ms)
+  Rendered admins/new.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 141ms (Views: 139.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/adminlogin" for 165.91.12.173 at 2016-04-20 23:30:14 +0000
+Processing by AdminSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"86hxE/VHr/dMedXnW/dXu1YTax9U/0qDh46e6CLOKSqvx7MMCA04s6h2mrcmVFCOXmo/f3FCrzifFgTaTXScBA==", "session"=>{"email"=>"123", "password"=>"[FILTERED]", "key"=>"123", "keep_me_logged_in"=>"0"}, "commit"=>"I am Alma Garcia!"}
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT 1  [["email", "123"]]
+Redirected to https://tdd-sabrinadai.c9users.io/admins/1
+Completed 302 Found in 84ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admins/1" for 165.91.12.173 at 2016-04-20 23:30:14 +0000
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (submit_bcheck ='t') AND (lower(email) LIKE lower('%'))[0m
+  Rendered admins/show.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profiles?id=610" for 165.91.12.173 at 2016-04-20 23:30:16 +0000
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"610"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 610]]
+  [1m[36mUserFormerworker Load (0.3ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  [1m[35mCurrentWorker Load (0.1ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 610]]
+  [1m[36mRelatedCouncilmember Load (0.1ms)[0m  [1mSELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  [1m[35mFormerCriminal Load (0.2ms)[0m  SELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1  [["account_id", 610]]
+  [1m[36mAccommodation Load (0.1ms)[0m  [1mSELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1[0m  [["account_id", 610]]
+  Rendered accounts/profiles.html.erb within layouts/application (66.8ms)
+Completed 200 OK in 103ms (Views: 100.3ms | ActiveRecord: 1.1ms)

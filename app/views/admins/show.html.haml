@@ -50,7 +50,8 @@
     %td= account.state
     %td= account.city
     %td= account.street
-    %td= account.zip
+    %td= account.zip 
+    %td= link_to "Profiles", profiles_path(:id => account.id) 
     %td= link_to "Approve", :controller => "admins", :action =>"approve", :id => account.id
     %td= link_to 'reject',  :controller => "admins", :action =>"reject", :id => account.id
  
