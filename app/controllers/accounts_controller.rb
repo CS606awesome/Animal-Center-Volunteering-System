@@ -34,6 +34,8 @@ class AccountsController < ApplicationController
       redirect_to login_path
       end
   end
+
+  #submit application 
   def submit_application
       @account = Account.find(session[:id])
       if @account.update(:is_volunteering=>'t')
@@ -94,6 +96,22 @@ class AccountsController < ApplicationController
       redirect_to login_path
     end
   end
+
+  def destroyapplication
+    @account = Account.find(session[:id])
+    if @account.update(:is_volunteering=>'f') && @account.application_form.destroy
+      flash[:notice] = "Withdrawal succeeded!"
+      redirect_to action: 'profiles'
+    else
+      flash[:notice] = "Withdrawal failed!"  
+      redirect_to action: 'viewapplication'
+    end
+
+  end
+
+
+
+
   
   def update
 

@@ -28848,3 +28848,570 @@ Processing by AccountsController#viewapplication as HTML
   [1m[35mApplicationForm Load (0.1ms)[0m  SELECT  "application_forms".* FROM "application_forms" WHERE "application_forms"."account_id" = ? LIMIT 1  [["account_id", 610]]
   Rendered accounts/viewapplication.html.erb within layouts/application (2.5ms)
 Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-04-20 15:11:09 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 341ms (Views: 325.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-67e2cb7955bba7f7045163a86b2dac5088c84f14caf812be56724a80894f007a.css?body=1" for ::1 at 2016-04-20 15:11:10 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-20 15:11:10 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-20 15:11:10 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-20 15:11:10 -0500
+
+
+Started GET "/assets/current_workers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-20 15:11:10 -0500
+
+
+Started GET "/assets/admin_session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-20 15:11:10 -0500
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-20 15:11:10 -0500
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-20 15:11:10 -0500
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-20 15:11:10 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-20 15:11:10 -0500
+
+
+Started GET "/assets/application.self-d881ea3eaa8bd59a52c5f723e4a3ee375c0bf81714dc2d6edd4ff3eefc7eac55.js?body=1" for ::1 at 2016-04-20 15:11:10 -0500
+
+
+Started GET "/accounts" for ::1 at 2016-04-20 15:11:14 -0500
+Processing by AccountsController#index as HTML
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2016-04-20 15:11:14 -0500
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (11.2ms)
+  Rendered accounts/new.html.haml within layouts/application (32.4ms)
+Completed 200 OK in 131ms (Views: 81.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/accounts" for ::1 at 2016-04-20 15:42:30 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eIBz2eHD/HrLzGOCV3N5cQXuf0FFScJYUlumHnk8NxhSP955YC18wqOhJD2mstDX33mkg1+D66XDj+4ztNidIQ==", "account"=>{"firstname"=>"Sikai", "middlename"=>"", "maidenname"=>"", "lastname"=>"Zhang", "gender"=>"Male", "DOB"=>"1998-04-12", "email"=>"me@abc.com", "password"=>"[FILTERED]", "homephone"=>"123456", "cellphone"=>"", "country"=>"", "state"=>"", "city"=>"", "street"=>"", "zip"=>""}, "commit"=>"Join us now!"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.1) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.1) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.1) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:164:in `block in halting'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/zhangsikai/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/zhangsikai/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/zhangsikai/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (37.2ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (110.2ms)
+
+
+Started POST "/accounts" for ::1 at 2016-04-20 15:42:45 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eIBz2eHD/HrLzGOCV3N5cQXuf0FFScJYUlumHnk8NxhSP955YC18wqOhJD2mstDX33mkg1+D66XDj+4ztNidIQ==", "account"=>{"firstname"=>"Sikai", "middlename"=>"", "maidenname"=>"", "lastname"=>"Zhang", "gender"=>"Male", "DOB"=>"1998-04-12", "email"=>"me@abc.com", "password"=>"[FILTERED]", "homephone"=>"123456", "cellphone"=>"", "country"=>"", "state"=>"", "city"=>"", "street"=>"", "zip"=>""}, "commit"=>"Join us now!"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.1) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.1) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.1) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:164:in `block in halting'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/zhangsikai/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/zhangsikai/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/zhangsikai/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.0ms)
+
+
+Started GET "/signup" for ::1 at 2016-04-20 15:42:56 -0500
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (5.1ms)
+  Rendered accounts/new.html.haml within layouts/application (13.9ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-67e2cb7955bba7f7045163a86b2dac5088c84f14caf812be56724a80894f007a.css?body=1" for ::1 at 2016-04-20 15:42:56 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-20 15:42:56 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-20 15:42:56 -0500
+
+
+Started GET "/assets/admin_session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-20 15:42:56 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-20 15:42:56 -0500
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-20 15:42:56 -0500
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-20 15:42:56 -0500
+
+
+Started GET "/assets/current_workers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-20 15:42:56 -0500
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-20 15:42:56 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-20 15:42:56 -0500
+
+
+Started GET "/assets/application.self-d881ea3eaa8bd59a52c5f723e4a3ee375c0bf81714dc2d6edd4ff3eefc7eac55.js?body=1" for ::1 at 2016-04-20 15:42:56 -0500
+
+
+Started POST "/accounts" for ::1 at 2016-04-20 15:43:05 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iM06hwfI999BqgHtUfWsLOsol5xc1bPtu8Gw/zXtMvxOqRNnzmjZxsS1yW1ruvtTwz6gi576GKePMjyKKuIGSA==", "account"=>{"firstname"=>"Sikai", "middlename"=>"", "maidenname"=>"", "lastname"=>"Zhang", "gender"=>"", "DOB"=>"", "email"=>"", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "country"=>"", "state"=>"", "city"=>"", "street"=>"", "zip"=>""}, "commit"=>"Join us now!"}
+Unpermitted parameter: maidenname
+  [1m[35m (0.9ms)[0m  begin transaction
+  [1m[36mAccount Exists (4.7ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered sessions/_signin.html.haml (4.8ms)
+  Rendered accounts/new.html.haml within layouts/application (15.7ms)
+Completed 200 OK in 218ms (Views: 49.9ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/accounts" for ::1 at 2016-04-20 15:43:13 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"svecYIHX87LbnYSS4mNB0nqkkyL4oCuQWOOOWcDYr410k7WASHfdq16CTBLYLBatUrKkNTqPgNpsEAIs39ebOQ==", "account"=>{"firstname"=>"Sikai", "middlename"=>"", "maidenname"=>"", "lastname"=>"Zhang", "gender"=>"", "DOB"=>"", "email"=>"me@abc.com", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "country"=>"", "state"=>"", "city"=>"", "street"=>"", "zip"=>""}, "commit"=>"Join us now!"}
+Unpermitted parameter: maidenname
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'me@abc.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered sessions/_signin.html.haml (1.1ms)
+  Rendered accounts/new.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 133ms (Views: 34.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/accounts" for ::1 at 2016-04-20 15:43:30 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"80C02YSE/0Y1TyRxXRw0ODWCaYufRVUxT5mhtLKNQFY1JJ05TSTRX7BQ7PFnU2NHHZRenF1q/nt7ai3BrYJ04g==", "account"=>{"firstname"=>"Sikai", "middlename"=>"", "maidenname"=>"", "lastname"=>"Zhang", "gender"=>"Male", "DOB"=>"1998-04-12", "email"=>"me@abc.com", "password"=>"[FILTERED]", "homephone"=>"123456", "cellphone"=>"", "country"=>"", "state"=>"", "city"=>"", "street"=>"", "zip"=>""}, "commit"=>"Join us now!"}
+Unpermitted parameter: maidenname
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'me@abc.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered sessions/_signin.html.haml (1.0ms)
+  Rendered accounts/new.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 165ms (Views: 47.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/accounts" for ::1 at 2016-04-20 15:43:39 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zZBRryJ1y2mpTRYMuBEPy8eyjjHGO5ghPaO8rKHuvBsL9HhP69XlcCxS3oyCXli076S5JgQUM2sJUDDZvuGIrw==", "account"=>{"firstname"=>"Sikai", "middlename"=>"", "maidenname"=>"", "lastname"=>"Zhang", "gender"=>"Male", "DOB"=>"1998-04-12", "email"=>"sikai@123.com", "password"=>"[FILTERED]", "homephone"=>"123456", "cellphone"=>"", "country"=>"", "state"=>"", "city"=>"", "street"=>"", "zip"=>""}, "commit"=>"Join us now!"}
+Unpermitted parameter: maidenname
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mAccount Exists (0.4ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'sikai@123.com' LIMIT 1
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "accounts" ("gender", "email", "password_digest", "firstname", "lastname", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "DOB") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["gender", "Male"], ["email", "sikai@123.com"], ["password_digest", "$2a$10$z7AWuSfVIfv5IF2LEfDRM.Sp6Y2QptFxv/eSqEHr/ar1voCoYOxUW"], ["firstname", "Sikai"], ["lastname", "Zhang"], ["middlename", ""], ["country", ""], ["state", ""], ["city", ""], ["street", ""], ["zip", ""], ["homephone", "123456"], ["cellphone", ""], ["DOB", "1998-04-12"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/accounts/611
+Completed 302 Found in 129ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/accounts/611" for ::1 at 2016-04-20 15:43:39 -0500
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"611"}
+  Rendered sessions/_signin.html.haml (1.1ms)
+  Rendered accounts/show.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-04-20 15:43:48 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iqS/aiQ1KMFkZiNSMHrFylAPWFu45Rnb4t+TBOF+KYNMwJaK7ZUG2OF569IKNZK1eBlvTHrKspHWLB9x/nEdNw==", "session"=>{"email"=>"sikai@123.com", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "sikai@123.com"]]
+Redirected to http://localhost:3000/profiles?id=611
+Completed 302 Found in 104ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/profiles?id=611" for ::1 at 2016-04-20 15:43:48 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"611"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 611]]
+  [1m[36mUserFormerworker Load (1.0ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35mCurrentWorker Load (0.6ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  [1m[36mRelatedCouncilmember Load (0.5ms)[0m  [1mSELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35mFormerCriminal Load (0.6ms)[0m  SELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  [1m[36mAccommodation Load (0.9ms)[0m  [1mSELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  Rendered accounts/profiles.html.erb within layouts/application (72.9ms)
+Completed 200 OK in 106ms (Views: 99.7ms | ActiveRecord: 4.8ms)
+
+
+Started PATCH "/accounts/611" for ::1 at 2016-04-20 15:43:58 -0500
+Processing by AccountsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YcqRia31+S9YS57yxRE2MWXD7fUX16he4BD3bqGq1RCnrrhpZFXXNt1UVnL/XmFOTdXa4tX4AxTU43sbvqXhpA==", "account"=>{"is_former_worker"=>"0", "is_current_worker"=>"0", "related_to_councilmember"=>"0", "has_convictions"=>"1", "emergency_contact_name"=>"", "emergency_phone"=>"", "emergency_phone_alternate"=>"", "need_accommodations"=>"0"}, "commit"=>"Save Changes", "id"=>"611"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 611]]
+  [1m[36mFormerCriminal Load (0.1ms)[0m  [1mSELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "former_criminals" ("account_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["account_id", 611], ["created_at", "2016-04-20 20:43:58.496756"], ["updated_at", "2016-04-20 20:43:58.496756"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36mUserFormerworker Load (0.1ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35mRelatedCouncilmember Load (0.1ms)[0m  SELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  [1m[36mCurrentWorker Load (0.1ms)[0m  [1mSELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35mAccommodation Load (0.1ms)[0m  SELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "accounts" SET "is_former_worker" = ?, "is_current_worker" = ?, "emergency_contact_name" = ?, "emergency_phone" = ?, "emergency_phone_alternate" = ?, "related_to_councilmember" = ?, "has_convictions" = ?, "need_accommodations" = ? WHERE "accounts"."id" = ?  [["is_former_worker", "f"], ["is_current_worker", "f"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""], ["related_to_councilmember", "f"], ["has_convictions", "t"], ["need_accommodations", "f"], ["id", 611]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/profiles/611
+Completed 302 Found in 32ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/profiles/611" for ::1 at 2016-04-20 15:43:58 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"611"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 611]]
+  [1m[36mUserFormerworker Load (0.1ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35mCurrentWorker Load (0.1ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  [1m[36mRelatedCouncilmember Load (0.1ms)[0m  [1mSELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35mFormerCriminal Load (0.1ms)[0m  SELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  [1m[36mAccommodation Load (0.2ms)[0m  [1mSELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  Rendered accounts/profiles.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/accounts/611" for ::1 at 2016-04-20 15:44:34 -0500
+Processing by AccountsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mzanZD2KOitm/BKBLmhF/w2iSg0+2u7fR/sw7uJpa5ZdUo6E9CoUMuPj2gEUJxKAJbR9Gvz1RZVzCLyb/WZfIg==", "account"=>{"is_former_worker"=>"0", "is_current_worker"=>"0", "related_to_councilmember"=>"0", "has_convictions"=>"1", "former_criminal_attributes"=>{"date_of_conviction"=>"", "nature_of_offense"=>"", "name_of_court"=>"", "disposition_of_case"=>"", "former_crime"=>"", "id"=>"5"}, "emergency_contact_name"=>"", "emergency_phone"=>"", "emergency_phone_alternate"=>"", "need_accommodations"=>"0"}, "commit"=>"Save Changes", "id"=>"611"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 611]]
+  [1m[36mFormerCriminal Load (0.2ms)[0m  [1mSELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35mUserFormerworker Load (0.1ms)[0m  SELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  [1m[36mRelatedCouncilmember Load (0.1ms)[0m  [1mSELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35mCurrentWorker Load (0.1ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  [1m[36mAccommodation Load (0.1ms)[0m  [1mSELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "former_criminals" SET "nature_of_offense" = ?, "name_of_court" = ?, "disposition_of_case" = ?, "former_crime" = ?, "updated_at" = ? WHERE "former_criminals"."id" = ?[0m  [["nature_of_offense", ""], ["name_of_court", ""], ["disposition_of_case", ""], ["former_crime", ""], ["updated_at", "2016-04-20 20:44:34.950088"], ["id", 5]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/profiles/611
+Completed 302 Found in 12ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/profiles/611" for ::1 at 2016-04-20 15:44:34 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"611"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 611]]
+  [1m[35mUserFormerworker Load (0.1ms)[0m  SELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  [1m[36mCurrentWorker Load (0.1ms)[0m  [1mSELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35mRelatedCouncilmember Load (0.1ms)[0m  SELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  [1m[36mFormerCriminal Load (0.1ms)[0m  [1mSELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35mAccommodation Load (0.1ms)[0m  SELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  Rendered accounts/profiles.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/saveandsubmit/611" for ::1 at 2016-04-20 15:44:37 -0500
+Processing by AccountsController#save_and_submit as HTML
+  Parameters: {"authenticity_token"=>"ObuCmaylHwdpJ5qS1Co1JXyN3QYmjPnWjTjaCRUiY+b/36t5ZQUxHuw4UhLuZWJaVJvqEeSjUpy5y1Z8Ci1XUg==", "id"=>"611"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 611]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "accounts" SET "submit_bcheck" = ? WHERE "accounts"."id" = ?[0m  [["submit_bcheck", "t"], ["id", 611]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/profiles?id=611
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/profiles?id=611" for ::1 at 2016-04-20 15:44:37 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"611"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 611]]
+  [1m[35mUserFormerworker Load (0.1ms)[0m  SELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  [1m[36mCurrentWorker Load (0.1ms)[0m  [1mSELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35mRelatedCouncilmember Load (0.2ms)[0m  SELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  [1m[36mFormerCriminal Load (0.2ms)[0m  [1mSELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35mAccommodation Load (0.1ms)[0m  SELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  Rendered accounts/profiles.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-04-20 15:44:52 -0500
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins" for ::1 at 2016-04-20 15:45:11 -0500
+Processing by AdminsController#index as HTML
+Redirected to http://localhost:3000/adminsignup
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/adminsignup" for ::1 at 2016-04-20 15:45:11 -0500
+Processing by AdminsController#new as HTML
+  Rendered admin_sessions/_signin.html.haml (5.2ms)
+  Rendered admins/new.html.haml within layouts/application (16.0ms)
+Completed 200 OK in 62ms (Views: 48.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/adminlogin" for ::1 at 2016-04-20 15:45:15 -0500
+Processing by AdminSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y8R9AMFiaGoVrS6IMuQ1w6ohzf2UH8YyG8MElzcg2NoNoFTgCMJGc5Cy5ggIq2K8gjf66lYwbXgvMIjiKC/sbg==", "session"=>{"email"=>"123", "password"=>"[FILTERED]", "key"=>"123", "keep_me_logged_in"=>"0"}, "commit"=>"I am Alma Garcia!"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT 1[0m  [["email", "123"]]
+Redirected to http://localhost:3000/admins/1
+Completed 302 Found in 96ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/admins/1" for ::1 at 2016-04-20 15:45:16 -0500
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAccount Load (4.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE (submit_bcheck = 't') AND (lower(email) LIKE lower('%'))
+  Rendered admins/show.html.haml within layouts/application (221.4ms)
+Completed 200 OK in 290ms (Views: 285.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/approve/611" for ::1 at 2016-04-20 15:45:27 -0500
+Processing by AdminsController#approve as HTML
+  Parameters: {"id"=>"611"}
+  [1m[36mAccount Load (1.6ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 611]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mUPDATE "accounts" SET "status" = ?, "submit_bcheck" = ? WHERE "accounts"."id" = ?[0m  [["status", "t"], ["submit_bcheck", "f"], ["id", 611]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/admins/611
+Completed 302 Found in 29ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/admins/611" for ::1 at 2016-04-20 15:45:28 -0500
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"611"}
+  [1m[36mAccount Load (3.8ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (submit_bcheck = 't') AND (lower(email) LIKE lower('%'))[0m
+  Rendered admins/show.html.haml within layouts/application (228.9ms)
+Completed 200 OK in 287ms (Views: 281.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/profiles?id=611" for ::1 at 2016-04-20 15:45:35 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"611"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=1):
+  app/controllers/accounts_controller.rb:32:in `profiles'
+
+
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/zhangsikai/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.2ms)
+
+
+Started GET "/" for ::1 at 2016-04-20 15:45:38 -0500
+Processing by IndexController#index as HTML
+  Rendered index/index.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for ::1 at 2016-04-20 15:45:41 -0500
+Processing by AccountsController#index as HTML
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2016-04-20 15:45:41 -0500
+Processing by AccountsController#new as HTML
+  Rendered sessions/_signin.html.haml (2.1ms)
+  Rendered accounts/new.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-04-20 15:45:50 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VBLHaeOjJlMOL2Iq4HQXnlq45mVIk2KCJX5bL2CnDuySdu6JKgMISoswqqraO0Dhcq7Rcoq8ycgRjddaf6g6WA==", "session"=>{"email"=>"sikai@123.com", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"I am already a volunteer!"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "sikai@123.com"]]
+Redirected to http://localhost:3000/profiles?id=611
+Completed 302 Found in 92ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/profiles?id=611" for ::1 at 2016-04-20 15:45:50 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"611"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 611]]
+  [1m[36mUserFormerworker Load (0.1ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35mCurrentWorker Load (0.1ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  [1m[36mRelatedCouncilmember Load (0.1ms)[0m  [1mSELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35mFormerCriminal Load (0.1ms)[0m  SELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  [1m[36mAccommodation Load (0.1ms)[0m  [1mSELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  Rendered accounts/profiles.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/application?id=611" for ::1 at 2016-04-20 15:46:04 -0500
+Processing by AccountsController#application as HTML
+  Parameters: {"id"=>"611"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 611]]
+  [1m[36mApplicationForm Load (0.6ms)[0m  [1mSELECT  "application_forms".* FROM "application_forms" WHERE "application_forms"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "application_forms" ("account_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["account_id", 611], ["created_at", "2016-04-20 20:46:04.697139"], ["updated_at", "2016-04-20 20:46:04.697139"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36mCriminalApplication Load (0.7ms)[0m  [1mSELECT  "criminal_applications".* FROM "criminal_applications" WHERE "criminal_applications"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35mStudentApplication Load (0.5ms)[0m  SELECT  "student_applications".* FROM "student_applications" WHERE "student_applications"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  [1m[36mMinorApplication Load (0.2ms)[0m  [1mSELECT  "minor_applications".* FROM "minor_applications" WHERE "minor_applications"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  Rendered accounts/application.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 83ms (Views: 50.1ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/profiles?id=611" for ::1 at 2016-04-20 15:48:21 -0500
+Processing by AccountsController#profiles as HTML
+  Parameters: {"id"=>"611"}
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 611]]
+  [1m[36mUserFormerworker Load (0.3ms)[0m  [1mSELECT  "user_formerworkers".* FROM "user_formerworkers" WHERE "user_formerworkers"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35mCurrentWorker Load (0.2ms)[0m  SELECT  "current_workers".* FROM "current_workers" WHERE "current_workers"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  [1m[36mRelatedCouncilmember Load (0.2ms)[0m  [1mSELECT  "related_councilmembers".* FROM "related_councilmembers" WHERE "related_councilmembers"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  [1m[35mFormerCriminal Load (0.2ms)[0m  SELECT  "former_criminals".* FROM "former_criminals" WHERE "former_criminals"."account_id" = ? LIMIT 1  [["account_id", 611]]
+  [1m[36mAccommodation Load (0.1ms)[0m  [1mSELECT  "accommodations".* FROM "accommodations" WHERE "accommodations"."account_id" = ? LIMIT 1[0m  [["account_id", 611]]
+  Rendered accounts/profiles.html.erb within layouts/application (60.2ms)
+Completed 200 OK in 176ms (Views: 108.6ms | ActiveRecord: 5.9ms)
