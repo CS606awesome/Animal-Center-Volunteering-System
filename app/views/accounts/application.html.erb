@@ -39,7 +39,15 @@ I understand that the City has the right to terminate my services as volunteer a
             <p>
                 <strong>What is your interested area?</strong>
             </p>
-            <%= af.label :interested_areas, 'Please fill it out'%>
+            <p>
+                Walking dogs;              Cleaning kennels<br />
+                Yard maintenance;          Fostering animals<br />
+                Descriptions of animals;   Bathing dogsClerical/office work<br />
+                Dog training;              GroomingEvent planning<br />
+                Off-site adoption days;    Contacting rescues<br />
+                Picture taking;            Other (please specify)<br />
+            </p>
+            <%= af.label :interested_areas, 'Choose from above'%>
             <%= af.text_field :interested_areas, :value => @account.application_form.interested_areas %>
             <br />
             <br />
