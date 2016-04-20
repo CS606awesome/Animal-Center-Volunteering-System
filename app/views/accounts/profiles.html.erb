@@ -185,9 +185,18 @@
     Deposition of Case:
         <input type="text" name="DOCase">
         <br />                                      -->
+        
+        
+    <p>
+        <b>5.Are you a student volunteer required by student organization?</b><br />
+        <%= f.radio_button :is_student, '1', :checked =>@account.is_student, :onclick=>"ISclickYes()" %> Yes<br />
+        <%= f.radio_button :is_student, '0', :checked =>!@account.is_student, :onclick=>"ISclickNo()" %> No<br />
+    </p>
+    
+    
 
 
-    <p><strong>5.Emergency contact</strong></p>
+    <p><strong>6.Emergency contact</strong></p>
     
         <%=f.label :emergency_contact_name, 'Emergency Contact Name'%>
         <%= f.text_field :emergency_contact_name, :value => @account.emergency_contact_name %>
@@ -201,7 +210,7 @@
         <%= f.text_field :emergency_phone_alternate, :value => @account.emergency_phone_alternate %>
         
     <p>
-        <b>6.Do you need any accommodations?</b><br />
+        <b>7.Do you need any accommodations?</b><br />
         <%= f.radio_button :need_accommodations, '1', :checked =>@account.need_accommodations, :onclick=>"NAclickYes()" %> Yes<br />
         <%= f.radio_button :need_accommodations, '0', :checked =>!@account.need_accommodations, :onclick=>"NAclickNo()" %> No<br />
     </p>
