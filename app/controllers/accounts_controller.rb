@@ -23,10 +23,12 @@ class AccountsController < ApplicationController
     end  
   end
   
+  #render the login page
   def show
     flash[:success] = 'Congradulations!now go ahead and login'  
     @account = Account.new
   end
+  
   
   def profiles 
       if logged_in
