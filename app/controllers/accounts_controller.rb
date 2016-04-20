@@ -193,8 +193,8 @@ class AccountsController < ApplicationController
   def save_and_submit
       @account = Account.find(session[:id])
       if @account.submit_bcheck == false && @account.status == nil      #if never submit, then save and submit        
-          if @account.update(:submit_bcheck => 't')
-          flash[:notice] = 'Your profile has been sent to the administrator'
+          if @account.update(:submit_bcheck => 't') 
+           flash[:notice] = 'Your profile has been sent to the administrator'
 
      #     redirect_to profiles_path :id => @account.id
      # else                                                   # if have already submitted, return to page and do nothing
