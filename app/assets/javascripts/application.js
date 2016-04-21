@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+//profile's toggle raido checkbox
     function FWclickYes()
     {
         $('#FWcheckbox').show();
@@ -54,3 +56,7 @@
     {
         $('#NAcheckbox').hide();
     }
+
+    $(document).ready(){ 
+    $('a[data-popup]').on('click', function(e) { window.open($(this).attr('href')); e.preventDefault(); });
+     });

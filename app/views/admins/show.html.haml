@@ -51,7 +51,7 @@
     %td= account.city
     %td= account.street
     %td= account.zip 
-    %td= link_to "Profiles", viewapplication_path(:id => account.id) 
+    %td= link_to "profile", viewapplication_path(:id => account.id), :onclick=>"window.open(this.href, 'profile', 'height=700, width=700');return false;"
     %td= link_to "Approve", :controller => "admins", :action =>"approve", :id => account.id
     %td= link_to 'reject',  :controller => "admins", :action =>"reject", :id => account.id
  
