@@ -101,6 +101,18 @@ class AdminsController < ApplicationController
       redirect_to action: 'show'
     end
    end
+
+   def finish
+      @account = Account.find(params[:id])
+    if @account.update(:status => nil, :is_volunteering =>'f')
+      #and the application data should be sent to other schema
+      flash[:notice] = "#{@account.firstname} has finished the volunteering!"
+      redirect_to action: 'moreshow'
+    else
+      flash[:danger] = 'Operation is failed!'
+      redirect_to action: 'moreshow'
+    end
+   end
  
       
   #compare the age

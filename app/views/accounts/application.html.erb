@@ -24,37 +24,46 @@ I understand that the City has the right to terminate my services as volunteer a
 
 <div id='@application'  style = "margin-top:10px">
     
+<!--<<<<<<< HEAD
+    <= form_for setup_app_account @account do |f| %>
+      
+        <= f.hidden_field :is_volunteering, :value => true %>
+      
     
-    <%= form_for setup_app_account @account do |f| %>
+======= -->
     
+    <%= form_for @account,url: submit_application_path do |f| %>
+
+
         <%= f.fields_for :application_form do |af| %>
             <p>
                 <strong>What is your interested area?</strong>
             </p>
-            <%= af.label :interested_areas, 'Please fill it out'%>
+            <p>
+                Walking dogs;              Cleaning kennels<br />
+                Yard maintenance;          Fostering animals<br />
+                Descriptions of animals;   Bathing dogsClerical/office work<br />
+                Dog training;              GroomingEvent planning<br />
+                Off-site adoption days;    Contacting rescues<br />
+                Picture taking;            Other (please specify)<br />
+            </p>
+            <%= af.label :interested_areas, 'Choose from above'%>
             <%= af.text_field :interested_areas, :value => @account.application_form.interested_areas %>
             <br />
             <br />
-            <p>
-                <strong>What is your volunteering status?</strong>
-            </p>
-            <%= af.label :volunteering_status, 'Please fill it out'%>
-            <%= af.text_field :volunteering_status, :value => @account.application_form.volunteering_status %>
-            <br />
-            <br />
+            
             <p>
                 <strong>What is your available date?</strong>
             </p>
-            <%= af.label :application_date, 'Please fill it out'%>
-            <%= af.text_field :application_date, :value => @account.application_form.application_date %>
-            <br />
-            <br />
             <%= af.label :available_time_begin, 'From (start time)'%>
             <%= af.text_field :available_time_begin, :value => @account.application_form.available_time_begin %>
+            <br />
+            'Format: YYYY-MM-DD HH-MINMIN-SS'
             <br />
             <%= af.label :available_time_end, 'To (end time)'%>
             <%= af.text_field :available_time_end, :value => @account.application_form.available_time_end %>
             <br />
+            'Format: YYYY-MM-DD HH-MINMIN-SS'
             <br />
         
         <% end %>
@@ -67,28 +76,29 @@ I understand that the City has the right to terminate my services as volunteer a
             <%= cf.text_field :mandatory_hours, :value => @account.criminal_application.mandatory_hours %>
             <br />
             <br />
-            <%= cf.label :mandatory_area, 'Mandatory Area'%>
-            <%= cf.text_field :mandatory_area, :value => @account.criminal_application.mandatory_area %>
+            <!--%= cf.label :mandatory_area, 'Mandatory Area'%>
+             cf.text_field :mandatory_area, :value => @account.criminal_application.mandatory_area %>
             <br />
+            <br /> 
+            = cf.label :deadline, 'Deadline'%>
+             cf.text_field :deadline, :value => @account.criminal_application.deadline %>
             <br />
-            <%= cf.label :deadline, 'Deadline'%>
-            <%= cf.text_field :deadline, :value => @account.criminal_application.deadline %>
-            <br />
-            <br />
+            <br />-->
         <% end %>
         
         <%= f.fields_for :student_application do |sf| %>
             <p>
-                <strong>If you are a student, please fill the blanks below.</strong>
+                <strong>If you are a student completing hours organization, please fill the blanks below.</strong>
             </p>
             <%= sf.label :student_program, 'What is the program that requires you to be volunteer'%>
             <%= sf.text_field :student_program, :value => @account.student_application.student_program %>
             <br />
             <br />
-            <%= sf.label :required_time, 'Required Time'%>
-            <%= sf.text_field :required_time, :value => @account.student_application.required_time %>
+            <!--%= sf.label :required_time, 'Required Time'%>
+             sf.text_field :required_time, :value => @account.student_application.required_time >% 
             <br />
             <br />
+            -->
             <%= sf.label :required_area, 'Required Area'%>
             <%= sf.text_field :required_area, :value => @account.student_application.required_area %>
             <br />
@@ -119,13 +129,12 @@ I understand that the City has the right to terminate my services as volunteer a
             <br />
             <br />
         <% end %>
-    
-    
-    <strong>Attention: once your application is submitted and approved, you can not change and submit again</strong><br />
+                    
+    <strong>Attention: once your application is submitted, you can not change and submit again</strong><br />
     
     <%= f.submit 'Submit the Application' %>
     <% end %>
     <br />
     <br />
     
-    <%= link_to 'Back to profiles', profiles_path(:id => @account.id) %>
+    <%= link_to 'Back to profiles edit', profiles_path(:id => @account.id) %>
