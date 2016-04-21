@@ -95,4 +95,6 @@
     <strong>If you have any question or want to cancel the application, please contact the administrator, thanks.</strong><br /><br />
 </p>
 
+<%= link_to 'Withdraw your application', withdraw_application_path, :method=>'delete' %>
+
 <%= link_to 'Back to profiles edit', profiles_path(:id => @account.id) %>
