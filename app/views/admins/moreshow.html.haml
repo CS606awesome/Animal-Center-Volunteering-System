@@ -1,7 +1,9 @@
+
 %h1 Application Data Management System
 %br
 %h3 Welcome Administrator !
 %fieldset
+.jumbotron
  =form_for managemore_path, :method => :get do 
   Firstname
   =text_field_tag :firstname,nil,placeholder: 'first name'
