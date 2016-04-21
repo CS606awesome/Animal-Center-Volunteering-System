@@ -40,7 +40,7 @@ class AccountsController < ApplicationController
   #submit application 
   def submit_application
       @account = Account.find(session[:id])
-      if @account.update(:is_volunteering=>'t')
+      if @account.update(:is_volunteering=>true)
        redirect_to viewapplication_path
       else
        redirect_to action: 'application'
@@ -51,7 +51,7 @@ class AccountsController < ApplicationController
 
   def destroyapplication
     @account = Account.find(session[:id])
-    if @account.update(:is_volunteering=>'f') && @account.application_form.destroy
+    if @account.update(:is_volunteering=>false) && @account.application_form.destroy
       flash[:notice] = "Withdrawal succeeded!"
       redirect_to action: 'profiles'
     else
@@ -201,7 +201,7 @@ class AccountsController < ApplicationController
   def save_and_submit
       @account = Account.find(session[:id])
       if @account.submit_bcheck == false && @account.status == nil      #if never submit, then save and submit        
-          if @account.update(:submit_bcheck => 't')
+          if @account.update(:submit_bcheck => true)
               flash[:notice] = 'Your profile has been sent to the administrator'
 
      #     redirect_to profiles_path :id => @account.id
