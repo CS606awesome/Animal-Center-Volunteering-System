@@ -1,21 +1,16 @@
-%flash
- =flash[:danger]
 %fieldset
  %legend
- =form_for(:session, url: adminlogin_path) do |f|
-
+ =form_for(:session, url: adminlogin_path,html: {class: 'form-inline'}) do |f|
   =f.text_field :email, {:placeholder => 'E-mail' }
-
   =f.text_field :password,{:placeholder => 'Password', :type=>'password'}
-
   =f.text_field :key,{:placeholder => 'TheMagicKey', :type=>'password'}
-  
-  =f.submit 'I am Alma Garcia!',class: 'btn btn-primary'
+  =f.submit 'sign in',class: 'btn btn-primary'
   %div{:style => 'margin-bottom:5px'}
   .checkbox
   =f.check_box :keep_me_logged_in 
   keep me logged in 
-  
  = link_to "Forget your password?", input_your_email_path, class: 'btn btn-danger btn-xs'
+%div{:style => "margin-bottom: 30px"} 
+%legend 
  
   

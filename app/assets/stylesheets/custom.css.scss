@@ -5,7 +5,7 @@
 /* universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 150px;
   font-family: Georgia;
 }
 
@@ -56,9 +56,9 @@ p {
   font-family: Georgia;
   line-height: 1.7em;
 }
-
+ 
 /* header */
-
+/*
 #logo {
   float: left;
   margin-right: 10px;
@@ -74,7 +74,31 @@ p {
   color: #fff;
   text-decoration: none;
 }
+*/
+header{
+  margin: 0;
+  padding: 10px;
+  background-color: #303030;
+  color: white;
+  border-bottom: 4px solid grey;
+ 
+}
+header.title {
+  margin-left: 20px;
+  font-size: 2.5em;
+  font-family: Georgia;
+  width: 60%;
+  height: 100%;
+ 
+}
 
+header.p {
+  margin-right: 20px;
+  color: white;
+  width: 40%;
+  height: 100%;
+}
+ 
 /* footer */
 
 footer {

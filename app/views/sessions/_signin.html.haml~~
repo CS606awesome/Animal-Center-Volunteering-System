@@ -7,11 +7,11 @@
      = form_for(:session, url: login_path, html: {class: 'form-horizontal'}) do |f|
       .field.form-group
        = f.label 'E-mail', class: 'col-sm-2 control-label'
-       .col-sm-2
+       .col-sm-10
         = f.text_field :email, class: 'form-control'
-       .col-sm-2
-        = f.label :password, class: 'col-sm-2 control-label'
-       .col-sm-2
+      .field.form-group
+       = f.label :password, class: 'col-sm-2 control-label'
+       .col-sm-10
         = f.text_field :password, class: 'form-control'
       .actions.form-group
        .col-sm-offset-2.col-sm-10
