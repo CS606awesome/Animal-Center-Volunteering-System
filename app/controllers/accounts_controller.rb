@@ -86,7 +86,11 @@ class AccountsController < ApplicationController
   end
   
   def viewapplication
-    if logged_in
+    #check as a administrator
+    if admin_logged_in
+      @account = Account.find(params[:id])
+    
+    elsif logged_in
       @account = Account.find(session[:id])
       #if @account.is_volunteering == false || @account.is_volunteering == nil
         #redirect_to profiles_path :id => @account.id

@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   post 'saveandsubmit/:id' => 'accounts#save_and_submit'
 
   get 'viewapplication' => 'accounts#viewapplication'
+  get 'viewapplication/:id' => 'accounts#viewapplication' 
 
   #withdraw the application
   delete 'withdraw_application' => 'accounts#destroyapplication' 
