@@ -42,12 +42,14 @@ group :development, :test do
     gem 'cucumber-rails', :require => false
     gem 'cucumber-rails-training-wheels'
     gem 'database_cleaner'
-    
+    gem 'rspec-rails'
+    gem 'simplecov'    
     gem 'capybara', '2.4.4'
     gem 'launchy'
+    gem 'rack_session_access'
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-
+  #gem 'web-console', '~> 2.0'
+  
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end

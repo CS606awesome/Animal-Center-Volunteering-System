@@ -14,11 +14,49 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-    function clickYes()
+
+//profile's toggle raido checkbox
+    function FWclickYes()
     {
-        $('#checkbox').show();
+        $('#FWcheckbox').show();
     }
-    function clickNo()
+    function FWclickNo()
     {
-        $('#checkbox').hide();
+        $('#FWcheckbox').hide();
+    } 
+    function RCclickYes()
+    {
+        $('#RCcheckbox').show();
     }
+    function RCclickNo()
+    {
+        $('#RCcheckbox').hide();
+    }
+     function CWclickYes()
+    {
+        $('#CWcheckbox').show();
+    }
+    function CWclickNo()
+    {
+        $('#CWcheckbox').hide();
+    }
+     function FCclickYes()
+    {
+        $('#FCcheckbox').show();
+    }
+    function FCclickNo()
+    {
+        $('#FCcheckbox').hide();
+    }
+    function NAclickYes()
+    {
+        $('#NAcheckbox').show();
+    }
+    function NAclickNo()
+    {
+        $('#NAcheckbox').hide();
+    }
+
+    $(document).ready(){ 
+    $('a[data-popup]').on('click', function(e) { window.open($(this).attr('href')); e.preventDefault(); });
+     });
