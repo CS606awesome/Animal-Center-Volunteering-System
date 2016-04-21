@@ -28,32 +28,33 @@ class AdminsController < ApplicationController
       redirect_to adminlogin_path
     else  
     ##find accounts who has already submitted the applications  
-    @accounts = Account.where('submit_bcheck =?', 't')
+     @accounts = Account.where('submit_bcheck =?', 't')
 
-    agemin = params[:agemin].to_i
-    agemax = params[:agemax].to_i
-    firstname = params[:firstname].to_s
-    lastname = params[:lastname].to_s
-    email = params[:email]
+     agemin = params[:agemin].to_i
+     agemax = params[:agemax].to_i
+     firstname = params[:firstname].to_s
+     lastname = params[:lastname].to_s
+     email = params[:email]
     
-    if agemax > 0
+     if agemax > 0
       @accounts = people_younger_than(@accounts,agemax)
-    end
+     end
     
-    if agemin > 0
+     if agemin > 0
       @accounts = people_older_than(@accounts,agemin)
-    end
+     end
     
-    if firstname != ''
+     if firstname != ''
       @accounts = firstname_filter(@accounts,firstname)
-    end
+     end
     
-    if lastname != ''
+     if lastname != ''
       @accounts = lastname_filter(@accounts,lastname)
-    end
+     end
     
-    if email != '' 
+     if email != '' 
       @accounts = email_filter(@accounts,email)
+     end
     end
   end
 
@@ -149,9 +150,6 @@ class AdminsController < ApplicationController
     @accounts = @accounts.where("lower(email) LIKE lower(?)", "#{email}%")
   end
   
-
-
-
   def admin_params
    params.require(:admin).permit(:email,:password, :password_confirmation,:key)
   end
