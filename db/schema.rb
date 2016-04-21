@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160420233732) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name"
     t.datetime "created_at",         null: false
@@ -20,7 +23,7 @@ ActiveRecord::Schema.define(version: 20160420233732) do
     t.integer  "account_id"
   end
 
-  add_index "accommodations", ["account_id"], name: "index_accommodations_on_account_id"
+  add_index "accommodations", ["account_id"], name: "index_accommodations_on_account_id", using: :btree
 
   create_table "accounts", force: :cascade do |t|
     t.string  "email"
@@ -73,7 +76,7 @@ ActiveRecord::Schema.define(version: 20160420233732) do
     t.integer  "account_id"
   end
 
-  add_index "application_forms", ["account_id"], name: "index_application_forms_on_account_id"
+  add_index "application_forms", ["account_id"], name: "index_application_forms_on_account_id", using: :btree
 
   create_table "criminal_applications", force: :cascade do |t|
     t.integer  "mandatory_hours"
@@ -84,7 +87,7 @@ ActiveRecord::Schema.define(version: 20160420233732) do
     t.integer  "account_id"
   end
 
-  add_index "criminal_applications", ["account_id"], name: "index_criminal_applications_on_account_id"
+  add_index "criminal_applications", ["account_id"], name: "index_criminal_applications_on_account_id", using: :btree
 
   create_table "current_workers", force: :cascade do |t|
     t.string   "name"
@@ -105,7 +108,7 @@ ActiveRecord::Schema.define(version: 20160420233732) do
     t.string   "former_crime"
   end
 
-  add_index "former_criminals", ["account_id"], name: "index_former_criminals_on_account_id"
+  add_index "former_criminals", ["account_id"], name: "index_former_criminals_on_account_id", using: :btree
 
   create_table "minor_applications", force: :cascade do |t|
     t.binary   "parent_signature"
@@ -114,7 +117,7 @@ ActiveRecord::Schema.define(version: 20160420233732) do
     t.integer  "account_id"
   end
 
-  add_index "minor_applications", ["account_id"], name: "index_minor_applications_on_account_id"
+  add_index "minor_applications", ["account_id"], name: "index_minor_applications_on_account_id", using: :btree
 
   create_table "related_councilmembers", force: :cascade do |t|
     t.string   "name"
@@ -124,7 +127,7 @@ ActiveRecord::Schema.define(version: 20160420233732) do
     t.integer  "account_id"
   end
 
-  add_index "related_councilmembers", ["account_id"], name: "index_related_councilmembers_on_account_id"
+  add_index "related_councilmembers", ["account_id"], name: "index_related_councilmembers_on_account_id", using: :btree
 
   create_table "student_applications", force: :cascade do |t|
     t.string   "student_program"
@@ -136,7 +139,7 @@ ActiveRecord::Schema.define(version: 20160420233732) do
     t.integer  "account_id"
   end
 
-  add_index "student_applications", ["account_id"], name: "index_student_applications_on_account_id"
+  add_index "student_applications", ["account_id"], name: "index_student_applications_on_account_id", using: :btree
 
   create_table "user_formerworkers", force: :cascade do |t|
     t.datetime "date_of_employment"
@@ -148,6 +151,15 @@ ActiveRecord::Schema.define(version: 20160420233732) do
     t.integer  "account_id"
   end
 
-  add_index "user_formerworkers", ["account_id"], name: "index_user_formerworkers_on_account_id"
+  add_index "user_formerworkers", ["account_id"], name: "index_user_formerworkers_on_account_id", using: :btree
 
+  add_foreign_key "accommodations", "accounts"
+  add_foreign_key "application_forms", "accounts"
+  add_foreign_key "criminal_applications", "accounts"
+  add_foreign_key "current_workers", "accounts"
+  add_foreign_key "former_criminals", "accounts"
+  add_foreign_key "minor_applications", "accounts"
+  add_foreign_key "related_councilmembers", "accounts"
+  add_foreign_key "student_applications", "accounts"
+  add_foreign_key "user_formerworkers", "accounts"
 end
