@@ -30,7 +30,7 @@ textarea {
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+  line-height: 1.5em;
   font-family: Georgia;
    
 }
@@ -44,13 +44,18 @@ h1 {
 
 h2 {
   font-size: 1.8em;
-  letter-spacing: -1px;
+  /*letter-spacing: -1px;*/
   margin-bottom: 10px;
   text-align: left;
   font-weight: bold;
   /* color: #A52A2A;*/
 }
 
+h3{
+  font-size: 1.5em;
+  
+  /*letter-spacing: 1px;*/
+}
 p {
   font-size: 1.3em;
   font-family: Georgia;
