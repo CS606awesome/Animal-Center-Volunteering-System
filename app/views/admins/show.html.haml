@@ -1,25 +1,29 @@
-%h1 Online volunteering Management System
-%br
-%h3 Wellcome Administrator !  
-%flash
- =flash[:danger]
- =flash[:notice]
+
+%h3 Welcome Administrator! 
+ 
 %fieldset
+.jumbotron
  =form_for admin_path, :method => :get do 
   Age	
+  %br
   =text_field_tag :agemin,nil,placeholder:'older than'
   =text_field_tag :agemax,nil,placeholder:'younger than'
   %div{:style => "margin-bottom:10px"}
   Firstname
-  =text_field_tag :firstname,nil,placeholder: 'first name'
+  %br
+  =text_field_tag :firstname,nil 
   %div{:style => "margin-bottom:10px"}
   Lastname
-  =text_field_tag :lastname,nil,placeholder: 'last name'
+  %br
+  =text_field_tag :lastname,nil 
   %div{:style => "margin-bottom:10px"}
   Email
-  =text_field_tag :email,nil,placeholder: 'email'
+  %br
+  =text_field_tag :email,nil 
+  %div{:style => "margin-bottom:10px"}
   =submit_tag 'select',class: 'btn btn-success'
-
+%br
+%br
 %table#accounts
  %thead
   %tr
@@ -56,5 +60,5 @@
     %td= link_to "Approve", :controller => "admins", :action =>"approve", :id => account.id
     &nbsp;
     %td= link_to 'reject',  :controller => "admins", :action =>"reject", :id => account.id
- 
+%br 
 = link_to 'Manage the qualified volunteer',managemore_path,class: 'btn btn-success'

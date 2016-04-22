@@ -1,9 +1,10 @@
-%h1
- Animal Center 
+
 =render 'admin_sessions/signin'
 %fieldset
- %flash
-  =flash[:danger] 
+%h2
+ Sign up
+ %legend
+.jumbotron
  =form_for @admin do |f|
   =f.text_field :email, {:placeholder => 'email'}
   =f.text_field :password, {:type=>'password',:placeholder => 'password'}
