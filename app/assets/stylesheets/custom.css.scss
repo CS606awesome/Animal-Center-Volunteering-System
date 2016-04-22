@@ -76,27 +76,27 @@ p {
 }
 */
 header{
-  margin: 0;
-  padding: 10px;
+  margin: 0,auto;
+  padding: 10px; 
+ /* padding: 0; */
   background-color: #003399;
   color: white;
-  border-bottom: 4px solid #CCFFFF;
  
+  
 }
-header.title {
+header.left {
+  float: left;
   margin-left: 20px;
   font-size: 2.5em;
   font-family: Georgia;
-  width: 60%;
-  height: 100%;
- 
+  width: 50%;
+  border-bottom: 4px solid #CCFFFF;
 }
 
-header.p {
+header.right {
+  float: right;
   margin-right: 20px;
   color: white;
-  width: 40%;
-  height: 100%;
 }
  
 /* footer */
@@ -118,6 +118,7 @@ footer a:hover {
 
 footer small {
   float: left;
+  font-size: 1em;
 }
 
 footer ul {
