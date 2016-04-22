@@ -127,21 +127,19 @@
      <%= f.fields_for  :related_councilmember do |rf| %>
      <p>The City of Bryan (City) Charter prohibits certain relatives of City Councilmembers from being employed by or volunteering for the City. Please read the list below of current City Councilmembers and their spouses, and then answer the question below. </p>
             <!-- input type="text" name="CurrentDep" -->
-            <p>Jason Bienski / Tasha (Sherrill) Bienski <br />
-Al Saenz / Cindy (Johnson) Saenz  <br />
-
-Rafael D. Peña III / Maraiah (Montelongo) Peña  <br />
-
-Greg Owens / Julie (Tschatschula) Owens  <br />
-
-Mike Southerland / Tana (Boudreaux) Southerland  <br />
-
-Ben Hardeman / Nancy (Pursell) Hardeman  <br />
-
-Buppy Simank / Jennifer (Yerrington) Simank 
-            <br /></p>
-            <%=rf.label :name, 'The council member\'s name' %>
-            <%= rf.text_field :name, :value => @account.related_councilmember.name %>
+            
+            <p>
+                <%= rf.check_box :name, {multiple: true}, 'Jason Bienski / Tasha (Sherrill) Bienski', nil %>Jason Bienski / Tasha (Sherrill) Bienski<br />
+                <%= rf.check_box :name, {multiple: true}, 'Al Saenz / Cindy (Johnson) Saenz', nil %>Al Saenz / Cindy (Johnson) Saenz<br />
+                <%= rf.check_box :name, {multiple: true}, 'Rafael D. Peña III / Maraiah (Montelongo) Peña', nil %>Rafael D. Peña III / Maraiah (Montelongo) Peña<br />
+                <%= rf.check_box :name, {multiple: true}, 'Greg Owens / Julie (Tschatschula) Owens', nil %>Greg Owens / Julie (Tschatschula) Owens<br />
+                <%= rf.check_box :name, {multiple: true}, 'Mike Southerland / Tana (Boudreaux) Southerland', nil %>Mike Southerland / Tana (Boudreaux) Southerland<br />
+                <%= rf.check_box :name, {multiple: true}, 'Ben Hardeman / Nancy (Pursell) Hardeman', nil %>Ben Hardeman / Nancy (Pursell) Hardeman<br />
+                <%= rf.check_box :name, {multiple: true}, 'Buppy Simank / Jennifer (Yerrington) Simank', nil %>Buppy Simank / Jennifer (Yerrington) Simank<br />
+                
+            </p>
+            <!--=rf.label :name, 'The council member\'s name' -->
+            <!--= rf.text_field :name, :value => @account.related_councilmember.name -->
             
             
             <%=rf.label :relationship, 'Relationship' %>

@@ -36,13 +36,17 @@ class AccountsController < ApplicationController
   end
   def submit_application
       @account = Account.find(session[:id])
-      if @account.update(:is_volunteering=>'t')
+      if @account.update(:is_volunteering=>'t') #&& @account.is_volunteering == false
+       
+       @account.update(account_update_params)
+       @account.update(:application_form_attributes => {:interested_areas => params[:account][:application_form_attributes][:interested_areas].join(' ')})
+       #@account.update(application_form_attributes = >{interested_areas => params[:account][:application_form_attributes][:interested_areas][0])
        redirect_to viewapplication_path
       else
        redirect_to action: 'application'
       end
-
   end
+  
   def application
       if logged_in
       @account = Account.find(session[:id]) 

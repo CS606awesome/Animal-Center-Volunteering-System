@@ -39,21 +39,35 @@ I understand that the City has the right to terminate my services as volunteer a
             <p>
                 <strong>What is your interested area?</strong>
             </p>
-            <p>
+            <!--p>
                 Walking dogs;              Cleaning kennels<br />
                 Yard maintenance;          Fostering animals<br />
                 Descriptions of animals;   Bathing dogsClerical/office work<br />
                 Dog training;              GroomingEvent planning<br />
                 Off-site adoption days;    Contacting rescues<br />
                 Picture taking;            Other (please specify)<br />
+            </p-->
+            <p>
+                <%= af.check_box :interested_areas, {multiple: true}, 'Walking dogs;', nil %>Walking dogs<br />
+                <%= af.check_box :interested_areas, {multiple: true}, 'Cleaning kennels;', nil %>Cleaning kennels<br />
+                <%= af.check_box :interested_areas, {multiple: true}, 'Yard maintenance;', nil %>Yard maintenance<br />
+                <%= af.check_box :interested_areas, {multiple: true}, 'Fostering animals;', nil %>Fostering animals<br />
+                <%= af.check_box :interested_areas, {multiple: true}, 'Descriptions of animals;', nil %>Descriptions of animals<br />
+                <%= af.check_box :interested_areas, {multiple: true}, 'Bathing dogs Clerical/office work;', nil %>Bathing dogs Clerical/office work<br />
+                <%= af.check_box :interested_areas, {multiple: true}, 'Dog training;', nil %>Dog training;<br />
+                <%= af.check_box :interested_areas, {multiple: true}, 'GroomingEvent planning;', nil %>GroomingEvent planning<br />
+                <%= af.check_box :interested_areas, {multiple: true}, 'Off-site adoption days;', nil %>Off-site adoption days<br />
+                <%= af.check_box :interested_areas, {multiple: true}, 'Contacting rescues;', nil %>Contacting rescues<br />
+                <%= af.check_box :interested_areas, {multiple: true}, 'Picture taking;', nil %>Picture taking<br />
+                Other (please specify)<%= af.text_field :interested_areas, {multiple: true , :value => ""} %><br />
             </p>
-            <%= af.label :interested_areas, 'Choose from above'%>
-            <%= af.text_field :interested_areas, :value => @account.application_form.interested_areas %>
+            <!--= af.label :interested_areas, 'Choose from above'%>
+            <= af.text_field :interested_areas, :value => @account.application_form.interested_areas -->
             <br />
             <br />
             
             <p>
-                <strong>What is your available date?</strong>
+                <strong>What is your available time?</strong>
             </p>
             <%= af.label :available_time_begin, 'From (start time)'%>
             <%= af.text_field :available_time_begin, :value => @account.application_form.available_time_begin %>
