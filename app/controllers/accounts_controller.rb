@@ -14,6 +14,9 @@ class AccountsController < ApplicationController
   
   def create
     @account = Account.new(account_params)
+    @account.cellphone = @account.cellphone.gsub(/\D/, '').insert(3, '-').insert(7, '-') #change homephone format to xxx-xxx-xxxx
+    @account.homephone = @account.homephone.gsub(/\D/, '').insert(3, '-').insert(7, '-') #change homephone format to xxx-xxx-xxxx
+    @account.DOB = @account.DOB.to_s.gsub(/^(\d{2})-(\d{2})-(\d{4})/, '\3-\1-\2') #change DOB format to yyyy-mm-dd
     if @account.save
      redirect_to @account 
     else  

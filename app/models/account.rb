@@ -50,9 +50,9 @@ validates :email,:firstname,:lastname,:homephone,
   uniqueness: { case_sensitive: true, on: [:create] }
   #####################################
   #validates :number validator 
-  INVALID_NUMBER_REGEX = /[^0-9     ]/
+  INVALID_NUMBER_REGEX = /[^0-9-]/ 
   validates :homephone,
   length: { maximum: 20 },
-  format: { without: INVALID_NUMBER_REGEX }
+  format: { without: INVALID_NUMBER_REGEX}
    
 end
