@@ -6,7 +6,7 @@ class AdminSessionsController < ApplicationController
    @admin = Admin.find_by(email: params[:session][:email].downcase)
   #@account.authenticate('123456')
    if @admin && @admin.authenticate(params[:session][:password])
-      log_in @admin
+      admin_log_in @admin
       redirect_to @admin
     else
     flash.now[:danger] = 'Your are not in admin table'  

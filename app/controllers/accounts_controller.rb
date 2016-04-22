@@ -14,6 +14,9 @@ class AccountsController < ApplicationController
   
   def create
     @account = Account.new(account_params)
+    @account.cellphone = @account.cellphone.gsub(/\D/, '').insert(3, '-').insert(7, '-') #change homephone format to xxx-xxx-xxxx
+    @account.homephone = @account.homephone.gsub(/\D/, '').insert(3, '-').insert(7, '-') #change homephone format to xxx-xxx-xxxx
+    @account.DOB = @account.DOB.to_s.gsub(/^(\d{2})-(\d{2})-(\d{4})/, '\3-\1-\2') #change DOB format to yyyy-mm-dd
     if @account.save
      redirect_to @account 
     else  
@@ -28,10 +31,11 @@ class AccountsController < ApplicationController
     @account = Account.new
   end
   
+
   
   def profiles 
-      if logged_in
-      @account = Account.find(session[:id])  
+      if @account = Account.find(session[:id])
+     
       else
       redirect_to login_path
       end
@@ -50,7 +54,9 @@ class AccountsController < ApplicationController
 
 
   def destroyapplication
-    @account = Account.find(session[:id])
+
+   @account = Account.find(session[:id])
+   if @account.is_volunteering == true
     if @account.update(:is_volunteering=>false) && @account.application_form.destroy
       flash[:notice] = "Withdrawal succeeded!"
       redirect_to action: 'profiles'
@@ -58,12 +64,15 @@ class AccountsController < ApplicationController
       flash[:notice] = "Withdrawal failed!"  
       redirect_to action: 'viewapplication'
     end
-
+   else
+    flash[:notice] = "You have not submitted your application yet!" 
+    redirect_to action: 'viewapplication'
+   end
   end
 
 
   def application
-
+      
       if logged_in
       @account = Account.find(session[:id]) 
           if @account.status == nil|| @account.status==false
@@ -104,18 +113,17 @@ class AccountsController < ApplicationController
   end
   
   def viewapplication
+    #check as a administrator
+    if admin_logged_in
+      session[:id] ||= params[:id]
+    end
     
-    if logged_in
+    if session[:id]
       @account = Account.find(session[:id])
      #if @account.is_volunteering == false || @account.is_volunteering == nil
         #redirect_to profiles_path :id => @account.id
         #flash[:notice] = "Your have no submitted application, please wait or contact the administrator."
       #end
-
-    #check as a administrator
-    elsif admin_logged_in
-      @account = Account.find(params[:id])
-
     else
       redirect_to login_path
     end
@@ -134,7 +142,7 @@ class AccountsController < ApplicationController
      #if @account.is_volunteering == nil || @account.is_volunteering == false
      #@account.update_attributes!(account_update_params)
 
-     if @account.submit_bcheck == false
+     if @account.status != true ||admin_logged_in
      
         if(params[:account][:is_former_worker] == "1") 
           @account.user_formerworker ||= UserFormerworker.new   
@@ -192,7 +200,7 @@ class AccountsController < ApplicationController
         redirect_to application_path :id => @account.id
         end
      else
-         flash[:notice] = 'Your profile is under investigation, please do not make any changes'
+         flash[:notice] = 'Your profile has been approved, no need to change it.'
          redirect_to profiles_path
      end
 
