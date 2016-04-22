@@ -19,6 +19,8 @@
   Email
   =text_field_tag :email,nil,placeholder: 'email'
   =submit_tag 'select'
+  
+= link_to 'Manage the qualified volunteer',managemore_path
 
 %table#accounts
  %thead
@@ -32,8 +34,14 @@
    %th Email
    %th Cellphone
    %th Homephone
-   %th Mailing Address
-   %th Your decision
+   %th Street
+   %th City
+   %th State
+   %th Country
+   %th Zip Code
+   %th Profile
+   %th Approve 
+   %th Reject
  %tbody
   - @accounts.each do |account|
    %tr
@@ -46,15 +54,15 @@
     %td= account.email
     %td= account.cellphone
     %td= account.homephone
-    %td= account.country
-    %td= account.state
-    %td= account.city
     %td= account.street
+    %td= account.city
+    %td= account.state
+    %td= account.country
     %td= account.zip 
     %td= link_to "profile", viewapplication_path(:id => account.id), :onclick=>"window.open(this.href, 'profile', 'height=800, width=800');return false;"
     &nbsp;
     %td= link_to "Approve", :controller => "admins", :action =>"approve", :id => account.id
     &nbsp;
-    %td= link_to 'reject',  :controller => "admins", :action =>"reject", :id => account.id
+    %td= link_to 'Reject',  :controller => "admins", :action =>"reject", :id => account.id
  
-= link_to 'Manage the qualified volunteer',managemore_path
+
