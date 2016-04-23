@@ -59,7 +59,7 @@
     %td= account.state
     %td= account.country
     %td= account.zip 
-    %td= link_to "profile", viewapplication_path(:id => account.id), :onclick=>"window.open(this.href, 'profile', 'height=800, width=800');return false;"
+    %td= link_to "profile", admincheckprofile_path(:id => account.id), :onclick=>"window.open(this.href, 'profile', 'height=800, width=800');return false;"
     &nbsp;
     %td= link_to "Approve", :controller => "admins", :action =>"approve", :id => account.id
     &nbsp;
