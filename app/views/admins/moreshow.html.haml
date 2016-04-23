@@ -1,7 +1,10 @@
 
 %h1 Application Data Management System
 %br
-%h3 Welcome Administrator !
+%h3 Wellcome Administrator !
+%flash
+ =flash[:danger]
+ =flash[:notice]
 %fieldset
 .jumbotron
  =form_for managemore_path, :method => :get do 
@@ -33,12 +36,11 @@
     %td= account.firstname
     %td= account.lastname
     %td= account.DOB
-    %td= account.application_form.volunteering_status
     %td= account.application_form.interested_areas
     %td= account.application_form.available_time_begin
     %td= account.application_form.available_time_end
     %td= account.application_form.created_at
-
+    %td= link_to "Finish", :controller => "admins", :action =>"finish", :id => account.id
 
 =link_to 'Manage the application',admin_path(session[:id]),class: 'btn btn-success'
 

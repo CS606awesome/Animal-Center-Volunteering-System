@@ -28,14 +28,20 @@ Rails.application.routes.draw do
 
   #Show user's workspace
   get 'profiles' => 'accounts#profiles'
-  get 'profiles/:id' => 'accounts#profiles'
-  
+  get 'profiles/:id' => 'accounts#profiles' 
   get 'application' => 'accounts#application'
-  
+  patch 'submit_application' => 'accounts#submit_application'
+
   post 'saveandsubmit' => 'accounts#save_and_submit'
   post 'saveandsubmit/:id' => 'accounts#save_and_submit'
 
+  get 'viewapplication' => 'accounts#viewapplication'
+  get 'viewapplication/:id' => 'accounts#viewapplication' 
+
+  #withdraw the application
+  delete 'withdraw_application' => 'accounts#destroyapplication' 
   #administrator login
+  
   get 'managemore' => 'admins#moreshow'
   get 'manage' => 'admins#show'
   get 'adminsignup' => 'admins#new'
@@ -47,6 +53,8 @@ Rails.application.routes.draw do
   #accounts has many applicaitons   
   get 'reject/:id' => 'admins#reject'
   get 'approve/:id' => 'admins#approve'
+  get 'finish/:id' => 'admins#finish'
+  
     resources :accounts do
       resources :applications
       resources :current_workers
