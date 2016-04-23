@@ -1,5 +1,14 @@
 %header.navbar.navbar-fixed-top
- %header.left Bryan Animal Center Volunteering System
- 
-
+ .row
+  .col-xs-5
+  .col-xs-9
+   .btn-group{"aria-label" => "a", :role => "group"}
+    %button.btn.btn-default{:type => "button"} View my application 
+    /=button_to "View my application" application_path
+    %button.btn.btn-default{:type => "button"} Profile
+    /profiles_path???
+    %button.btn.btn-default{:type => "button"} Logout 
+    /logout_path???
+    
+  
   

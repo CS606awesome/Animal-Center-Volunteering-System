@@ -1,6 +1,6 @@
 .jumbotron
  = form_for(:session, url: login_path, html: {class: 'form-inline'}) do |f|
-  = f.text_field :email, {:placeholder => 'email' } 
+  = f.text_field :email, {:placeholder => 'Email' } 
   = f.text_field :password,{:placeholder => 'Password', :type=>'password'} 
   = f.submit 'sign in',class: 'btn btn-success'
   .checkbox

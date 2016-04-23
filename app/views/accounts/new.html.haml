@@ -14,8 +14,8 @@
    .row
     .col-xs-6
     .col-xs-6
-     %h2 Sign Up
-     .jumbotron
+     /%h2 Sign Up
+     .jumbotron{:style => "width:430px"} 
       =form_for @account do |f|
        %div{:style => "margin-bottom:10px"}
        =f.label 'Name' 
@@ -26,25 +26,17 @@
        =f.text_field :maidenname, {:placeholder => 'Maiden'}
        =f.text_field :lastname,  {:placeholder => 'Last'}
        %div{:style => "margin-bottom:10px"}
-       %b#checkboxlink Gender
-       /%br/
-       %div{:style => "margin-bottom:10px"}
-       = f.radio_button :gender, "male", :checked => @account.gender, :onclick=>"FWclickYes()"
-       Male
-       = f.radio_button :gender, "female", :checked => !@account.gender,:onclick=>"FWclickNo()"
-       Female
-       %div{:style => "margin-bottom:10px"}
-       =f.label 'Date of Birth' 
-       %br/
-       =f.text_field :DOB, {:placeholder => 'mm-dd-yyyy'}
+       =f.label 'Date of Birth'
+       %br
+       =f.text_field :DOB, {:placeholder => 'mm-dd-yyyy',:size => 42}
        %div{:style => "margin-bottom:10px"}
        =f.label 'E-mail' 
        %br
-       =f.text_field :email 
+       =f.text_field :email, :size => 42 
        %div{:style => "margin-bottom:10px"}
-       =f.label 'password' 
+       =f.label 'Password' 
        %br
-       =f.text_field :password, {:type=>'password'}
+       =f.text_field :password, {:type=>'password',:size => 42}
        =f.label 'Your password must be 6~20 characters!'
        %div{:style => "margin-bottom:10px"}
        =f.label 'Phone Number' 
@@ -54,13 +46,21 @@
        %div{:style => "margin-bottom:10px"}
        =f.label 'Address'
        %br
-       =f.text_field :street, {:placeholder => 'Street'}
+       =f.text_field :zip, {:placeholder => 'Zip'}
        =f.text_field :city, {:placeholder => 'City'}
        %div{:style => "margin-bottom:10px"}
        =f.text_field :state, {:placeholder => 'State'}
        =f.text_field :country, {:placeholder => 'Country'}
        %div{:style => "margin-bottom:10px"}
-       =f.text_field :zip, {:placeholder => 'Zip'}
+       =f.text_field :street, {:placeholder => 'Street',:size =>42}
+       %div{:style => "margin-bottom:10px"}
+       %b#checkboxlink Gender
+       /%br/
+       %div{:style => "margin-bottom:10px"}
+       = f.radio_button :gender, "male", :checked => @account.gender, :onclick=>"FWclickYes()"
+       Male
+       = f.radio_button :gender, "female", :checked => !@account.gender,:onclick=>"FWclickNo()"
+       Female
        %p
        =f.submit 'Join us now!',class: 'btn btn-success'
  
