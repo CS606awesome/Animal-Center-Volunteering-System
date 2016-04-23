@@ -58,6 +58,17 @@ class AdminsController < ApplicationController
     end
   end
 
+  def check_profile
+    if admin_logged_in
+      session[:id] = params[:id]
+      redirect_to viewapplication_path
+    else
+      flash[:notice] = "please log in at first!"
+      redirect_to adminlogin_path
+    end
+    
+  end
+
   def moreshow
    if !admin_logged_in
       redirect_to adminlogin_path
