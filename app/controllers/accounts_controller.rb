@@ -238,7 +238,7 @@ class AccountsController < ApplicationController
         @account = Account.find_by(email: params[:email])
         if @account
           session[:id]= @account.id
-          Mailer.welcome_email(@account).deliver_now
+          Mailer.reset_password_email(@account).deliver_now
           redirect_to check_your_email_path
         else
           flash.now[:danger] = 'Your email is not valid or it has not been registered, please try again!'

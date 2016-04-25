@@ -99,6 +99,7 @@ class AdminsController < ApplicationController
     @account = Account.find(params[:id])
     if @account.update(:status => 't', :submit_bcheck => 'f')
       flash[:notice] = 'Approvement is successful!'
+       Mailer.approve_email(@account).deliver_now
       redirect_to action: 'show'
     else
       flash[:danger] = 'Approvement is failed!'
@@ -109,6 +110,7 @@ class AdminsController < ApplicationController
      @account = Account.find(params[:id])
     if @account.update(:status => 'f', :submit_bcheck => 'f')
       flash[:notice] = 'Rejection is successful!'
+      Mailer.reject_email(@account).deliver_now
       redirect_to action: 'show'
     else
       flash[:danger] = 'Rejection is failed!'
