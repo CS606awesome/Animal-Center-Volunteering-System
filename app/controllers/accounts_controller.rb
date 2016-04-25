@@ -14,15 +14,27 @@ class AccountsController < ApplicationController
   
   def create
     @account = Account.new(account_params)
-    @account.cellphone = @account.cellphone.gsub(/\D/, '').insert(3, '-').insert(7, '-') #change homephone format to xxx-xxx-xxxx
-    @account.homephone = @account.homephone.gsub(/\D/, '').insert(3, '-').insert(7, '-') #change homephone format to xxx-xxx-xxxx
-    @account.DOB = @account.DOB.to_s.gsub(/^(\d{2})-(\d{2})-(\d{4})/, '\3-\1-\2') #change DOB format to yyyy-mm-dd
+    @cellphone_number = @account.cellphone.gsub(/\D/, '')
+    @homephone_number = @account.homephone.gsub(/\D/, '')
+    if @cellphone_number.length == 10   #change homephone format to xxx-xxx-xxxx
+        @account.cellphone = correct_phone_format(@cellphone_number)
+    end
+    
+    if @homephone_number.length == 10   #change homephone format to xxx-xxx-xxxx
+        @account.homephone = correct_phone_format(@homephone_number)
+    end
+    
+   # @account.DOB = @account.DOB.to_s.gsub(/^(\d{2})-(\d{2})-(\d{4})/, '\3-\1-\2') #change DOB format to yyyy-mm-dd
     if @account.save
      redirect_to @account 
     else  
       flash.now[:danger] = 'Registration failed, some inforamtion is missing!'  
       render 'new'
     end  
+  end
+  
+  def correct_phone_format(account)
+      account = account.insert(3, '-').insert(7, '-')
   end
   
   #render the login page
@@ -183,7 +195,17 @@ class AccountsController < ApplicationController
               @account.accommodation.destroy
           end
         end
-     
+        @cellphone_number = @account.cellphone.gsub(/\D/, '')
+        @homephone_number = @account.homephone.gsub(/\D/, '')
+        @DOB_format = @account.DOB.to_s
+        if @cellphone_number.length == 10   #change homephone format to xxx-xxx-xxxx
+            @account.cellphone = correct_phone_format(@cellphone_number)
+        end
+    
+        if @homephone_number.length == 10   #change homephone format to xxx-xxx-xxxx
+            @account.homephone = correct_phone_format(@homephone_number)
+        end
+        
         if @account.save(:validate => false)
         flash[:notice] = 'Changes Saved!'
     

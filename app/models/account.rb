@@ -52,7 +52,14 @@ validates :email,:firstname,:lastname,:homephone,
   #validates :number validator 
   INVALID_NUMBER_REGEX = /[^0-9-]/ 
   validates :homephone,
-  length: { maximum: 20 },
+  length: { is: 12 },
   format: { without: INVALID_NUMBER_REGEX}
+  
+   validate :happened_at_is_valid_datetime
+
+  def happened_at_is_valid_datetime
+    errors.add(:DOB, 'must be a valid datetime') if ((DateTime.parse(DOB) rescue ArgumentError) == ArgumentError)
+  end
+
    
 end
