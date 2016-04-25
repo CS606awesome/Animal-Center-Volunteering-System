@@ -4,7 +4,7 @@
   .left.column{:style => "margin-bottom:10px"}
     %img{:alt => "HTML5 Icon", :src => "http://www.ollarate.com/images/original/missing.jpg", :style => "width:320px;height:330px;"}/
     / option, need discussion
-    %p photo
+    %p Photo
   .right.column{:style => "margin-bottom:10px"}
     %p 
       %strong Name:
@@ -14,9 +14,8 @@
       %strong Gender:
       =@account.gender
     %p
-      %strong Date of Birth:
+      %strong Date Of Birth:
       = @account.DOB
-      / why DOB is orange?
     %p
       %strong Email:
       = @account.email
@@ -24,7 +23,7 @@
       %strong Home Phone:
       = @account.homephone
     %p
-      %strong Cell phone:
+      %strong Cell Phone:
       = @account.cellphone
     %p
       %strong Home Address:
@@ -121,7 +120,7 @@
       = ff.text_field :former_crime, :value => @account.former_criminal.former_crime
       %br/
   %p
-    %strong 5.Emergency contact
+    %strong 5.Emergency Contact
   = f.label :emergency_contact_name, 'Emergency Contact Name',:style =>"width:220px"
   = f.text_field :emergency_contact_name, :value => @account.emergency_contact_name
   %br/

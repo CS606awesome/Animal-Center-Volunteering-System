@@ -1,15 +1,15 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to "bryan animal center", '#', id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   '#' %></li>
-        <li><%= link_to "Help",   '#' %></li>
-        <li><%= link_to "Log in", '#' %></li>
-      </ul>
-    </nav>
+<header class="navbar navbar-fixed-top">
+  <div class="row">
+    <div class="col-xs-5"></div>
+    <div class="col-xs-9">
+      <div aria-label="a" class="btn-group" role="group">
+        <button class="btn btn-default">
+          <a href="https://project606-juliaaaa2015.c9users.io/signup" type="button">View my application </button>
+        <button class="btn btn-default">
+         <a href="https://project606-juliaaaa2015.c9users.io/signup" type="button">Profile </button>
+        <button class="btn btn-default">
+         <a href="https://project606-juliaaaa2015.c9users.io/signup" type="button">Logout </button>
+      </div>
+    </div>
   </div>
 </header>
-
-
- 

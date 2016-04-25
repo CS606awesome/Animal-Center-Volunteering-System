@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
-
+  get    'logout'  => 'sessions#destroy'
+  
   get    'input_your_email' => 'accounts#input_your_email'
   post    'input_your_email' => 'accounts#input_your_email'
 
@@ -28,7 +29,7 @@ Rails.application.routes.draw do
 
   #Show user's workspace
   get 'profiles' => 'accounts#profiles'
-  get 'profiles/:id' => 'accounts#profiles' 
+  #get 'profiles/:id' => 'accounts#profiles' 
   get 'application' => 'accounts#application'
   patch 'submit_application' => 'accounts#submit_application'
 

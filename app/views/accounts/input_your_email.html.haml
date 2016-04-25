@@ -2,6 +2,6 @@
 %legend
 .jumbotron
  =form_for input_your_email_path, :method => :post do
-  =label :email,'Please input your email'
-  =text_field_tag :email,nil, placeholder: 'email'
+  %strong Please Input Your Email
+  =text_field_tag :email,nil, placeholder: 'Email'
   =submit_tag 'Reset', class: 'btn btn-success'

@@ -74,7 +74,7 @@ class AccountsController < ApplicationController
               else           
               flash[:notice] = 'You have not be approved by our administrator yet, please submit and wait with patience.'
               end
-              redirect_to profiles_path(:id => @account.id)
+              redirect_to profiles_path#(:id => @account.id)
           else
           @account.application_form ||= ApplicationForm.new 
           # if user is a criminal
@@ -203,24 +203,24 @@ class AccountsController < ApplicationController
 
       if @account.submit_bcheck == false && @account.status == nil      #if never submit, then save and submit        
           if @account.update(:submit_bcheck => 't')
-              flash[:notice] = 'Your profile has been sent to the administrator'
+              flash[:success] = 'Your profile has been sent to the administrator'
 
      #     redirect_to profiles_path :id => @account.id
      # else                                                   # if have already submitted, return to page and do nothing
      #     redirect_to profiles_path :id => @account.id
 
           else
-          flash[:notice] = 'Submission is failed'  
+          flash[:danger] = 'Submission is failed'  
           end
       else     
           if @account.status != nil  
-          flash[:notice] = 'You are approved, no need to bother our administrator right? LOL'# if have submitted, return to page and do nothing
+          flash[:success] = 'You are approved, no need to bother our administrator right? LOL'# if have submitted, return to page and do nothing
           else
-          flash[:notice] = 'Your profile is under processing!'
+          flash[:info] = 'Your profile is under processing!'
           end
       end
       
-      redirect_to profiles_path :id => @account.id
+      redirect_to profiles_path #:id => @account.id
       
   end
      

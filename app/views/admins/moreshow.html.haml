@@ -1,22 +1,22 @@
-
-%h1 Application Data Management System
-%br
-%h3 Wellcome Administrator !
+/%h1 Application Data Management System
+%h3 Welcome Administrator!
 %flash
  =flash[:danger]
  =flash[:notice]
 %fieldset
 .jumbotron
- =form_for managemore_path, :method => :get do 
-  Firstname
-  =text_field_tag :firstname,nil,placeholder: 'first name'
+ =form_for managemore_path, :method => :get do |f|
+  =f.label 'Firstname', :style => "width:100px"
+  =f.text_field :firstname
   %div{:style => "margin-bottom:10px"}
-  Lastname
-  =text_field_tag :lastname,nil,placeholder: 'last name'
+  =f.label 'Lastname', :style => "width:100px"
+  =f.text_field :lastname
   %div{:style => "margin-bottom:10px"}
-  Email
-  =text_field_tag :email,nil,placeholder: 'email'
-  =submit_tag 'select',class: 'btn btn-success'
+  =f.label 'Email', :style => "width:100px" 
+  =f.text_field :email
+  %div{:style => "margin-bottom:10px"}
+  /%br
+  =f.submit 'select',class: 'btn btn-success'
 
 %table#accounts
  %thead

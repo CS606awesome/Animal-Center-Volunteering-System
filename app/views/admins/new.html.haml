@@ -5,11 +5,14 @@
  Sign up
  %legend
 .jumbotron
- =form_for @admin do |f|
-  =f.text_field :email, {:placeholder => 'email'}
-  =f.text_field :password, {:type=>'password',:placeholder => 'password'}
-  %div{:style => "margin-bottom:10px"}
-  =f.text_field :key, {:placeholder => 'themagickey'}
+ =form_for @admin  do |f|
+  %strong E-mail
+  =f.text_field :email, {:placeholder => 'E-mail', class: 'form-inline'} 
+  %strong Password
+  =f.text_field :password, {:type=>'password',:placeholder => 'Password',class: 'form-inline'}
+  /%div{:style => "margin-bottom:10px"}
+  %strong The Magic Key
+  =f.text_field :key, {:placeholder => 'The Magic Key',class: 'form-inline'}
   %div{:style => "margin-bottom:10px"}
   %p
   =f.submit 'Join us now!',class: 'btn btn-primary'

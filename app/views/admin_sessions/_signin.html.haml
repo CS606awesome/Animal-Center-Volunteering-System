@@ -4,9 +4,12 @@
   %legend
  .jumbotron
   =form_for(:session, url: adminlogin_path,html: {class: 'form-inline'}) do |f|
+   =f.label 'E-mail'
    =f.text_field :email, {:placeholder => 'E-mail' }
+   =f.label 'Password'
    =f.text_field :password,{:placeholder => 'Password', :type=>'password'}
-   =f.text_field :key,{:placeholder => 'TheMagicKey', :type=>'password'}
+   =f.label 'The Magic Key'
+   =f.text_field :key,{:placeholder => 'The Magic Key', :type=>'password'}
    =f.submit 'sign in',class: 'btn btn-success'
    %div{:style => 'margin-bottom:5px'}
    .checkbox

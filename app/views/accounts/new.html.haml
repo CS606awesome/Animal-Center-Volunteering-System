@@ -26,9 +26,9 @@
        =f.text_field :maidenname, {:placeholder => 'Maiden'}
        =f.text_field :lastname,  {:placeholder => 'Last'}
        %div{:style => "margin-bottom:10px"}
-       =f.label 'Date of Birth'
+       %strong Date Of Birth
        %br
-       =f.text_field :DOB, {:placeholder => 'mm-dd-yyyy',:size => 42}
+       =f.text_field :DOB, {:placeholder => 'MM-DD-YYYY',:size => 42}
        %div{:style => "margin-bottom:10px"}
        =f.label 'E-mail' 
        %br
@@ -39,20 +39,22 @@
        =f.text_field :password, {:type=>'password',:size => 42}
        =f.label 'Your password must be 6~20 characters!'
        %div{:style => "margin-bottom:10px"}
-       =f.label 'Phone Number' 
+       %strong Phone Number 
        %br
        =f.text_field :homephone, {:placeholder => 'Homephone'}
+       =f.label 'Your homephone must be xxx-xxx-xxxx!'
        =f.text_field :cellphone, {:placeholder => 'Cellphone'}
+       =f.label 'Your cellphone must be xxx-xxx-xxxx!'
        %div{:style => "margin-bottom:10px"}
        =f.label 'Address'
        %br
-       =f.text_field :zip, {:placeholder => 'Zip'}
+       =f.text_field :street, {:placeholder => 'Street'}
        =f.text_field :city, {:placeholder => 'City'}
        %div{:style => "margin-bottom:10px"}
        =f.text_field :state, {:placeholder => 'State'}
        =f.text_field :country, {:placeholder => 'Country'}
        %div{:style => "margin-bottom:10px"}
-       =f.text_field :street, {:placeholder => 'Street',:size =>42}
+       =f.text_field :zip, {:placeholder => 'Zip',:size =>42}
        %div{:style => "margin-bottom:10px"}
        %b#checkboxlink Gender
        /%br/
