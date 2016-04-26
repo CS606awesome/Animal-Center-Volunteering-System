@@ -97,7 +97,7 @@ class AdminsController < ApplicationController
 
    def approve
     @account = Account.find(params[:id])
-    if @account.update(:status => 't', :submit_bcheck => 'f')
+    if @account.update_columns(status: true, submit_bcheck: false)
       flash[:notice] = 'Approvement is successful!'
       redirect_to action: 'show'
     else
@@ -107,7 +107,7 @@ class AdminsController < ApplicationController
    end
    def reject
      @account = Account.find(params[:id])
-    if @account.update(:status => 'f', :submit_bcheck => 'f')
+    if @account.update_columns(status: false, submit_bcheck: false)
       flash[:notice] = 'Rejection is successful!'
       redirect_to action: 'show'
     else
@@ -118,7 +118,7 @@ class AdminsController < ApplicationController
 
    def finish
       @account = Account.find(params[:id])
-    if @account.update(:status => nil, :is_volunteering =>'f')
+    if @account.update_columns(status: nil, is_volunteering: false)
       #and the application data should be sent to other schema
       flash[:notice] = "#{@account.firstname} has finished the volunteering!"
       redirect_to action: 'moreshow'

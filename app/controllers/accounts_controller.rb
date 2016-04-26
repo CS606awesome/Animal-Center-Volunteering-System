@@ -25,6 +25,8 @@ class AccountsController < ApplicationController
     end
     
    # @account.DOB = @account.DOB.to_s.gsub(/^(\d{2})-(\d{2})-(\d{4})/, '\3-\1-\2') #change DOB format to yyyy-mm-dd
+     correct_DOB_format(@account)
+
     if @account.save
      redirect_to @account 
     else  
@@ -35,6 +37,13 @@ class AccountsController < ApplicationController
   
   def correct_phone_format(account)
       account = account.insert(3, '-').insert(7, '-')
+  end
+
+  #used to correct the format of input DOB since the front end is using jQuery ui
+  def correct_DOB_format(account)
+      if /^(\d\d)\/(\d\d)\/(\d\d\d\d)$/.match(account.DOB.to_s)
+        account.DOB = "#{$3}-#{$1}-#{$2}"
+      end
   end
   
   #render the login page
@@ -56,7 +65,7 @@ class AccountsController < ApplicationController
   #submit application 
   def submit_application
       @account = Account.find(session[:id])
-      if @account.update(:is_volunteering=>true)
+      if @account.update_columns(:is_volunteering=>true)
        redirect_to viewapplication_path
       else
        redirect_to action: 'application'
@@ -68,7 +77,7 @@ class AccountsController < ApplicationController
   def destroyapplication
    @account = Account.find(session[:id])
    if @account.is_volunteering == true
-    if @account.update(:is_volunteering=>'f') && @account.application_form.destroy
+    if @account.update_columns(:is_volunteering =>false) && @account.application_form.destroy
 
       flash[:notice] = "Withdrawal succeeded!"
       redirect_to action: 'profiles'
@@ -139,7 +148,7 @@ class AccountsController < ApplicationController
   
   def update
 
-     @account = Account.find(params[:id])
+     @account = Account.find(session[:id])
      
      #@account.is_volunteering = false
      
@@ -197,7 +206,7 @@ class AccountsController < ApplicationController
         end
         @cellphone_number = @account.cellphone.gsub(/\D/, '')
         @homephone_number = @account.homephone.gsub(/\D/, '')
-        @DOB_format = @account.DOB.to_s
+     
         if @cellphone_number.length == 10   #change homephone format to xxx-xxx-xxxx
             @account.cellphone = correct_phone_format(@cellphone_number)
         end
@@ -206,7 +215,9 @@ class AccountsController < ApplicationController
             @account.homephone = correct_phone_format(@homephone_number)
         end
         
-        if @account.save(:validate => false)
+        correct_DOB_format(@account)
+
+        if @account.save
         flash[:notice] = 'Changes Saved!'
     
      #else
@@ -227,7 +238,7 @@ class AccountsController < ApplicationController
   def save_and_submit
       @account = Account.find(session[:id])
       if @account.submit_bcheck == false && @account.status == nil      #if never submit, then save and submit        
-          if @account.update(:submit_bcheck => true)
+          if @account.update_columns(submit_bcheck: true)
               flash[:notice] = 'Your profile has been sent to the administrator'
 
      #     redirect_to profiles_path :id => @account.id
@@ -277,7 +288,7 @@ class AccountsController < ApplicationController
       @account = Account.find(session[:id])
      
        if (params[:account][:password] == params[:account][:password_confirmation])
-         if @account.update_attributes(account_password_params)   
+         if @account.update_columns(account_password_params)   
             flash[:success] = "You have reset your password successfully."
             redirect_to login_path
          else
@@ -301,7 +312,7 @@ private
   end
   
   def account_update_params
-   params.require(:account).permit(:is_former_worker,:is_current_worker, :emergency_contact_name,
+   params.require(:account).permit(:password, :password_confirmation,:is_former_worker,:is_current_worker, :emergency_contact_name,
                                   :emergency_phone,:emergency_phone_alternate,:related_to_councilmember,
                                   :has_convictions, :need_accommodations, :is_volunteering,  :is_student,
                                   :firstname, :lastname, :DOB, :homephone, :cellphone, :street, :city, :state, :zip,
