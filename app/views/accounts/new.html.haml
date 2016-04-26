@@ -1,3 +1,4 @@
+
 %h1
  Animal Center 
 =render 'sessions/signin'
@@ -21,7 +22,7 @@
    =f.text_field :lastname,  {:placeholder => 'Lastname'}
   %div{:style => "margin-bottom:10px"}
    =f.text_field :gender, {:placeholder => 'Gender'}
-   =f.text_field :DOB, {:placeholder => 'mm-dd-yyyy(DOB)'}
+   =f.text_field :DOB, {:placeholder => 'mm-dd-yyyy(DOB)', :id=>'dob',:id => 'datepicker' }
   %div{:style => "margin-bottom:10px"}
    =f.text_field :email, {:placeholder => 'E-mail'}
    =f.text_field :password, {:type=>'password',:placeholder => 'password'}

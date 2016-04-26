@@ -14,8 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require bootstrap-datepicker
+//= require jquery-ui
 
-//profile's toggle raido checkbox
     function FWclickYes()
     {
         $('#FWcheckbox').show();
@@ -57,6 +58,14 @@
         $('#NAcheckbox').hide();
     }
 
-    $(document).ready(){ 
-    $('a[data-popup]').on('click', function(e) { window.open($(this).attr('href')); e.preventDefault(); });
+    $(function(){    
+     $('a[data-popup]').on('click', function(e) { window.open($(this).attr('href')); e.preventDefault(); });
+     $('.datepicker').datepicker();
+     $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
      });
+
+     
+     
