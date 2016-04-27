@@ -1,5 +1,4 @@
 %header.navbar.navbar-fixed-top
- /%header.left Bryan Animal Center Volunteering System
  %header.right  
   = form_for(:session, url: login_path, html: {class: 'form-inline'}) do |f|
    = f.text_field :email, {:placeholder => 'Email' } 
@@ -7,7 +6,7 @@
    = f.submit 'Sign In',class: 'btn btn-success'
    .checkbox
    = f.check_box :keep_me_logged_in, :style => "margin-top: 0px"
-   Keep Me Logged In
+   = f.label "Keep Me Logged In", :style =>"color: white"
   = link_to "Forget your password?", input_your_email_path, class: 'btn btn-warning btn-xs' 
   
   
