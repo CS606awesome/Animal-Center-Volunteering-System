@@ -23,7 +23,7 @@ class Account < ActiveRecord::Base
     accepts_nested_attributes_for :student_application, allow_destroy: true
     
 has_secure_password
-validates :email,:firstname,:lastname,:homephone,
+validates :email,:firstname,:lastname,:homephone, 
   presence: true,
   :on => [ :create ]
   validates :password, 
@@ -42,7 +42,7 @@ validates :email,:firstname,:lastname,:homephone,
   ###################################
   #validates :name validator
   INVALID_NAME_REGEX = /[^a-zA-Z     ]/
-  validates :firstname,:lastname,
+  validates :firstname,:lastname, 
   length: { maximum: 20 },
   format: { without: INVALID_NAME_REGEX }
   #validates :unique email                                  
@@ -51,8 +51,26 @@ validates :email,:firstname,:lastname,:homephone,
   #####################################
   #validates :number validator 
   INVALID_NUMBER_REGEX = /[^0-9     ]/
-  validates :homephone,
+  validates :homephone, #:emergency_phone, :emergency_phone_alternate,
   length: { maximum: 20 },
   format: { without: INVALID_NUMBER_REGEX }
+
+
+#validation of change profile!
+ 
+  INVALID_NAME_REGEX = /[^a-zA-Z     ]/
+  validates :firstname,:lastname, :emergency_contact_name, :middlename, 
+  length: { maximum: 20 },
+  format: { without: INVALID_NAME_REGEX }
+  #validates :unique email                                  
+  validates  :email,
+  uniqueness: { case_sensitive: true, on: [:update] }
+  #####################################
+  #validates :number validator 
+  INVALID_NUMBER_REGEX = /[^0-9     ]/
+  validates :homephone, :emergency_phone, :emergency_phone_alternate,
+  length: { maximum: 20 },
+  format: { without: INVALID_NUMBER_REGEX }
+  
    
 end

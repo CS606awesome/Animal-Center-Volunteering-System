@@ -33,20 +33,23 @@ I understand that the City has the right to terminate my services as volunteer a
 ======= -->
     
     <%= form_for @account,url: submit_application_path do |f| %>
+    
+        <% if flash[:my_errors] %>
+            <h2>Error:</h2>
+            <ul>
+              <% flash[:my_errors].each do |m| %>
+                <li>
+                  <%= m %>
+                </li>
+              <% end %>
+        <% end %>
 
 
         <%= f.fields_for :application_form do |af| %>
             <p>
                 <strong>What is your interested area?</strong>
             </p>
-            <!--p>
-                Walking dogs;              Cleaning kennels<br />
-                Yard maintenance;          Fostering animals<br />
-                Descriptions of animals;   Bathing dogsClerical/office work<br />
-                Dog training;              GroomingEvent planning<br />
-                Off-site adoption days;    Contacting rescues<br />
-                Picture taking;            Other (please specify)<br />
-            </p-->
+        
             <p>
                 <%= af.check_box :interested_areas, {multiple: true}, 'Walking dogs;', nil %>Walking dogs<br />
                 <%= af.check_box :interested_areas, {multiple: true}, 'Cleaning kennels;', nil %>Cleaning kennels<br />

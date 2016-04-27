@@ -11,26 +11,28 @@
     </div>
     
 </div>
-
+ <!--p>(the information with * is required)</p-->
 
 
   <%= form_for @account do |f| %>
   <!-- **************************************************************************** -->
-  <!-- add all form contents within this helper -->
-  
-  <!--%= f.label  :emergency_contact_name, 'Emergency Contact Name'%>
-  <!--%= f.text_field 'emergency_contact_name'%>
-  <!-- change form below into helper format: 
-  f.label :field_name 'questions you need to ask'
-  f.text_field :field_name
-  radio dot has other f. method name
-  -->
+        <% if flash[:my_errors] %>
+        <h2>Error:</h2>
+        <ul>
+          <% flash[:my_errors].each do |m| %>
+            <li>
+              <%= m %>
+            </li>
+          <% end %>
+        <% end %>
+        
+
       <div class="right column"  style = "margin-bottom:10px">
       <p>
-          <!--strong>Name</strong><br /--> 
-          <!--= @account.firstname%> <= @account.lastname-->
           <%=f.label :firstname, 'First Name'%>
           <%= f.text_field :firstname, :value => @account.firstname %><br />
+          <%=f.label :middlename, 'Middle Name'%>
+          <%= f.text_field :middlename, :value => @account.middlename %><br />
           <%=f.label :lastname, 'Last Name'%>
           <%= f.text_field :lastname, :value => @account.lastname %><br />
       </p>
@@ -57,6 +59,8 @@
           <%= f.text_field :state, :value => @account.state %><br />
           <%=f.label :zip, 'Zip'%>
           <%= f.text_field :zip, :value => @account.zip %><br />
+          <%=f.label :country, 'Country'%>
+          <%= f.text_field :country, :value => @account.country %><br />
       </p>
     </div>
   
@@ -82,23 +86,7 @@
             <%=uf.text_field :position_or_department, :value => @account.user_formerworker.position_or_department %>
         <% end %>    
       </div>
-    <!--Date of Employment:
-        <input type="text" name="DOE"  >
-        <!--%=f.label :date_of_employment, 'Date of Employment'%>  -->
-        <!--%= f.text_field :date_of_employment, :value => @user_formerworkers.date_of_employment %> 
-    <br />
-    Reasons of Leaving:
-        <input type="text" name="ROL">
-    <br />
-    Position:
-        <input type="text" name="FormerPOS"> -->
-        
-    
-     <!--The council member's Name:
-        <input type="text" name="CMname">
-    <br>
-    Relationship:
-        <input type="text" name="RelationshiptoCM"  -->
+ 
     
     <p>
         <b>2.Are you a current worker of the city of Bryan?</b><br />
@@ -175,20 +163,7 @@
             <br />
     <% end %>   
     </div>
-    <!--Date of Conviction:
-        <input type="text" name="DOCon">
-    <br />
-    Nature of Offense:
-        <input type="text" name="NatureofOffense">
-        <br />
-    Name of Court:
-        <input type="text" name="NOC">
-        <br />
 
-    Deposition of Case:
-        <input type="text" name="DOCase">
-        <br />                                      -->
-        
         
     <p>
         <b>5.Are you a student volunteer required by student organization?</b><br />
@@ -231,7 +206,7 @@
   
   <% end %>
   <br />
-  <%= button_to "Submit for Approve", action: "save_and_submit" %> <b>(attention: please save before you submit, once you have submitted your profile, you can't change it anymore)</b>
+  <%= button_to "Submit for Approve", action: "save_and_submit" %> <b>(attention: please save before you submit, once you have submitted your profile and it has been approved, you can't change it anymore)</b>
 <br /><br />
 
 
