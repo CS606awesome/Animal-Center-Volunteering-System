@@ -181,7 +181,7 @@ class AccountsController < ApplicationController
         end
      
         if @account.save(:validate => false)
-        flash[:notice] = 'Changes Saved!'
+        flash[:success] = 'Changes Saved!'
     
      #else
      #   flash[:notice] = 'Your have already submitted an application, you can not submit change until you complete this one.'

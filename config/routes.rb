@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   get    'logout'  => 'sessions#destroy'
+  delete 'logout'  => 'admin_sessions#destroy'
+  get    'logout'  => 'admin_sessions#destroy'
   
   get    'input_your_email' => 'accounts#input_your_email'
   post    'input_your_email' => 'accounts#input_your_email'
