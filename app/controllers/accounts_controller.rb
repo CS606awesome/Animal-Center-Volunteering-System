@@ -40,12 +40,19 @@ class AccountsController < ApplicationController
       @account = Account.find(session[:id])
       if @account.update(:is_volunteering=>'t') #&& @account.is_volunteering == false
        
-       @account.update(account_update_params)
-       @account.update(:application_form_attributes => {:interested_areas => params[:account][:application_form_attributes][:interested_areas].join(' ')})
-       #@account.update(application_form_attributes = >{interested_areas => params[:account][:application_form_attributes][:interested_areas][0])
-       redirect_to viewapplication_path
+        if @account.update(account_update_params)
+          if params[:account][:application_form_attributes][:interested_areas][0].size < 1
+            @account.update(:application_form_attributes => {:interested_areas => "none"})
+          else  
+            @account.update(:application_form_attributes => {:interested_areas => params[:account][:application_form_attributes][:interested_areas].join(' ')})
+          end
+          redirect_to viewapplication_path
+        else
+          flash[:my_errors] = @account.errors.full_messages;
+          redirect_to application_path(:id => @account.id)
+        end
       else
-       redirect_to action: 'application'
+        redirect_to action: 'application'
       end
   end
 
@@ -115,10 +122,22 @@ class AccountsController < ApplicationController
      if @account.submit_bcheck == false
      
         if(params[:account][:is_former_worker] == "1") 
-          @account.user_formerworker ||= UserFormerworker.new   
+          @account.user_formerworker ||= UserFormerworker.new  
+        else
+          @account.user_formerworker ||= UserFormerworker.new 
+          @account.update(:is_former_worker => "0")
         end
-        if(params[:account][:related_to_councilmember] == "1") 
-          @account.related_councilmember ||= RelatedCouncilmember.new   
+        if(params[:account][:related_to_councilmember] == "1")
+          if params[:account][:related_councilmember_attributes].nil?
+            @account.related_councilmember ||= RelatedCouncilmember.new
+          elsif params[:account][:related_councilmember_attributes][:name].nil?
+            flash[:notice] = 'Please check one CM'
+            flash[:my_errors] = ["council memeber name is blank"];
+            redirect_to profiles_path :id => @account.id and return
+          else
+            @account.related_councilmember ||= RelatedCouncilmember.new
+            @account.related_councilmember.name = params[:account][:related_councilmember_attributes][:name].join(' ')
+          end
         end
         if(params[:account][:is_current_worker] == "1") 
           @account.current_worker ||= CurrentWorker.new   
@@ -130,13 +149,15 @@ class AccountsController < ApplicationController
           @account.accommodation ||= Accommodation.new   
         end
      
-        if @account.related_to_councilmember == true
-          if params[:account][:related_councilmember_attributes][:name].nil?
-            flash[:notice] = 'Please check one CM'
-          else
-            @account.related_councilmember.name = params[:account][:related_councilmember_attributes][:name][0]   #.join(' ')
-          end
-        end
+        #if @account.related_to_councilmember == true
+          #if params[:account][:related_councilmember_attributes][:name].nil?
+            #flash[:notice] = 'Please check one CM'
+            #flash[:my_errors] = ["council memeber name is blank"];
+            #redirect_to profiles_path :id => @account.id and return
+         # else
+          #  @account.related_councilmember.name = params[:account][:related_councilmember_attributes][:name].join(' ')
+         # end
+        #end
         #@account.attributes = account_update_params
         if @account.update(account_update_params) #unless destroyed?  #save(:validate => true)
      

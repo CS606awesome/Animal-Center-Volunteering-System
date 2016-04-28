@@ -9,14 +9,14 @@ class RelatedCouncilmember < ActiveRecord::Base
 #  length: { maximum: 50 },
 #  format: { without: INVALID_NAME_REGEX }
 
-validates :relationship, :name,
-  presence: true,
-  :on => [ :update ],
-  :if => :choose_yes?
+#validates :relationship, :name,
+#  presence: true,
+#  :on => [ :update ],
+#  :if => :choose_yes?
   
-  def choose_yes?
-      account.related_to_councilmember == true
-  end
+#  def choose_yes?
+#      account.related_to_councilmember == true
+#  end
   
 #validates :name,
 #  presence: true,

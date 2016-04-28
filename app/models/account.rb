@@ -6,7 +6,7 @@ class Account < ActiveRecord::Base
     has_one :user_formerworker
     has_one :accommodation
     
-    has_one :application_form
+    has_one :application_form, :dependent => :destroy
     has_one :criminal_application
     has_one :minor_application
     has_one :student_application

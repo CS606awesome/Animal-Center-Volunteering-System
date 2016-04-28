@@ -117,15 +117,16 @@
             <!-- input type="text" name="CurrentDep" -->
             
             <p>
-                <%= rf.check_box :name, {multiple: true}, 'Jason Bienski / Tasha (Sherrill) Bienski', nil %>Jason Bienski / Tasha (Sherrill) Bienski<br />
-                <%= rf.check_box :name, {multiple: true}, 'Al Saenz / Cindy (Johnson) Saenz', nil %>Al Saenz / Cindy (Johnson) Saenz<br />
-                <%= rf.check_box :name, {multiple: true}, 'Rafael D. Peña III / Maraiah (Montelongo) Peña', nil %>Rafael D. Peña III / Maraiah (Montelongo) Peña<br />
-                <%= rf.check_box :name, {multiple: true}, 'Greg Owens / Julie (Tschatschula) Owens', nil %>Greg Owens / Julie (Tschatschula) Owens<br />
-                <%= rf.check_box :name, {multiple: true}, 'Mike Southerland / Tana (Boudreaux) Southerland', nil %>Mike Southerland / Tana (Boudreaux) Southerland<br />
-                <%= rf.check_box :name, {multiple: true}, 'Ben Hardeman / Nancy (Pursell) Hardeman', nil %>Ben Hardeman / Nancy (Pursell) Hardeman<br />
-                <%= rf.check_box :name, {multiple: true}, 'Buppy Simank / Jennifer (Yerrington) Simank', nil %>Buppy Simank / Jennifer (Yerrington) Simank<br />
+                <%= rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Jason Bienski/).nil?)}, 'Jason Bienski / Tasha (Sherrill) Bienski', nil %>Jason Bienski / Tasha (Sherrill) Bienski<br />
+                <%= rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Al Saenz/).nil?)}, 'Al Saenz / Cindy (Johnson) Saenz', nil %>Al Saenz / Cindy (Johnson) Saenz<br />
+                <%= rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Rafael D. Peña III/).nil?)}, 'Rafael D. Peña III / Maraiah (Montelongo) Peña', nil %>Rafael D. Peña III / Maraiah (Montelongo) Peña<br />
+                <%= rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Greg Owens/).nil?)}, 'Greg Owens / Julie (Tschatschula) Owens', nil %>Greg Owens / Julie (Tschatschula) Owens<br />
+                <%= rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Mike Southerland/).nil?)}, 'Mike Southerland / Tana (Boudreaux) Southerland', nil %>Mike Southerland / Tana (Boudreaux) Southerland<br />
+                <%= rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Ben Hardeman/).nil?)}, 'Ben Hardeman / Nancy (Pursell) Hardeman', nil %>Ben Hardeman / Nancy (Pursell) Hardeman<br />
+                <%= rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Buppy Simank/).nil?)}, 'Buppy Simank / Jennifer (Yerrington) Simank', nil %>Buppy Simank / Jennifer (Yerrington) Simank<br />
                 
             </p>
+
             <!--=rf.label :name, 'The council member\'s name' -->
             <!--= rf.text_field :name, :value => @account.related_councilmember.name -->
             
