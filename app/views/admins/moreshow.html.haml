@@ -17,7 +17,7 @@
   =f.text_field :email
   %div{:style => "margin-bottom:10px"}
   /%br
-  =f.submit 'select',class: 'btn btn-success'
+  =f.submit 'Select',class: 'btn btn-success'
 
 %table#accounts
  %thead
@@ -43,5 +43,5 @@
     %td= account.application_form.created_at
     %td= link_to "Finish", :controller => "admins", :action =>"finish", :id => account.id
 
-=link_to 'Manage the application',admin_path(session[:id]),class: 'btn btn-success'
+=link_to 'Manage The Application',admin_path(session[:id]),class: 'btn btn-success'
 

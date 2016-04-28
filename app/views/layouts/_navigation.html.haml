@@ -6,7 +6,5 @@
    = f.submit 'Sign In',class: 'btn btn-success'
    .checkbox
    = f.check_box :keep_me_logged_in, :style => "margin-top: 0px"
-   = f.label "Keep Me Logged In", :style =>"color: white"
-  = link_to "Forget your password?", input_your_email_path, class: 'btn btn-warning btn-xs' 
-  
-  
+   =f.label :keep_me_logged_in, "Keep Me Logged In", :style =>"color: white"  
+  = link_to "Forget Your Password?", input_your_email_path, class: 'btn btn-warning btn-xs' 

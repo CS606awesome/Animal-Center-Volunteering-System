@@ -52,10 +52,10 @@ class AccountsController < ApplicationController
   def destroyapplication
     @account = Account.find(session[:id])
     if @account.update(:is_volunteering=>'f') && @account.application_form.destroy
-      flash[:notice] = "Withdrawal succeeded!"
+      flash[:success] = "Withdrawal succeeded!"
       redirect_to action: 'profiles'
     else
-      flash[:notice] = "Withdrawal failed!"  
+      flash[:danger] = "Withdrawal failed!"  
       redirect_to action: 'viewapplication'
     end
 
@@ -69,10 +69,10 @@ class AccountsController < ApplicationController
           if @account.status == nil|| @account.status==false
               #if rejected
               if @account.status ==false
-              flash[:notice] = 'You were rejected by our administrator, we are sorry you can not be a volunteer this time.' 
+              flash[:danger] = 'You were rejected by our administrator, we are sorry you can not be a volunteer this time.' 
               #haven't submit for background check 
               else           
-              flash[:notice] = 'You have not be approved by our administrator yet, please submit and wait with patience.'
+              flash[:danger] = 'You have not be approved by our administrator yet, please submit and wait with patience.'
               end
               redirect_to profiles_path#(:id => @account.id)
           else
@@ -192,7 +192,7 @@ class AccountsController < ApplicationController
         redirect_to application_path :id => @account.id
         end
      else
-         flash[:notice] = 'Your profile is under investigation, please do not make any changes'
+         flash[:warning] = 'Your profile is under investigation, please do not make any changes'
          redirect_to profiles_path
      end
 

@@ -6,8 +6,8 @@
  =form_for admin_path, :method => :get do 
   Age	
   %br
-  =text_field_tag :agemin,nil,placeholder:'older than'
-  =text_field_tag :agemax,nil,placeholder:'younger than'
+  =text_field_tag :agemin,nil,placeholder:'Older Than'
+  =text_field_tag :agemax,nil,placeholder:'Younger Than'
   %div{:style => "margin-bottom:10px"}
   Firstname
   %br
@@ -21,7 +21,7 @@
   %br
   =text_field_tag :email,nil 
   %div{:style => "margin-bottom:10px"}
-  =submit_tag 'select',class: 'btn btn-success'
+  =submit_tag 'Select',class: 'btn btn-success'
 %br
 %br
 %table#accounts
@@ -32,12 +32,12 @@
    %th Maidenname
    %th Lastname
    %th Gender
-   %th Date of Birth
+   %th Date Of Birth
    %th Email
    %th Cellphone
    %th Homephone
    %th Mailing Address
-   %th Your decision
+   %th Your Decision
  %tbody
   - @accounts.each do |account|
    %tr
@@ -61,4 +61,4 @@
     &nbsp;
     %td= link_to 'reject',  :controller => "admins", :action =>"reject", :id => account.id
 %br 
-= link_to 'Manage the qualified volunteer',managemore_path,class: 'btn btn-success'
+= link_to 'Manage The Qualified Volunteer',managemore_path,class: 'btn btn-success'
