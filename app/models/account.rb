@@ -55,7 +55,7 @@ validates :email,:firstname,:lastname,:homephone,
   length: { is: 12 },
   format: { without: INVALID_NUMBER_REGEX}
 #validates date of birth
-  validates_date :DOB
+  validates_format_of :DOB, :with => /\d{4}-\d{2}-\d{2}/, :message => "date must be in the following format: mm/dd/yyyy"
 
    
 end

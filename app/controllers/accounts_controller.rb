@@ -41,8 +41,8 @@ class AccountsController < ApplicationController
 
   #used to correct the format of input DOB since the front end is using jQuery ui
   def correct_DOB_format(account)
-      if /^(\d\d)\/(\d\d)\/(\d\d\d\d)$/.match(account.DOB.to_s)
-        account.DOB = "#{$3}-#{$1}-#{$2}"
+      if /^((0[1-9])|(1[0-2]))\/((0[1-9])|(1[0-9])|(2[0-9])|(3[0-1]))\/(\d{4})$/.match(account.DOB.to_s)
+        account.DOB = "#{$9}-#{$1}-#{$4}"
       end
   end
   
@@ -308,14 +308,14 @@ private
   end
   def account_params
 
-   params.require(:account).permit(:gender, :email,:password, :password_confirmation,:firstname,:lastname, :middlename,:country,:state,:city,:street,:zip,:homephone,:cellphone,:DOB)
+   params.require(:account).permit(:gender, :email,:password, :password_confirmation,:firstname,:lastname, :middlename,:maidenname,:country,:state,:city,:street,:zip,:homephone,:cellphone,:DOB)
   end
   
   def account_update_params
    params.require(:account).permit(:password, :password_confirmation,:is_former_worker,:is_current_worker, :emergency_contact_name,
                                   :emergency_phone,:emergency_phone_alternate,:related_to_councilmember,
                                   :has_convictions, :need_accommodations, :is_volunteering,  :is_student,
-                                  :firstname, :lastname, :DOB, :homephone, :cellphone, :street, :city, :state, :zip,
+                                  :firstname, :lastname, :middlename, :maidenname, :DOB, :homephone, :cellphone, :street, :city, :state, :zip,
                                   current_worker_attributes: [:id, :department, :name],
                                   user_formerworker_attributes: [:id, :date_of_employment, :reason_for_leaving, :position_or_department],
                                   former_criminal_attributes: [:id, :date_of_conviction, :nature_of_offense, :name_of_court, :disposition_of_case, :former_crime],
