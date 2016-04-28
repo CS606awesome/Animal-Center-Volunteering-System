@@ -1,4 +1,6 @@
 class AdminsController < ApplicationController
+  #gmail library
+  require 'gmail'
 
   def index
    redirect_to action: 'new'  
@@ -58,6 +60,36 @@ class AdminsController < ApplicationController
    end
   end
 
+  ####some funcitons for adminshow page
+
+    #send email
+  def gmailsender
+    if !session[:sended]
+    session[:reciever_id]=params[:id]
+    end
+    @account = Account.find(session[:reciever_id]) 
+  end
+
+  def send_gmail
+   @account = Account.find(session[:reciever_id])
+   address = @account.email
+   body = params[:body]
+   gmail = Gmail.connect('sssikai123@gmail.com','woshizhu@123')
+   email = gmail.compose do
+    to "#{address}"
+    subject "Hi,I am the volunteering administrator from bryan animal center"
+    body "#{body}"
+   end
+   if email.deliver!
+     flash[:notice] = "deliver successful!"
+   else
+      flash[:notice] = 'deliver failed!'  
+   end
+   session[:sended] = 1
+   redirect_to send_gmail_path, :method=>'get'
+  end
+  
+  ######################check profile
   def check_profile
     if admin_logged_in
       session[:id] = params[:id]
@@ -118,6 +150,8 @@ class AdminsController < ApplicationController
     end
    end
 
+  ############functions for adminmoreshow page
+   
    def finish
       @account = Account.find(params[:id])
     if @account.update(:status => nil, :is_volunteering =>'f')
@@ -164,8 +198,6 @@ class AdminsController < ApplicationController
     @accounts = @accounts.where("lower(email) LIKE lower(?)", "#{email}%")
   end
   
-
-
 
   def admin_params
    params.require(:admin).permit(:email,:password, :password_confirmation,:key)

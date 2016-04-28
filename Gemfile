@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
+
+#Integrate it with google api
+gem 'gmail'
+#allow the app to send mailer
 gem 'actionmailer'
+
 gem 'email_verifier'
 gem 'email_validator'
 gem 'bcrypt'

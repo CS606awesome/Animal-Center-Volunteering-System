@@ -16,6 +16,11 @@ Rails.application.routes.draw do
   get    'input_your_email' => 'accounts#input_your_email'
   post    'input_your_email' => 'accounts#input_your_email'
 
+  #send applicant gmail
+  get    'send_gmail' =>  'admins#gmailsender'
+  post   'send_gmail' =>  'admins#send_gmail'
+
+
   get    'reset_your_password'  => 'accounts#reset_your_password'
   post    'reset_your_password'  => 'accounts#save_password_change'
 

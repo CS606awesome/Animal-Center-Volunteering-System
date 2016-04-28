@@ -90,6 +90,11 @@ GEM
     gherkin (3.2.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    gmail (0.6.0)
+      gmail_xoauth (>= 0.3.0)
+      mail (>= 2.2.1)
+    gmail_xoauth (0.4.1)
+      oauth (>= 0.3.6)
     haml (4.0.7)
       tilt
     haml-rails (0.9.0)
@@ -130,6 +135,7 @@ GEM
     multi_test (0.1.2)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    oauth (0.5.1)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -239,6 +245,7 @@ DEPENDENCIES
   database_cleaner
   email_validator
   email_verifier
+  gmail
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails

@@ -1,0 +1,12 @@
+%h2 Send him a mail
+%h3 
+ Reciever: 
+ =@account.firstname
+ &nbsp;
+ =@account.lastname
+%flash
+ =flash[:notice]
+=form_for send_gmail_path, :method => :post do
+ =text_area_tag :body,nil, placeholder: 'compose your email here',rows: 25, cols: 50, id: 'mail_composer'
+ %br
+ =submit_tag 'send' 
