@@ -47,7 +47,7 @@ I understand that the City has the right to terminate my services as volunteer a
 
         <%= f.fields_for :application_form do |af| %>
             <p>
-                <strong>What is your interested area?</strong>
+                <strong>What is your area of interest?</strong>
             </p>
         
             <p>
@@ -128,9 +128,9 @@ I understand that the City has the right to terminate my services as volunteer a
         
         <%= f.fields_for :minor_application do |mf| %>
             <p>
-                <strong>If you are a minor(younger than 18), please fill the blanks below.</strong>
+                <strong>If you are a minor(younger than 18 years), please fill in the blanks below.</strong>
             </p>
-            <%= mf.label :parent_signature, 'Please ask your guardian to sign here'%>
+            <%= mf.label :parent_signature, 'Please ask your guardian to sign electronically here'%>
             <%= mf.text_field :parent_signature, :value => @account.minor_application.parent_signature %>
             <br />
             <br />
@@ -141,7 +141,7 @@ I understand that the City has the right to terminate my services as volunteer a
         
         <strong>Your signature</strong><br />
         <%= f.fields_for :application_form do |af| %>
-            <%= af.label :signature, 'Please sign here to make sure of your application form'%>
+            <%= af.label :signature, 'Please sign here electronically to submit your application form'%>
             <%= af.text_field :signature, :value => @account.application_form.signature %>
             <br />
             <br />
@@ -154,7 +154,7 @@ I understand that the City has the right to terminate my services as volunteer a
     <strong>Attention: once your application is submitted, you can not change and submit again</strong><br />
 ======= -->
                     
-    <strong>Attention: once your application is submitted, you can not change and submit again</strong><br />
+    <strong>ATTENTION: once your application is submitted, you can not change it or submit again</strong><br />
     
     <%= f.submit 'Submit the Application' %>
     <% end %>

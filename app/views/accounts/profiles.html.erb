@@ -69,7 +69,7 @@
   
   
       <p>
-       <b id = "checkboxlink">1.Are you a former worker of the city of Bryan?</b> <b>(If you are still working in Bryan, please check no)</b><br />    
+       <b id = "checkboxlink">1.Are you a former worker of the City of Bryan?</b> <b>(If you are still working for COB, please check no)</b><br />    
         <%= f.radio_button :is_former_worker, "1", :checked => @account.is_former_worker, :onclick=>"FWclickYes()" %> Yes<br />
         <%= f.radio_button :is_former_worker, "0", :checked => !@account.is_former_worker,:onclick=>"FWclickNo()"%> No<br />
       </p> 
@@ -89,7 +89,7 @@
  
     
     <p>
-        <b>2.Are you a current worker of the city of Bryan?</b><br />
+        <b>2.Are you a current worker of the City of Bryan?</b><br />
         <%= f.radio_button :is_current_worker, '1', :checked =>@account.is_current_worker, :onclick=>"CWclickYes()" %> Yes<br />
         <%= f.radio_button :is_current_worker, '0', :checked =>!@account.is_current_worker, :onclick=>"CWclickNo()" %> No<br />
     </p>
@@ -107,7 +107,7 @@
     
     
     <p>
-        <b>3.Are you a relative of any council members?</b><br />
+        <b>3.Are you a relative of any City of Bryan council members?</b><br />
         <%= f.radio_button :related_to_councilmember, '1', :checked => @account.related_to_councilmember, :onclick=>"RCclickYes()" %> Yes<br />
         <%= f.radio_button :related_to_councilmember, '0', :checked =>!@account.related_to_councilmember, :onclick=>"RCclickNo()" %> No<br />
     </p>
@@ -140,7 +140,7 @@
     
     
     <p>
-        <b>4.Do you come here to do community service because of criminal conviction?</b><br />
+        <b>4.Are you coming here to do community service for a court?</b><br />
         <%= f.radio_button :has_convictions, '1', :checked =>@account.has_convictions, :onclick=>"FCclickYes()" %> Yes<br />
         <%= f.radio_button :has_convictions, '0', :checked =>!@account.has_convictions, :onclick=>"FCclickNo()"  %> No<br />
     </p>  
@@ -167,7 +167,7 @@
 
         
     <p>
-        <b>5.Are you a student volunteer required by student organization?</b><br />
+        <b>5.Are you a student volunteer required by a student organization?</b><br />
         <%= f.radio_button :is_student, '1', :checked =>@account.is_student, :onclick=>"ISclickYes()" %> Yes<br />
         <%= f.radio_button :is_student, '0', :checked =>!@account.is_student, :onclick=>"ISclickNo()" %> No<br />
     </p>
@@ -189,7 +189,7 @@
         <%= f.text_field :emergency_phone_alternate, :value => @account.emergency_phone_alternate %>
         
     <p>
-        <b>7.Do you need any accommodations?</b><br />
+        <b>7.Do you require any accommodations?</b><br />
         <%= f.radio_button :need_accommodations, '1', :checked =>@account.need_accommodations, :onclick=>"NAclickYes()" %> Yes<br />
         <%= f.radio_button :need_accommodations, '0', :checked =>!@account.need_accommodations, :onclick=>"NAclickNo()" %> No<br />
     </p>
@@ -203,11 +203,11 @@
         
    <br /><br /> 
         
-  <%= f.submit 'Save Changes'%>    <!-- this is used to save change --><b>(save your profiles, and you can edit and save it again)</b>
+  <%= f.submit 'Save Changes'%>    <!-- this is used to save change --><b>(save your profile, and you can edit and save it again)</b>
   
   <% end %>
   <br />
-  <%= button_to "Submit for Approve", action: "save_and_submit" %> <b>(attention: please save before you submit, once you have submitted your profile and it has been approved, you can't change it anymore)</b>
+  <%= button_to "Submit for Approve", action: "save_and_submit" %> <b>(ATTENTION: please save before you submit, once you have submitted your profile and it has been approved, you can't change it anymore)</b>
 <br /><br />
 
 
