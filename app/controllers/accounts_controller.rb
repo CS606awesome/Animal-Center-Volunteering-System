@@ -38,14 +38,15 @@ class AccountsController < ApplicationController
   #submit application 
   def submit_application
       @account = Account.find(session[:id])
+      #@account.application_form.interested_areas = params[:account][:application_form_attributes][:interested_areas].join(' ')
       if @account.update(:is_volunteering=>'t') #&& @account.is_volunteering == false
        
         if @account.update(account_update_params)
-          if params[:account][:application_form_attributes][:interested_areas][0].size < 1
-            @account.update(:application_form_attributes => {:interested_areas => "none"})
-          else  
-            @account.update(:application_form_attributes => {:interested_areas => params[:account][:application_form_attributes][:interested_areas].join(' ')})
-          end
+          @account.update(:application_form_attributes =>{:available_time_end => params[:account][:application_form_attributes][:available_time_end],:available_time_begin => params[:account][:application_form_attributes][:available_time_begin],:signature => params[:account][:application_form_attributes][:signature],:interested_areas => params[:account][:application_form_attributes][:interested_areas].join(' ')})
+          #@account.update_attributes(:application_form_attributes =>{:interested_areas => params[:account][:application_form_attributes][:interested_areas][0]})
+          #@account.update(:application_form_attributes =>{:signature => params[:account][:application_form_attributes][:signature]})
+          #@account.update(:application_form_attributes =>{:available_time_begin => params[:account][:application_form_attributes][:available_time_begin]})
+          #@account.update(:application_form_attributes =>{:available_time_end => params[:account][:application_form_attributes][:available_time_end]})
           redirect_to viewapplication_path
         else
           flash[:my_errors] = @account.errors.full_messages;

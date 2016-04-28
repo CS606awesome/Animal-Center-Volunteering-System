@@ -62,7 +62,7 @@ I understand that the City has the right to terminate my services as volunteer a
                 <%= af.check_box :interested_areas, {multiple: true}, 'Off-site adoption days;', nil %>Off-site adoption days<br />
                 <%= af.check_box :interested_areas, {multiple: true}, 'Contacting rescues;', nil %>Contacting rescues<br />
                 <%= af.check_box :interested_areas, {multiple: true}, 'Picture taking;', nil %>Picture taking<br />
-                Other (please specify)<%= af.text_field :interested_areas, {multiple: true , :value => ""} %><br />
+                Other (please specify)<%= af.text_field :interested_areas, {multiple: true , :value => " "} %><br />
             </p>
             <!--= af.label :interested_areas, 'Choose from above'%>
             <= af.text_field :interested_areas, :value => @account.application_form.interested_areas -->
