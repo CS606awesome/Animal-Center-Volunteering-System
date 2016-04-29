@@ -14,6 +14,19 @@ class AccountsController < ApplicationController
   
   def create
     @account = Account.new(account_params)
+    @cellphone_number = @account.cellphone.gsub(/\D/, '')
+    @homephone_number = @account.homephone.gsub(/\D/, '')
+    if @cellphone_number.length == 10   #change homephone format to xxx-xxx-xxxx
+        @account.cellphone = correct_phone_format(@cellphone_number)
+    end
+    
+    if @homephone_number.length == 10   #change homephone format to xxx-xxx-xxxx
+        @account.homephone = correct_phone_format(@homephone_number)
+    end
+    
+   # @account.DOB = @account.DOB.to_s.gsub(/^(\d{2})-(\d{2})-(\d{4})/, '\3-\1-\2') #change DOB format to yyyy-mm-dd
+     correct_DOB_format(@account)
+
     if @account.save
      redirect_to @account 
     else  
@@ -22,16 +35,28 @@ class AccountsController < ApplicationController
     end  
   end
   
+  def correct_phone_format(account)
+      account = account.insert(3, '-').insert(7, '-')
+  end
+
+  #used to correct the format of input DOB since the front end is using jQuery ui
+  def correct_DOB_format(account)
+      if /^((0[1-9])|(1[0-2]))\/((0[1-9])|(1[0-9])|(2[0-9])|(3[0-1]))\/(\d{4})$/.match(account.DOB.to_s)
+        account.DOB = "#{$9}-#{$1}-#{$4}"
+      end
+  end
+  
   #render the login page
   def show
-    flash[:success] = 'Congradulations! Now go ahead and log in'  
+    flash[:success] = 'Congradulations!now go ahead and login'  
     @account = Account.new
   end
   
+
   
   def profiles 
-      if logged_in
-      @account = Account.find(session[:id])  
+      if @account = Account.find(session[:id])
+     
       else
       redirect_to login_path
       end
@@ -40,7 +65,7 @@ class AccountsController < ApplicationController
   #submit application 
   def submit_application
       @account = Account.find(session[:id])
-      if @account.update(:is_volunteering=>'t')
+      if @account.update_columns(:is_volunteering=>true)
        redirect_to viewapplication_path
       else
        redirect_to action: 'application'
@@ -50,20 +75,25 @@ class AccountsController < ApplicationController
 
 
   def destroyapplication
-    @account = Account.find(session[:id])
-    if @account.update(:is_volunteering=>'f') && @account.application_form.destroy
+   @account = Account.find(session[:id])
+   if @account.is_volunteering == true
+    if @account.update_columns(:is_volunteering =>false) && @account.application_form.destroy
+
       flash[:success] = "Withdrawal succeeded!"
       redirect_to action: 'profiles'
     else
       flash[:danger] = "Withdrawal failed!"  
       redirect_to action: 'viewapplication'
     end
-
+   else
+    flash[:danger] = "You have not submitted your application yet!" 
+    redirect_to action: 'viewapplication'
+   end
   end
 
 
   def application
-
+      
       if logged_in
       @account = Account.find(session[:id]) 
           if @account.status == nil|| @account.status==false
@@ -102,20 +132,15 @@ class AccountsController < ApplicationController
       redirect_to login_path
       end
   end
+
   
   def viewapplication
-    
-    if logged_in
+    if session[:id]
       @account = Account.find(session[:id])
      #if @account.is_volunteering == false || @account.is_volunteering == nil
         #redirect_to profiles_path :id => @account.id
         #flash[:notice] = "Your have no submitted application, please wait or contact the administrator."
       #end
-
-    #check as a administrator
-    elsif admin_logged_in
-      @account = Account.find(params[:id])
-
     else
       redirect_to login_path
     end
@@ -123,7 +148,7 @@ class AccountsController < ApplicationController
   
   def update
 
-     @account = Account.find(params[:id])
+     @account = Account.find(session[:id])
      
      #@account.is_volunteering = false
      
@@ -134,7 +159,7 @@ class AccountsController < ApplicationController
      #if @account.is_volunteering == nil || @account.is_volunteering == false
      #@account.update_attributes!(account_update_params)
 
-     if @account.submit_bcheck == false
+     if @account.status != true ||admin_logged_in
      
         if(params[:account][:is_former_worker] == "1") 
           @account.user_formerworker ||= UserFormerworker.new   
@@ -153,7 +178,7 @@ class AccountsController < ApplicationController
         end
      
         @account.attributes = account_update_params
-
+     
         if(params[:account][:is_former_worker] == "0")
             if(@account.user_formerworker != nil)
                 @account.user_formerworker.destroy
@@ -179,8 +204,20 @@ class AccountsController < ApplicationController
               @account.accommodation.destroy
           end
         end
+        @cellphone_number = @account.cellphone.gsub(/\D/, '')
+        @homephone_number = @account.homephone.gsub(/\D/, '')
      
-        if @account.save(:validate => false)
+        if @cellphone_number.length == 10   #change homephone format to xxx-xxx-xxxx
+            @account.cellphone = correct_phone_format(@cellphone_number)
+        end
+    
+        if @homephone_number.length == 10   #change homephone format to xxx-xxx-xxxx
+            @account.homephone = correct_phone_format(@homephone_number)
+        end
+        
+        correct_DOB_format(@account)
+
+        if @account.save
         flash[:success] = 'Changes Saved!'
     
      #else
@@ -192,7 +229,7 @@ class AccountsController < ApplicationController
         redirect_to application_path :id => @account.id
         end
      else
-         flash[:warning] = 'Your profile is under investigation, please do not make any changes'
+         flash[:warning] = 'Your profile has been approved, no need to change it.'
          redirect_to profiles_path
      end
 
@@ -200,9 +237,8 @@ class AccountsController < ApplicationController
   
   def save_and_submit
       @account = Account.find(session[:id])
-
       if @account.submit_bcheck == false && @account.status == nil      #if never submit, then save and submit        
-          if @account.update(:submit_bcheck => 't')
+          if @account.update_columns(submit_bcheck: true)
               flash[:success] = 'Your profile has been sent to the administrator'
 
      #     redirect_to profiles_path :id => @account.id
@@ -219,7 +255,6 @@ class AccountsController < ApplicationController
           flash[:info] = 'Your profile is under processing!'
           end
       end
-      
       redirect_to profiles_path #:id => @account.id
       
   end
@@ -244,13 +279,7 @@ class AccountsController < ApplicationController
         end
       end
   end
-    
-  def resend_your_email
-     @account = Account.find(session[:id])
-     Mailer.welcome_email(@account).deliver_now
-     flash[:success] = "Email has been resent again, please check it!"
-  end
- 
+  
   def reset_your_password
      @account = Account.find(session[:id])
   end
@@ -259,11 +288,11 @@ class AccountsController < ApplicationController
       @account = Account.find(session[:id])
      
        if (params[:account][:password] == params[:account][:password_confirmation])
-         if @account.update_attributes(account_password_params)   
+         if @account.update_columns(account_password_params)   
             flash[:success] = "You have reset your password successfully."
             redirect_to login_path
          else
-           flash[:warning] = "Passwords are not satisfied the requirement."
+           flash[:warning] = "passwords are not satisfied the requirement."
            flash[:info] = "Your password must be 6-20 characters and cannot be blank."
            render 'reset_your_password'
          end
@@ -279,14 +308,14 @@ private
   end
   def account_params
 
-   params.require(:account).permit(:gender, :email,:password, :password_confirmation,:firstname,:lastname, :middlename,:country,:state,:city,:street,:zip,:homephone,:cellphone,:DOB)
+   params.require(:account).permit(:gender, :email,:password, :password_confirmation,:firstname,:lastname, :middlename,:maidenname,:country,:state,:city,:street,:zip,:homephone,:cellphone,:DOB)
   end
   
   def account_update_params
-   params.require(:account).permit(:is_former_worker,:is_current_worker, :emergency_contact_name,
+   params.require(:account).permit(:password, :password_confirmation,:is_former_worker,:is_current_worker, :emergency_contact_name,
                                   :emergency_phone,:emergency_phone_alternate,:related_to_councilmember,
                                   :has_convictions, :need_accommodations, :is_volunteering,  :is_student,
-                                  :firstname, :lastname, :DOB, :homephone, :cellphone, :street, :city, :state, :zip,
+                                  :firstname, :lastname, :middlename, :maidenname, :DOB, :homephone, :cellphone, :street, :city, :state, :zip,
                                   current_worker_attributes: [:id, :department, :name],
                                   user_formerworker_attributes: [:id, :date_of_employment, :reason_for_leaving, :position_or_department],
                                   former_criminal_attributes: [:id, :date_of_conviction, :nature_of_offense, :name_of_court, :disposition_of_case, :former_crime],

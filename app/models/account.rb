@@ -1,5 +1,5 @@
 class Account < ActiveRecord::Base
-    
+   
     has_one :current_worker
     has_one :former_criminal
     has_one :related_councilmember
@@ -24,13 +24,14 @@ class Account < ActiveRecord::Base
     
 has_secure_password
 validates :email,:firstname,:lastname,:homephone,
-  presence: true,
-  :on => [ :create ]
+  presence: true
+
   validates :password, 
   length: { in: 6..20,
              to_short: "your password should be at least %{count} characters",
              to_long: "your password should be at most %{count} characters" },
-  :on => [ :create,:update]
+             on: [:create]
+
   #validates :email
   validates :email, email: true
   ##validates_email_realness_of :email
@@ -43,14 +44,19 @@ validates :email,:firstname,:lastname,:homephone,
   validates :firstname,:lastname,
   length: { maximum: 20 },
   format: { without: INVALID_NAME_REGEX }
+
   #validates :unique email                                  
   validates  :email,
-  uniqueness: { case_sensitive: true, on: [:create] }
+             uniqueness: { case_sensitive: true }
   #####################################
   #validates :number validator 
-  INVALID_NUMBER_REGEX = /[^0-9     ]/
+  INVALID_NUMBER_REGEX = /[^0-9-]/ 
   validates :homephone,
-  length: { maximum: 20 },
-  format: { without: INVALID_NUMBER_REGEX }
+  length: { is: 12 },
+  format: { without: INVALID_NUMBER_REGEX}
+#validates date of birth
+  validates_date :DOB
+
    
 end
+

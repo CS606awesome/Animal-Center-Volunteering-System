@@ -43,8 +43,9 @@ Rails.application.routes.draw do
 
   #withdraw the application
   delete 'withdraw_application' => 'accounts#destroyapplication' 
+ 
   #administrator login
-  
+  get 'admincheckprofile'=>'admins#check_profile' 
   get 'managemore' => 'admins#moreshow'
   get 'manage' => 'admins#show'
   get 'adminsignup' => 'admins#new'

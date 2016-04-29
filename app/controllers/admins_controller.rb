@@ -57,6 +57,20 @@ class AdminsController < ApplicationController
     end
    end
   end
+
+  def check_profile
+    if admin_logged_in
+      session[:id] = params[:id]
+      redirect_to viewapplication_path
+    else
+      flash[:notice] = "please log in at first!"
+      redirect_to adminlogin_path
+    end
+    
+  end
+
+
+  
   def moreshow
    if !admin_logged_in
       redirect_to adminlogin_path
@@ -83,7 +97,7 @@ class AdminsController < ApplicationController
 
    def approve
     @account = Account.find(params[:id])
-    if @account.update(:status => 't', :submit_bcheck => 'f')
+    if @account.update_columns(status: true, submit_bcheck: false)
       flash[:success] = 'Approvement is successful!'
       redirect_to action: 'show'
     else
@@ -93,7 +107,7 @@ class AdminsController < ApplicationController
    end
    def reject
      @account = Account.find(params[:id])
-    if @account.update(:status => 'f', :submit_bcheck => 'f')
+    if @account.update_columns(status: false, submit_bcheck: false)
       flash[:success] = 'Rejection is successful!'
       redirect_to action: 'show'
     else
@@ -104,7 +118,7 @@ class AdminsController < ApplicationController
 
    def finish
       @account = Account.find(params[:id])
-    if @account.update(:status => nil, :is_volunteering =>'f')
+    if @account.update_columns(status: nil, is_volunteering: false)
       #and the application data should be sent to other schema
       flash[:success] = "#{@account.firstname} has finished the volunteering!"
       redirect_to action: 'moreshow'

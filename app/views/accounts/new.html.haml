@@ -28,7 +28,7 @@
        %div{:style => "margin-bottom:10px"}
        %strong Date of Birth
        %br
-       =f.text_field :DOB, {:placeholder => 'MM-DD-YYYY',:size => 42}
+       =f.text_field :DOB, {:id=>'datepicker',:placeholder => 'MM-DD-YYYY',:size => 42}
        %div{:style => "margin-bottom:10px"}
        =f.label 'E-mail' 
        %br
@@ -65,4 +65,4 @@
        Female
        %p
        =f.submit 'Join Us Now!',class: 'btn btn-success'
- 
+

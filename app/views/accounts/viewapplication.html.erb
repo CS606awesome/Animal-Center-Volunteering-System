@@ -1,6 +1,9 @@
 <h3>Your Profile and Application</h3>
 
 <h3>Submitted Profiles</h3>
+<% if flash[:notice] %>
+    <div class="notice"><strong><%= flash[:notice] %></strong></div>
+<% end %>
 <p>
           <strong>Name</strong> 
           <%= @account.firstname%> <%= @account.lastname%>
@@ -37,7 +40,7 @@
       <p>
           <strong>SSN</strong>
           <%= @account.SSN %><br />
-          <strong>driver_license</strong>
+          <strong>Driver License</strong>
           <%= @account.driver_license %><br />
       </p>
       <p><strong>Has your profile been approved so that you can submit an application?: </strong><%= @account.status%></p>
