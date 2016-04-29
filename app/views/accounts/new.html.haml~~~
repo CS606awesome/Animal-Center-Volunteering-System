@@ -1,0 +1,69 @@
+ 
+%fieldset
+ -if @account.errors.any?
+  %div{:id=>"error_explanations"}
+  =pluralize(@account.errors.count, "error") #count the amount of errors(error)
+  has been found!
+  %ul
+   -@account.errors.full_messages.each do |msg|
+    %li
+     =msg
+ %flash
+  =flash[:danger] 
+  .container
+   .row
+    .col-xs-6
+    .col-xs-6
+     =form_for @account do |f|
+      %div{:style => "margin-bottom:10px"}
+      =f.label 'Name', :style => "width:100px"
+      %br
+      =f.text_field :firstname, {:placeholder => 'First'} 
+      =f.text_field :middlename, {:placeholder => 'Middle'} 
+      /=f.label 'Maidenname',:style => "width:100px"
+      %div{:style => "margin-bottom:10px"}
+      =f.text_field :maidenname, {:placeholder => 'Maiden'}
+      /=f.label 'Lastname',:style => "width:100px"
+      =f.text_field :lastname,  {:placeholder => 'Last'}
+      %div{:style => "margin-bottom:10px"}
+      %b#checkboxlink gender
+      /%br/
+      %div{:style => "margin-bottom:10px"}
+      = f.radio_button :gender, "1", :checked => @account.gender, :onclick=>"FWclickYes()"
+      Male
+      = f.radio_button :gender, "0", :checked => !@account.gender,:onclick=>"FWclickNo()"
+      Female
+      /=f.label 'Gender',:style => "width:100px"
+      /=f.text_field :gender, {:placeholder => 'Gender'}
+      %div{:style => "margin-bottom:10px"}
+      =f.label 'Date of Birth',:style => "width:100px"
+      %br/
+      =f.text_field :DOB, {:placeholder => 'yyyy-mm-dd'}
+      %div{:style => "margin-bottom:10px"}
+      =f.label 'E-mail',:style => "width:100px"
+      %br
+      =f.text_field :email 
+      %div{:style => "margin-bottom:10px"}
+      =f.label 'password',:style => "width:100px"
+      %br
+      =f.text_field :password, {:type=>'password'}
+      %div{:style => "margin-bottom:10px"}
+      =f.label 'Phone Number',:style => "width:100px"
+      %br
+      =f.text_field :homephone, {:placeholder => 'Homephone'}
+      =f.text_field :cellphone, {:placeholder => 'Cellphone'}
+      %div{:style => "margin-bottom:10px"}
+      =f.label 'Country',:style => "width:100px"
+      =f.text_field :country, {:placeholder => 'Country'}
+      =f.label 'State',:style => "width:100px"
+      =f.text_field :state, {:placeholder => 'State'}
+      %div{:style => "margin-bottom:10px"}
+      =f.label 'City',:style => "width:100px"
+      =f.text_field :city, {:placeholder => 'City'}
+      =f.label 'Street',:style => "width:100px"
+      =f.text_field :street, {:placeholder => 'Street'}
+      =f.label 'Zip',:style => "width:30px"
+      =f.text_field :zip, {:placeholder => 'Zip'}
+      %p
+      =f.submit 'Join us now!',class: 'btn btn-success'
+ 

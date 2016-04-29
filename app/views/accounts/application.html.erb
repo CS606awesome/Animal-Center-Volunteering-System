@@ -1,6 +1,6 @@
 <h1>Application Form</h1>   <!--this is just a test page -->
 
-<h2>Volunteer Acknowledgement</h2>
+<h3><strong>Volunteer Acknowledgement</strong></h3>
 <p>
     I understand the City operates the Bryan Animal Center (BAC), a facility that houses animals picked up by animal control personnel/citizens, assists with recovery of lost animals, and finds homes for animals that can be adopted. I understand the City allows volunteers to assist with the operation of the facility in an effort to provide more care, encourage adoption, and reduce rates of euthanasia. 
 
@@ -24,13 +24,6 @@ I understand that the City has the right to terminate my services as volunteer a
 
 <div id='@application'  style = "margin-top:10px">
     
-<!--<<<<<<< HEAD
-    <= form_for setup_app_account @account do |f| %>
-      
-        <= f.hidden_field :is_volunteering, :value => true %>
-      
-    
-======= -->
     
     <%= form_for @account,url: submit_application_path do |f| %>
 
@@ -47,7 +40,7 @@ I understand that the City has the right to terminate my services as volunteer a
                 Off-site adoption days;    Contacting rescues<br />
                 Picture taking;            Other (please specify)<br />
             </p>
-            <%= af.label :interested_areas, 'Choose from above'%>
+            <%= af.label :interested_areas, 'Choose From Above'%>
             <%= af.text_field :interested_areas, :value => @account.application_form.interested_areas %>
             <br />
             <br />
@@ -55,15 +48,15 @@ I understand that the City has the right to terminate my services as volunteer a
             <p>
                 <strong>What is your available date?</strong>
             </p>
-            <%= af.label :available_time_begin, 'From (start time)'%>
+            <%= af.label :available_time_begin, 'From (Start Time)'%>
             <%= af.text_field :available_time_begin, :value => @account.application_form.available_time_begin %>
             <br />
-            'Format: YYYY-MM-DD HH-MINMIN-SS'
+            Format: YYYY-MM-DD HH-MINMIN-SS
             <br />
-            <%= af.label :available_time_end, 'To (end time)'%>
+            <%= af.label :available_time_end, 'To (End Time)'%>
             <%= af.text_field :available_time_end, :value => @account.application_form.available_time_end %>
             <br />
-            'Format: YYYY-MM-DD HH-MINMIN-SS'
+            Format: YYYY-MM-DD HH-MINMIN-SS
             <br />
         
         <% end %>
@@ -130,9 +123,9 @@ I understand that the City has the right to terminate my services as volunteer a
             <br />
         <% end %>
                     
-    <strong>Attention: once your application is submitted, you can not change and submit again</strong><br />
+    <strong>Attention: Once your application is submitted, you can not change and submit again.</strong><br />
     
-    <%= f.submit 'Submit the Application' %>
+    <%= f.submit 'Submit the Application',class: 'btn btn-success' %>
     <% end %>
     <br />
     <br />
