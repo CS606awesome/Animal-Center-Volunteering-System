@@ -28,26 +28,27 @@
 = link_to 'Manage the qualified volunteer',managemore_path,class: 'btn btn-success'
 
 %table#accounts
- %thead
-  %tr
-   %th Firstname
-   %th Middlename
-   %th Maidenname
-   %th Lastname
-   %th Gender
-   %th Date Of Birth
-   %th Email
-   %th Cellphone
-   %th Homephone
-   %th Street
-   %th City
-   %th State
-   %th Country
-   %th Zip Code
-   %th Profile
-   %th Approve 
-   %th Reject
- %tbody
+ %table.table.table-striped
+  %thead
+   %tr
+    %th Firstname
+    %th Middlename
+    %th Maidenname
+    %th Lastname
+    %th Gender
+    %th Date Of Birth
+    %th Email
+    %th Cellphone
+    %th Homephone
+    %th Street
+    %th City
+    %th State
+    %th Country
+    %th Zip Code
+    %th Profile
+    %th Approve 
+    %th Reject
+  %tbody
   - @accounts.each do |account|
    %tr
     %td= account.firstname

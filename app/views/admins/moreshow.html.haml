@@ -18,20 +18,21 @@
   %div{:style => "margin-bottom:10px"}
   /%br
   =f.submit 'Select',class: 'btn btn-success'
-
+=link_to 'Manage The Application',admin_path(session[:admin_id]),class: 'btn btn-success'
 %table#accounts
- %thead
-  %tr
-   %th Firstname
-   %th Lastname
-   %th DOB
-   %th Volunteering Status
-   %th Interested Area
-   %th Time Beginning
-   %th Time End
-   %th Applicaiton Date
+ %table.table.table-striped
+  %thead
+   %tr
+    %th Firstname
+    %th Lastname
+    %th DOB
+    %th Volunteering Status
+    %th Interested Area
+    %th Time Beginning
+    %th Time End
+    %th Applicaiton Date
 
- %tbody
+  %tbody
   - @accounts.each do |account|
    %tr
     %td= account.firstname
@@ -43,5 +44,4 @@
     %td= account.application_form.created_at
     %td= link_to "Finish", :controller => "admins", :action =>"finish", :id => account.id
 
-=link_to 'Manage The Application',admin_path(session[:id]),class: 'btn btn-success'
 
