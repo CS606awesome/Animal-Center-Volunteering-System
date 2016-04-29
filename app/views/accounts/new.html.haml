@@ -1,3 +1,4 @@
+
 %h1
  Animal Center 
 =render 'sessions/signin'
@@ -21,19 +22,19 @@
    =f.text_field :lastname,  {:placeholder => 'Lastname'}
   %div{:style => "margin-bottom:10px"}
    =f.text_field :gender, {:placeholder => 'Gender'}
-   =f.text_field :DOB, {:placeholder => 'yyyy-mm-dd(DOB)'}
+   =f.text_field :DOB, {:placeholder => 'mm-dd-yyyy(DOB)', :id => 'datepicker' }
   %div{:style => "margin-bottom:10px"}
    =f.text_field :email, {:placeholder => 'E-mail'}
    =f.text_field :password, {:type=>'password',:placeholder => 'password'}
   %div{:style => "margin-bottom:10px"}
-   =f.text_field :homephone, {:placeholder => 'Homephone'}
-   =f.text_field :cellphone, {:placeholder => 'Cellphone'}
+   =f.text_field :homephone, {:placeholder => 'xxx-xxx-xxxx(Homephone)'}
+   =f.text_field :cellphone, {:placeholder => 'xxx-xxx-xxxx(Cellphone)'}
   %div{:style => "margin-bottom:10px"}
-   =f.text_field :country, {:placeholder => 'Country'}
-   =f.text_field :state, {:placeholder => 'State'}
-   =f.text_field :city, {:placeholder => 'City'}
    =f.text_field :street, {:placeholder => 'Street'}
+   =f.text_field :city, {:placeholder => 'City'}
+   =f.text_field :state, {:placeholder => 'State'}
+   =f.text_field :country, {:placeholder => 'Country'}
   %div{:style => "margin-bottom:10px"}
-   =f.text_field :zip, {:placeholder => 'Zip'}
+   =f.text_field :zip, {:placeholder => 'Zip Code'}
   %p
    =f.submit 'Join us now!'

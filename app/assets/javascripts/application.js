@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require bootstrap-datepicker
+//= require jquery-ui
+
     function FWclickYes()
     {
         $('#FWcheckbox').show();
@@ -54,3 +57,15 @@
     {
         $('#NAcheckbox').hide();
     }
+
+    $(function(){    
+     $('a[data-popup]').on('click', function(e) { window.open($(this).attr('href')); e.preventDefault(); });
+     $('.datepicker').datepicker();
+     $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+     });
+
+     
+     

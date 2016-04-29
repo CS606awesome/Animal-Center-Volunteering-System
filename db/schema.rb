@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160415062014) do
+ActiveRecord::Schema.define(version: 20160427213157) do
 
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name"
@@ -32,12 +32,7 @@ ActiveRecord::Schema.define(version: 20160415062014) do
     t.string  "emergency_contact_name"
     t.string  "emergency_phone"
     t.string  "emergency_phone_alternate"
-    t.date    "DOB"
-    t.boolean "is_former_worker"
-    t.boolean "has_convictions"
-    t.boolean "need_accommodations"
-    t.boolean "related_to_councilmember"
-    t.boolean "is_current_worker"
+    t.string  "DOB"
     t.binary  "picture"
     t.binary  "driver_license"
     t.integer "SSN"
@@ -51,6 +46,13 @@ ActiveRecord::Schema.define(version: 20160415062014) do
     t.string  "zip"
     t.boolean "status"
     t.boolean "is_volunteering",           default: false
+    t.boolean "submit_bcheck",             default: false
+    t.boolean "is_former_worker",          default: false
+    t.boolean "has_convictions",           default: false
+    t.boolean "is_student",                default: false
+    t.boolean "need_accommodations",       default: false
+    t.boolean "related_to_councilmember",  default: false
+    t.boolean "is_current_worker",         default: false
   end
 
   create_table "admins", force: :cascade do |t|
@@ -63,9 +65,7 @@ ActiveRecord::Schema.define(version: 20160415062014) do
 
   create_table "application_forms", force: :cascade do |t|
     t.string   "interested_areas"
-    t.string   "volunteering_status"
     t.binary   "signature"
-    t.datetime "application_date"
     t.datetime "available_time_begin"
     t.datetime "available_time_end"
     t.datetime "created_at",           null: false

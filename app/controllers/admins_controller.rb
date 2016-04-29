@@ -28,7 +28,7 @@ class AdminsController < ApplicationController
       redirect_to adminlogin_path
     else  
     ##find accounts who has already submitted the applications  
-    @accounts = Account.where("is_former_worker is not NULL and status is NULL")
+    @accounts = Account.where('submit_bcheck =?', 't')
    
     agemin = params[:agemin].to_i
     agemax = params[:agemax].to_i
@@ -57,11 +57,25 @@ class AdminsController < ApplicationController
     end
    end
   end
+
+  def check_profile
+    if admin_logged_in
+      session[:id] = params[:id]
+      redirect_to viewapplication_path
+    else
+      flash[:notice] = "please log in at first!"
+      redirect_to adminlogin_path
+    end
+    
+  end
+
+
+  
   def moreshow
    if !admin_logged_in
       redirect_to adminlogin_path
    else  
-    @accounts = Account.where("is_volunteering='t'")
+    @accounts = Account.where('is_volunteering = ?', 't')
     firstname = params[:firstname].to_s
     lastname = params[:lastname].to_s
     email = params[:email] 
@@ -83,7 +97,7 @@ class AdminsController < ApplicationController
 
    def approve
     @account = Account.find(params[:id])
-    if @account.update(:status => 't')
+    if @account.update_columns(status: true, submit_bcheck: false)
       flash[:notice] = 'Approvement is successful!'
       redirect_to action: 'show'
     else
@@ -93,12 +107,24 @@ class AdminsController < ApplicationController
    end
    def reject
      @account = Account.find(params[:id])
-    if @account.update(:status => 'f')
+    if @account.update_columns(status: false, submit_bcheck: false)
       flash[:notice] = 'Rejection is successful!'
       redirect_to action: 'show'
     else
       flash[:danger] = 'Rejection is failed!'
       redirect_to action: 'show'
+    end
+   end
+
+   def finish
+      @account = Account.find(params[:id])
+    if @account.update_columns(status: nil, is_volunteering: false)
+      #and the application data should be sent to other schema
+      flash[:notice] = "#{@account.firstname} has finished the volunteering!"
+      redirect_to action: 'moreshow'
+    else
+      flash[:danger] = 'Operation is failed!'
+      redirect_to action: 'moreshow'
     end
    end
  
@@ -124,17 +150,40 @@ class AdminsController < ApplicationController
     res
   end
   
-  def firstname_filter(accounts,firstname)
-    @accounts = @accounts.where('lower(firstname) = ?', firstname.downcase)
+   def firstname_filter(accounts,firstname)
+    res = []
+    accounts.each do |e|
+      if e.firstname.downcase == firstname.downcase
+        res << e
+      end
+    end
+    res
   end
+  #  @accounts = @accounts.where('lower(firstname) = ?', firstname.downcase)
+ # end
   
   def lastname_filter(accounts,lastname)
-    @accounts = @accounts.where('lower(lastname) = ?', lastname.downcase)
+    res = []
+    accounts.each do |e|
+      if e.lastname.downcase == lastname.downcase
+        res << e
+      end
+    end
+    res
   end
+ #   @accounts = @accounts.where('lower(lastname) = ?', lastname.downcase)
+#  end
   
   def email_filter(accounts,email)
-    @accounts = @accounts.where("lower(email) LIKE lower(?)", "#{email}%")
+    res = []
+    accounts.each do |e|
+      if e.email.to_s.include?(email)
+        res << e
+      end
+    end
+    res
   end
+  
   
 
 

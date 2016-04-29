@@ -1,0 +1,99 @@
+<h3>Your Profile and Application</h3>
+
+<h3>Submitted Profiles</h3>
+<% if flash[:notice] %>
+    <div class="notice"><strong><%= flash[:notice] %></strong></div>
+<% end %>
+<p>
+          <strong>Name</strong> 
+          <%= @account.firstname%> <%= @account.lastname%>
+      </p>
+      <p>
+          <strong>Date of Birth</strong> 
+          <%= @account.DOB%>               <!-- why DOB is orange? -->
+      </p>
+      <p>
+          <strong>Email</strong>
+          <%= @account.email%>
+      </p>
+      <p>
+          <strong>Home Phone</strong>
+          <%= @account.homephone%>
+      </p>
+      <p>
+          <strong>Cell phone</strong>
+          <%= @account.cellphone%>
+      </p>
+      <p>
+          <strong>Home Address</strong><br />
+          <strong>Street</strong>
+          <%= @account.street%><br />
+          <strong>City</strong>
+          <%= @account.city %><br />
+          <strong>State</strong>
+          <%= @account.state %><br />
+          <strong>State</strong>
+          <%= @account.country %><br />
+          <strong>Zip</strong>
+          <%= @account.zip %><br />
+      </p>
+      <p>
+          <strong>SSN</strong>
+          <%= @account.SSN %><br />
+          <strong>driver_license</strong>
+          <%= @account.driver_license %><br />
+      </p>
+      <p><strong>Has your profile been approved so that you can submit an application?: </strong><%= @account.status%></p>
+
+<h3>Submitted Application</h3>
+<%= form_for @account do |f| %>
+ <% if @account.application_form != nil %>
+  <%= fields_for :application_form do |af| %>
+     <p>
+         <strong>
+             The Application Created at: 
+         </strong>
+        
+             <%= @account.application_form.created_at %>
+         
+     </p>
+     <p>
+         <strong>
+             Last updated at: 
+         </strong>
+         <% if @account.application_form != nil %>
+             <%= @account.application_form.updated_at %>
+         <% end %>
+     </p>
+     <p>
+         <strong>
+             Your interested area: 
+         </strong>
+         <%= @account.application_form.interested_areas %>
+     </p>
+     <p>
+         <strong>
+             Your scheduled time: <br />
+         </strong>
+             From: <%= @account.application_form.available_time_begin %><br />
+             To: <%= @account.application_form.available_time_end %>
+     </p>
+     <% end %>
+ <% end %>
+     <p>
+         <strong>
+             Your application status
+         </strong>
+             (true for submitted, false for not): 
+         
+             <%= @account.is_volunteering %><br />
+            
+     </p>
+     
+    
+    
+<% end %>
+
+<%= link_to 'Withdraw your application', withdraw_application_path, :method=>'delete' %>  
+&nbsp;
+<%= link_to 'Back to profiles edit', profiles_path(:id => @account.id) %>

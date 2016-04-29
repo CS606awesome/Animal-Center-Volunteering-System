@@ -14,7 +14,19 @@ class AccountsController < ApplicationController
   
   def create
     @account = Account.new(account_params)
-    #@current_worker = @account.current_workers.create(current_worker_params)
+    @cellphone_number = @account.cellphone.gsub(/\D/, '')
+    @homephone_number = @account.homephone.gsub(/\D/, '')
+    if @cellphone_number.length == 10   #change homephone format to xxx-xxx-xxxx
+        @account.cellphone = correct_phone_format(@cellphone_number)
+    end
+    
+    if @homephone_number.length == 10   #change homephone format to xxx-xxx-xxxx
+        @account.homephone = correct_phone_format(@homephone_number)
+    end
+    
+   # @account.DOB = @account.DOB.to_s.gsub(/^(\d{2})-(\d{2})-(\d{4})/, '\3-\1-\2') #change DOB format to yyyy-mm-dd
+     correct_DOB_format(@account)
+
     if @account.save
      redirect_to @account 
     else  
@@ -23,92 +35,228 @@ class AccountsController < ApplicationController
     end  
   end
   
+  def correct_phone_format(account)
+      account = account.insert(3, '-').insert(7, '-')
+  end
+
+  #used to correct the format of input DOB since the front end is using jQuery ui
+  def correct_DOB_format(account)
+      if /^((0[1-9])|(1[0-2]))\/((0[1-9])|(1[0-9])|(2[0-9])|(3[0-1]))\/(\d{4})$/.match(account.DOB.to_s)
+        account.DOB = "#{$9}-#{$1}-#{$4}"
+      end
+  end
+  
+  #render the login page
   def show
     flash[:success] = 'Congradulations!now go ahead and login'  
     @account = Account.new
   end
   
+
+  
   def profiles 
-      if logged_in
-      @account = Account.find(params[:id])  
-      #@accounts = Account.all
+      if @account = Account.find(session[:id])
+     
       else
       redirect_to login_path
       end
   end
   
+  #submit application 
+  def submit_application
+      @account = Account.find(session[:id])
+      if @account.update_columns(:is_volunteering=>true)
+       redirect_to viewapplication_path
+      else
+       redirect_to action: 'application'
+      end
+
+  end
+
+
+  def destroyapplication
+   @account = Account.find(session[:id])
+   if @account.is_volunteering == true
+    if @account.update_columns(:is_volunteering =>false) && @account.application_form.destroy
+
+      flash[:notice] = "Withdrawal succeeded!"
+      redirect_to action: 'profiles'
+    else
+      flash[:notice] = "Withdrawal failed!"  
+      redirect_to action: 'viewapplication'
+    end
+   else
+    flash[:notice] = "You have not submitted your application yet!" 
+    redirect_to action: 'viewapplication'
+   end
+  end
+
+
   def application
+      
       if logged_in
-      @account = Account.find(params[:id]) 
-          if @account.status == false || @account.status == nil
+      @account = Account.find(session[:id]) 
+          if @account.status == nil|| @account.status==false
+              #if rejected
+              if @account.status ==false
+              flash[:notice] = 'You were rejected by our administrator, we are sorry you can not be a volunteer this time.' 
+              #haven't submit for background check 
+              else           
+              flash[:notice] = 'You have not be approved by our administrator yet, please submit and wait with patience.'
+              end
               redirect_to profiles_path(:id => @account.id)
-          end
-      #@accounts = Account.all
+          else
+          @account.application_form ||= ApplicationForm.new 
+          # if user is a criminal
+           if @account.has_convictions == true   
+            @account.criminal_application ||= CriminalApplication.new
+           end  
+           #if user is required by organization
+           if @account.is_student == true
+               @account.student_application ||= StudentApplication.new
+           end
+           ##if user's DOB is later than 18 years ago(younder than 18)
+
+           ##if user is a student
+         #  if 
+         #   @account.student_application ||= StudentApplication.new 
+         #  end   
+           if to_sec(@account.DOB) > 18.years.ago.to_i    
+            @account.minor_application ||= MinorApplication.new   
+           end
+
+
+          end          
+     
       else
       redirect_to login_path
       end
+  end
+
+  
+  def viewapplication
+    if session[:id]
+      @account = Account.find(session[:id])
+     #if @account.is_volunteering == false || @account.is_volunteering == nil
+        #redirect_to profiles_path :id => @account.id
+        #flash[:notice] = "Your have no submitted application, please wait or contact the administrator."
+      #end
+    else
+      redirect_to login_path
+    end
   end
   
   def update
 
-     @account = Account.find(params[:id])
+     @account = Account.find(session[:id])
+     
+     #@account.is_volunteering = false
+     
+     #if params[:account][:application_form_attributes][signature
+    #    @account.is_volunteering = true
+    # end
+     
+     #if @account.is_volunteering == nil || @account.is_volunteering == false
      #@account.update_attributes!(account_update_params)
-     if(params[:account][:is_former_worker] == "1") 
-       @account.user_formerworker ||= UserFormerworker.new   
-     end
-     if(params[:account][:related_to_councilmember] == "1") 
-       @account.related_councilmember ||= RelatedCouncilmember.new   
-     end
-     if(params[:account][:is_current_worker] == "1") 
-       @account.current_worker ||= CurrentWorker.new   
-     end
-     if(params[:account][:has_convictions] == "1") 
-       @account.former_criminal ||= FormerCriminal.new   
-     end
-     if(params[:account][:need_accommodations] == "1") 
-       @account.accommodation ||= Accommodation.new   
-     end
+
+     if @account.status != true ||admin_logged_in
      
-     @account.attributes = account_update_params
+        if(params[:account][:is_former_worker] == "1") 
+          @account.user_formerworker ||= UserFormerworker.new   
+        end
+        if(params[:account][:related_to_councilmember] == "1") 
+          @account.related_councilmember ||= RelatedCouncilmember.new   
+        end
+        if(params[:account][:is_current_worker] == "1") 
+          @account.current_worker ||= CurrentWorker.new   
+        end
+        if(params[:account][:has_convictions] == "1") 
+          @account.former_criminal ||= FormerCriminal.new   
+        end
+        if(params[:account][:need_accommodations] == "1") 
+          @account.accommodation ||= Accommodation.new   
+        end
      
-     if(params[:account][:is_former_worker] == "0")
-         if(@account.user_formerworker != nil)
-             @account.user_formerworker.destroy
-         end
-     end
-     if(params[:account][:related_to_councilmember] == "0") 
-       if @account.related_councilmember != nil
-           @account.related_councilmember.destroy
-       end
-     end
-     if(params[:account][:is_current_worker] == "0") 
-       if @account.current_worker != nil  
-           @account.current_worker.destroy
-       end
-     end
-     if(params[:account][:has_convictions] == "0") 
-       if @account.former_criminal != nil  
-           @account.former_criminal.destroy
-       end
-     end
-     if(params[:account][:need_accommodations] == "0") 
-       if @account.accommodation != nil   
-           @account.accommodation.destroy
-       end
-     end
+        @account.attributes = account_update_params
      
-     @account.save(:validate => false)
-     flash[:notice] = 'Changes Saved!'
-     redirect_to profiles_path :id => @account.id
+        if(params[:account][:is_former_worker] == "0")
+            if(@account.user_formerworker != nil)
+                @account.user_formerworker.destroy
+            end
+        end
+        if(params[:account][:related_to_councilmember] == "0") 
+          if @account.related_councilmember != nil
+              @account.related_councilmember.destroy
+          end
+        end
+        if(params[:account][:is_current_worker] == "0") 
+          if @account.current_worker != nil  
+              @account.current_worker.destroy
+          end
+        end
+        if(params[:account][:has_convictions] == "0") 
+          if @account.former_criminal != nil  
+              @account.former_criminal.destroy
+          end
+        end
+        if(params[:account][:need_accommodations] == "0") 
+          if @account.accommodation != nil   
+              @account.accommodation.destroy
+          end
+        end
+        @cellphone_number = @account.cellphone.gsub(/\D/, '')
+        @homephone_number = @account.homephone.gsub(/\D/, '')
+     
+        if @cellphone_number.length == 10   #change homephone format to xxx-xxx-xxxx
+            @account.cellphone = correct_phone_format(@cellphone_number)
+        end
+    
+        if @homephone_number.length == 10   #change homephone format to xxx-xxx-xxxx
+            @account.homephone = correct_phone_format(@homephone_number)
+        end
+        
+        correct_DOB_format(@account)
+
+        if @account.save
+        flash[:notice] = 'Changes Saved!'
+    
+     #else
+     #   flash[:notice] = 'Your have already submitted an application, you can not submit change until you complete this one.'
+    #    redirect_to profiles_path :id => @account.id
+        redirect_to action: 'profiles'
+        else
+        flash[:alert] = 'Your last application has been approved, you can not submit a new one until you complete this one.'
+        redirect_to application_path :id => @account.id
+        end
+     else
+         flash[:notice] = 'Your profile has been approved, no need to change it.'
+         redirect_to profiles_path
+     end
 
   end
   
   def save_and_submit
       @account = Account.find(session[:id])
-      @account.status = false
-      @account.save(:validate => false)
-      flash[:notice] = 'Your profile has been sent to the administrator'
+      if @account.submit_bcheck == false && @account.status == nil      #if never submit, then save and submit        
+          if @account.update_columns(submit_bcheck: true)
+              flash[:notice] = 'Your profile has been sent to the administrator'
+
+     #     redirect_to profiles_path :id => @account.id
+     # else                                                   # if have already submitted, return to page and do nothing
+     #     redirect_to profiles_path :id => @account.id
+
+          else
+          flash[:notice] = 'Submission is failed'  
+          end
+      else     
+          if @account.status != nil  
+          flash[:notice] = 'You are approved, no need to bother our administrator right? LOL'# if have submitted, return to page and do nothing
+          else
+          flash[:notice] = 'Your profile is under processing!'
+          end
+      end
       redirect_to profiles_path :id => @account.id
+      
   end
      
   
@@ -140,7 +288,7 @@ class AccountsController < ApplicationController
       @account = Account.find(session[:id])
      
        if (params[:account][:password] == params[:account][:password_confirmation])
-         if @account.update_attributes(account_password_params)   
+         if @account.update_columns(account_password_params)   
             flash[:success] = "You have reset your password successfully."
             redirect_to login_path
          else
@@ -160,13 +308,14 @@ private
   end
   def account_params
 
-   params.require(:account).permit(:gender, :email,:password, :password_confirmation,:firstname,:lastname, :middlename,:country,:state,:city,:street,:zip,:homephone,:cellphone,:DOB)
+   params.require(:account).permit(:gender, :email,:password, :password_confirmation,:firstname,:lastname, :middlename,:maidenname,:country,:state,:city,:street,:zip,:homephone,:cellphone,:DOB)
   end
   
   def account_update_params
-   params.require(:account).permit(:is_former_worker,:is_current_worker, :emergency_contact_name,
+   params.require(:account).permit(:password, :password_confirmation,:is_former_worker,:is_current_worker, :emergency_contact_name,
                                   :emergency_phone,:emergency_phone_alternate,:related_to_councilmember,
-                                  :has_convictions, :need_accommodations, 
+                                  :has_convictions, :need_accommodations, :is_volunteering,  :is_student,
+                                  :firstname, :lastname, :middlename, :maidenname, :DOB, :homephone, :cellphone, :street, :city, :state, :zip,
                                   current_worker_attributes: [:id, :department, :name],
                                   user_formerworker_attributes: [:id, :date_of_employment, :reason_for_leaving, :position_or_department],
                                   former_criminal_attributes: [:id, :date_of_conviction, :nature_of_offense, :name_of_court, :disposition_of_case, :former_crime],
@@ -174,7 +323,7 @@ private
                                   accommodation_attributes: [:id, :accommodation_name],
                                   application_form_attributes: [:id, :signature, :interested_areas, :volunteering_status, :application_date, :available_time_begin, :available_time_end],
                                   criminal_application_attributes: [:id, :mandatory_hours, :mandatory_area, :deadline],
-                                  student_application_attributes: [:id, :required_area, :required_time, :deadline],
+                                  student_application_attributes: [:id, :student_program, :required_area, :required_time, :deadline],
                                   minor_application_attributes: [:id, :parent_signature])
                                 
   end
