@@ -24,6 +24,9 @@
   =submit_tag 'Select',class: 'btn btn-success'
 %br
 %br
+  
+= link_to 'Manage the qualified volunteer',managemore_path,class: 'btn btn-success'
+
 %table#accounts
  %thead
   %tr
@@ -36,8 +39,14 @@
    %th Email
    %th Cellphone
    %th Homephone
-   %th Mailing Address
-   %th Your Decision
+   %th Street
+   %th City
+   %th State
+   %th Country
+   %th Zip Code
+   %th Profile
+   %th Approve 
+   %th Reject
  %tbody
   - @accounts.each do |account|
    %tr
@@ -50,15 +59,14 @@
     %td= account.email
     %td= account.cellphone
     %td= account.homephone
-    %td= account.country
-    %td= account.state
-    %td= account.city
     %td= account.street
+    %td= account.city
+    %td= account.state
+    %td= account.country
     %td= account.zip 
-    %td= link_to "profile", viewapplication_path(:id => account.id), :onclick=>"window.open(this.href, 'profile', 'height=800, width=800');return false;"
+    %td= link_to "profile", admincheckprofile_path(:id => account.id), :onclick=>"window.open(this.href, 'profile', 'height=800, width=800');return false;"
     &nbsp;
     %td= link_to "Approve", :controller => "admins", :action =>"approve", :id => account.id
     &nbsp;
-    %td= link_to 'reject',  :controller => "admins", :action =>"reject", :id => account.id
-%br 
-= link_to 'Manage The Qualified Volunteer',managemore_path,class: 'btn btn-success'
+    %td= link_to 'Reject',  :controller => "admins", :action =>"reject", :id => account.id
+

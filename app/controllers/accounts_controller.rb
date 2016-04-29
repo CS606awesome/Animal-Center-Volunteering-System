@@ -80,6 +80,7 @@ class AccountsController < ApplicationController
     if @account.update_columns(:is_volunteering =>false) && @account.application_form.destroy
 
       flash[:success] = "Withdrawal succeeded!"
+
       redirect_to action: 'profiles'
     else
       flash[:danger] = "Withdrawal failed!"  
@@ -87,6 +88,7 @@ class AccountsController < ApplicationController
     end
    else
     flash[:danger] = "You have not submitted your application yet!" 
+
     redirect_to action: 'viewapplication'
    end
   end
@@ -218,6 +220,7 @@ class AccountsController < ApplicationController
         correct_DOB_format(@account)
 
         if @account.save
+
         flash[:success] = 'Changes Saved!'
     
      #else
@@ -229,7 +232,9 @@ class AccountsController < ApplicationController
         redirect_to application_path :id => @account.id
         end
      else
+
          flash[:warning] = 'Your profile has been approved, no need to change it.'
+
          redirect_to profiles_path
      end
 
@@ -239,6 +244,7 @@ class AccountsController < ApplicationController
       @account = Account.find(session[:id])
       if @account.submit_bcheck == false && @account.status == nil      #if never submit, then save and submit        
           if @account.update_columns(submit_bcheck: true)
+
               flash[:success] = 'Your profile has been sent to the administrator'
 
      #     redirect_to profiles_path :id => @account.id
