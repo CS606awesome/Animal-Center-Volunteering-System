@@ -31,10 +31,6 @@ module NavigationHelpers
         id = Account.find_by_email(email_name).id
         page.set_rack_session(id: id)
         reset_your_password_path
-<<<<<<< HEAD
-    
-  
-=======
 
     when /^sign up page$/ then signup_path
     when /^log in page$/ then login_path
@@ -45,7 +41,6 @@ module NavigationHelpers
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
->>>>>>> 3a770986ad637dd34b681162a873c5bae0b926d3
     else
       begin
         page_name =~ /^the (.*) page$/
