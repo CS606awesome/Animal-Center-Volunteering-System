@@ -150,17 +150,40 @@ class AdminsController < ApplicationController
     res
   end
   
-  def firstname_filter(accounts,firstname)
-    @accounts = @accounts.where('lower(firstname) = ?', firstname.downcase)
+   def firstname_filter(accounts,firstname)
+    res = []
+    accounts.each do |e|
+      if e.firstname.downcase == firstname.downcase
+        res << e
+      end
+    end
+    res
   end
+  #  @accounts = @accounts.where('lower(firstname) = ?', firstname.downcase)
+ # end
   
   def lastname_filter(accounts,lastname)
-    @accounts = @accounts.where('lower(lastname) = ?', lastname.downcase)
+    res = []
+    accounts.each do |e|
+      if e.lastname.downcase == lastname.downcase
+        res << e
+      end
+    end
+    res
   end
+ #   @accounts = @accounts.where('lower(lastname) = ?', lastname.downcase)
+#  end
   
   def email_filter(accounts,email)
-    @accounts = @accounts.where("lower(email) LIKE lower(?)", "#{email}%")
+    res = []
+    accounts.each do |e|
+      if e.email.to_s.include?(email)
+        res << e
+      end
+    end
+    res
   end
+  
   
 
 
