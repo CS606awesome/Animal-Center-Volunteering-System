@@ -17,7 +17,7 @@ class AccountsController < ApplicationController
     if @account.save
      redirect_to @account 
     else  
-      flash.now[:danger] = 'Registration failed, some inforamtion is missing!'  
+      flash.now[:danger] = 'Registration failed, some information is missing!'  
       render 'new'
     end  
   end
