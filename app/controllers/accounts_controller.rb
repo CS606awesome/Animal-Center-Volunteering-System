@@ -174,7 +174,7 @@ class AccountsController < ApplicationController
           elsif params[:account][:related_councilmember_attributes][:name].nil?
             #flash[:notice] = 'Please check one CM'
             flash[:warning] = ["council memeber name is blank"];
-            redirect_to profiles_path :id => @account.id and return
+            redirect_to profiles_path  and return #:id => @account.id
           else
             @account.related_councilmember ||= RelatedCouncilmember.new
             @account.related_councilmember.name = params[:account][:related_councilmember_attributes][:name].join(' ')
@@ -229,7 +229,7 @@ class AccountsController < ApplicationController
 
         flash[:alert] = 'save changes failed!'
 
-        redirect_to profiles_path :id => @account.id
+        redirect_to profiles_path #:id => @account.id
         end
      else
 
@@ -281,11 +281,18 @@ class AccountsController < ApplicationController
           session[:id]= @account.id
           Mailer.reset_password_email(@account).deliver_now
           redirect_to check_your_email_path
+          flash[:success] = "Email has been resent, please check it."
         else
           flash.now[:danger] = 'Your email is not valid or it has not been registered, please try again!'
           render 'input_your_email'
         end
       end
+  end
+  
+  def resend_your_email
+     @account = Account.find(session[:id])
+     Mailer.reset_password_email(@account).deliver_now
+     flash[:success] = "Email has been resent, please check it."
   end
   
   def reset_your_password

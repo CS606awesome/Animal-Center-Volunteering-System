@@ -1,0 +1,206 @@
+%h1 Profile Edit
+- if flash[:info]
+  .info
+    %strong= flash[:info]
+%div{:id => "@account", :style => "margin-top:10px"}
+  .left.column{:style => "margin-bottom:10px"}
+    %img{:alt => "HTML5 Icon", :src => "http://www.ollarate.com/images/original/missing.jpg", :style => "width:320px;height:330px;"}/
+    / option, need discussion
+    %p photo
+/ p>(the information with * is required)</p
+= form_for @account do |f|
+  / ****************************************************************************
+  - if flash[:warning]
+    %h2 Error:
+    %ul
+      - flash[:warning].each do |m|
+        %li
+          = m
+  .right.column{:style => "margin-bottom:10px"}
+    %p
+      = f.label :firstname, 'First Name', :style => "width:150px"
+      = f.text_field :firstname, :value => @account.firstname, :size => "25"
+    %p
+      = f.label :middlename, 'Middle Name', :style => "width:150px"
+      = f.text_field :middlename, :value => @account.middlename, :size => "25"
+    %p
+      = f.label :lastname, 'Last Name', :style => "width:150px"
+      = f.text_field :lastname, :value => @account.lastname, :size => "25"
+    %p
+      = f.label :DOB, 'Date of Birth', :style => "width:150px"
+      = f.text_field :DOB, :value => @account.DOB, :size => "25"
+      / why DOB is orange?
+    %p
+      = f.label :homephone, 'Home Phone', :style => "width:150px"
+      = f.text_field :homephone, :value => @account.homephone, :size => "25"
+    %p
+      = f.label :cellphone, 'Cell Phone', :style => "width:150px"
+      = f.text_field :cellphone, :value => @account.cellphone, :size => "25"
+    %p
+      %strong Home Address
+      %br/
+      = f.label :street, 'Street', :style => "width:150px"
+      = f.text_field :street, :value => @account.street, :size => "25"
+    %p
+      = f.label :city, 'City', :style => "width:150px"
+      = f.text_field :city, :value => @account.city, :size => "25"
+    %p
+      = f.label :state, 'State', :style => "width:150px"
+      = f.text_field :state, :value => @account.state, :size => "25"
+    %p
+      = f.label :zip, 'Zip', :style => "width:150px"
+      = f.text_field :zip, :value => @account.zip, :size => "25"
+    %p
+      = f.label :country, 'Country', :style => "width:150px"
+      = f.text_field :country, :value => @account.country, :size => "25"
+      %br/
+  %p
+    %b#checkboxlink 1.Are you a former worker of the City of Bryan?
+    %b (If you are still working for COB, please check no)
+    %br/
+    = f.radio_button :is_former_worker, "1", :checked => @account.is_former_worker, :onclick=>"FWclickYes()"
+    Yes
+    %br/
+    = f.radio_button :is_former_worker, "0", :checked => !@account.is_former_worker,:onclick=>"FWclickNo()"
+    No
+    %br/
+  #FWcheckbox
+    = f.fields_for  :user_formerworker do |uf|
+      / input type="text" name="CurrentDep"
+      = uf.label :date_of_employment, 'Dates of Employment'
+      = uf.text_field :date_of_employment, :value => @account.user_formerworker.date_of_employment
+      %br/
+      = uf.label :reason_for_leaving, 'Reasons for Leaving'
+      = uf.text_field :reason_for_leaving, :value => @account.user_formerworker.reason_for_leaving
+      %br/
+      = uf.label :position_or_department, 'Position or Department'
+      = uf.text_field :position_or_department, :value => @account.user_formerworker.position_or_department
+  %p
+    %b 2.Are you a current worker of the City of Bryan?
+    %br/
+    = f.radio_button :is_current_worker, '1', :checked =>@account.is_current_worker, :onclick=>"CWclickYes()"
+    Yes
+    %br/
+    = f.radio_button :is_current_worker, '0', :checked =>!@account.is_current_worker, :onclick=>"CWclickNo()"
+    No
+    %br/
+  #CWcheckbox
+    = f.fields_for  :current_worker do |cf|
+      / input type="text" name="CurrentDep"
+      = cf.label :department, 'Department'
+      = cf.text_field :department, :value => @account.current_worker.department
+      %br/
+      = cf.label :name, 'Position'
+      = cf.text_field :name, :value => @account.current_worker.name
+      %br/
+  %p
+    %b 3.Are you a relative of any City of Bryan council members?
+    %br/
+    = f.radio_button :related_to_councilmember, '1', :checked => @account.related_to_councilmember, :onclick=>"RCclickYes()"
+    Yes
+    %br/
+    = f.radio_button :related_to_councilmember, '0', :checked =>!@account.related_to_councilmember, :onclick=>"RCclickNo()"
+    No
+    %br/
+  #RCcheckbox
+    = f.fields_for  :related_councilmember do |rf|
+      %p The City of Bryan (City) Charter prohibits certain relatives of City Councilmembers from being employed by or volunteering for the City. Please read the list below of current City Councilmembers and their spouses, and then answer the question below.
+      / input type="text" name="CurrentDep"
+      %p
+        = rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Jason Bienski/).nil?)}, 'Jason Bienski / Tasha (Sherrill) Bienski', nil
+        Jason Bienski / Tasha (Sherrill) Bienski
+        %br/
+        = rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Al Saenz/).nil?)}, 'Al Saenz / Cindy (Johnson) Saenz', nil
+        Al Saenz / Cindy (Johnson) Saenz
+        %br/
+        = rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Rafael D. Peña III/).nil?)}, 'Rafael D. Peña III / Maraiah (Montelongo) Peña', nil
+        Rafael D. Peña III / Maraiah (Montelongo) Peña
+        %br/
+        = rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Greg Owens/).nil?)}, 'Greg Owens / Julie (Tschatschula) Owens', nil
+        Greg Owens / Julie (Tschatschula) Owens
+        %br/
+        = rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Mike Southerland/).nil?)}, 'Mike Southerland / Tana (Boudreaux) Southerland', nil
+        Mike Southerland / Tana (Boudreaux) Southerland
+        %br/
+        = rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Ben Hardeman/).nil?)}, 'Ben Hardeman / Nancy (Pursell) Hardeman', nil
+        Ben Hardeman / Nancy (Pursell) Hardeman
+        %br/
+        = rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Buppy Simank/).nil?)}, 'Buppy Simank / Jennifer (Yerrington) Simank', nil
+        Buppy Simank / Jennifer (Yerrington) Simank
+        %br/
+      / =rf.label :name, 'The council member\'s name'
+      / = rf.text_field :name, :value => @account.related_councilmember.name
+      = rf.label :relationship, 'Your Relationship to Them'
+      = rf.text_field :relationship, :value => @account.related_councilmember.relationship
+      %br/
+  %p
+    %b 4.Are you coming here to do community service for a court?
+    %br/
+    = f.radio_button :has_convictions, '1', :checked =>@account.has_convictions, :onclick=>"FCclickYes()"
+    Yes
+    %br/
+    = f.radio_button :has_convictions, '0', :checked =>!@account.has_convictions, :onclick=>"FCclickNo()"
+    No
+    %br/
+  #FCcheckbox
+    = f.fields_for  :former_criminal do |ff|
+      / input type="text" name="CurrentDep"
+      = ff.label :date_of_conviction, 'Date of Conviction'
+      = ff.text_field :date_of_conviction, :value => @account.former_criminal.date_of_conviction
+      %br/
+      = ff.label :nature_of_offense, 'Nature of Offense'
+      = ff.text_field :nature_of_offense, :value => @account.former_criminal.nature_of_offense
+      %br/
+      = ff.label :name_of_court, 'Name of Court'
+      = ff.text_field :name_of_court, :value => @account.former_criminal.name_of_court
+      %br/
+      = ff.label :disposition_of_case, 'Disposition of Case'
+      = ff.text_field :disposition_of_case, :value => @account.former_criminal.disposition_of_case
+      %br/
+      = ff.label :former_crime, 'Please Write Your Former Crimes'
+      = ff.text_field :former_crime, :value => @account.former_criminal.former_crime
+      %br/
+  %p
+    %b 5.Are you a student volunteer required by a student organization?
+    %br/
+    = f.radio_button :is_student, '1', :checked =>@account.is_student, :onclick=>"ISclickYes()"
+    Yes
+    %br/
+    = f.radio_button :is_student, '0', :checked =>!@account.is_student, :onclick=>"ISclickNo()"
+    No
+    %br/
+  %p
+    %strong 6.Emergency contact
+  = f.label :emergency_contact_name, 'Emergency Contact Name', :style => "width:220px"
+  = f.text_field :emergency_contact_name, :value => @account.emergency_contact_name
+  %p
+  = f.label :emergency_phone, 'Emergency Contact Phone', :style => "width:220px"
+  = f.text_field :emergency_phone, :value => @account.emergency_phone
+  %p
+  = f.label :emergency_phone_alternate, 'Emergency Contact Alt Phone', :style => "width:220px"
+  = f.text_field :emergency_phone_alternate, :value => @account.emergency_phone_alternate
+  %p
+    %b 7.Do you require any accommodations?
+    %br/
+    = f.radio_button :need_accommodations, '1', :checked =>@account.need_accommodations, :onclick=>"NAclickYes()"
+    Yes
+    %br/
+    = f.radio_button :need_accommodations, '0', :checked =>!@account.need_accommodations, :onclick=>"NAclickNo()"
+    No
+    %br/
+  #NAcheckbox
+    = f.fields_for  :accommodation do |a|
+      = a.label :accommodation_name, 'Write the accomodation you need below'
+      = a.text_field :accommodation_name, :value => @account.accommodation.accommodation_name
+  %br/
+  = f.submit 'Save Changes', class: 'btn btn-success'
+  / this is used to save change
+  %b (Save your profile, and you can edit and save it again)
+%br/
+= button_to "Submit for Approve",action: "save_and_submit", class: 'btn btn-success'
+%b (ATTENTION: please save before you submit, once you have submitted your profile and it has been approved, you can't change it anymore)
+%br/
+%br/
+%table
+  %tr
+    %tb= link_to 'New Application', application_path(:id => @account.id)
