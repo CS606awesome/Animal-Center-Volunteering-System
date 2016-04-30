@@ -1,4 +1,6 @@
 class AdminsController < ApplicationController
+  #gmail library
+  require 'gmail'
 
   def index
    redirect_to action: 'new'  
@@ -34,7 +36,7 @@ class AdminsController < ApplicationController
     agemax = params[:agemax].to_i
     firstname = params[:firstname].to_s
     lastname = params[:lastname].to_s
-    email = params[:email]
+    email = params[:email].to_s
     
     if agemax > 0
       @accounts = people_younger_than(@accounts,agemax)
@@ -42,6 +44,10 @@ class AdminsController < ApplicationController
     
     if agemin > 0
       @accounts = people_older_than(@accounts,agemin)
+    end
+
+    if email != ''
+      @accounts = email_filter(@accounts,email)
     end
     
     if firstname != ''
@@ -51,13 +57,42 @@ class AdminsController < ApplicationController
     if lastname != ''
       @accounts = lastname_filter(@accounts,lastname)
     end
-    
-    if email != '' 
-      @accounts = email_filter(@accounts,email)
-    end
+   
    end
   end
 
+  ####some funcitons for adminshow page
+
+    #send email
+  def gmailsender
+    if !session[:sended]
+    session[:reciever_id]=params[:id]
+    else
+    session.delete(:sended)
+    end
+    @account = Account.find(session[:reciever_id]) 
+  end
+
+  def send_gmail
+   @account = Account.find(session[:reciever_id])
+   address = @account.email
+   body = params[:body]
+   gmail = Gmail.connect('sssikai123@gmail.com','woshizhu@123')
+   email = gmail.compose do
+    to "#{address}"
+    subject "Hi,I am the volunteering administrator from bryan animal center"
+    body "#{body}"
+   end
+   if email.deliver!
+     flash[:notice] = "deliver successful!"
+   else
+      flash[:notice] = 'deliver failed!'  
+   end
+   session[:sended] = 1
+   redirect_to send_gmail_path, :method=>'get'
+  end
+  
+  ######################check profile
   def check_profile
     if admin_logged_in
       session[:id] = params[:id]
@@ -78,7 +113,7 @@ class AdminsController < ApplicationController
     @accounts = Account.where('is_volunteering = ?', 't')
     firstname = params[:firstname].to_s
     lastname = params[:lastname].to_s
-    email = params[:email] 
+    email = params[:email].to_s
     if firstname != ''
       @accounts = firstname_filter(@accounts,firstname)
     end
@@ -99,6 +134,7 @@ class AdminsController < ApplicationController
     @account = Account.find(params[:id])
     if @account.update_columns(status: true, submit_bcheck: false)
       flash[:success] = 'Approvement is successful!'
+        Mailer.approve_email(@account).deliver_now
       redirect_to action: 'show'
     else
       flash[:danger] = 'Approvement is failed!'
@@ -109,6 +145,8 @@ class AdminsController < ApplicationController
      @account = Account.find(params[:id])
     if @account.update_columns(status: false, submit_bcheck: false)
       flash[:success] = 'Rejection is successful!'
+        Mailer.reject_email(@account).deliver_now
+
       redirect_to action: 'show'
     else
       flash[:danger] = 'Rejection is failed!'
@@ -116,6 +154,8 @@ class AdminsController < ApplicationController
     end
    end
 
+  ############functions for adminmoreshow page
+   
    def finish
       @account = Account.find(params[:id])
     if @account.update_columns(status: nil, is_volunteering: false)
@@ -183,10 +223,7 @@ class AdminsController < ApplicationController
     end
     res
   end
-  
-  
-
-
+    
 
   def admin_params
    params.require(:admin).permit(:email,:password, :password_confirmation,:key)
