@@ -32,11 +32,11 @@
        %div{:style => "margin-bottom:10px"}
        =f.label 'E-mail' 
        %br
-       =f.text_field :email, :size => 42 
+       =f.text_field :email, {:placeholder => 'E-mail', :size => 42}
        %div{:style => "margin-bottom:10px"}
        =f.label 'Password' 
        %br
-       =f.text_field :password, {:type=>'password',:size => 42}
+       =f.text_field :password, {:type=>'password',:placeholder => 'Pass-word', :size => 42}
        =f.label 'Your password must be 6~20 characters!'
        %div{:style => "margin-bottom:10px"}
        %strong Phone Number 
