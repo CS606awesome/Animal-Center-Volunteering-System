@@ -28,7 +28,7 @@ class AccountsController < ApplicationController
      correct_DOB_format(@account)
 
     if @account.save
-     redirect_to @account 
+      redirect_to @account 
     else  
       flash.now[:danger] = 'Registration failed, some information is missing!'  
       render 'new'
@@ -65,12 +65,24 @@ class AccountsController < ApplicationController
   #submit application 
   def submit_application
       @account = Account.find(session[:id])
-      if @account.update_columns(:is_volunteering=>true)
-       redirect_to viewapplication_path
-      else
-       redirect_to action: 'application'
-      end
 
+      #@account.application_form.interested_areas = params[:account][:application_form_attributes][:interested_areas].join(' ')
+      if @account.update(:is_volunteering=>'t') #&& @account.is_volunteering == false
+       
+        if @account.update(account_update_params)
+          @account.update(:application_form_attributes =>{:available_time_end => params[:account][:application_form_attributes][:available_time_end],:available_time_begin => params[:account][:application_form_attributes][:available_time_begin],:signature => params[:account][:application_form_attributes][:signature],:interested_areas => params[:account][:application_form_attributes][:interested_areas].join(' ')})
+          #@account.update_attributes(:application_form_attributes =>{:interested_areas => params[:account][:application_form_attributes][:interested_areas][0]})
+          #@account.update(:application_form_attributes =>{:signature => params[:account][:application_form_attributes][:signature]})
+          #@account.update(:application_form_attributes =>{:available_time_begin => params[:account][:application_form_attributes][:available_time_begin]})
+          #@account.update(:application_form_attributes =>{:available_time_end => params[:account][:application_form_attributes][:available_time_end]})
+          redirect_to viewapplication_path
+        else
+          flash[:my_errors] = @account.errors.full_messages;
+          redirect_to application_path(:id => @account.id)
+        end
+      else
+        redirect_to action: 'application'
+      end
   end
 
 
@@ -118,11 +130,7 @@ class AccountsController < ApplicationController
                @account.student_application ||= StudentApplication.new
            end
            ##if user's DOB is later than 18 years ago(younder than 18)
-
-           ##if user is a student
-         #  if 
-         #   @account.student_application ||= StudentApplication.new 
-         #  end   
+ 
            if to_sec(@account.DOB) > 18.years.ago.to_i    
             @account.minor_application ||= MinorApplication.new   
            end
@@ -139,10 +147,7 @@ class AccountsController < ApplicationController
   def viewapplication
     if session[:id]
       @account = Account.find(session[:id])
-     #if @account.is_volunteering == false || @account.is_volunteering == nil
-        #redirect_to profiles_path :id => @account.id
-        #flash[:notice] = "Your have no submitted application, please wait or contact the administrator."
-      #end
+
     else
       redirect_to login_path
     end
@@ -150,24 +155,29 @@ class AccountsController < ApplicationController
   
   def update
 
-     @account = Account.find(session[:id])
-     
-     #@account.is_volunteering = false
-     
-     #if params[:account][:application_form_attributes][signature
-    #    @account.is_volunteering = true
-    # end
-     
-     #if @account.is_volunteering == nil || @account.is_volunteering == false
-     #@account.update_attributes!(account_update_params)
+
+     @account = Account.find(params[:id])
+
 
      if @account.status != true ||admin_logged_in
      
         if(params[:account][:is_former_worker] == "1") 
-          @account.user_formerworker ||= UserFormerworker.new   
+          @account.user_formerworker ||= UserFormerworker.new  
+        else
+          @account.user_formerworker ||= UserFormerworker.new 
+          @account.update(:is_former_worker => "0")
         end
-        if(params[:account][:related_to_councilmember] == "1") 
-          @account.related_councilmember ||= RelatedCouncilmember.new   
+        if(params[:account][:related_to_councilmember] == "1")
+          if params[:account][:related_councilmember_attributes].nil?
+            @account.related_councilmember ||= RelatedCouncilmember.new
+          elsif params[:account][:related_councilmember_attributes][:name].nil?
+            flash[:notice] = 'Please check one CM'
+            flash[:my_errors] = ["council memeber name is blank"];
+            redirect_to profiles_path :id => @account.id and return
+          else
+            @account.related_councilmember ||= RelatedCouncilmember.new
+            @account.related_councilmember.name = params[:account][:related_councilmember_attributes][:name].join(' ')
+          end
         end
         if(params[:account][:is_current_worker] == "1") 
           @account.current_worker ||= CurrentWorker.new   
@@ -179,7 +189,17 @@ class AccountsController < ApplicationController
           @account.accommodation ||= Accommodation.new   
         end
      
-        @account.attributes = account_update_params
+        #if @account.related_to_councilmember == true
+          #if params[:account][:related_councilmember_attributes][:name].nil?
+            #flash[:notice] = 'Please check one CM'
+            #flash[:my_errors] = ["council memeber name is blank"];
+            #redirect_to profiles_path :id => @account.id and return
+         # else
+          #  @account.related_councilmember.name = params[:account][:related_councilmember_attributes][:name].join(' ')
+         # end
+        #end
+        #@account.attributes = account_update_params
+        if @account.update(account_update_params) #unless destroyed?  #save(:validate => true)
      
         if(params[:account][:is_former_worker] == "0")
             if(@account.user_formerworker != nil)
@@ -206,30 +226,15 @@ class AccountsController < ApplicationController
               @account.accommodation.destroy
           end
         end
-        @cellphone_number = @account.cellphone.gsub(/\D/, '')
-        @homephone_number = @account.homephone.gsub(/\D/, '')
-     
-        if @cellphone_number.length == 10   #change homephone format to xxx-xxx-xxxx
-            @account.cellphone = correct_phone_format(@cellphone_number)
-        end
-    
-        if @homephone_number.length == 10   #change homephone format to xxx-xxx-xxxx
-            @account.homephone = correct_phone_format(@homephone_number)
-        end
-        
-        correct_DOB_format(@account)
 
-        if @account.save
-
-        flash[:success] = 'Changes Saved!'
-    
-     #else
-     #   flash[:notice] = 'Your have already submitted an application, you can not submit change until you complete this one.'
-    #    redirect_to profiles_path :id => @account.id
+        flash[:notice] = 'Changes Saved!'
+          
         redirect_to action: 'profiles'
+        
         else
         flash[:alert] = 'Your last application has been approved, you can not submit a new one until you complete this one.'
-        redirect_to application_path :id => @account.id
+        flash[:my_errors] = @account.errors.full_messages;
+        redirect_to profiles_path :id => @account.id
         end
      else
 
@@ -321,7 +326,8 @@ private
    params.require(:account).permit(:password, :password_confirmation,:is_former_worker,:is_current_worker, :emergency_contact_name,
                                   :emergency_phone,:emergency_phone_alternate,:related_to_councilmember,
                                   :has_convictions, :need_accommodations, :is_volunteering,  :is_student,
-                                  :firstname, :lastname, :middlename, :maidenname, :DOB, :homephone, :cellphone, :street, :city, :state, :zip,
+                                  :firstname, :lastname, :DOB, :homephone, :cellphone, :street, :city, :state, :zip,
+                                  :middlename, :email, :country, :maidenname,
                                   current_worker_attributes: [:id, :department, :name],
                                   user_formerworker_attributes: [:id, :date_of_employment, :reason_for_leaving, :position_or_department],
                                   former_criminal_attributes: [:id, :date_of_conviction, :nature_of_offense, :name_of_court, :disposition_of_case, :former_crime],

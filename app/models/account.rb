@@ -6,7 +6,7 @@ class Account < ActiveRecord::Base
     has_one :user_formerworker
     has_one :accommodation
     
-    has_one :application_form
+    has_one :application_form, :dependent => :destroy
     has_one :criminal_application
     has_one :minor_application
     has_one :student_application
@@ -23,8 +23,10 @@ class Account < ActiveRecord::Base
     accepts_nested_attributes_for :student_application, allow_destroy: true
     
 has_secure_password
-validates :email,:firstname,:lastname,:homephone,
-  presence: true
+
+validates :email,:firstname,:lastname,:homephone, 
+  presence: true,
+  :on => [ :create ]
 
   validates :password, 
   length: { in: 6..20,
@@ -41,7 +43,7 @@ validates :email,:firstname,:lastname,:homephone,
   ###################################
   #validates :name validator
   INVALID_NAME_REGEX = /[^a-zA-Z     ]/
-  validates :firstname,:lastname,
+  validates :firstname,:lastname, 
   length: { maximum: 20 },
   format: { without: INVALID_NAME_REGEX }
 
@@ -50,14 +52,28 @@ validates :email,:firstname,:lastname,:homephone,
              uniqueness: { case_sensitive: true }
   #####################################
   #validates :number validator 
-  INVALID_NUMBER_REGEX = /[^0-9-]/ 
-  validates :homephone,
-  length: { is: 12 },
-  format: { without: INVALID_NUMBER_REGEX}
-#validates date of birth
 
-  validates_format_of :DOB, :with => /\d{4}-\d{2}-\d{2}/, :message => "date must be in the following format: mm/dd/yyyy"
+  INVALID_NUMBER_REGEX = /[^0-9     ]/
+  validates :homephone, #:emergency_phone, :emergency_phone_alternate,
+  length: { maximum: 20 },
+  format: { without: INVALID_NUMBER_REGEX }
 
+
+#validation of change profile!
+ 
+  INVALID_NAME_REGEX = /[^a-zA-Z     ]/
+  validates :firstname,:lastname, :emergency_contact_name, :middlename, 
+  length: { maximum: 20 },
+  format: { without: INVALID_NAME_REGEX }
+  #validates :unique email                                  
+  validates  :email,
+  uniqueness: { case_sensitive: true, on: [:update] }
+  #####################################
+  #validates :number validator 
+  INVALID_NUMBER_REGEX = /[^0-9     ]/
+  validates :homephone, :emergency_phone, :emergency_phone_alternate,
+  length: { maximum: 20 },
+  format: { without: INVALID_NUMBER_REGEX }
 
    
 end
