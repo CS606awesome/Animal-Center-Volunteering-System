@@ -15,3 +15,6 @@
  *= require bootstrap-datepicker
  *= require jquery-ui
  */
+ textarea {border: 1px solid #888; 
+}
+

@@ -5345,601 +5345,178 @@ Processing by AccountsController#input_your_email as HTML
   Rendered accounts/input_your_email.html.haml within layouts/application (1.0ms)
 Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms)
   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
   [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/signup" for 127.0.0.1 at 2016-04-30 02:03:46 +0000
+Started GET "/signup" for 127.0.0.1 at 2016-04-29 20:09:44 -0500
 Processing by AccountsController#new as HTML
-  Rendered layouts/_navigation.html.haml (28.0ms)
-  Rendered accounts/new.html.haml within layouts/application (122.2ms)
+  Rendered layouts/_navigation.html.haml (12.7ms)
+  Rendered accounts/new.html.haml within layouts/application (55.1ms)
   Rendered layouts/_shim.html.erb (0.6ms)
-  Rendered layouts/_header.html.haml (6.9ms)
-  Rendered layouts/_footer.html.erb (0.6ms)
-Completed 200 OK in 39611ms (Views: 39534.6ms | ActiveRecord: 1.0ms)
+  Rendered layouts/_header.html.haml (5.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 17900ms (Views: 17852.6ms | ActiveRecord: 0.4ms)
   [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.2ms)[0m  begin transaction
   [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/adminsignup" for 127.0.0.1 at 2016-04-30 02:04:26 +0000
+Started GET "/adminsignup" for 127.0.0.1 at 2016-04-29 20:10:02 -0500
 Processing by AdminsController#new as HTML
-  Rendered layouts/_adminheader.html.haml (2.3ms)
-  Rendered admin_sessions/_signin.html.haml (10.0ms)
-  Rendered layouts/_adminheader.html.haml (2.3ms)
-  Rendered admins/new.html.haml within layouts/application (19.7ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.3ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 38ms (Views: 27.9ms | ActiveRecord: 0.4ms)
-  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.6ms)[0m  begin transaction
-  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mAccount Exists (0.4ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
-  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
-Started GET "/login" for 127.0.0.1 at 2016-04-30 02:04:26 +0000
-Processing by SessionsController#new as HTML
-  Rendered sessions/_signin.html.haml (4.2ms)
-  Rendered sessions/new.html.haml within layouts/application (10.1ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
-  [1m[35m (0.1ms)[0m  rollback transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  commit transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
-  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
-  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
-  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  commit transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
-  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
-Started GET "/input_your_email" for 127.0.0.1 at 2016-04-30 02:04:26 +0000
-Processing by AccountsController#input_your_email as HTML
-  Rendered accounts/input_your_email.html.haml within layouts/application (4.4ms)
+  Rendered layouts/_adminheader.html.haml (3.4ms)
+  Rendered admin_sessions/_signin.html.haml (21.2ms)
+  Rendered layouts/_adminheader.html.haml (0.2ms)
+  Rendered admins/new.html.haml within layouts/application (39.9ms)
   Rendered layouts/_shim.html.erb (0.1ms)
   Rendered layouts/_header.html.haml (0.1ms)
   Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
-Started POST "/input_your_email" for 127.0.0.1 at 2016-04-30 02:04:26 +0000
+Completed 200 OK in 66ms (Views: 55.9ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAccount Exists (0.5ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2016-04-29 20:10:02 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (3.4ms)
+  Rendered sessions/new.html.haml within layouts/application (7.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/input_your_email" for 127.0.0.1 at 2016-04-29 20:10:02 -0500
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (4.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+Started POST "/input_your_email" for 127.0.0.1 at 2016-04-29 20:10:02 -0500
 Processing by AccountsController#input_your_email as HTML
   Parameters: {"utf8"=>"✓", "email"=>"670348827@qq.com", "commit"=>"Reset"}
   [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348827@qq.com"]]
-  Rendered accounts/input_your_email.html.haml within layouts/application (1.8ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered accounts/input_your_email.html.haml within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
   Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.1ms)
-  [1m[35m (0.3ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.2ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/signup" for 127.0.0.1 at 2016-04-30 02:15:30 +0000
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2016-04-29 20:13:39 -0500
 Processing by AccountsController#new as HTML
-  Rendered layouts/_navigation.html.haml (42.2ms)
-  Rendered accounts/new.html.haml within layouts/application (133.1ms)
-  Rendered layouts/_shim.html.erb (0.7ms)
-  Rendered layouts/_header.html.haml (5.2ms)
-  Rendered layouts/_footer.html.erb (0.5ms)
-Completed 200 OK in 885ms (Views: 800.8ms | ActiveRecord: 0.9ms)
+  Rendered layouts/_navigation.html.haml (11.1ms)
+  Rendered accounts/new.html.haml within layouts/application (53.4ms)
+  Rendered layouts/_shim.html.erb (1.2ms)
+  Rendered layouts/_header.html.haml (18.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 703ms (Views: 651.8ms | ActiveRecord: 0.5ms)
   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.2ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/adminsignup" for 127.0.0.1 at 2016-04-30 02:15:31 +0000
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/adminsignup" for 127.0.0.1 at 2016-04-29 20:13:40 -0500
 Processing by AdminsController#new as HTML
-  Rendered layouts/_adminheader.html.haml (4.8ms)
-  Rendered admin_sessions/_signin.html.haml (13.5ms)
+  Rendered layouts/_adminheader.html.haml (2.8ms)
+  Rendered admin_sessions/_signin.html.haml (10.4ms)
   Rendered layouts/_adminheader.html.haml (0.1ms)
-  Rendered admins/new.html.haml within layouts/application (29.9ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered admins/new.html.haml within layouts/application (19.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
   Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 56ms (Views: 42.0ms | ActiveRecord: 0.6ms)
-  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 25.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
   [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mAccount Exists (0.3ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
+  [1m[35mAccount Exists (0.6ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
   [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
-Started GET "/login" for 127.0.0.1 at 2016-04-30 02:15:32 +0000
+Started GET "/login" for 127.0.0.1 at 2016-04-29 20:13:40 -0500
 Processing by SessionsController#new as HTML
-  Rendered sessions/_signin.html.haml (4.1ms)
-  Rendered sessions/new.html.haml within layouts/application (7.3ms)
+  Rendered sessions/_signin.html.haml (15.7ms)
+  Rendered sessions/new.html.haml within layouts/application (20.1ms)
   Rendered layouts/_shim.html.erb (0.1ms)
   Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  commit transaction
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 29ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
   [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
-  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[35m (0.1ms)[0m  rollback transaction
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  commit transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
-Started GET "/input_your_email" for 127.0.0.1 at 2016-04-30 02:15:32 +0000
+Started GET "/input_your_email" for 127.0.0.1 at 2016-04-29 20:13:40 -0500
 Processing by AccountsController#input_your_email as HTML
-  Rendered accounts/input_your_email.html.haml within layouts/application (10.5ms)
+  Rendered accounts/input_your_email.html.haml within layouts/application (6.6ms)
   Rendered layouts/_shim.html.erb (0.1ms)
   Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
-Started POST "/input_your_email" for 127.0.0.1 at 2016-04-30 02:15:32 +0000
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+Started POST "/input_your_email" for 127.0.0.1 at 2016-04-29 20:13:40 -0500
 Processing by AccountsController#input_your_email as HTML
   Parameters: {"utf8"=>"✓", "email"=>"670348827@qq.com", "commit"=>"Reset"}
   [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348827@qq.com"]]
   Rendered accounts/input_your_email.html.haml within layouts/application (1.3ms)
   Rendered layouts/_shim.html.erb (0.1ms)
   Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.1ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/signup" for 127.0.0.1 at 2016-04-30 02:17:48 +0000
-Processing by AccountsController#new as HTML
-  Rendered layouts/_navigation.html.haml (32.7ms)
-  Rendered accounts/new.html.haml within layouts/application (126.3ms)
-  Rendered layouts/_shim.html.erb (0.7ms)
-  Rendered layouts/_header.html.haml (4.1ms)
-  Rendered layouts/_footer.html.erb (0.5ms)
-Completed 200 OK in 798ms (Views: 709.6ms | ActiveRecord: 0.8ms)
-  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
   [1m[35m (0.0ms)[0m  begin transaction
-Started GET "/adminsignup" for 127.0.0.1 at 2016-04-30 02:17:49 +0000
-Processing by AdminsController#new as HTML
-  Rendered layouts/_adminheader.html.haml (2.6ms)
-  Rendered admin_sessions/_signin.html.haml (10.4ms)
-  Rendered layouts/_adminheader.html.haml (0.1ms)
-  Rendered admins/new.html.haml within layouts/application (18.3ms)
-  Rendered layouts/_shim.html.erb (0.0ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 34ms (Views: 24.4ms | ActiveRecord: 0.4ms)
+Started GET "/signup" for 127.0.0.1 at 2016-04-29 20:17:43 -0500
+Processing by AccountsController#new as HTML
+  Rendered layouts/_navigation.html.haml (12.8ms)
+  Rendered accounts/new.html.haml within layouts/application (64.4ms)
+  Rendered layouts/_shim.html.erb (1.2ms)
+  Rendered layouts/_header.html.haml (19.0ms)
+  Rendered layouts/_footer.html.erb (1.8ms)
+Completed 200 OK in 713ms (Views: 662.7ms | ActiveRecord: 0.7ms)
   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.2ms)[0m  begin transaction
   [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mAccount Exists (0.3ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
-  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
-Started GET "/login" for 127.0.0.1 at 2016-04-30 02:17:49 +0000
-Processing by SessionsController#new as HTML
-  Rendered sessions/_signin.html.haml (5.3ms)
-  Rendered sessions/new.html.haml within layouts/application (8.4ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36m (2.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  commit transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
-  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
-  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  commit transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
-  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
-Started GET "/input_your_email" for 127.0.0.1 at 2016-04-30 02:17:49 +0000
-Processing by AccountsController#input_your_email as HTML
-  Rendered accounts/input_your_email.html.haml within layouts/application (4.0ms)
-  Rendered layouts/_shim.html.erb (0.2ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
-Started POST "/input_your_email" for 127.0.0.1 at 2016-04-30 02:17:49 +0000
-Processing by AccountsController#input_your_email as HTML
-  Parameters: {"utf8"=>"✓", "email"=>"670348827@qq.com", "commit"=>"Reset"}
-  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348827@qq.com"]]
-  Rendered accounts/input_your_email.html.haml within layouts/application (1.1ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.1ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.2ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/signup" for 127.0.0.1 at 2016-04-30 02:18:19 +0000
-Processing by AccountsController#new as HTML
-  Rendered layouts/_navigation.html.haml (27.8ms)
-  Rendered accounts/new.html.haml within layouts/application (137.6ms)
-  Rendered layouts/_shim.html.erb (3.7ms)
-  Rendered layouts/_header.html.haml (3.9ms)
-  Rendered layouts/_footer.html.erb (0.4ms)
-Completed 200 OK in 745ms (Views: 674.0ms | ActiveRecord: 1.0ms)
-Started POST "/accounts" for 127.0.0.1 at 2016-04-30 02:18:20 +0000
-Processing by AccountsController#create as HTML
-  Parameters: {"utf8"=>"✓", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "DOB"=>"", "email"=>"sabrina@gmail.com", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "street"=>"", "city"=>"", "state"=>"", "country"=>"", "zip"=>"", "gender"=>"female"}, "commit"=>"Join Us Now!"}
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'sabrina@gmail.com' LIMIT 1
-  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
-  Rendered layouts/_navigation.html.haml (1.1ms)
-  Rendered accounts/new.html.haml within layouts/application (11.2ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 71ms (Views: 14.7ms | ActiveRecord: 0.4ms)
-  [1m[35m (0.1ms)[0m  rollback transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  commit transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-Started GET "/adminsignup" for 127.0.0.1 at 2016-04-30 02:18:20 +0000
+Started GET "/adminsignup" for 127.0.0.1 at 2016-04-29 20:17:43 -0500
 Processing by AdminsController#new as HTML
-  Rendered layouts/_adminheader.html.haml (1.6ms)
-  Rendered admin_sessions/_signin.html.haml (7.8ms)
+  Rendered layouts/_adminheader.html.haml (4.8ms)
+  Rendered admin_sessions/_signin.html.haml (16.9ms)
   Rendered layouts/_adminheader.html.haml (0.1ms)
-  Rendered admins/new.html.haml within layouts/application (13.3ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 31ms (Views: 19.4ms | ActiveRecord: 0.4ms)
-  [1m[35m (0.1ms)[0m  rollback transaction
-  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  commit transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
-  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
-Started GET "/login" for 127.0.0.1 at 2016-04-30 02:18:20 +0000
-Processing by SessionsController#new as HTML
-  Rendered sessions/_signin.html.haml (3.6ms)
-  Rendered sessions/new.html.haml within layouts/application (6.4ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.2ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mAccount Exists (0.3ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
-  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
-  [1m[35mAccount Load (0.6ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "670348828@qq.com"]]
-  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.2ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mAccount Exists (0.3ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
-  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
-Started GET "/input_your_email" for 127.0.0.1 at 2016-04-30 02:18:20 +0000
-Processing by AccountsController#input_your_email as HTML
-  Rendered accounts/input_your_email.html.haml within layouts/application (5.9ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms)
-Started POST "/input_your_email" for 127.0.0.1 at 2016-04-30 02:18:21 +0000
-Processing by AccountsController#input_your_email as HTML
-  Parameters: {"utf8"=>"✓", "email"=>"670348827@qq.com", "commit"=>"Reset"}
-  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "670348827@qq.com"]]
-  Rendered accounts/input_your_email.html.haml within layouts/application (1.5ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.1ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
-  [1m[35m (0.0ms)[0m  begin transaction
-Started GET "/signup" for 127.0.0.1 at 2016-04-30 02:19:09 +0000
-Processing by AccountsController#new as HTML
-  Rendered layouts/_navigation.html.haml (27.9ms)
-  Rendered accounts/new.html.haml within layouts/application (112.0ms)
-  Rendered layouts/_shim.html.erb (0.5ms)
-  Rendered layouts/_header.html.haml (3.9ms)
-  Rendered layouts/_footer.html.erb (0.4ms)
-Completed 200 OK in 709ms (Views: 639.4ms | ActiveRecord: 0.7ms)
-Started POST "/accounts" for 127.0.0.1 at 2016-04-30 02:19:10 +0000
-Processing by AccountsController#create as HTML
-  Parameters: {"utf8"=>"✓", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "DOB"=>"", "email"=>"sabrina@gmail.com", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "street"=>"", "city"=>"", "state"=>"", "country"=>"", "zip"=>"", "gender"=>"female"}, "commit"=>"Join Us Now!"}
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mAccount Exists (0.4ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'sabrina@gmail.com' LIMIT 1
-  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
-  Rendered layouts/_navigation.html.haml (7.6ms)
-  Rendered accounts/new.html.haml within layouts/application (21.2ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 82ms (Views: 25.1ms | ActiveRecord: 0.6ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  commit transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-Started GET "/adminsignup" for 127.0.0.1 at 2016-04-30 02:19:10 +0000
-Processing by AdminsController#new as HTML
-  Rendered layouts/_adminheader.html.haml (1.5ms)
-  Rendered admin_sessions/_signin.html.haml (9.6ms)
-  Rendered layouts/_adminheader.html.haml (0.1ms)
-  Rendered admins/new.html.haml within layouts/application (17.3ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 35ms (Views: 22.4ms | ActiveRecord: 0.5ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  commit transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
-  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
-Started GET "/login" for 127.0.0.1 at 2016-04-30 02:19:10 +0000
-Processing by SessionsController#new as HTML
-  Rendered sessions/_signin.html.haml (3.2ms)
-  Rendered sessions/new.html.haml within layouts/application (6.3ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mAccount Exists (0.3ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
-  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
-  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "670348828@qq.com"]]
-  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
-  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
-Started GET "/input_your_email" for 127.0.0.1 at 2016-04-30 02:19:10 +0000
-Processing by AccountsController#input_your_email as HTML
-  Rendered accounts/input_your_email.html.haml within layouts/application (7.1ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
-Started POST "/input_your_email" for 127.0.0.1 at 2016-04-30 02:19:10 +0000
-Processing by AccountsController#input_your_email as HTML
-  Parameters: {"utf8"=>"✓", "email"=>"670348827@qq.com", "commit"=>"Reset"}
-  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "670348827@qq.com"]]
-  Rendered accounts/input_your_email.html.haml within layouts/application (0.8ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.1ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.2ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/signup" for 127.0.0.1 at 2016-04-30 02:21:30 +0000
-Processing by AccountsController#new as HTML
-  Rendered layouts/_navigation.html.haml (27.2ms)
-  Rendered accounts/new.html.haml within layouts/application (113.7ms)
-  Rendered layouts/_shim.html.erb (0.7ms)
-  Rendered layouts/_header.html.haml (3.3ms)
-  Rendered layouts/_footer.html.erb (0.5ms)
-Completed 200 OK in 791ms (Views: 715.2ms | ActiveRecord: 0.8ms)
-Started POST "/accounts" for 127.0.0.1 at 2016-04-30 02:21:30 +0000
-Processing by AccountsController#create as HTML
-  Parameters: {"utf8"=>"✓", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "DOB"=>"", "email"=>"sabrina@gmail.com", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "street"=>"", "city"=>"", "state"=>"", "country"=>"", "zip"=>"", "gender"=>"female"}, "commit"=>"Join Us Now!"}
-  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'sabrina@gmail.com' LIMIT 1
-  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
-  Rendered layouts/_navigation.html.haml (3.6ms)
-  Rendered accounts/new.html.haml within layouts/application (18.0ms)
+  Rendered admins/new.html.haml within layouts/application (30.7ms)
   Rendered layouts/_shim.html.erb (0.1ms)
   Rendered layouts/_header.html.haml (0.2ms)
   Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 100ms (Views: 22.7ms | ActiveRecord: 0.7ms)
-Started POST "/accounts" for 127.0.0.1 at 2016-04-30 02:21:31 +0000
-Processing by AccountsController#create as HTML
-  Parameters: {"utf8"=>"✓", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "DOB"=>"03-14-1993", "email"=>"sabrina@gmail.com", "password"=>"[FILTERED]", "homephone"=>"860-899-9350", "cellphone"=>"860-899-9350", "street"=>"", "city"=>"", "state"=>"", "country"=>"", "zip"=>""}, "commit"=>"Join Us Now!"}
-  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'sabrina@gmail.com' LIMIT 1[0m
-  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
-  Rendered layouts/_navigation.html.haml (1.6ms)
-  Rendered accounts/new.html.haml within layouts/application (12.2ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 29ms (Views: 16.4ms | ActiveRecord: 0.5ms)
-Started GET "/login" for 127.0.0.1 at 2016-04-30 02:21:31 +0000
-Processing by SessionsController#new as HTML
-  Rendered sessions/_signin.html.haml (2.8ms)
-  Rendered sessions/new.html.haml within layouts/application (5.7ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms)
-Started POST "/login" for 127.0.0.1 at 2016-04-30 02:21:31 +0000
-Processing by SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"sabrina@gmail.com", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"Sign In"}
-  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "sabrina@gmail.com"]]
-  Rendered sessions/_signin.html.haml (1.4ms)
-  Rendered sessions/new.html.haml within layouts/application (1.8ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 28ms (Views: 5.1ms | ActiveRecord: 0.4ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  commit transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-Started GET "/adminsignup" for 127.0.0.1 at 2016-04-30 02:21:31 +0000
-Processing by AdminsController#new as HTML
-  Rendered layouts/_adminheader.html.haml (7.3ms)
-  Rendered admin_sessions/_signin.html.haml (15.1ms)
-  Rendered layouts/_adminheader.html.haml (0.1ms)
-  Rendered admins/new.html.haml within layouts/application (22.9ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 41ms (Views: 29.6ms | ActiveRecord: 0.5ms)
-  [1m[35m (0.1ms)[0m  rollback transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  commit transaction
-  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
-  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
-  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
-Started GET "/login" for 127.0.0.1 at 2016-04-30 02:21:31 +0000
-Processing by SessionsController#new as HTML
-  Rendered sessions/_signin.html.haml (0.9ms)
-  Rendered sessions/new.html.haml within layouts/application (1.3ms)
-  Rendered layouts/_shim.html.erb (0.0ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
-  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mAccount Exists (0.3ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
-  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
-  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "670348828@qq.com"]]
-  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mAccount Exists (0.3ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
-  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
-Started GET "/input_your_email" for 127.0.0.1 at 2016-04-30 02:21:31 +0000
-Processing by AccountsController#input_your_email as HTML
-  Rendered accounts/input_your_email.html.haml within layouts/application (5.3ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
-Started POST "/input_your_email" for 127.0.0.1 at 2016-04-30 02:21:31 +0000
-Processing by AccountsController#input_your_email as HTML
-  Parameters: {"utf8"=>"✓", "email"=>"670348827@qq.com", "commit"=>"Reset"}
-  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "670348827@qq.com"]]
-  Rendered accounts/input_your_email.html.haml within layouts/application (0.9ms)
-  Rendered layouts/_shim.html.erb (0.0ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.2ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (2.9ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/signup" for 127.0.0.1 at 2016-04-30 02:28:44 +0000
-Processing by AccountsController#new as HTML
-  Rendered layouts/_navigation.html.haml (26.9ms)
-  Rendered accounts/new.html.haml within layouts/application (141.8ms)
-  Rendered layouts/_shim.html.erb (0.8ms)
-  Rendered layouts/_header.html.haml (4.0ms)
-  Rendered layouts/_footer.html.erb (1.5ms)
-Completed 200 OK in 798ms (Views: 702.9ms | ActiveRecord: 1.1ms)
-Started POST "/accounts" for 127.0.0.1 at 2016-04-30 02:28:45 +0000
-Processing by AccountsController#create as HTML
-  Parameters: {"utf8"=>"✓", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "DOB"=>"", "email"=>"sabrina@gmail.com", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "street"=>"", "city"=>"", "state"=>"", "country"=>"", "zip"=>"", "gender"=>"female"}, "commit"=>"Join Us Now!"}
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'sabrina@gmail.com' LIMIT 1
-  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
-  Rendered layouts/_navigation.html.haml (1.8ms)
-  Rendered accounts/new.html.haml within layouts/application (19.3ms)
-  Rendered layouts/_shim.html.erb (0.0ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 88ms (Views: 22.7ms | ActiveRecord: 0.5ms)
-Started POST "/accounts" for 127.0.0.1 at 2016-04-30 02:28:45 +0000
-Processing by AccountsController#create as HTML
-  Parameters: {"utf8"=>"✓", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "DOB"=>"03-14-1993", "email"=>"sabrina@gmail.com", "password"=>"[FILTERED]", "homephone"=>"860-899-9350", "cellphone"=>"860-899-9350", "street"=>"", "city"=>"", "state"=>"", "country"=>"", "zip"=>""}, "commit"=>"Join Us Now!"}
-  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'sabrina@gmail.com' LIMIT 1[0m
-  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
-  Rendered layouts/_navigation.html.haml (2.1ms)
-  Rendered accounts/new.html.haml within layouts/application (12.0ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 30ms (Views: 15.9ms | ActiveRecord: 0.5ms)
-Started GET "/login" for 127.0.0.1 at 2016-04-30 02:28:45 +0000
-Processing by SessionsController#new as HTML
-  Rendered sessions/_signin.html.haml (6.5ms)
-  Rendered sessions/new.html.haml within layouts/application (9.8ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms)
-Started POST "/login" for 127.0.0.1 at 2016-04-30 02:28:45 +0000
-Processing by SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"sabrina@gmail.com", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"Sign In"}
-  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "sabrina@gmail.com"]]
-  Rendered sessions/_signin.html.haml (1.2ms)
-  Rendered sessions/new.html.haml within layouts/application (1.7ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 26ms (Views: 5.4ms | ActiveRecord: 0.4ms)
-  [1m[35m (0.3ms)[0m  rollback transaction
-  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  commit transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-Started GET "/adminsignup" for 127.0.0.1 at 2016-04-30 02:28:46 +0000
-Processing by AdminsController#new as HTML
-  Rendered layouts/_adminheader.html.haml (3.6ms)
-  Rendered admin_sessions/_signin.html.haml (12.1ms)
-  Rendered layouts/_adminheader.html.haml (0.1ms)
-  Rendered admins/new.html.haml within layouts/application (18.8ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 40ms (Views: 26.7ms | ActiveRecord: 0.5ms)
-  [1m[35m (0.1ms)[0m  rollback transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  commit transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
-  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
-Started GET "/login" for 127.0.0.1 at 2016-04-30 02:28:46 +0000
-Processing by SessionsController#new as HTML
-  Rendered sessions/_signin.html.haml (1.4ms)
-  Rendered sessions/new.html.haml within layouts/application (1.8ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms)
-  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
-  [1m[35m (0.0ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
-  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
-  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "670348828@qq.com"]]
+Completed 200 OK in 54ms (Views: 40.0ms | ActiveRecord: 0.4ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
@@ -5947,223 +5524,1240 @@ Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
   [1m[35mAccount Exists (0.5ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
   [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
-Started GET "/input_your_email" for 127.0.0.1 at 2016-04-30 02:28:46 +0000
-Processing by AccountsController#input_your_email as HTML
-  Rendered accounts/input_your_email.html.haml within layouts/application (12.4ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
-Started POST "/input_your_email" for 127.0.0.1 at 2016-04-30 02:28:46 +0000
-Processing by AccountsController#input_your_email as HTML
-  Parameters: {"utf8"=>"✓", "email"=>"670348827@qq.com", "commit"=>"Reset"}
-  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1  [["email", "670348827@qq.com"]]
-  Rendered accounts/input_your_email.html.haml within layouts/application (1.5ms)
-  Rendered layouts/_shim.html.erb (0.0ms)
-  Rendered layouts/_header.html.haml (0.2ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.2ms)
-  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.2ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  begin transaction
-Started GET "/signup" for 127.0.0.1 at 2016-04-30 02:29:57 +0000
-Processing by AccountsController#new as HTML
-  Rendered layouts/_navigation.html.haml (30.5ms)
-  Rendered accounts/new.html.haml within layouts/application (113.0ms)
-  Rendered layouts/_shim.html.erb (0.6ms)
-  Rendered layouts/_header.html.haml (2.9ms)
-  Rendered layouts/_footer.html.erb (0.4ms)
-Completed 200 OK in 731ms (Views: 650.9ms | ActiveRecord: 0.9ms)
-Started POST "/accounts" for 127.0.0.1 at 2016-04-30 02:29:58 +0000
-Processing by AccountsController#create as HTML
-  Parameters: {"utf8"=>"✓", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "DOB"=>"", "email"=>"sabrina@gmail.com", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "street"=>"", "city"=>"", "state"=>"", "country"=>"", "zip"=>"", "gender"=>"female"}, "commit"=>"Join Us Now!"}
-  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'sabrina@gmail.com' LIMIT 1
-  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
-  Rendered layouts/_navigation.html.haml (1.5ms)
-  Rendered accounts/new.html.haml within layouts/application (21.0ms)
-  Rendered layouts/_shim.html.erb (0.2ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 86ms (Views: 24.5ms | ActiveRecord: 0.5ms)
-Started POST "/accounts" for 127.0.0.1 at 2016-04-30 02:29:58 +0000
-Processing by AccountsController#create as HTML
-  Parameters: {"utf8"=>"✓", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "DOB"=>"03-14-1993", "email"=>"sabrina@gmail.com", "password"=>"[FILTERED]", "homephone"=>"860-899-9350", "cellphone"=>"860-899-9350", "street"=>"", "city"=>"", "state"=>"", "country"=>"", "zip"=>""}, "commit"=>"Join Us Now!"}
-  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
-  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'sabrina@gmail.com' LIMIT 1[0m
-  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
-  Rendered layouts/_navigation.html.haml (1.6ms)
-  Rendered accounts/new.html.haml within layouts/application (11.4ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 27ms (Views: 15.1ms | ActiveRecord: 0.5ms)
-Started GET "/login" for 127.0.0.1 at 2016-04-30 02:29:58 +0000
+Started GET "/login" for 127.0.0.1 at 2016-04-29 20:17:44 -0500
 Processing by SessionsController#new as HTML
-  Rendered sessions/_signin.html.haml (3.9ms)
-  Rendered sessions/new.html.haml within layouts/application (7.0ms)
-  Rendered layouts/_shim.html.erb (0.0ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms)
-Started POST "/login" for 127.0.0.1 at 2016-04-30 02:29:58 +0000
-Processing by SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"sabrina@gmail.com", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"Sign In"}
-  [1m[36mAccount Load (2.8ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "sabrina@gmail.com"]]
-  Rendered sessions/_signin.html.haml (1.3ms)
-  Rendered sessions/new.html.haml within layouts/application (1.8ms)
+  Rendered sessions/_signin.html.haml (4.7ms)
+  Rendered sessions/new.html.haml within layouts/application (9.9ms)
   Rendered layouts/_shim.html.erb (0.1ms)
   Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 26ms (Views: 5.2ms | ActiveRecord: 2.8ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.1ms)[0m  commit transaction
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-Started GET "/adminsignup" for 127.0.0.1 at 2016-04-30 02:29:58 +0000
-Processing by AdminsController#new as HTML
-  Rendered layouts/_adminheader.html.haml (2.2ms)
-  Rendered admin_sessions/_signin.html.haml (9.8ms)
-  Rendered layouts/_adminheader.html.haml (0.1ms)
-  Rendered admins/new.html.haml within layouts/application (16.6ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 36ms (Views: 23.8ms | ActiveRecord: 0.4ms)
-Started POST "/admins" for 127.0.0.1 at 2016-04-30 02:29:58 +0000
-Processing by AdminsController#create as HTML
-  Parameters: {"utf8"=>"✓", "admin"=>{"email"=>"wyf1111@gmail.com", "password"=>"[FILTERED]", "key"=>"123456"}, "commit"=>"Join Us Now!"}
   [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "wyf1111@gmail.com"], ["password_digest", "$2a$04$abw1V/8DJE6s4pBNgzu8s.xpBiM3fXROTlomUluk28ktEmdLTO9bq"], ["key", "123456"], ["created_at", "2016-04-30 02:29:58.440394"], ["updated_at", "2016-04-30 02:29:58.440394"]]
-  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
-Redirected to http://www.example.com/adminlogin?id=1
-Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
-Started GET "/adminlogin?id=1" for 127.0.0.1 at 2016-04-30 02:29:58 +0000
-Processing by AdminSessionsController#new as HTML
-  Parameters: {"id"=>"1"}
-  Rendered layouts/_adminheader.html.haml (0.1ms)
-  Rendered admin_sessions/_signin.html.haml (2.4ms)
-  Rendered layouts/_adminheader.html.haml (0.1ms)
-  Rendered admin_sessions/new.html.haml within layouts/application (4.3ms)
-  Rendered layouts/_shim.html.erb (0.0ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
-Started GET "/adminsignup" for 127.0.0.1 at 2016-04-30 02:29:58 +0000
-Processing by AdminsController#new as HTML
-  Rendered layouts/_adminheader.html.haml (0.1ms)
-  Rendered admin_sessions/_signin.html.haml (3.2ms)
-  Rendered layouts/_adminheader.html.haml (0.1ms)
-  Rendered admins/new.html.haml within layouts/application (6.1ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
-Started POST "/adminlogin" for 127.0.0.1 at 2016-04-30 02:29:58 +0000
-Processing by AdminSessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"wyf1111@gmail.com", "password"=>"[FILTERED]", "key"=>"12345", "keep_me_logged_in"=>"0"}, "commit"=>"Sign In"}
-  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT 1[0m  [["email", "wyf1111@gmail.com"]]
-  Rendered layouts/_adminheader.html.haml (0.1ms)
-  Rendered admin_sessions/_signin.html.haml (2.6ms)
-  Rendered layouts/_adminheader.html.haml (0.1ms)
-  Rendered admin_sessions/new.html.haml within layouts/application (3.5ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 0.3ms)
-Started GET "/adminsignup" for 127.0.0.1 at 2016-04-30 02:29:58 +0000
-Processing by AdminsController#new as HTML
-  Rendered layouts/_adminheader.html.haml (0.1ms)
-  Rendered admin_sessions/_signin.html.haml (2.3ms)
-  Rendered layouts/_adminheader.html.haml (0.1ms)
-  Rendered admins/new.html.haml within layouts/application (4.2ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.2ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms)
-Started POST "/adminlogin" for 127.0.0.1 at 2016-04-30 02:29:58 +0000
-Processing by AdminSessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"wyf1111@gmail.com", "password"=>"[FILTERED]", "key"=>"123456", "keep_me_logged_in"=>"0"}, "commit"=>"Sign In"}
-  [1m[35mAdmin Load (0.1ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT 1  [["email", "wyf1111@gmail.com"]]
-Redirected to http://www.example.com/admins/1
-Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
-Started GET "/admins/1" for 127.0.0.1 at 2016-04-30 02:29:58 +0000
-Processing by AdminsController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (submit_bcheck ='t')[0m
-  Rendered layouts/_adminheader.html.haml (0.4ms)
-  Rendered admins/show.html.haml within layouts/application (12.9ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.4ms)
-  [1m[35mAdmin Load (0.1ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT 1  [["email", "wyf1111@gmail.com"]]
-Started GET "/admins/1" for 127.0.0.1 at 2016-04-30 02:29:58 +0000
-Processing by AdminsController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (submit_bcheck ='t')[0m
-  Rendered layouts/_adminheader.html.haml (0.1ms)
-  Rendered admins/show.html.haml within layouts/application (2.3ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.4ms)
-Started GET "/admins/1?utf8=%E2%9C%93&agemin=23&agemax=26&firstname=sasa&lastname=wang&email=sa123&commit=Select" for 127.0.0.1 at 2016-04-30 02:29:58 +0000
-Processing by AdminsController#show as HTML
-  Parameters: {"utf8"=>"✓", "agemin"=>"23", "agemax"=>"26", "firstname"=>"sasa", "lastname"=>"wang", "email"=>"sa123", "commit"=>"Select", "id"=>"1"}
-  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts" WHERE (submit_bcheck ='t')
-  Rendered layouts/_adminheader.html.haml (0.1ms)
-  Rendered admins/show.html.haml within layouts/application (1.7ms)
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/input_your_email" for 127.0.0.1 at 2016-04-29 20:17:44 -0500
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (5.2ms)
   Rendered layouts/_shim.html.erb (0.1ms)
   Rendered layouts/_header.html.haml (0.1ms)
   Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.3ms)
-  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+Started POST "/input_your_email" for 127.0.0.1 at 2016-04-29 20:17:44 -0500
+Processing by AccountsController#input_your_email as HTML
+  Parameters: {"utf8"=>"✓", "email"=>"670348827@qq.com", "commit"=>"Reset"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348827@qq.com"]]
+  Rendered accounts/input_your_email.html.haml within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateApplicationForms (20160307230508)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "application_forms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "interested_area" varchar, "volunteering_status" varchar, "signature" blob(2097152), "application_date" datetime, "available_time_begin" datetime, "available_time_end" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307230508"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to CreateUserFormalworkers (20160307230545)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "user_formalworkers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date_of_employment" datetime, "reason_for_leaving" varchar, "position_or_department" varchar, "interested_area" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307230545"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to CreateAccount (20160307230636)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "current_address" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_formal_worker" boolean, "has_convictions" boolean, "need_accomendations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob(2097152), "driver_license" blob(2097152), "SSN" integer) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307230636"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to CreateMinorApplications (20160307230644)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "minor_applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "parent_signature" blob(2097152), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307230644"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to CreateCriminalApplications (20160307230914)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "criminal_applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mandatory_hours" integer, "mandatory_area" varchar, "deadlin" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307230914"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to CreateStudentApplications (20160307231010)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "student_applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "student_program" varchar, "required_time" integer, "required_area" varchar, "deadline" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307231010"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to CreateFormalCriminals (20160307231032)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "formal_criminals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date_of_conviction" datetime, "nature_of_offense" varchar, "name_of_court" varchar, "disposition_of_case" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307231032"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to CreateAccommodations (20160307231100)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "accommodations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "accommodation_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307231100"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to CreateCurrentWorkers (20160307231131)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "current_workers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "department" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "account_id" integer) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307231131"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to CreateRelatedCouncilmembers (20160307231157)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "related_councilmembers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "relationship" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160307231157"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to ChangeColumnName (20160307231855)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.2ms)[0m  CREATE TEMPORARY TABLE "aapplication_forms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "interested_areas" varchar, "volunteering_status" varchar, "signature" blob, "application_date" datetime, "available_time_begin" datetime, "available_time_end" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "application_forms"[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "application_forms"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "application_forms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "interested_areas" varchar, "volunteering_status" varchar, "signature" blob, "application_date" datetime, "available_time_begin" datetime, "available_time_end" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aapplication_forms"
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "aapplication_forms"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160307231855"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to AddMiddlenameToAccounts (20160309021705)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "accounts" ADD "middlename" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160309021705"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Migrating to ChangeFormalCriminalsToFormerCriminals (20160318003517)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "formal_criminals" RENAME TO "former_criminals"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160318003517"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to ChangeUserformalworkersToUserformerworkers (20160318003939)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "user_formalworkers" RENAME TO "user_formerworkers"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160318003939"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAdmins (20160329025113)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "password_digest" varchar, "email" varchar, "key" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160329025113"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddAccountToFormerCriminal (20160330213734)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "former_criminals" ADD "account_id" integer[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_former_criminals_on_account_id" ON "former_criminals" ("account_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160330213734"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to AddAccountToRelatedCouncilmember (20160330213938)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "related_councilmembers" ADD "account_id" integer
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_related_councilmembers_on_account_id" ON "related_councilmembers" ("account_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160330213938"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddAccountToUserFormerworker (20160330214509)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "user_formerworkers" ADD "account_id" integer[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_user_formerworkers_on_account_id" ON "user_formerworkers" ("account_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160330214509"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to RenameColumnAinTableAccountstoB (20160330223350)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TEMPORARY TABLE "aaccounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "current_address" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_formal_worker" boolean, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "accounts"[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "accounts"
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "current_address" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_formal_worker" boolean, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aaccounts"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "aaccounts"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160330223350"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddAccountToAccommodation (20160330230442)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "accommodations" ADD "account_id" integer[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_accommodations_on_account_id" ON "accommodations" ("account_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160330230442"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Migrating to AddMaidennameToAccounts (20160403040024)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "accounts" ADD "maidenname" varchar
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "accounts" ADD "gender" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160403040024"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to RenameColumnXinTableAccountstoY (20160403040230)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "aaccounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "current_address" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_former_worker" boolean, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "accounts"
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "accounts"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "current_address" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_former_worker" boolean, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "aaccounts"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "aaccounts"
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160403040230"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to RemoveAccountsIdFromUserFormerworkers (20160405142845)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "auser_formerworkers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date_of_employment" datetime, "reason_for_leaving" varchar, "position_or_department" varchar, "interested_area" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "account_id" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_formerworkers_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_formerworkers_on_account_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "tindex_auser_formerworkers_on_account_id" ON "auser_formerworkers" ("account_id")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "user_formerworkers"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "user_formerworkers"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "user_formerworkers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date_of_employment" datetime, "reason_for_leaving" varchar, "position_or_department" varchar, "interested_area" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "account_id" integer) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_auser_formerworkers_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_auser_formerworkers_on_account_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_user_formerworkers_on_account_id" ON "user_formerworkers" ("account_id")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "auser_formerworkers"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "auser_formerworkers"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160405142845"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddAccountToApplicationForm (20160412010811)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "application_forms" ADD "account_id" integer[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_application_forms_on_account_id" ON "application_forms" ("account_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160412010811"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to AddAccountToCriminalApplication (20160412011005)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "criminal_applications" ADD "account_id" integer
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_criminal_applications_on_account_id" ON "criminal_applications" ("account_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160412011005"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddAccountToStudentApplication (20160412011038)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "student_applications" ADD "account_id" integer[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_student_applications_on_account_id" ON "student_applications" ("account_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160412011038"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to AddAccountToMinorApplication (20160412011106)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "minor_applications" ADD "account_id" integer
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_minor_applications_on_account_id" ON "minor_applications" ("account_id")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160412011106"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to RenameDeadlinInTableCriminalApplicationsToDeadline (20160412014631)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "acriminal_applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mandatory_hours" integer, "mandatory_area" varchar, "deadline" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "account_id" integer) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_criminal_applications_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_criminal_applications_on_account_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "tindex_acriminal_applications_on_account_id" ON "acriminal_applications" ("account_id")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "criminal_applications"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "criminal_applications"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "criminal_applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mandatory_hours" integer, "mandatory_area" varchar, "deadline" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "account_id" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_acriminal_applications_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_acriminal_applications_on_account_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_criminal_applications_on_account_id" ON "criminal_applications" ("account_id")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "acriminal_applications"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "acriminal_applications"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_criminal_applications_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_criminal_applications_on_account_id' AND type='index'
+[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160412014631"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddColumnAddress (20160412170304)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "aaccounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "current_address" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_former_worker" boolean, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "accounts"
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "accounts"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_former_worker" boolean, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "aaccounts"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "aaccounts"
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "accounts" ADD "country" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "accounts" ADD "state" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "accounts" ADD "city" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "accounts" ADD "street" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "accounts" ADD "zip" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160412170304"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddStatusToAccount (20160415000710)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "accounts" ADD "status" boolean[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160415000710"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddFormerCrimesToFormerCriminals (20160415003655)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "former_criminals" ADD "former_crime" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160415003655"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddIsVolunteeringToAccounts (20160415062014)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "accounts" ADD "is_volunteering" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160415062014"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddColumnSubmitBCheckToAccounts (20160418211839)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "accounts" ADD "submit_bcheck" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160418211839"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddIsStudentToAccounts (20160420202050)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "accounts" ADD "is_student" boolean[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160420202050"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to RemoveIsVolunteeringFromApplicationForms (20160420213754)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "aapplication_forms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "interested_areas" varchar, "volunteering_status" varchar, "signature" blob, "application_date" datetime, "available_time_begin" datetime, "available_time_end" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "account_id" integer) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_forms_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_forms_on_account_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "tindex_aapplication_forms_on_account_id" ON "aapplication_forms" ("account_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "application_forms"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "application_forms"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "application_forms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "interested_areas" varchar, "signature" blob, "application_date" datetime, "available_time_begin" datetime, "available_time_end" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "account_id" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aapplication_forms_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aapplication_forms_on_account_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_application_forms_on_account_id" ON "application_forms" ("account_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "aapplication_forms"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "aapplication_forms"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160420213754"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to RemoveApplicationDateFromApplicationForms (20160420214140)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "aapplication_forms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "interested_areas" varchar, "signature" blob, "application_date" datetime, "available_time_begin" datetime, "available_time_end" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "account_id" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_forms_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_forms_on_account_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "tindex_aapplication_forms_on_account_id" ON "aapplication_forms" ("account_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "application_forms"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "application_forms"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "application_forms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "interested_areas" varchar, "signature" blob, "available_time_begin" datetime, "available_time_end" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "account_id" integer) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aapplication_forms_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aapplication_forms_on_account_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_application_forms_on_account_id" ON "application_forms" ("account_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aapplication_forms"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "aapplication_forms"[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160420214140"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Migrating to RemoveIsFormerWorkerFromAccounts (20160420230609)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TEMPORARY TABLE "aaccounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_former_worker" boolean, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar, "country" varchar, "state" varchar, "city" varchar, "street" varchar, "zip" varchar, "status" boolean, "is_volunteering" boolean DEFAULT 'f', "submit_bcheck" boolean DEFAULT 'f', "is_student" boolean) [0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "accounts"
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "accounts"[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar, "country" varchar, "state" varchar, "city" varchar, "street" varchar, "zip" varchar, "status" boolean, "is_volunteering" boolean DEFAULT 'f', "submit_bcheck" boolean DEFAULT 'f', "is_student" boolean) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "aaccounts"[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "aaccounts"
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160420230609"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Migrating to AddIsFormerWorkerFromAccounts (20160420230740)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  ALTER TABLE "accounts" ADD "is_former_worker" boolean DEFAULT 'f'
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160420230740"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to RemoveHasConvictionsFromAccounts (20160420230908)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TEMPORARY TABLE "aaccounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "has_convictions" boolean, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar, "country" varchar, "state" varchar, "city" varchar, "street" varchar, "zip" varchar, "status" boolean, "is_volunteering" boolean DEFAULT 'f', "submit_bcheck" boolean DEFAULT 'f', "is_student" boolean, "is_former_worker" boolean DEFAULT 'f') 
+  [1m[36m (0.3ms)[0m  [1mSELECT * FROM "accounts"[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "accounts"
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar, "country" varchar, "state" varchar, "city" varchar, "street" varchar, "zip" varchar, "status" boolean, "is_volunteering" boolean DEFAULT 'f', "submit_bcheck" boolean DEFAULT 'f', "is_student" boolean, "is_former_worker" boolean DEFAULT 'f') [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aaccounts"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "aaccounts"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160420230908"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Migrating to AddHasConvictionsToAccounts (20160420231157)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "accounts" ADD "has_convictions" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160420231157"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Migrating to RemoveIsStudentFromAccounts (20160420231905)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "aaccounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar, "country" varchar, "state" varchar, "city" varchar, "street" varchar, "zip" varchar, "status" boolean, "is_volunteering" boolean DEFAULT 'f', "submit_bcheck" boolean DEFAULT 'f', "is_student" boolean, "is_former_worker" boolean DEFAULT 'f', "has_convictions" boolean DEFAULT 'f') [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "accounts"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "accounts"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar, "country" varchar, "state" varchar, "city" varchar, "street" varchar, "zip" varchar, "status" boolean, "is_volunteering" boolean DEFAULT 'f', "submit_bcheck" boolean DEFAULT 'f', "is_former_worker" boolean DEFAULT 'f', "has_convictions" boolean DEFAULT 'f') 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "aaccounts"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "aaccounts"
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160420231905"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to AdIsStudentToAccounts (20160420232006)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "accounts" ADD "is_student" boolean DEFAULT 'f'
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160420232006"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to RemoveNeedAccommodationsFromAccounts (20160420232328)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TEMPORARY TABLE "aaccounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "need_accommodations" boolean, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar, "country" varchar, "state" varchar, "city" varchar, "street" varchar, "zip" varchar, "status" boolean, "is_volunteering" boolean DEFAULT 'f', "submit_bcheck" boolean DEFAULT 'f', "is_former_worker" boolean DEFAULT 'f', "has_convictions" boolean DEFAULT 'f', "is_student" boolean DEFAULT 'f') 
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "accounts"[0m
+  [1m[35m (0.7ms)[0m  DROP TABLE "accounts"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar, "country" varchar, "state" varchar, "city" varchar, "street" varchar, "zip" varchar, "status" boolean, "is_volunteering" boolean DEFAULT 'f', "submit_bcheck" boolean DEFAULT 'f', "is_former_worker" boolean DEFAULT 'f', "has_convictions" boolean DEFAULT 'f', "is_student" boolean DEFAULT 'f') [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aaccounts"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "aaccounts"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160420232328"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to AdNeedAccommodationsToAccounts (20160420232428)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "accounts" ADD "need_accommodations" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160420232428"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to RemoveRelatedToCouncilmemberFromAccounts (20160420233414)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TEMPORARY TABLE "aaccounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "related_to_councilmember" boolean, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar, "country" varchar, "state" varchar, "city" varchar, "street" varchar, "zip" varchar, "status" boolean, "is_volunteering" boolean DEFAULT 'f', "submit_bcheck" boolean DEFAULT 'f', "is_former_worker" boolean DEFAULT 'f', "has_convictions" boolean DEFAULT 'f', "is_student" boolean DEFAULT 'f', "need_accommodations" boolean DEFAULT 'f') [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "accounts"
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "accounts"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar, "country" varchar, "state" varchar, "city" varchar, "street" varchar, "zip" varchar, "status" boolean, "is_volunteering" boolean DEFAULT 'f', "submit_bcheck" boolean DEFAULT 'f', "is_former_worker" boolean DEFAULT 'f', "has_convictions" boolean DEFAULT 'f', "is_student" boolean DEFAULT 'f', "need_accommodations" boolean DEFAULT 'f') 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "aaccounts"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "aaccounts"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160420233414"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to AddRelatedToCouncilMembersToAccounts (20160420233515)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "accounts" ADD "related_to_councilmember" boolean DEFAULT 'f'
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160420233515"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to RemoveIsCurrentWorkerFromAccounts (20160420233631)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TEMPORARY TABLE "aaccounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "is_current_worker" boolean, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar, "country" varchar, "state" varchar, "city" varchar, "street" varchar, "zip" varchar, "status" boolean, "is_volunteering" boolean DEFAULT 'f', "submit_bcheck" boolean DEFAULT 'f', "is_former_worker" boolean DEFAULT 'f', "has_convictions" boolean DEFAULT 'f', "is_student" boolean DEFAULT 'f', "need_accommodations" boolean DEFAULT 'f', "related_to_councilmember" boolean DEFAULT 'f') 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "accounts"[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "accounts"
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar, "country" varchar, "state" varchar, "city" varchar, "street" varchar, "zip" varchar, "status" boolean, "is_volunteering" boolean DEFAULT 'f', "submit_bcheck" boolean DEFAULT 'f', "is_former_worker" boolean DEFAULT 'f', "has_convictions" boolean DEFAULT 'f', "is_student" boolean DEFAULT 'f', "need_accommodations" boolean DEFAULT 'f', "related_to_councilmember" boolean DEFAULT 'f') [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aaccounts"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "aaccounts"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160420233631"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Migrating to AddIsFormerWorkerToAccounts (20160420233732)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "accounts" ADD "is_current_worker" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160420233732"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to ChangeDataTypeForDob (20160427213157)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "aaccounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" date, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar, "country" varchar, "state" varchar, "city" varchar, "street" varchar, "zip" varchar, "status" boolean, "is_volunteering" boolean DEFAULT 'f', "submit_bcheck" boolean DEFAULT 'f', "is_former_worker" boolean DEFAULT 'f', "has_convictions" boolean DEFAULT 'f', "is_student" boolean DEFAULT 'f', "need_accommodations" boolean DEFAULT 'f', "related_to_councilmember" boolean DEFAULT 'f', "is_current_worker" boolean DEFAULT 'f') [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "accounts"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "accounts"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "firstname" varchar, "lastname" varchar, "password_digest" varchar, "homephone" varchar, "cellphone" varchar, "emergency_contact_name" varchar, "emergency_phone" varchar, "emergency_phone_alternate" varchar, "DOB" varchar, "picture" blob, "driver_license" blob, "SSN" integer, "middlename" varchar, "maidenname" varchar, "gender" varchar, "country" varchar, "state" varchar, "city" varchar, "street" varchar, "zip" varchar, "status" boolean, "is_volunteering" boolean DEFAULT 'f', "submit_bcheck" boolean DEFAULT 'f', "is_former_worker" boolean DEFAULT 'f', "has_convictions" boolean DEFAULT 'f', "is_student" boolean DEFAULT 'f', "need_accommodations" boolean DEFAULT 'f', "related_to_councilmember" boolean DEFAULT 'f', "is_current_worker" boolean DEFAULT 'f') 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "aaccounts"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "aaccounts"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160427213157"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_accommodations_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_accommodations_on_account_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_forms_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_forms_on_account_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_criminal_applications_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_criminal_applications_on_account_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_former_criminals_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_former_criminals_on_account_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_minor_applications_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_minor_applications_on_account_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_related_councilmembers_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_related_councilmembers_on_account_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_student_applications_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_student_applications_on_account_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_formerworkers_on_account_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_formerworkers_on_account_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
   [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2016-04-29 20:22:11 -0500
+Processing by AccountsController#new as HTML
+  Rendered layouts/_navigation.html.haml (12.7ms)
+  Rendered accounts/new.html.haml within layouts/application (58.5ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.haml (14.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 669ms (Views: 627.9ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/adminsignup" for 127.0.0.1 at 2016-04-29 20:22:12 -0500
+Processing by AdminsController#new as HTML
+  Rendered layouts/_adminheader.html.haml (2.7ms)
+  Rendered admin_sessions/_signin.html.haml (13.3ms)
+  Rendered layouts/_adminheader.html.haml (0.0ms)
+  Rendered admins/new.html.haml within layouts/application (22.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 26.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
   [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
-  [1m[35mAccount Exists (0.3ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
+  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
   [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
-Started GET "/login" for 127.0.0.1 at 2016-04-30 02:29:58 +0000
+Started GET "/login" for 127.0.0.1 at 2016-04-29 20:22:12 -0500
 Processing by SessionsController#new as HTML
-  Rendered sessions/_signin.html.haml (1.8ms)
-  Rendered sessions/new.html.haml within layouts/application (2.4ms)
+  Rendered sessions/_signin.html.haml (6.6ms)
+  Rendered sessions/new.html.haml within layouts/application (10.1ms)
   Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
-  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered layouts/_header.html.haml (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (8.4ms)[0m  rollback transaction
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.1ms)[0m  commit transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
-  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
-  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.0ms)[0m  commit transaction
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
-  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
-Started GET "/input_your_email" for 127.0.0.1 at 2016-04-30 02:29:58 +0000
+Started GET "/input_your_email" for 127.0.0.1 at 2016-04-29 20:22:12 -0500
 Processing by AccountsController#input_your_email as HTML
-  Rendered accounts/input_your_email.html.haml within layouts/application (3.2ms)
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.haml (0.1ms)
-  Rendered layouts/_footer.html.erb (0.1ms)
-Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
-Started POST "/input_your_email" for 127.0.0.1 at 2016-04-30 02:29:58 +0000
+  Rendered accounts/input_your_email.html.haml within layouts/application (5.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+Started POST "/input_your_email" for 127.0.0.1 at 2016-04-29 20:22:12 -0500
 Processing by AccountsController#input_your_email as HTML
   Parameters: {"utf8"=>"✓", "email"=>"670348827@qq.com", "commit"=>"Reset"}
   [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348827@qq.com"]]
   Rendered accounts/input_your_email.html.haml within layouts/application (0.9ms)
   Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2016-04-29 20:23:16 -0500
+Processing by AccountsController#new as HTML
+  Rendered layouts/_navigation.html.haml (9.9ms)
+  Rendered accounts/new.html.haml within layouts/application (50.6ms)
+  Rendered layouts/_shim.html.erb (1.2ms)
+  Rendered layouts/_header.html.haml (4.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 732ms (Views: 687.9ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/adminsignup" for 127.0.0.1 at 2016-04-29 20:23:16 -0500
+Processing by AdminsController#new as HTML
+  Rendered layouts/_adminheader.html.haml (2.8ms)
+  Rendered admin_sessions/_signin.html.haml (9.7ms)
+  Rendered layouts/_adminheader.html.haml (0.1ms)
+  Rendered admins/new.html.haml within layouts/application (17.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 30ms (Views: 22.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAccount Exists (0.6ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2016-04-29 20:23:16 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (6.3ms)
+  Rendered sessions/new.html.haml within layouts/application (10.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
   Rendered layouts/_header.html.haml (0.1ms)
   Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/input_your_email" for 127.0.0.1 at 2016-04-29 20:23:17 -0500
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (5.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+Started POST "/input_your_email" for 127.0.0.1 at 2016-04-29 20:23:17 -0500
+Processing by AccountsController#input_your_email as HTML
+  Parameters: {"utf8"=>"✓", "email"=>"670348827@qq.com", "commit"=>"Reset"}
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348827@qq.com"]]
+  Rendered accounts/input_your_email.html.haml within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2016-04-29 20:26:17 -0500
+Processing by AccountsController#new as HTML
+  Rendered layouts/_navigation.html.haml (10.2ms)
+  Rendered accounts/new.html.haml within layouts/application (50.0ms)
+  Rendered layouts/_shim.html.erb (1.1ms)
+  Rendered layouts/_header.html.haml (19.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 694ms (Views: 652.6ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/adminsignup" for 127.0.0.1 at 2016-04-29 20:26:18 -0500
+Processing by AdminsController#new as HTML
+  Rendered layouts/_adminheader.html.haml (2.7ms)
+  Rendered admin_sessions/_signin.html.haml (11.6ms)
+  Rendered layouts/_adminheader.html.haml (0.1ms)
+  Rendered admins/new.html.haml within layouts/application (19.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAccount Exists (0.6ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2016-04-29 20:26:18 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (14.0ms)
+  Rendered sessions/new.html.haml within layouts/application (19.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/input_your_email" for 127.0.0.1 at 2016-04-29 20:26:18 -0500
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (6.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+Started POST "/input_your_email" for 127.0.0.1 at 2016-04-29 20:26:18 -0500
+Processing by AccountsController#input_your_email as HTML
+  Parameters: {"utf8"=>"✓", "email"=>"670348827@qq.com", "commit"=>"Reset"}
+  [1m[36mAccount Load (0.7ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348827@qq.com"]]
+  Rendered accounts/input_your_email.html.haml within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2016-04-29 20:29:52 -0500
+Processing by AccountsController#new as HTML
+  Rendered layouts/_navigation.html.haml (10.7ms)
+  Rendered accounts/new.html.haml within layouts/application (50.4ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  Rendered layouts/_header.html.haml (7.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 741ms (Views: 683.4ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/adminsignup" for 127.0.0.1 at 2016-04-29 20:29:53 -0500
+Processing by AdminsController#new as HTML
+  Rendered layouts/_adminheader.html.haml (9.0ms)
+  Rendered admin_sessions/_signin.html.haml (25.7ms)
+  Rendered layouts/_adminheader.html.haml (0.9ms)
+  Rendered admins/new.html.haml within layouts/application (49.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 72ms (Views: 60.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAccount Exists (0.5ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2016-04-29 20:29:53 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (5.2ms)
+  Rendered sessions/new.html.haml within layouts/application (9.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/input_your_email" for 127.0.0.1 at 2016-04-29 20:29:53 -0500
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (5.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+Started POST "/input_your_email" for 127.0.0.1 at 2016-04-29 20:29:53 -0500
+Processing by AccountsController#input_your_email as HTML
+  Parameters: {"utf8"=>"✓", "email"=>"670348827@qq.com", "commit"=>"Reset"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348827@qq.com"]]
+  Rendered accounts/input_your_email.html.haml within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2016-04-29 20:31:48 -0500
+Processing by AccountsController#new as HTML
+  Rendered layouts/_navigation.html.haml (12.7ms)
+  Rendered accounts/new.html.haml within layouts/application (60.2ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.haml (19.3ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 672ms (Views: 635.5ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/adminsignup" for 127.0.0.1 at 2016-04-29 20:31:49 -0500
+Processing by AdminsController#new as HTML
+  Rendered layouts/_adminheader.html.haml (4.0ms)
+  Rendered admin_sessions/_signin.html.haml (12.0ms)
+  Rendered layouts/_adminheader.html.haml (0.1ms)
+  Rendered admins/new.html.haml within layouts/application (19.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 37ms (Views: 27.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAccount Exists (0.7ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2016-04-29 20:31:49 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (4.8ms)
+  Rendered sessions/new.html.haml within layouts/application (8.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mAccount Load (0.6ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/input_your_email" for 127.0.0.1 at 2016-04-29 20:31:49 -0500
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (5.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+Started POST "/input_your_email" for 127.0.0.1 at 2016-04-29 20:31:49 -0500
+Processing by AccountsController#input_your_email as HTML
+  Parameters: {"utf8"=>"✓", "email"=>"670348827@qq.com", "commit"=>"Reset"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348827@qq.com"]]
+  Rendered accounts/input_your_email.html.haml within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms)
   [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2016-04-29 20:34:03 -0500
+Processing by AccountsController#new as HTML
+  Rendered layouts/_navigation.html.haml (11.9ms)
+  Rendered accounts/new.html.haml within layouts/application (56.0ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.haml (6.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 686ms (Views: 639.5ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/adminsignup" for 127.0.0.1 at 2016-04-29 20:34:04 -0500
+Processing by AdminsController#new as HTML
+  Rendered layouts/_adminheader.html.haml (3.5ms)
+  Rendered admin_sessions/_signin.html.haml (11.5ms)
+  Rendered layouts/_adminheader.html.haml (0.1ms)
+  Rendered admins/new.html.haml within layouts/application (19.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAccount Exists (1.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2016-04-29 20:34:04 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (5.7ms)
+  Rendered sessions/new.html.haml within layouts/application (10.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/input_your_email" for 127.0.0.1 at 2016-04-29 20:34:04 -0500
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (4.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+Started POST "/input_your_email" for 127.0.0.1 at 2016-04-29 20:34:04 -0500
+Processing by AccountsController#input_your_email as HTML
+  Parameters: {"utf8"=>"✓", "email"=>"670348827@qq.com", "commit"=>"Reset"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348827@qq.com"]]
+  Rendered accounts/input_your_email.html.haml within layouts/application (1.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2016-04-29 20:34:53 -0500
+Processing by AccountsController#new as HTML
+  Rendered layouts/_navigation.html.haml (9.6ms)
+  Rendered accounts/new.html.haml within layouts/application (53.1ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.haml (6.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 687ms (Views: 642.0ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/adminsignup" for 127.0.0.1 at 2016-04-29 20:34:53 -0500
+Processing by AdminsController#new as HTML
+  Rendered layouts/_adminheader.html.haml (2.8ms)
+  Rendered admin_sessions/_signin.html.haml (11.3ms)
+  Rendered layouts/_adminheader.html.haml (0.1ms)
+  Rendered admins/new.html.haml within layouts/application (20.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 26.4ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAccount Exists (0.6ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2016-04-29 20:34:53 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (5.9ms)
+  Rendered sessions/new.html.haml within layouts/application (10.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/input_your_email" for 127.0.0.1 at 2016-04-29 20:34:54 -0500
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (5.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+Started POST "/input_your_email" for 127.0.0.1 at 2016-04-29 20:34:54 -0500
+Processing by AccountsController#input_your_email as HTML
+  Parameters: {"utf8"=>"✓", "email"=>"670348827@qq.com", "commit"=>"Reset"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348827@qq.com"]]
+  Rendered accounts/input_your_email.html.haml within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2016-04-30 15:11:13 -0500
+Processing by AccountsController#new as HTML
+  Rendered layouts/_navigation.html.haml (11.0ms)
+  Rendered accounts/new.html.haml within layouts/application (51.6ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.haml (14.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 620ms (Views: 579.1ms | ActiveRecord: 0.7ms)
+Started POST "/accounts" for 127.0.0.1 at 2016-04-30 15:11:14 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "DOB"=>"", "email"=>"sabrina@gmail.com", "password"=>"[FILTERED]", "homephone"=>"", "cellphone"=>"", "street"=>"", "city"=>"", "state"=>"", "country"=>"", "zip"=>"", "gender"=>"female"}, "commit"=>"Join Us Now!"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAccount Exists (0.6ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'sabrina@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered layouts/_navigation.html.haml (1.1ms)
+  Rendered accounts/new.html.haml within layouts/application (12.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 55ms (Views: 16.0ms | ActiveRecord: 0.8ms)
+Started POST "/accounts" for 127.0.0.1 at 2016-04-30 15:11:14 -0500
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "account"=>{"firstname"=>"", "middlename"=>"", "maidenname"=>"", "lastname"=>"", "DOB"=>"03-14-1993", "email"=>"sabrina@gmail.com", "password"=>"[FILTERED]", "homephone"=>"860-899-9350", "cellphone"=>"860-899-9350", "street"=>"", "city"=>"", "state"=>"", "country"=>"", "zip"=>""}, "commit"=>"Join Us Now!"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'sabrina@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered layouts/_navigation.html.haml (1.1ms)
+  Rendered accounts/new.html.haml within layouts/application (10.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 24ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+Started GET "/login" for 127.0.0.1 at 2016-04-30 15:11:14 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (6.5ms)
+  Rendered sessions/new.html.haml within layouts/application (10.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2016-04-30 15:11:14 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"sabrina@gmail.com", "password"=>"[FILTERED]", "keep_me_logged_in"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "sabrina@gmail.com"]]
+  Rendered sessions/_signin.html.haml (2.0ms)
+  Rendered sessions/new.html.haml within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/adminsignup" for 127.0.0.1 at 2016-04-30 15:11:14 -0500
+Processing by AdminsController#new as HTML
+  Rendered layouts/_adminheader.html.haml (5.0ms)
+  Rendered admin_sessions/_signin.html.haml (14.7ms)
+  Rendered layouts/_adminheader.html.haml (0.1ms)
+  Rendered admins/new.html.haml within layouts/application (22.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 39ms (Views: 29.0ms | ActiveRecord: 0.3ms)
+Started POST "/admins" for 127.0.0.1 at 2016-04-30 15:11:14 -0500
+Processing by AdminsController#create as HTML
+  Parameters: {"utf8"=>"✓", "admin"=>{"email"=>"wyf1111@gmail.com", "password"=>"[FILTERED]", "key"=>"123456"}, "commit"=>"Join Us Now!"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "wyf1111@gmail.com"], ["password_digest", "$2a$04$A2h2/qeBiwOhM1Yd367Zgef6qAAr0gOLiG.3F0fBosaKSZWgD4/By"], ["key", "123456"], ["created_at", "2016-04-30 20:11:14.928127"], ["updated_at", "2016-04-30 20:11:14.928127"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/adminlogin?id=1
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms)
+Started GET "/adminlogin?id=1" for 127.0.0.1 at 2016-04-30 15:11:14 -0500
+Processing by AdminSessionsController#new as HTML
+  Parameters: {"id"=>"1"}
+  Rendered layouts/_adminheader.html.haml (0.1ms)
+  Rendered admin_sessions/_signin.html.haml (2.7ms)
+  Rendered layouts/_adminheader.html.haml (0.1ms)
+  Rendered admin_sessions/new.html.haml within layouts/application (4.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+Started GET "/adminsignup" for 127.0.0.1 at 2016-04-30 15:11:14 -0500
+Processing by AdminsController#new as HTML
+  Rendered layouts/_adminheader.html.haml (0.1ms)
+  Rendered admin_sessions/_signin.html.haml (1.9ms)
+  Rendered layouts/_adminheader.html.haml (0.0ms)
+  Rendered admins/new.html.haml within layouts/application (4.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+Started POST "/adminlogin" for 127.0.0.1 at 2016-04-30 15:11:14 -0500
+Processing by AdminSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"wyf1111@gmail.com", "password"=>"[FILTERED]", "key"=>"12345", "keep_me_logged_in"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT 1[0m  [["email", "wyf1111@gmail.com"]]
+  Rendered layouts/_adminheader.html.haml (0.2ms)
+  Rendered admin_sessions/_signin.html.haml (1.8ms)
+  Rendered layouts/_adminheader.html.haml (0.0ms)
+  Rendered admin_sessions/new.html.haml within layouts/application (2.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.haml (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+Started GET "/adminsignup" for 127.0.0.1 at 2016-04-30 15:11:15 -0500
+Processing by AdminsController#new as HTML
+  Rendered layouts/_adminheader.html.haml (0.1ms)
+  Rendered admin_sessions/_signin.html.haml (3.3ms)
+  Rendered layouts/_adminheader.html.haml (0.1ms)
+  Rendered admins/new.html.haml within layouts/application (6.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+Started POST "/adminlogin" for 127.0.0.1 at 2016-04-30 15:11:15 -0500
+Processing by AdminSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"wyf1111@gmail.com", "password"=>"[FILTERED]", "key"=>"123456", "keep_me_logged_in"=>"0"}, "commit"=>"Sign In"}
+  [1m[35mAdmin Load (0.1ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT 1  [["email", "wyf1111@gmail.com"]]
+Redirected to http://www.example.com/admins/1
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+Started GET "/admins/1" for 127.0.0.1 at 2016-04-30 15:11:15 -0500
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered layouts/_adminheader.html.haml (0.2ms)
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (submit_bcheck ='t')[0m
+  Rendered admins/show.html.haml within layouts/application (12.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.2ms)
+  [1m[35mAdmin Load (0.1ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT 1  [["email", "wyf1111@gmail.com"]]
+Started GET "/admins/1" for 127.0.0.1 at 2016-04-30 15:11:15 -0500
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered layouts/_adminheader.html.haml (0.1ms)
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (submit_bcheck ='t')[0m
+  Rendered admins/show.html.haml within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+Started GET "/admins/1?utf8=%E2%9C%93&agemin=23&agemax=26&firstname=sasa&lastname=wang&email=sa123&commit=Select" for 127.0.0.1 at 2016-04-30 15:11:15 -0500
+Processing by AdminsController#show as HTML
+  Parameters: {"utf8"=>"✓", "agemin"=>"23", "agemax"=>"26", "firstname"=>"sasa", "lastname"=>"wang", "email"=>"sa123", "commit"=>"Select", "id"=>"1"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE (submit_bcheck ='t')
+  Rendered layouts/_adminheader.html.haml (0.1ms)
+  Rendered admins/show.html.haml within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (3.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Started GET "/login" for 127.0.0.1 at 2016-04-30 15:11:15 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_signin.html.haml (1.0ms)
+  Rendered sessions/new.html.haml within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348828@qq.com"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = '670348828@qq.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/input_your_email" for 127.0.0.1 at 2016-04-30 15:11:15 -0500
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+Started POST "/input_your_email" for 127.0.0.1 at 2016-04-30 15:11:15 -0500
+Processing by AccountsController#input_your_email as HTML
+  Parameters: {"utf8"=>"✓", "email"=>"670348827@qq.com", "commit"=>"Reset"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = ? LIMIT 1[0m  [["email", "670348827@qq.com"]]
+  Rendered accounts/input_your_email.html.haml within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
