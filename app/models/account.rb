@@ -53,12 +53,6 @@ validates :email,:firstname,:lastname,:homephone,
   #####################################
   #validates :number validator 
 
-  INVALID_NUMBER_REGEX = /[^0-9     ]/
-  validates :homephone, #:emergency_phone, :emergency_phone_alternate,
-  length: { maximum: 20 },
-  format: { without: INVALID_NUMBER_REGEX }
-
-
 #validation of change profile!
  
   INVALID_NAME_REGEX = /[^a-zA-Z     ]/
@@ -71,9 +65,17 @@ validates :email,:firstname,:lastname,:homephone,
   #####################################
   #validates :number validator 
   INVALID_NUMBER_REGEX = /[^0-9     ]/
-  validates :homephone, :emergency_phone, :emergency_phone_alternate,
+  validates :emergency_phone, :emergency_phone_alternate,
   length: { maximum: 20 },
   format: { without: INVALID_NUMBER_REGEX }
+
+  INVALID_NUMBER_REGEX = /[^0-9-]/ 
+  validates :homephone,
+  length: { is: 12 },
+  format: { without: INVALID_NUMBER_REGEX}
+
+#validates date of birth
+  validates_format_of :DOB, :with => /\d{4}-\d{2}-\d{2}/, :message => "date must be in the following format: mm/dd/yyyy"
 
    
 end
