@@ -255,7 +255,7 @@ class AccountsController < ApplicationController
           flash[:notice] = 'Your profile is under processing!'
           end
       end
-      redirect_to profiles_path :id => @account.id
+      redirect_to profiles_path #:id => @account.id
       
   end
      
