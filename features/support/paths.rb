@@ -26,8 +26,7 @@ module NavigationHelpers
     when /^check_your_email page$/
        check_your_email_path
   
-   
-    when /^reset_your_password page$/ 
+   when /^reset_your_password page$/ 
         id = Account.find_by_email(email_name).id
         page.set_rack_session(id: id)
         reset_your_password_path
