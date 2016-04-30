@@ -6,11 +6,15 @@
 <% end %>
 <p>
           <strong>Name</strong> 
-          <%= @account.firstname%> <%= @account.lastname%>
+          <%= @account.firstname%> <%= @account.middlename%> <%= @account.lastname%> (maidenname: <%= @account.maidenname%>)
       </p>
       <p>
           <strong>Date of Birth</strong> 
           <%= @account.DOB%>               <!-- why DOB is orange? -->
+      </p>
+      <p>
+          <strong>Gender</strong>
+          <%= @account.gender%>
       </p>
       <p>
           <strong>Email</strong>
@@ -32,17 +36,24 @@
           <%= @account.city %><br />
           <strong>State</strong>
           <%= @account.state %><br />
-          <strong>State</strong>
+          <strong>Country</strong>
           <%= @account.country %><br />
           <strong>Zip</strong>
           <%= @account.zip %><br />
       </p>
       <p>
+<<<<<<< HEAD
           <strong>SSN</strong>
           <%= @account.SSN %><br />
           <strong>Driver License</strong>
+=======
+          <!-- strong>SSN</strong-->
+          <!--= @account.SSN %><br /-->
+          <strong>driver_license</strong>
+>>>>>>> yyhzy_application
           <%= @account.driver_license %><br />
       </p>
+      
       <p><strong>Has your profile been approved so that you can submit an application?: </strong><%= @account.status%></p>
 
 <h3>Submitted Application</h3>
@@ -78,6 +89,7 @@
              From: <%= @account.application_form.available_time_begin %><br />
              To: <%= @account.application_form.available_time_end %>
      </p>
+     <p><%= @account.application_form.signature %></p>
      <% end %>
  <% end %>
      <p>
