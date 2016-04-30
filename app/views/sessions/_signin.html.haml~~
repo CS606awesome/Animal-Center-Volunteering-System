@@ -1,0 +1,22 @@
+%fieldset
+ %legend
+  .container
+   .row
+    .col-xs-3
+    .col-xs-9
+     = form_for(:session, url: login_path, html: {class: 'form-horizontal'}) do |f|
+      .field.form-group
+       = f.label 'E-mail', class: 'col-sm-2 control-label'
+       .col-sm-10
+        = f.text_field :email, class: 'form-control'
+      .field.form-group
+       = f.label :password, class: 'col-sm-2 control-label'
+       .col-sm-10
+        = f.text_field :password, class: 'form-control'
+      .actions.form-group
+       .col-sm-offset-2.col-sm-10
+        = f.submit 'I am already a volunteer!',class: 'btn btn-success'
+        = link_to "Forget your password?", input_your_email_path, class: 'btn btn-warning'
+        .checkbox
+        = f.check_box :keep_me_logged_in
+        keep me logged in

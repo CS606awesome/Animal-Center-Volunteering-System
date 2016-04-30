@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
+#Integrate it with google api
+gem 'gmail'
+#allow the app to send mailer
 gem 'actionmailer'
+
 gem 'email_verifier'
 gem 'email_validator'
 gem 'bcrypt'
@@ -23,7 +27,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'bootstrap-sass', '~> 3.2.0'
-
+gem 'autoprefixer-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '~> 2.3.0'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

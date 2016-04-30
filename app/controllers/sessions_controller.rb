@@ -7,7 +7,8 @@ def new
   #@account.authenticate('123456')
    if @account && @account.authenticate(params[:session][:password])
       log_in @account
-      redirect_to profiles_path :id => @account.id
+      redirect_to profiles_path 
+      #:id => @account.id
     else
     flash.now[:danger] = 'Wrong email/password combination!'  
     render 'new'
@@ -21,5 +22,6 @@ def new
   def destroy
     log_out
     redirect_to accounts_path
+    flash[:success] = "You have logout successfully!"
   end
 end

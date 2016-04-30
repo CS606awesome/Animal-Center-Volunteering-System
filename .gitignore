@@ -53,3 +53,5 @@ public/assets/bootstrap/glyphicons-halflings-regular-f495f34e4f177cf0115af995bbb
 public/assets/bootstrap/glyphicons-halflings-regular-f495f34e4f177cf0115af995bbbfeb3fcabc88502876e76fc51a4ab439bc8431.eot.gz
 
 public/assets/bootstrap/glyphicons-halflings-regular-fc969dc1c6ff531abcf368089dcbaf5775133b0626ff56b52301a059fc0f9e1e.woff
+
+app/views/layouts/application.html.erb

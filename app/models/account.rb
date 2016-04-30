@@ -31,7 +31,7 @@ validates :email,:firstname,:lastname,:homephone,
              to_short: "your password should be at least %{count} characters",
              to_long: "your password should be at most %{count} characters" },
              on: [:create]
-         
+
   #validates :email
   validates :email, email: true
   ##validates_email_realness_of :email
@@ -55,7 +55,9 @@ validates :email,:firstname,:lastname,:homephone,
   length: { is: 12 },
   format: { without: INVALID_NUMBER_REGEX}
 #validates date of birth
+
   validates_format_of :DOB, :with => /\d{4}-\d{2}-\d{2}/, :message => "date must be in the following format: mm/dd/yyyy"
+
 
    
 end

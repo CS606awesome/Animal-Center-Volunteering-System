@@ -12,9 +12,17 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
-
+  get    'logout'  => 'sessions#destroy'
+  delete 'adminlogout'  => 'admin_sessions#destroy'
+  get    'adminlogout'  => 'admin_sessions#destroy'
+  
   get    'input_your_email' => 'accounts#input_your_email'
   post    'input_your_email' => 'accounts#input_your_email'
+
+  #send applicant gmail
+  get    'send_gmail' =>  'admins#gmailsender'
+  post   'send_gmail' =>  'admins#send_gmail'
+
 
   get    'reset_your_password'  => 'accounts#reset_your_password'
   post    'reset_your_password'  => 'accounts#save_password_change'
@@ -22,9 +30,13 @@ Rails.application.routes.draw do
   #forget password
   get    'check_your_email' => 'accounts#check_your_email'
 
+ #resend email
+  get   'resend_your_email' => 'accounts#resend_your_email'
+  post  'resend_your_email' => 'accounts#resend_your_email'
+
   #Show user's workspace
   get 'profiles' => 'accounts#profiles'
-  get 'profiles/:id' => 'accounts#profiles' 
+  #get 'profiles/:id' => 'accounts#profiles' 
   get 'application' => 'accounts#application'
   patch 'submit_application' => 'accounts#submit_application'
 

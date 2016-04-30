@@ -30,7 +30,7 @@ class AccountsController < ApplicationController
     if @account.save
      redirect_to @account 
     else  
-      flash.now[:danger] = 'Registration failed, some inforamtion is missing!'  
+      flash.now[:danger] = 'Registration failed, some information is missing!'  
       render 'new'
     end  
   end
@@ -55,7 +55,8 @@ class AccountsController < ApplicationController
 
   
   def profiles 
-      if @account = Account.find(session[:id])
+      if logged_in 
+        @account = Account.find(session[:id])
      
       else
       redirect_to login_path
@@ -79,14 +80,16 @@ class AccountsController < ApplicationController
    if @account.is_volunteering == true
     if @account.update_columns(:is_volunteering =>false) && @account.application_form.destroy
 
-      flash[:notice] = "Withdrawal succeeded!"
+      flash[:success] = "Withdrawal succeeded!"
+
       redirect_to action: 'profiles'
     else
-      flash[:notice] = "Withdrawal failed!"  
+      flash[:danger] = "Withdrawal failed!"  
       redirect_to action: 'viewapplication'
     end
    else
-    flash[:notice] = "You have not submitted your application yet!" 
+    flash[:danger] = "You have not submitted your application yet!" 
+
     redirect_to action: 'viewapplication'
    end
   end
@@ -99,12 +102,12 @@ class AccountsController < ApplicationController
           if @account.status == nil|| @account.status==false
               #if rejected
               if @account.status ==false
-              flash[:notice] = 'You were rejected by our administrator, we are sorry you can not be a volunteer this time.' 
+              flash[:danger] = 'You were rejected by our administrator, we are sorry you can not be a volunteer this time.' 
               #haven't submit for background check 
               else           
-              flash[:notice] = 'You have not be approved by our administrator yet, please submit and wait with patience.'
+              flash[:danger] = 'You have not be approved by our administrator yet, please submit and wait with patience.'
               end
-              redirect_to profiles_path(:id => @account.id)
+              redirect_to profiles_path#(:id => @account.id)
           else
           @account.application_form ||= ApplicationForm.new 
           # if user is a criminal
@@ -159,7 +162,7 @@ class AccountsController < ApplicationController
      #if @account.is_volunteering == nil || @account.is_volunteering == false
      #@account.update_attributes!(account_update_params)
 
-     if @account.status != true ||admin_logged_in
+     if @account.submit_bcheck == false#||admin_logged_in
      
         if(params[:account][:is_former_worker] == "1") 
           @account.user_formerworker ||= UserFormerworker.new   
@@ -218,18 +221,21 @@ class AccountsController < ApplicationController
         correct_DOB_format(@account)
 
         if @account.save
-        flash[:notice] = 'Changes Saved!'
+
+        flash[:success] = 'Changes Saved!'
     
      #else
      #   flash[:notice] = 'Your have already submitted an application, you can not submit change until you complete this one.'
     #    redirect_to profiles_path :id => @account.id
         redirect_to action: 'profiles'
         else
-        flash[:alert] = 'Your last application has been approved, you can not submit a new one until you complete this one.'
-        redirect_to application_path :id => @account.id
+        flash[:alert] = 'save changes failed!'
+        redirect_to profiles_path :id => @account.id
         end
      else
-         flash[:notice] = 'Your profile has been approved, no need to change it.'
+
+         flash[:warning] = 'Your profile is under processing, if you want to make any changes please contact our administrator!'
+
          redirect_to profiles_path
      end
 
@@ -239,20 +245,23 @@ class AccountsController < ApplicationController
       @account = Account.find(session[:id])
       if @account.submit_bcheck == false && @account.status == nil      #if never submit, then save and submit        
           if @account.update_columns(submit_bcheck: true)
-              flash[:notice] = 'Your profile has been sent to the administrator'
+
+              flash[:success] = 'Your profile has been sent to the administrator'
 
      #     redirect_to profiles_path :id => @account.id
      # else                                                   # if have already submitted, return to page and do nothing
      #     redirect_to profiles_path :id => @account.id
 
           else
-          flash[:notice] = 'Submission is failed'  
+          flash[:danger] = 'Submission is failed'  
           end
       else     
-          if @account.status != nil  
-          flash[:notice] = 'You are approved, no need to bother our administrator right? LOL'# if have submitted, return to page and do nothing
+          if @account.status == true  
+          flash[:success] = 'You are approved, no need to bother our administrator right? LOL'# if have submitted, return to page and do nothing
+          elsif @account.status == false
+          flash[:success] = 'We are sorry that your profile is rejected, you can not submit again'  
           else
-          flash[:notice] = 'Your profile is under processing!'
+          flash[:info] = 'Your profile is under processing!'
           end
       end
       redirect_to profiles_path #:id => @account.id
@@ -271,7 +280,7 @@ class AccountsController < ApplicationController
         @account = Account.find_by(email: params[:email])
         if @account
           session[:id]= @account.id
-          Mailer.welcome_email(@account).deliver_now
+          Mailer.reset_password_email(@account).deliver_now
           redirect_to check_your_email_path
         else
           flash.now[:danger] = 'Your email is not valid or it has not been registered, please try again!'
@@ -288,16 +297,16 @@ class AccountsController < ApplicationController
       @account = Account.find(session[:id])
      
        if (params[:account][:password] == params[:account][:password_confirmation])
-         if @account.update_columns(account_password_params)   
+         if @account.update(account_password_params)   
             flash[:success] = "You have reset your password successfully."
             redirect_to login_path
          else
-           flash[:failed] = "passwords are not satisfied the requirement."
-           flash[:requirement] = "Your password must be 6-20 characters and cannot be blank."
+           flash[:warning] = "passwords are not satisfied the requirement."
+           flash[:info] = "Your password must be 6-20 characters and cannot be blank."
            render 'reset_your_password'
          end
        else
-          flash[:alert]="The passwords you entered must be the same!"
+          flash[:warning]="The passwords you entered must be the same!"
           render 'reset_your_password'
        end
    end

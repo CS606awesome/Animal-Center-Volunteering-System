@@ -1,48 +1,54 @@
-%h1 Online volunteering Management System
-%br
-%h3 Wellcome Administrator !  
-%flash
- =flash[:danger]
- =flash[:notice]
+=render 'layouts/adminheader'
+%h3 Welcome Administrator! 
+ 
 %fieldset
+.jumbotron
  =form_for admin_path, :method => :get do 
   Age	
-  =text_field_tag :agemin,nil,placeholder:'older than'
-  =text_field_tag :agemax,nil,placeholder:'younger than'
+  %br
+  =text_field_tag :agemin,nil,placeholder:'Older Than'
+  =text_field_tag :agemax,nil,placeholder:'Younger Than'
   %div{:style => "margin-bottom:10px"}
   Firstname
-  =text_field_tag :firstname,nil,placeholder: 'first name'
+  %br
+  =text_field_tag :firstname,nil,placeholder:'First Name' 
   %div{:style => "margin-bottom:10px"}
   Lastname
-  =text_field_tag :lastname,nil,placeholder: 'last name'
+  %br
+  =text_field_tag :lastname,nil,placeholder:'Last Name' 
   %div{:style => "margin-bottom:10px"}
   Email
-  =text_field_tag :email,nil,placeholder: 'email'
-  =submit_tag 'select'
+  %br
+  =text_field_tag :email,nil,placeholder:'Email'
+  %div{:style => "margin-bottom:10px"}
+  =submit_tag 'Select',class: 'btn btn-success'
+%br
+%br
   
-= link_to 'Manage the qualified volunteer',managemore_path
-
+= link_to 'Manage the qualified volunteer',managemore_path,class: 'btn btn-success'
 %table#accounts
- %thead
-  %tr
-   %th Firstname
-   %th Middlename
-   %th Maidenname
-   %th Lastname
-   %th Gender
-   %th Date of Birth
-   %th Email
-   %th Cellphone
-   %th Homephone
-   %th Street
-   %th City
-   %th State
-   %th Country
-   %th Zip Code
-   %th Profile
-   %th Approve 
-   %th Reject
- %tbody
+ %table.table.table-striped
+  %thead
+   %tr
+    %th Firstname
+    %th Middlename
+    %th Maidenname
+    %th Lastname
+    %th Gender
+    %th Date Of Birth
+    %th Email
+    %th Cellphone
+    %th Homephone
+    %th Street
+    %th City
+    %th State
+    %th Country
+    %th Zip Code
+    %th Profile
+    %th Compose email
+    %th Approve 
+    %th Reject
+  %tbody
   - @accounts.each do |account|
    %tr
     %td= account.firstname
@@ -61,8 +67,9 @@
     %td= account.zip 
     %td= link_to "profile", admincheckprofile_path(:id => account.id), :onclick=>"window.open(this.href, 'profile', 'height=800, width=800');return false;"
     &nbsp;
+    %td= link_to "send email", send_gmail_path(:id => account.id), :onclick=>"window.open(this.href, 'send email', 'height=800, width=800');return false;"
+    &nbsp;
     %td= link_to "Approve", :controller => "admins", :action =>"approve", :id => account.id
     &nbsp;
     %td= link_to 'Reject',  :controller => "admins", :action =>"reject", :id => account.id
- 
 

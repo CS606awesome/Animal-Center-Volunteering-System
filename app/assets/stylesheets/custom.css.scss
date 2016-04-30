@@ -1,0 +1,134 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+/* universal */
+
+body {
+  padding-top: 150px;
+  font-family: Georgia;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  font-family: Georgia;
+  resize: vertical;
+}
+
+.center {
+  font-family: Georgia;
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.5em;
+  font-family: Georgia;
+   
+}
+
+h1 {
+  font-size: 2.5em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+h2 {
+  font-size: 1.8em;
+  /*letter-spacing: -1px;*/
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: bold;
+  /* color: #A52A2A;*/
+}
+
+h3{
+  font-size: 1.5em;
+  
+  /*letter-spacing: 1px;*/
+}
+p {
+  font-size: 1.3em;
+  font-family: Georgia;
+  line-height: 1.7em;
+}
+ 
+/* header */
+/*
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+*/
+header{
+  margin: 0,auto;
+  padding: 10px; 
+ /* padding: 0; */
+  background-color: #505050;
+}
+header.left {
+  float: left;
+  margin-left: 20px;
+  font-size: 2.5em;
+  font-family: Georgia;
+  width: 50%;
+  border-bottom: 4px solid #CCFFFF;
+}
+
+header.right {
+  float: right;
+  margin-right: 20px;
+}
+ 
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #fff;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+  font-size: 1em;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
