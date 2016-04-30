@@ -11,15 +11,15 @@
   %div{:style => "margin-bottom:10px"}
   Firstname
   %br
-  =text_field_tag :firstname,nil 
+  =text_field_tag :firstname,nil,placeholder:'First Name' 
   %div{:style => "margin-bottom:10px"}
   Lastname
   %br
-  =text_field_tag :lastname,nil 
+  =text_field_tag :lastname,nil,placeholder:'Last Name' 
   %div{:style => "margin-bottom:10px"}
   Email
   %br
-  =text_field_tag :email,nil 
+  =text_field_tag :email,nil,placeholder:'Email'
   %div{:style => "margin-bottom:10px"}
   =submit_tag 'Select',class: 'btn btn-success'
 %br
