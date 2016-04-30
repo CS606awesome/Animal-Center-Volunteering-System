@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160420233732) do
+ActiveRecord::Schema.define(version: 20160430194954) do
 
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20160420233732) do
     t.boolean "need_accommodations",       default: false
     t.boolean "related_to_councilmember",  default: false
     t.boolean "is_current_worker",         default: false
+    t.string  "shirt_size"
   end
 
   create_table "admins", force: :cascade do |t|
