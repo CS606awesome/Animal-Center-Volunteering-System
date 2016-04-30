@@ -26,7 +26,6 @@
 %br
   
 = link_to 'Manage the qualified volunteer',managemore_path,class: 'btn btn-success'
-
 %table#accounts
  %table.table.table-striped
   %thead
@@ -46,6 +45,7 @@
     %th Country
     %th Zip Code
     %th Profile
+    %th Compose email
     %th Approve 
     %th Reject
   %tbody
@@ -66,6 +66,8 @@
     %td= account.country
     %td= account.zip 
     %td= link_to "profile", admincheckprofile_path(:id => account.id), :onclick=>"window.open(this.href, 'profile', 'height=800, width=800');return false;"
+    &nbsp;
+    %td= link_to "send email", send_gmail_path(:id => account.id), :onclick=>"window.open(this.href, 'send email', 'height=800, width=800');return false;"
     &nbsp;
     %td= link_to "Approve", :controller => "admins", :action =>"approve", :id => account.id
     &nbsp;

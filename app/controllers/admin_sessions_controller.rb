@@ -15,6 +15,7 @@ class AdminSessionsController < ApplicationController
   end
  
   def destroy
+    admin_log_out
     flash[:success] = "You have logout successfully!"
     redirect_to adminsignup_path
     

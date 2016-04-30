@@ -55,7 +55,8 @@ class AccountsController < ApplicationController
 
   
   def profiles 
-      if @account = Account.find(session[:id])
+      if logged_in 
+        @account = Account.find(session[:id])
      
       else
       redirect_to login_path
@@ -161,7 +162,7 @@ class AccountsController < ApplicationController
      #if @account.is_volunteering == nil || @account.is_volunteering == false
      #@account.update_attributes!(account_update_params)
 
-     if @account.status != true ||admin_logged_in
+     if @account.submit_bcheck == false#||admin_logged_in
      
         if(params[:account][:is_former_worker] == "1") 
           @account.user_formerworker ||= UserFormerworker.new   
@@ -228,12 +229,12 @@ class AccountsController < ApplicationController
     #    redirect_to profiles_path :id => @account.id
         redirect_to action: 'profiles'
         else
-        flash[:alert] = 'Your last application has been approved, you can not submit a new one until you complete this one.'
-        redirect_to application_path :id => @account.id
+        flash[:alert] = 'save changes failed!'
+        redirect_to profiles_path :id => @account.id
         end
      else
 
-         flash[:warning] = 'Your profile has been approved, no need to change it.'
+         flash[:warning] = 'Your profile is under processing, if you want to make any changes please contact our administrator!'
 
          redirect_to profiles_path
      end
@@ -255,8 +256,10 @@ class AccountsController < ApplicationController
           flash[:danger] = 'Submission is failed'  
           end
       else     
-          if @account.status != nil  
+          if @account.status == true  
           flash[:success] = 'You are approved, no need to bother our administrator right? LOL'# if have submitted, return to page and do nothing
+          elsif @account.status == false
+          flash[:success] = 'We are sorry that your profile is rejected, you can not submit again'  
           else
           flash[:info] = 'Your profile is under processing!'
           end
@@ -277,7 +280,7 @@ class AccountsController < ApplicationController
         @account = Account.find_by(email: params[:email])
         if @account
           session[:id]= @account.id
-          Mailer.welcome_email(@account).deliver_now
+          Mailer.reset_password_email(@account).deliver_now
           redirect_to check_your_email_path
         else
           flash.now[:danger] = 'Your email is not valid or it has not been registered, please try again!'
@@ -294,7 +297,7 @@ class AccountsController < ApplicationController
       @account = Account.find(session[:id])
      
        if (params[:account][:password] == params[:account][:password_confirmation])
-         if @account.update_columns(account_password_params)   
+         if @account.update(account_password_params)   
             flash[:success] = "You have reset your password successfully."
             redirect_to login_path
          else
