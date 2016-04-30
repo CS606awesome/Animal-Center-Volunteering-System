@@ -77,7 +77,7 @@ class AccountsController < ApplicationController
           #@account.update(:application_form_attributes =>{:available_time_end => params[:account][:application_form_attributes][:available_time_end]})
           redirect_to viewapplication_path
         else
-          flash[:my_errors] = @account.errors.full_messages;
+          flash[:warning] = @account.errors.full_messages;
           redirect_to application_path(:id => @account.id)
         end
       else
@@ -171,8 +171,8 @@ class AccountsController < ApplicationController
           if params[:account][:related_councilmember_attributes].nil?
             @account.related_councilmember ||= RelatedCouncilmember.new
           elsif params[:account][:related_councilmember_attributes][:name].nil?
-            flash[:notice] = 'Please check one CM'
-            flash[:my_errors] = ["council memeber name is blank"];
+            #flash[:notice] = 'Please check one CM'
+            flash[:warning] = ["council memeber name is blank"];
             redirect_to profiles_path :id => @account.id and return
           else
             @account.related_councilmember ||= RelatedCouncilmember.new
@@ -189,16 +189,7 @@ class AccountsController < ApplicationController
           @account.accommodation ||= Accommodation.new   
         end
      
-        #if @account.related_to_councilmember == true
-          #if params[:account][:related_councilmember_attributes][:name].nil?
-            #flash[:notice] = 'Please check one CM'
-            #flash[:my_errors] = ["council memeber name is blank"];
-            #redirect_to profiles_path :id => @account.id and return
-         # else
-          #  @account.related_councilmember.name = params[:account][:related_councilmember_attributes][:name].join(' ')
-         # end
-        #end
-        #@account.attributes = account_update_params
+        
         if @account.update(account_update_params) #unless destroyed?  #save(:validate => true)
      
         if(params[:account][:is_former_worker] == "0")
@@ -233,7 +224,7 @@ class AccountsController < ApplicationController
         
         else
         flash[:alert] = 'Your last application has been approved, you can not submit a new one until you complete this one.'
-        flash[:my_errors] = @account.errors.full_messages;
+        flash[:warning] = @account.errors.full_messages;
         redirect_to profiles_path :id => @account.id
         end
      else

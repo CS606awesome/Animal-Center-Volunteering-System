@@ -1,9 +1,9 @@
-<h1> Profile</h1>
-<% if flash[:notice] %>
-    <div class="notice"><strong><%= flash[:notice] %></strong></div>
+<h1> Profile Edit</h1>
+<% if flash[:info] %>
+    <div class="info"><strong><%= flash[:info] %></strong></div>
 <% end %>
 
-   <div id='@account'  style = "margin-top:10px">
+<div id='@account'  style = "margin-top:10px">
     <div class='left column' style = "margin-bottom:10px">
         <img src="http://www.ollarate.com/images/original/missing.jpg" alt="HTML5 Icon" style="width:320px;height:330px;">   
         <!-- option, need discussion -->
@@ -16,10 +16,10 @@
 
   <%= form_for @account do |f| %>
   <!-- **************************************************************************** -->
-        <% if flash[:my_errors] %>
+        <% if flash[:warning] %>
         <h2>Error:</h2>
         <ul>
-          <% flash[:my_errors].each do |m| %>
+          <% flash[:warning].each do |m| %>
             <li>
               <%= m %>
             </li>
@@ -38,23 +38,10 @@
       </p>
       <p>
           <%=f.label :DOB, 'Date of Birth'%>
-          <%= f.text_field :DOB, :value => @account.DOB, :id => 'datepicker' %>   <br />            <!-- why DOB is orange? -->
+          <%= f.text_field :DOB, :value => @account.DOB %>   <br />            <!-- why DOB is orange? -->
       </p>
       
       <p>
-          <strong>Home Phone:</strong>
-          <%= @account.homephone%>
-      </p>
-      <p>
-          <strong>Cell phone:</strong>
-          <%= @account.cellphone%>
-      </p>
-      <p>
-          <strong>Home Address:</strong><br />
-          Street:<%= @account.street%><br />
-          City:<%= @account.city %><br />
-          State:<%= @account.state %><br />
-
           <%=f.label :homephone, 'Home Phone'%>
           <%= f.text_field :homephone, :value => @account.homephone %><br />
       </p>
@@ -86,7 +73,7 @@
         <%= f.radio_button :is_former_worker, "1", :checked => @account.is_former_worker, :onclick=>"FWclickYes()" %> Yes<br />
         <%= f.radio_button :is_former_worker, "0", :checked => !@account.is_former_worker,:onclick=>"FWclickNo()"%> No<br />
       </p> 
-      <div class="hidden" id="FWcheckbox"> 
+      <div id="FWcheckbox"> 
         <%= f.fields_for  :user_formerworker do |uf| %>
             <!-- input type="text" name="CurrentDep" -->
             <%=uf.label :date_of_employment, 'Dates of Employment' %>
@@ -106,7 +93,7 @@
         <%= f.radio_button :is_current_worker, '1', :checked =>@account.is_current_worker, :onclick=>"CWclickYes()" %> Yes<br />
         <%= f.radio_button :is_current_worker, '0', :checked =>!@account.is_current_worker, :onclick=>"CWclickNo()" %> No<br />
     </p>
-    <div class="hidden" id="CWcheckbox"> 
+    <div  id="CWcheckbox"> 
     <%= f.fields_for  :current_worker do |cf| %>
             <!-- input type="text" name="CurrentDep" -->
             <%=cf.label :department, 'Department'%>
@@ -124,7 +111,7 @@
         <%= f.radio_button :related_to_councilmember, '1', :checked => @account.related_to_councilmember, :onclick=>"RCclickYes()" %> Yes<br />
         <%= f.radio_button :related_to_councilmember, '0', :checked =>!@account.related_to_councilmember, :onclick=>"RCclickNo()" %> No<br />
     </p>
-    <div class="hidden" id="RCcheckbox">  
+    <div  id="RCcheckbox">  
      <%= f.fields_for  :related_councilmember do |rf| %>
      <p>The City of Bryan (City) Charter prohibits certain relatives of City Councilmembers from being employed by or volunteering for the City. Please read the list below of current City Councilmembers and their spouses, and then answer the question below. </p>
             <!-- input type="text" name="CurrentDep" -->
@@ -132,7 +119,7 @@
             <p>
                 <%= rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Jason Bienski/).nil?)}, 'Jason Bienski / Tasha (Sherrill) Bienski', nil %>Jason Bienski / Tasha (Sherrill) Bienski<br />
                 <%= rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Al Saenz/).nil?)}, 'Al Saenz / Cindy (Johnson) Saenz', nil %>Al Saenz / Cindy (Johnson) Saenz<br />
-                <%= rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Rafael D. Peña III/).nil?)}, 'Rafael D. Peña III / Maraiah (Montelongo) Peña', nil %>Rafael D. Peña III / Maraiah (Montelongo) Peña<br />
+                <%= rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Rafael D. Peña III/).nil?)}, 'Rafael D. Peña III / Maraiah (Montelongo) Peña', nil %>Rafael D. Peña III / Maraiah (Montelongo) Peña  <br />
                 <%= rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Greg Owens/).nil?)}, 'Greg Owens / Julie (Tschatschula) Owens', nil %>Greg Owens / Julie (Tschatschula) Owens<br />
                 <%= rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Mike Southerland/).nil?)}, 'Mike Southerland / Tana (Boudreaux) Southerland', nil %>Mike Southerland / Tana (Boudreaux) Southerland<br />
                 <%= rf.check_box :name, {multiple: true, :checked => (!(@account.related_councilmember.name =~ /Ben Hardeman/).nil?)}, 'Ben Hardeman / Nancy (Pursell) Hardeman', nil %>Ben Hardeman / Nancy (Pursell) Hardeman<br />
@@ -157,7 +144,7 @@
         <%= f.radio_button :has_convictions, '1', :checked =>@account.has_convictions, :onclick=>"FCclickYes()" %> Yes<br />
         <%= f.radio_button :has_convictions, '0', :checked =>!@account.has_convictions, :onclick=>"FCclickNo()"  %> No<br />
     </p>  
-    <div class="hidden" id="FCcheckbox"> 
+    <div id="FCcheckbox"> 
     <%= f.fields_for  :former_criminal do |ff| %>
             <!-- input type="text" name="CurrentDep" -->
             <%=ff.label :date_of_conviction, 'Date of Conviction'%>
@@ -190,15 +177,15 @@
 
     <p><strong>6.Emergency contact</strong></p>
     
-        <%=f.label :emergency_contact_name, 'Emergency Contact Name',:style =>"width:220px"%>
+        <%=f.label :emergency_contact_name, 'Emergency Contact Name'%>
         <%= f.text_field :emergency_contact_name, :value => @account.emergency_contact_name %>
     <br><br>
     
-        <%=f.label :emergency_phone, 'Emergency Contact Phone',:style =>"width:220px"%>
+        <%=f.label :emergency_phone, 'Emergency Contact Phone'%>
         <%= f.text_field :emergency_phone, :value => @account.emergency_phone %>
         
     <br><br>
-        <%=f.label :emergency_phone_alternate, 'Emergency Contact Alt Phone',:style =>"width:220px"%>
+        <%=f.label :emergency_phone_alternate, 'Emergency Contact Alt Phone'%>
         <%= f.text_field :emergency_phone_alternate, :value => @account.emergency_phone_alternate %>
         
     <p>
@@ -207,7 +194,7 @@
         <%= f.radio_button :need_accommodations, '0', :checked =>!@account.need_accommodations, :onclick=>"NAclickNo()" %> No<br />
     </p>
     
-     <div class="hidden" id="NAcheckbox"> 
+     <div  id="NAcheckbox"> 
     <%= f.fields_for  :accommodation do |a| %>
         <%=a.label :accommodation_name, 'Write the accomodation you need below' %>
         <%=a.text_field :accommodation_name, :value => @account.accommodation.accommodation_name %>
@@ -216,23 +203,14 @@
         
    <br /><br /> 
         
-<<<<<<< HEAD:app/views/accounts/profiles.html.erb~~
-  <%= f.submit 'Save Changes',class: 'btn btn-success'%>    <!-- this is used to save change -->
-  
-  <% end %>
-  <br />
-  <%= button_to "Save and Submit for Approve", action: "save_and_submit", class: 'btn btn-success'%>
-  <%= f.submit 'Save Changes'%>    <!-- this is used to save change --><b>(save your profiles, and you can edit and save it again)</b>
-=======
   <%= f.submit 'Save Changes'%>    <!-- this is used to save change --><b>(save your profile, and you can edit and save it again)</b>
->>>>>>> yyhzy_application:app/views/accounts/profiles.html.erb
   
   <% end %>
   <br />
   <%= button_to "Submit for Approve", action: "save_and_submit" %> <b>(ATTENTION: please save before you submit, once you have submitted your profile and it has been approved, you can't change it anymore)</b>
 <br /><br />
 
- 
+
 <table>
     <tr>
         <tb>
