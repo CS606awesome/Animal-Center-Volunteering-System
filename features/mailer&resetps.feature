@@ -7,23 +7,23 @@ Feature: reset your password
 Background: accounts in database
    Given the following accounts exist:
    |id|email              |firstname|lastname |password|homephone |
-   |1 |670348828@qq.com   |Dongni   |Han      |123456  |9795714506|
+   |10 |670348828@qq.com   |Dongni   |Han      |123456  |9795714506|
 
 Scenario: forget your password
   Given I am on the login page 
-  And I follow "Forget your password"
+  And I follow "Forget Your Password"
   Then I should be on the input_your_email page 
-  And I should see "Please input your email"
-  And I fill in "email" with "670348828@qq.com" 
+  And I should see "Please Input Your Email"
+  And I fill in "Email" with "670348828@qq.com" 
   When I press "Reset" 
   Then I should be on the check_your_email page  
 
-Scenario: reset your password with email
-  Given I am on the reset_your_password page for "670348828@qq.com" 
-  And I type "654321" in "Create new password"
-  And I type "654321" in "Re-enter new password"
-  When I press "Continue"
-  Then I should be on the login page 
+#Scenario: reset your password with email
+#  Given I am on the reset_your_password page for "670348828@qq.com" 
+#  And I type "654321" in "Create New Password"
+#  And I type "654321" in "Re-enter New Password"
+#  When I press "Continue"
+#  Then I should be on the login page 
   
 
  
