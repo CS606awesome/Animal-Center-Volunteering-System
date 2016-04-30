@@ -219,7 +219,7 @@ class AccountsController < ApplicationController
           end
         end
 
-        flash[:notice] = 'Changes Saved!'
+        flash[:success] = 'Changes Saved!'
           
         redirect_to action: 'profiles'
         
@@ -227,7 +227,7 @@ class AccountsController < ApplicationController
 
         flash[:warning] = @account.errors.full_messages;
 
-        flash[:alert] = 'save changes failed!'
+        flash[:danger] = 'save changes failed!'
 
         redirect_to profiles_path #:id => @account.id
         end

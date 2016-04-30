@@ -1,7 +1,5 @@
 <h1> Profile Edit</h1>
-<% if flash[:info] %>
-    <div class="info"><strong><%= flash[:info] %></strong></div>
-<% end %>
+
 
 <div id='@account'  style = "margin-top:10px">
     <div class='left column' style = "margin-bottom:10px">
@@ -16,15 +14,7 @@
 
   <%= form_for @account do |f| %>
   <!-- **************************************************************************** -->
-        <% if flash[:warning] %>
-        <h2>Error:</h2>
-        <ul>
-          <% flash[:warning].each do |m| %>
-            <li>
-              <%= m %>
-            </li>
-          <% end %>
-        <% end %>
+      
         
 
       <div class="right column"  style = "margin-bottom:10px">
