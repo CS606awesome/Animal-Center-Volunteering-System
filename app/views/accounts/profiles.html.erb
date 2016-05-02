@@ -35,6 +35,8 @@
           <%= f.text_field :middlename, :value => @account.middlename %><br />
           <%=f.label :lastname, 'Last Name'%>
           <%= f.text_field :lastname, :value => @account.lastname %><br />
+          <%=f.label :maidenname, 'Maiden Name'%>
+          <%= f.text_field :maidenname, :value => @account.maidenname %><br />
       </p>
       <p>
           <%=f.label :DOB, 'Date of Birth'%>
@@ -62,10 +64,10 @@
           <%=f.label :country, 'Country'%>
           <%= f.text_field :country, :value => @account.country %><br />
       </p>
+      <p><%=f.label :shirt_size, 'Your Shirt Size (We may issue you a volunteer shirt)'%>
+          <%= f.text_field :shirt_size, :value => @account.shirt_size %><br />
+      </p>
     </div>
-  
-  
-      
   
   
       <p>
@@ -127,10 +129,7 @@
                 
             </p>
 
-            <!--=rf.label :name, 'The council member\'s name' -->
-            <!--= rf.text_field :name, :value => @account.related_councilmember.name -->
-            
-            
+           
             <%=rf.label :relationship, 'Your Relationship to Them' %>
             <%=rf.text_field :relationship, :value => @account.related_councilmember.relationship %>
             <br />

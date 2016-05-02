@@ -36,6 +36,11 @@ module NavigationHelpers
     when /^log in page$/ then login_path
     when /^admin login page$/ then adminsignup_path
     when /^admin manage page$/ then admin_path(Admin.find_by_email(email_name))
+    when /^profiles page$/ then
+      #@account = Account.find_by_email(email_name)
+      #log_in(@account)
+      profiles_path(:id => Account.find_by_email(email_name).id)
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
