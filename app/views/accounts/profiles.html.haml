@@ -10,12 +10,6 @@
 / p>(the information with * is required)</p
 = form_for @account do |f|
   / ****************************************************************************
-  - if flash[:warning]
-    %h2 Error:
-    %ul
-      - flash[:warning].each do |m|
-        %li
-          = m
   .right.column{:style => "margin-bottom:10px"}
     %p
       = f.label :firstname, 'First Name', :style => "width:150px"

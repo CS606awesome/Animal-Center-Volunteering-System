@@ -78,7 +78,7 @@ class AccountsController < ApplicationController
           #@account.update(:application_form_attributes =>{:available_time_end => params[:account][:application_form_attributes][:available_time_end]})
           redirect_to viewapplication_path
         else
-          flash[:warning] = @account.errors.full_messages;
+          flash[:danger] = @account.errors.full_messages;
           redirect_to application_path(:id => @account.id)
         end
       else
@@ -258,7 +258,7 @@ class AccountsController < ApplicationController
           if @account.status == true  
           flash[:success] = 'You are approved, no need to bother our administrator right? LOL'# if have submitted, return to page and do nothing
           elsif @account.status == false
-          flash[:success] = 'We are sorry that your profile is rejected, you can not submit again'  
+          flash[:warning] = 'We are sorry that your profile is rejected, you can not submit again'  
           else
           flash[:info] = 'Your profile is under processing!'
           end
@@ -307,7 +307,7 @@ class AccountsController < ApplicationController
             flash[:success] = "You have reset your password successfully."
             redirect_to login_path
          else
-           flash[:warning] = "passwords are not satisfied the requirement."
+           flash[:warning] = "Passwords are not satisfied the requirement."
            flash[:info] = "Your password must be 6-20 characters and cannot be blank."
            render 'reset_your_password'
          end
