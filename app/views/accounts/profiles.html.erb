@@ -16,15 +16,6 @@
 
   <%= form_for @account do |f| %>
   <!-- **************************************************************************** -->
-        <% if flash[:warning] %>
-        <h2>Error:</h2>
-        <ul>
-          <% flash[:warning].each do |m| %>
-            <li>
-              <%= m %>
-            </li>
-          <% end %>
-        <% end %>
         
 
       <div class="right column"  style = "margin-bottom:10px">
@@ -71,13 +62,14 @@
   
   
       <p>
-       <b id = "checkboxlink">1.Are you a former worker of the City of Bryan?</b> <b>(If you are still working for COB, please check no)</b><br />    
+       <b id = "checkboxlink">1.Are you a former worker of the City of Bryan?</b> <b>(If you are still working for COB, please check no)</b><br />
         <%= f.radio_button :is_former_worker, "1", :checked => @account.is_former_worker, :onclick=>"FWclickYes()" %> Yes<br />
         <%= f.radio_button :is_former_worker, "0", :checked => !@account.is_former_worker,:onclick=>"FWclickNo()"%> No<br />
       </p> 
       <div id="FWcheckbox"> 
         <%= f.fields_for  :user_formerworker do |uf| %>
             <!-- input type="text" name="CurrentDep" -->
+            <b>(if you want to click no, you still need to fill in all the blanks first)</b><br />
             <%=uf.label :date_of_employment, 'Dates of Employment' %>
             <%= uf.text_field :date_of_employment, :value => @account.user_formerworker.date_of_employment %>
             <br />
@@ -97,6 +89,7 @@
     </p>
     <div  id="CWcheckbox"> 
     <%= f.fields_for  :current_worker do |cf| %>
+            <b>(if you want to click no, you still need to fill in all the blanks first)</b><br />
             <!-- input type="text" name="CurrentDep" -->
             <%=cf.label :department, 'Department'%>
             <%= cf.text_field :department, :value => @account.current_worker.department %>
@@ -145,6 +138,7 @@
     </p>  
     <div id="FCcheckbox"> 
     <%= f.fields_for  :former_criminal do |ff| %>
+            <b>(if you want to click no, you still need to fill in all the blanks first)</b><br />
             <!-- input type="text" name="CurrentDep" -->
             <%=ff.label :date_of_conviction, 'Date of Conviction'%>
             <%= ff.text_field :date_of_conviction, :value => @account.former_criminal.date_of_conviction %>
