@@ -17,7 +17,7 @@
 //= require_tree .
 //= require bootstrap-datepicker
 //= require jquery-ui
-
+//= require jquery.autosize
     function FWclickYes()
     {
         $('#FWcheckbox').show();
@@ -68,5 +68,6 @@
     });
      });
 
-     
-     
+$(document).ready(function(){
+  $('textarea').autosize();
+});
