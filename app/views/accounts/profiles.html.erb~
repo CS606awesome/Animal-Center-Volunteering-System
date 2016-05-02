@@ -28,7 +28,7 @@
       </p>
       <p>
           <%=f.label :DOB, 'Date of Birth'%>
-          <%= f.text_field :DOB, :value => @account.DOB %>   <br />            <!-- why DOB is orange? -->
+          <%= f.text_field :DOB,:id=>'datepicker', :value => @account.DOB %>   <br />            <!-- why DOB is orange? -->
       </p>
       
       <p>
