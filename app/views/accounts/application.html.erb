@@ -64,11 +64,13 @@ I understand that the City has the right to terminate my services as volunteer a
             <br />
             <br />
             
+            <div class='col-sm-6'>
+             <input type='text' class="form-control" id='datetimepicker' />
+            </div>
             <p>
                 <strong>What is your available time?</strong>
             </p>
             <%= af.label :available_time_begin, 'From (Start Time)'%>
-            <%= af.text_field :available_time_begin, :value => @account.application_form.available_time_begin %>
             <br />
             Format: YYYY-MM-DD HH-MINMIN-SS
             <br />
@@ -77,7 +79,6 @@ I understand that the City has the right to terminate my services as volunteer a
             <br />
             Format: YYYY-MM-DD HH-MINMIN-SS
             <br />
-        
         <% end %>
         
         <%= f.fields_for :criminal_application do |cf| %>
