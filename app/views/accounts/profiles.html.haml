@@ -49,8 +49,7 @@
       = f.text_field :country, :value => @account.country, :size => "25"
     %P 
       =f.label :shirt_size, 'Your Shirt Size (We may issue you a volunteer shirt)'
-      = f.text_field :shirt_size, :value => @account.shirt_size 
-      From XS to XXXL
+      = f.text_field :shirt_size, :value => @account.shirt_size,:placeholder=>"From XS to XXXL"
     %br
   %p
     %b#checkboxlink 1.Are you a former worker of the City of Bryan?
@@ -66,7 +65,7 @@
     = f.fields_for  :user_formerworker do |uf|
       / input type="text" name="CurrentDep"
       = uf.label :date_of_employment, 'Dates of Employment',:style => "width:180px"
-      = uf.text_field :date_of_employment, :value => @account.user_formerworker.date_of_employment
+      = uf.text_field :date_of_employment, :value => @account.user_formerworker.date_of_employment,:placeholder=>"YYYY-MM-DD"
       %p
       = uf.label :reason_for_leaving, 'Reasons for Leaving',:style => "width:180px"
       = uf.text_field :reason_for_leaving, :value => @account.user_formerworker.reason_for_leaving
@@ -144,7 +143,7 @@
     = f.fields_for  :former_criminal do |ff|
       / input type="text" name="CurrentDep"
       = ff.label :date_of_conviction, 'Date of Conviction',:style => "width:140px"
-      = ff.text_field :date_of_conviction, :value => @account.former_criminal.date_of_conviction
+      = ff.text_field :date_of_conviction, :value => @account.former_criminal.date_of_conviction,:placeholder=>"YYYY-MM-DD"
       %p
       = ff.label :nature_of_offense, 'Nature of Offense',:style => "width:140px"
       = ff.text_field :nature_of_offense, :value => @account.former_criminal.nature_of_offense

@@ -6,6 +6,6 @@
  =@account.lastname
  
 =form_for send_gmail_path, :method => :post do
- =text_area_tag :body,nil, placeholder: 'compose your email here',rows: 10, cols: 50, id: 'mail_composer'
+ =text_area_tag :body,nil, placeholder: 'Compose your email here',rows: 10, cols: 50, id: 'mail_composer'
  %br
- =submit_tag 'send' 
+ =submit_tag 'Send', class: 'btn btn-success'
