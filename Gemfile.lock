@@ -148,6 +148,7 @@ GEM
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     oauth (0.5.1)
+    pg (0.18.4)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -272,6 +273,7 @@ DEPENDENCIES
   jquery-ui-rails
   launchy
   momentjs-rails (>= 2.9.0)
+  pg
   rack_session_access
   rails (= 4.2.1)
   rerun
