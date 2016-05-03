@@ -78,7 +78,7 @@ class AccountsController < ApplicationController
           #@account.update(:application_form_attributes =>{:available_time_end => params[:account][:application_form_attributes][:available_time_end]})
           redirect_to viewapplication_path
         else
-          flash[:warning] = @account.errors.full_messages;
+          flash[:danger] = @account.errors.full_messages;
           redirect_to application_path(:id => @account.id)
         end
       else
@@ -174,7 +174,7 @@ class AccountsController < ApplicationController
           elsif params[:account][:related_councilmember_attributes][:name].nil?
             #flash[:notice] = 'Please check one CM'
             flash[:warning] = ["council memeber name is blank"];
-            redirect_to profiles_path :id => @account.id and return
+            redirect_to profiles_path  and return #:id => @account.id
           else
             @account.related_councilmember ||= RelatedCouncilmember.new
             @account.related_councilmember.name = params[:account][:related_councilmember_attributes][:name].join(' ')
@@ -219,7 +219,7 @@ class AccountsController < ApplicationController
           end
         end
 
-        flash[:notice] = 'Changes Saved!'
+        flash[:success] = 'Changes Saved!'
           
         redirect_to action: 'profiles'
         
@@ -227,9 +227,9 @@ class AccountsController < ApplicationController
 
         flash[:warning] = @account.errors.full_messages;
 
-        flash[:alert] = 'save changes failed!'
+        flash[:danger] = 'save changes failed!'
 
-        redirect_to profiles_path :id => @account.id
+        redirect_to profiles_path #:id => @account.id
         end
      else
 
@@ -258,7 +258,7 @@ class AccountsController < ApplicationController
           if @account.status == true  
           flash[:success] = 'You are approved, no need to bother our administrator right? LOL'# if have submitted, return to page and do nothing
           elsif @account.status == false
-          flash[:success] = 'We are sorry that your profile is rejected, you can not submit again'  
+          flash[:warning] = 'We are sorry that your profile is rejected, you can not submit again'  
           else
           flash[:info] = 'Your profile is under processing!'
           end
@@ -281,11 +281,18 @@ class AccountsController < ApplicationController
           session[:id]= @account.id
           Mailer.reset_password_email(@account).deliver_now
           redirect_to check_your_email_path
+          flash[:success] = "Email has been resent, please check it."
         else
           flash.now[:danger] = 'Your email is not valid or it has not been registered, please try again!'
           render 'input_your_email'
         end
       end
+  end
+  
+  def resend_your_email
+     @account = Account.find(session[:id])
+     Mailer.reset_password_email(@account).deliver_now
+     flash[:success] = "Email has been resent, please check it."
   end
   
   def reset_your_password
@@ -300,7 +307,7 @@ class AccountsController < ApplicationController
             flash[:success] = "You have reset your password successfully."
             redirect_to login_path
          else
-           flash[:warning] = "passwords are not satisfied the requirement."
+           flash[:warning] = "Passwords are not satisfied the requirement."
            flash[:info] = "Your password must be 6-20 characters and cannot be blank."
            render 'reset_your_password'
          end

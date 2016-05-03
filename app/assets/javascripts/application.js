@@ -17,7 +17,8 @@
 //= require_tree .
 //= require bootstrap-datepicker
 //= require jquery-ui
-
+//= require jquery.autosize
+//= require moment
     function FWclickYes()
     {
         $('#FWcheckbox').show();
@@ -66,7 +67,9 @@
       changeMonth: true,
       changeYear: true
     });
+     $('#datetimepicker').datetimepicker();
      });
 
-     
-     
+$(document).ready(function(){
+  $('textarea').autosize();
+});

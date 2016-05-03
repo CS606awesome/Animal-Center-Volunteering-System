@@ -16,7 +16,8 @@ module NavigationHelpers
   if page_name =~ /the (.*) for "(.*)"/
       email_name = $2.to_s
       page_name  = $1.to_s
-  end  
+  end 
+    
     case page_name
     
     when /^input_your_email page$/
@@ -26,11 +27,10 @@ module NavigationHelpers
     when /^check_your_email page$/
        check_your_email_path
   
-   
-    when /^reset_your_password page$/ 
-        id = Account.find_by_email(email_name).id
-        page.set_rack_session(id: id)
-        reset_your_password_path
+  # when /^reset_your_password page$/ 
+  #      id = Account.find_by_email(email_name).id
+  #      page.set_rack_session(id: id)
+  #      reset_your_password_path
 
     when /^sign up page$/ then signup_path
     when /^log in page$/ then login_path
