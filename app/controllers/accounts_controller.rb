@@ -227,7 +227,7 @@ class AccountsController < ApplicationController
 
         flash[:warning] = @account.errors.full_messages;
 
-        flash[:danger] = 'save changes failed!'
+        flash[:danger] = 'Save changes failed!'
 
         redirect_to profiles_path #:id => @account.id
         end
@@ -299,13 +299,26 @@ class AccountsController < ApplicationController
      @account = Account.find(session[:id])
   end
    
+  def validate_password(password)
+     if password.length<6 || password.length>20
+      return nil
+    end
+    return 1
+  end
+  
    def save_password_change
       @account = Account.find(session[:id])
      
        if (params[:account][:password] == params[:account][:password_confirmation])
-         if @account.update(account_password_params)   
+          if validate_password(params[:account][:password])
+             @account.password = params[:account][:password]
+             if @account.save
             flash[:success] = "You have reset your password successfully."
             redirect_to login_path
+             else 
+            flash[:warning] = "Sorry, your password is not saved successfully, please input again!"
+            render 'reset_your_password'
+              end
          else
            flash[:warning] = "Passwords are not satisfied the requirement."
            flash[:info] = "Your password must be 6-20 characters and cannot be blank."
@@ -318,9 +331,7 @@ class AccountsController < ApplicationController
    end
 
 private
-  def account_password_params
-     params.require(:account).permit(:password, :password_confirmation)
-  end
+  
   def account_params
 
    params.require(:account).permit(:gender, :email,:password, :password_confirmation,:firstname,:lastname, :middlename,:maidenname,:country,:state,:city,:street,:zip,:homephone,:cellphone,:DOB)
