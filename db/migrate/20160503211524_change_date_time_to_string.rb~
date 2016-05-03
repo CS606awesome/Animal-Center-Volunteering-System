@@ -1,0 +1,6 @@
+class ChangeDateTimeToString < ActiveRecord::Migration
+  def change
+    change_column :accounts,:available_time_begin,:string
+    change_column :accounts,:available_time_end,:string
+  end
+end
