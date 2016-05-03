@@ -56,21 +56,15 @@ validates :email,:firstname,:lastname,:homephone,
 #validation of change profile!
  
   INVALID_NAME_REGEX = /[^a-zA-Z     ]/
-  validates :firstname,:lastname, :emergency_contact_name, :middlename, 
+  validates :emergency_contact_name, :middlename, 
   length: { maximum: 20 },
   format: { without: INVALID_NAME_REGEX }
   #validates :unique email                                  
-  validates  :email,
-  uniqueness: { case_sensitive: true, on: [:update] }
   #####################################
   #validates :number validator 
-  INVALID_NUMBER_REGEX = /[^0-9     ]/
-  validates :emergency_phone, :emergency_phone_alternate,
-  length: { maximum: 20 },
-  format: { without: INVALID_NUMBER_REGEX }
 
   INVALID_NUMBER_REGEX = /[^0-9-]/ 
-  validates :homephone,
+  validates :homephone, :cellphone, :emergency_phone, :emergency_phone_alternate,
   length: { is: 12 },
   format: { without: INVALID_NUMBER_REGEX}
 
