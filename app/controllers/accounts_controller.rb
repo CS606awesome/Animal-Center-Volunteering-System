@@ -46,6 +46,12 @@ class AccountsController < ApplicationController
       end
   end
   
+  def correct_DOB_format_update(account)
+     if /^((0[1-9])|(1[0-2]))\/((0[1-9])|(1[0-9])|(2[0-9])|(3[0-1]))\/(\d{4})$/.match(account[:DOB])
+        account[:DOB] = "#{$9}-#{$1}-#{$4}"
+     end
+  end
+  
   #render the login page
   def show
     flash[:success] = 'Congradulations!now go ahead and login'  
@@ -157,10 +163,10 @@ class AccountsController < ApplicationController
   def update
 
 
-     @account = Account.find(params[:id])
+     @account = Account.find(session[:id])
+      
 
-
-     if @account.submit_bcheck == false#||admin_logged_in
+     if @account.submit_bcheck == false||admin_logged_in
      
         if(params[:account][:is_former_worker] == "1") 
           @account.user_formerworker ||= UserFormerworker.new  
@@ -189,10 +195,28 @@ class AccountsController < ApplicationController
         if(params[:account][:need_accommodations] == "1") 
           @account.accommodation ||= Accommodation.new   
         end
-     
         
+        correct_DOB_format_update(params[:account])
+        
+        if params[:account][:homephone].gsub(/\D/, '').length == 10   #change homephone format to xxx-xxx-xxxx
+         params[:account][:homephone] = params[:account][:homephone].gsub(/\D/, '').insert(3, '-').insert(7, '-')
+        end
+        
+        if params[:account][:emergency_phone].gsub(/\D/, '').length == 10   #change homephone format to xxx-xxx-xxxx
+         params[:account][:emergency_phone] = params[:account][:emergency_phone].gsub(/\D/, '').insert(3, '-').insert(7, '-')
+        end
+        
+        if params[:account][:emergency_phone_alternate].gsub(/\D/, '').length == 10   #change homephone format to xxx-xxx-xxxx
+         params[:account][:emergency_phone_alternate] = params[:account][:emergency_phone_alternate].gsub(/\D/, '').insert(3, '-').insert(7, '-')
+        end
+
+        if params[:account][:cellphone].gsub(/\D/, '').length == 10   #change homephone format to xxx-xxx-xxxx
+         params[:account][:cellphone] = params[:account][:cellphone].gsub(/\D/, '').insert(3, '-').insert(7, '-')
+        end
+    
+    
         if @account.update(account_update_params) #unless destroyed?  #save(:validate => true)
-     
+         
         if(params[:account][:is_former_worker] == "0")
             if(@account.user_formerworker != nil)
                 @account.user_formerworker.destroy
@@ -218,6 +242,7 @@ class AccountsController < ApplicationController
               @account.accommodation.destroy
           end
         end
+       
 
         flash[:success] = 'Changes Saved!'
           
