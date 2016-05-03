@@ -158,7 +158,7 @@ class AccountsController < ApplicationController
 
 
      @account = Account.find(params[:id])
-
+     @my_update_hash = account_update_params
 
      if @account.submit_bcheck == false#||admin_logged_in
      
@@ -167,7 +167,13 @@ class AccountsController < ApplicationController
         else
           @account.user_formerworker ||= UserFormerworker.new 
           @account.update(:is_former_worker => "0")
+          if params[:account].has_key?(:user_formerworker_attributes)
+              @my_update_hash[:user_formerworker_attributes][:date_of_employment] = "1999-3-8"
+              @my_update_hash[:user_formerworker_attributes][:reason_for_leaving] = "none" 
+              @my_update_hash[:user_formerworker_attributes][:position_or_department] = "none"
+          end
         end
+        
         if(params[:account][:related_to_councilmember] == "1")
           if params[:account][:related_councilmember_attributes].nil?
             @account.related_councilmember ||= RelatedCouncilmember.new
@@ -179,19 +185,47 @@ class AccountsController < ApplicationController
             @account.related_councilmember ||= RelatedCouncilmember.new
             @account.related_councilmember.name = params[:account][:related_councilmember_attributes][:name].join(' ')
           end
+        else
+          if params[:account].has_key?(:related_councilmember_attributes)
+              @my_update_hash[:related_councilmember_attributes][:relationship] = "none"
+              @my_update_hash[:related_councilmember_attributes][:name] = "none"
+          end
         end
+        
         if(params[:account][:is_current_worker] == "1") 
-          @account.current_worker ||= CurrentWorker.new   
+          @account.current_worker ||= CurrentWorker.new
+        else
+          @account.current_worker ||= CurrentWorker.new
+          if params[:account].has_key?(:current_worker_attributes)
+              @my_update_hash[:current_worker_attributes][:department] = "none"
+              @my_update_hash[:current_worker_attributes][:name] = "none" 
+          end
         end
+        
         if(params[:account][:has_convictions] == "1") 
-          @account.former_criminal ||= FormerCriminal.new   
+          @account.former_criminal ||= FormerCriminal.new
+        else
+          @account.former_criminal ||= FormerCriminal.new
+          if params[:account].has_key?(:former_criminal_attributes)
+              @my_update_hash[:former_criminal_attributes][:date_of_conviction] = "1991-1-1"
+              @my_update_hash[:former_criminal_attributes][:nature_of_offense] = "none" 
+              @my_update_hash[:former_criminal_attributes][:name_of_court] = "none"
+              @my_update_hash[:former_criminal_attributes][:disposition_of_case] = "none" 
+              @my_update_hash[:former_criminal_attributes][:former_crime] = "none"
+          end
         end
+        
         if(params[:account][:need_accommodations] == "1") 
-          @account.accommodation ||= Accommodation.new   
+          @account.accommodation ||= Accommodation.new
+        else
+          @account.accommodation ||= Accommodation.new
+          if params[:account].has_key?(:accommodation_attributes)
+              @my_update_hash[:accommodation_attributes][:accommodation_name] = "none"
+          end
         end
      
         
-        if @account.update(account_update_params) #unless destroyed?  #save(:validate => true)
+        if @account.update(@my_update_hash) #(account_update_params) #unless destroyed?  #save(:validate => true)
      
         if(params[:account][:is_former_worker] == "0")
             if(@account.user_formerworker != nil)
