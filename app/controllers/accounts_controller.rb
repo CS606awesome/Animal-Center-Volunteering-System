@@ -363,7 +363,7 @@ private
   end
   
   def account_update_params
-   params.require(:account).permit(:password, :password_confirmation,:is_former_worker,:is_current_worker, :emergency_contact_name,
+   params.require(:account).permit(:password, :password_confirmation,:is_former_worker,:shirt_size,:is_current_worker, :emergency_contact_name,
                                   :emergency_phone,:emergency_phone_alternate,:related_to_councilmember,
                                   :has_convictions, :need_accommodations, :is_volunteering,  :is_student,
                                   :firstname, :lastname, :DOB, :homephone, :cellphone, :street, :city, :state, :zip,
