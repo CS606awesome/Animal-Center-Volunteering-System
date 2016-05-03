@@ -324,7 +324,6 @@ class AccountsController < ApplicationController
      @account = Account.find(session[:id])
   end
    
-
    def validate_password(password)
      if password.length<6 || password.length>20
       return nil
