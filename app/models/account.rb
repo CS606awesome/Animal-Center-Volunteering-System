@@ -76,6 +76,11 @@ validates :email,:firstname,:lastname,:homephone,
 #validates date of birth
   validates_format_of :DOB, :with => /\d{4}-\d{2}-\d{2}/, :message => "date must be in the following format: mm/dd/yyyy"
 
+  VALID_SIZE = %w(XS S M L XL XXL)
+  validates :shirt_size,
+  inclusion: { in: VALID_SIZE}
+  
+ # validates_inclusion_of :shirt_size, :in => VALID_SIZE, :on => :update
    
 end
 
