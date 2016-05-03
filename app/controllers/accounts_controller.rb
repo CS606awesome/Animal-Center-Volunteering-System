@@ -358,11 +358,7 @@ class AccountsController < ApplicationController
           render 'reset_your_password'
        end
    end
-
    
-   
-   
-
 private
   
   def account_params
