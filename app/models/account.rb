@@ -64,8 +64,13 @@ validates :email,:firstname,:lastname,:homephone,
   #validates :number validator 
 
   INVALID_NUMBER_REGEX = /[^0-9-]/ 
-  validates :homephone, :cellphone, :emergency_phone, :emergency_phone_alternate,
+  validates :homephone, :cellphone, 
   length: { is: 12 },
+  format: { without: INVALID_NUMBER_REGEX}
+  
+   INVALID_NUMBER_REGEX = /[^0-9-]/ 
+  validates :emergency_phone, :emergency_phone_alternate,
+  length: { maximum: 20 },
   format: { without: INVALID_NUMBER_REGEX}
 
 #validates date of birth
