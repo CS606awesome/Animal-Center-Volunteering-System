@@ -84,9 +84,9 @@ class AdminsController < ApplicationController
     body "#{body}"
    end
    if email.deliver!
-     flash[:notice] = "deliver successful!"
+     flash[:success] = "Deliver successful!"
    else
-      flash[:notice] = 'deliver failed!'  
+      flash[:success] = 'Deliver failed!'  
    end
    session[:sended] = 1
    redirect_to send_gmail_path, :method =>'get'
@@ -98,7 +98,7 @@ class AdminsController < ApplicationController
       session[:id] = params[:id]
       redirect_to viewapplication_path
     else
-      flash[:notice] = "please log in at first!"
+      flash[:info] = "Please log in at first!"
       redirect_to adminlogin_path
     end
     

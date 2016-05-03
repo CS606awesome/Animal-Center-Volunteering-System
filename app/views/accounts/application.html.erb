@@ -62,21 +62,17 @@ I understand that the City has the right to terminate my services as volunteer a
             <= af.text_field :interested_areas, :value => @account.application_form.interested_areas -->
 
             <br />
-            <br />
             
             <p>
                 <strong>What is your available time?</strong>
             </p>
-
             <%= af.label :available_time_begin, 'From (Start Time)', :style => "width: 140px"%> 
-            <%= af.text_field :available_time_begin, :value => @account.application_form.available_time_begin %>
+            <%= af.text_field :available_time_begin, :value => @account.application_form.available_time_begin,:size=>25,:placeholder=>"YYYY-MM-DD HH:MM:SS" %>
             <br />
-            Format: YYYY-MM-DD HH:MM:SS
             <br />
             <%= af.label :available_time_end, 'To (End Time)', :style => "width: 140px"%>
-            <%= af.text_field :available_time_end, :value => @account.application_form.available_time_end %>
+            <%= af.text_field :available_time_end, :value => @account.application_form.available_time_end,:size=>25,:placeholder=>"YYYY-MM-DD HH:MM:SS" %>
             <br />
-            Format: YYYY-MM-DD HH:MM:SS
             <br />
         <% end %>
         
@@ -84,7 +80,7 @@ I understand that the City has the right to terminate my services as volunteer a
             <p>
                 <strong>If you are a criminal, please fill the blanks below.</strong>
             </p> 
-            <%= cf.label :mandatory_hours, 'Mandatory Hours'%>
+            <%= cf.label :mandatory_hours, 'Mandatory Hours', :style => "width: 140px"%>
             <%= cf.text_field :mandatory_hours, :value => @account.criminal_application.mandatory_hours %>
             <br />
             <br />
@@ -102,8 +98,8 @@ I understand that the City has the right to terminate my services as volunteer a
             <p>
                 <strong>If you are a student completing hours organization, please fill the blanks below.</strong>
             </p>
-            <%= sf.label :student_program, 'What is the program that requires you to be volunteer'%>
-            <%= sf.text_field :student_program, :value => @account.student_application.student_program %>
+            <%= sf.label :student_program, 'What is the program that requires you to be volunteer', :style => "width: 400px"%>
+            <%= sf.text_field :student_program, :value => @account.student_application.student_program, :size=>27 %>
             <br />
             <br />
             <!--%= sf.label :required_time, 'Required Time'%>
@@ -111,13 +107,12 @@ I understand that the City has the right to terminate my services as volunteer a
             <br />
             <br />
             -->
-            <%= sf.label :required_area, 'Required Area'%>
+            <%= sf.label :required_area, 'Required Area', :style => "width: 120px"%>
             <%= sf.text_field :required_area, :value => @account.student_application.required_area %>
             <br />
             <br />
-            <%= sf.label :deadline, 'Deadline'%>
-            <%= sf.text_field :deadline, :value => @account.student_application.deadline %>
-            <br />
+            <%= sf.label :deadline, 'Deadline', :style => "width: 120px"%>
+            <%= sf.text_field :deadline, :value => @account.student_application.deadline,:placeholder => "YYYY-MM-DD" %>
             <br />
         <% end %>
         
@@ -125,10 +120,8 @@ I understand that the City has the right to terminate my services as volunteer a
             <p>
                 <strong>If you are a minor(younger than 18 years), please fill in the blanks below.</strong>
             </p>
-            <%= mf.label :parent_signature, 'Please ask your guardian to sign electronically here'%>
-            <%= mf.text_field :parent_signature, :value => @account.minor_application.parent_signature %>
-            <br />
-            <br />
+            <%= mf.label :parent_signature, 'Please ask your guardian to sign electronically here', :style => "width: 400px"%>
+            <%= mf.text_field :parent_signature, :value => @account.minor_application.parent_signature, :size=>27%>
             <br />
             <br />
         <% end %>
