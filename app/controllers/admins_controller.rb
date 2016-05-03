@@ -30,7 +30,7 @@ class AdminsController < ApplicationController
       redirect_to adminlogin_path
     else  
     ##find accounts who has already submitted the applications  
-    @accounts = Account.where('submit_bcheck =?', 't')
+    @accounts = Account.where('submit_bcheck =?', true)
    
     agemin = params[:agemin].to_i
     agemax = params[:agemax].to_i
@@ -89,7 +89,7 @@ class AdminsController < ApplicationController
       flash[:notice] = 'deliver failed!'  
    end
    session[:sended] = 1
-   redirect_to send_gmail_path, :method=>'get'
+   redirect_to send_gmail_path, :method =>'get'
   end
   
   ######################check profile
@@ -110,7 +110,7 @@ class AdminsController < ApplicationController
    if !admin_logged_in
       redirect_to adminlogin_path
    else  
-    @accounts = Account.where('is_volunteering = ?', 't')
+    @accounts = Account.where('is_volunteering = ?', true)
     firstname = params[:firstname].to_s
     lastname = params[:lastname].to_s
     email = params[:email].to_s

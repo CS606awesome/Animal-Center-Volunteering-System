@@ -74,7 +74,7 @@ class AccountsController < ApplicationController
       @account = Account.find(session[:id])
 
       #@account.application_form.interested_areas = params[:account][:application_form_attributes][:interested_areas].join(' ')
-      if @account.update(:is_volunteering=>'t') #&& @account.is_volunteering == false
+      if @account.update(:is_volunteering=>true) #&& @account.is_volunteering == false
        
         if @account.update(account_update_params)
           @account.update(:application_form_attributes =>{:available_time_end => params[:account][:application_form_attributes][:available_time_end],:available_time_begin => params[:account][:application_form_attributes][:available_time_begin],:signature => params[:account][:application_form_attributes][:signature],:interested_areas => params[:account][:application_form_attributes][:interested_areas].join(' ')})
