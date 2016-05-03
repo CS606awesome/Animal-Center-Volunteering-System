@@ -14,7 +14,7 @@
 
   <%= form_for @account do |f| %>
   <!-- **************************************************************************** -->
-      
+
         
 
       <div class="right column"  style = "margin-bottom:10px">
@@ -25,10 +25,12 @@
           <%= f.text_field :middlename, :value => @account.middlename %><br />
           <%=f.label :lastname, 'Last Name'%>
           <%= f.text_field :lastname, :value => @account.lastname %><br />
+          <%=f.label :maidenname, 'Maiden Name'%>
+          <%= f.text_field :maidenname, :value => @account.maidenname %><br />
       </p>
       <p>
           <%=f.label :DOB, 'Date of Birth'%>
-          <%= f.text_field :DOB, :value => @account.DOB %>   <br />            <!-- why DOB is orange? -->
+          <%= f.text_field :DOB,:id=>'datepicker', :value => @account.DOB %>   <br />            <!-- why DOB is orange? -->
       </p>
       
       <p>
@@ -52,20 +54,21 @@
           <%=f.label :country, 'Country'%>
           <%= f.text_field :country, :value => @account.country %><br />
       </p>
+      <p><%=f.label :shirt_size, 'Your Shirt Size (We may issue you a volunteer shirt)'%>
+          <%= f.text_field :shirt_size, :value => @account.shirt_size %><br />
+      </p>
     </div>
   
   
-      
-  
-  
       <p>
-       <b id = "checkboxlink">1.Are you a former worker of the City of Bryan?</b> <b>(If you are still working for COB, please check no)</b><br />    
+       <b id = "checkboxlink">1.Are you a former worker of the City of Bryan?</b> <b>(If you are still working for COB, please check no)</b><br />
         <%= f.radio_button :is_former_worker, "1", :checked => @account.is_former_worker, :onclick=>"FWclickYes()" %> Yes<br />
         <%= f.radio_button :is_former_worker, "0", :checked => !@account.is_former_worker,:onclick=>"FWclickNo()"%> No<br />
       </p> 
       <div id="FWcheckbox"> 
         <%= f.fields_for  :user_formerworker do |uf| %>
             <!-- input type="text" name="CurrentDep" -->
+            <b>(if you want to click no, you still need to fill in all the blanks first)</b><br />
             <%=uf.label :date_of_employment, 'Dates of Employment' %>
             <%= uf.text_field :date_of_employment, :value => @account.user_formerworker.date_of_employment %>
             <br />
@@ -85,6 +88,7 @@
     </p>
     <div  id="CWcheckbox"> 
     <%= f.fields_for  :current_worker do |cf| %>
+            <b>(if you want to click no, you still need to fill in all the blanks first)</b><br />
             <!-- input type="text" name="CurrentDep" -->
             <%=cf.label :department, 'Department'%>
             <%= cf.text_field :department, :value => @account.current_worker.department %>
@@ -117,10 +121,7 @@
                 
             </p>
 
-            <!--=rf.label :name, 'The council member\'s name' -->
-            <!--= rf.text_field :name, :value => @account.related_councilmember.name -->
-            
-            
+           
             <%=rf.label :relationship, 'Your Relationship to Them' %>
             <%=rf.text_field :relationship, :value => @account.related_councilmember.relationship %>
             <br />
@@ -136,6 +137,7 @@
     </p>  
     <div id="FCcheckbox"> 
     <%= f.fields_for  :former_criminal do |ff| %>
+            <b>(if you want to click no, you still need to fill in all the blanks first)</b><br />
             <!-- input type="text" name="CurrentDep" -->
             <%=ff.label :date_of_conviction, 'Date of Conviction'%>
             <%= ff.text_field :date_of_conviction, :value => @account.former_criminal.date_of_conviction %>

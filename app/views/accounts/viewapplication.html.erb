@@ -42,11 +42,18 @@
           <%= @account.zip %><br />
       </p>
       <p>
+
           <!-- strong>SSN</strong-->
           <!--= @account.SSN %><br /-->
           <strong>Driver License</strong>
+
           <%= @account.driver_license %><br />
       </p>
+      <p>
+          <strong>Shirt Size</strong>
+          <%= @account.shirt_size %><br />
+      </p>
+      
       
       <p><strong>Has your profile been approved so that you can submit an application? </strong><%= @account.status%></p>
 
@@ -83,7 +90,7 @@
              From: <%= @account.application_form.available_time_begin %><br />
              To: <%= @account.application_form.available_time_end %>
      </p>
-     <p><%= @account.application_form.signature %></p>
+     <p><strong>Signature: </strong><%= @account.application_form.signature %></p>
      <% end %>
  <% end %>
      <p>

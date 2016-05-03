@@ -5,6 +5,11 @@ gem 'gmail'
 #allow the app to send mailer
 gem 'actionmailer'
 
+#datetimepicker
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
+
+
 gem 'email_verifier'
 gem 'email_validator'
 gem 'bcrypt'
