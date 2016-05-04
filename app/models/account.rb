@@ -49,7 +49,9 @@ validates :email,:firstname,:lastname,:homephone,
 
   #validates :unique email                                  
   validates  :email,
-             uniqueness: { case_sensitive: true }
+             uniqueness: { case_sensitive: true },
+             on: [:create]
+
   #####################################
   #validates :number validator 
 
@@ -58,8 +60,7 @@ validates :email,:firstname,:lastname,:homephone,
   INVALID_NAME_REGEX = /[^a-zA-Z     ]/
   validates :emergency_contact_name, :middlename, 
   length: { maximum: 20 },
-  format: { without: INVALID_NAME_REGEX }
-  #validates :unique email                                  
+  format: { without: INVALID_NAME_REGEX }                               
   #####################################
   #validates :number validator 
 
