@@ -117,8 +117,8 @@ I understand that the City has the right to terminate my services as volunteer a
             <%= sf.text_field :required_area, :value => @account.student_application.required_area %>
             <br />
             <br />
-            <%= sf.label :deadline, 'Deadline', :style => "width: 120px"%>
-            <%= sf.text_field :deadline, :value => @account.student_application.deadline,:placeholder => "YYYY-MM-DD" %>
+            <%= sf.label :deadline, 'Deadline',:style => "width: 120px"%>
+            <%= sf.text_field :deadline, :value => @account.student_application.deadline,:id=>'datepicker',:placeholder => "YYYY-MM-DD" %>
             <br />
         <% end %>
         
