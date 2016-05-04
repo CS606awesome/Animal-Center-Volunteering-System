@@ -170,7 +170,7 @@ class AccountsController < ApplicationController
                @account.student_application ||= StudentApplication.new
            end
            ##if user's DOB is later than 18 years ago(younder than 18)
- 
+
            if to_sec(@account.DOB) > 18.years.ago.to_i    
             @account.minor_application ||= MinorApplication.new   
            end
@@ -199,7 +199,7 @@ class AccountsController < ApplicationController
      @account = Account.find(params[:id])
      @my_update_hash = account_update_params
 
-     if @account.submit_bcheck == false||admin_logged_in
+     if @account.submit_bcheck == false&&@account.status== nil ||admin_logged_in
      
         if(params[:account][:is_former_worker] == "1") 
           @account.user_formerworker ||= UserFormerworker.new  
@@ -325,7 +325,7 @@ class AccountsController < ApplicationController
         end
      else
 
-         flash[:warning] = 'Your profile is under processing, if you want to make any changes please contact our administrator!'
+         flash[:warning] = 'After sending to administrator, you can not change your profiel anymore, if you want to make any changes please contact our administrator!'
 
          redirect_to profiles_path
      end
