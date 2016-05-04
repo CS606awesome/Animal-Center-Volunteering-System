@@ -106,7 +106,7 @@ class AccountsController < ApplicationController
   
   #validates that time begin is earlier than time end 
   def correct_time_range(time_end, time_begin)
-    if  Time.parse(time_begin) < Time.parse(time_end) && Time.parse(time_begin) > Time.now.to_s
+    if  Time.parse(time_begin) < Time.parse(time_end) and Time.parse(time_begin) > Time.now
       return true
     else
       return false
@@ -116,7 +116,7 @@ class AccountsController < ApplicationController
 
   ##validate the application time range
   def correct_datetime(time)   
-    if /^(0?[1-9]|1[0-2])\/(0?[1-9]|[12][0-9]|3[01])\/\d\d\d\d (00|[0-9]|1[0-9]|2[0-3]):([0-9]|[0-5][0-9]) (AM|PM)$/.match(time)
+    if /^(0?[1-9]|1[0-2])\/(0?[1-9]|[12][0-9]|3[01])\/(\d\d\d\d) (00|[0-9]|1[0-9]|2[0-3]):([0-9]|[0-5][0-9]) (AM|PM)$/.match(time)
       time = "#{$3}/#{$1}/#{$2} #{$4}:#{$5} #{$6}"
       return time
     else     
