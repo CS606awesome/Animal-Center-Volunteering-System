@@ -46,6 +46,12 @@ class AccountsController < ApplicationController
       end
   end
   
+  def correct_DOB_format_update(account)
+     if /^((0[1-9])|(1[0-2]))\/((0[1-9])|(1[0-9])|(2[0-9])|(3[0-1]))\/(\d{4})$/.match(account[:DOB])
+        account[:DOB] = "#{$9}-#{$1}-#{$4}"
+     end
+  end
+  
   #render the login page
   def show
     flash[:success] = 'Congradulations!now go ahead and login'  
@@ -68,7 +74,7 @@ class AccountsController < ApplicationController
       @account = Account.find(session[:id])
 
       #@account.application_form.interested_areas = params[:account][:application_form_attributes][:interested_areas].join(' ')
-      if @account.update(:is_volunteering=>'t') #&& @account.is_volunteering == false
+      if @account.update(:is_volunteering=>true) #&& @account.is_volunteering == false
        
         if @account.update(account_update_params)
           @account.update(:application_form_attributes =>{:available_time_end => params[:account][:application_form_attributes][:available_time_end],:available_time_begin => params[:account][:application_form_attributes][:available_time_begin],:signature => params[:account][:application_form_attributes][:signature],:interested_areas => params[:account][:application_form_attributes][:interested_areas].join(' ')})
@@ -160,7 +166,7 @@ class AccountsController < ApplicationController
      @account = Account.find(params[:id])
      @my_update_hash = account_update_params
 
-     if @account.submit_bcheck == false#||admin_logged_in
+     if @account.submit_bcheck == false||admin_logged_in
      
         if(params[:account][:is_former_worker] == "1") 
           @account.user_formerworker ||= UserFormerworker.new  
@@ -223,10 +229,28 @@ class AccountsController < ApplicationController
               @my_update_hash[:accommodation_attributes][:accommodation_name] = "none"
           end
         end
-     
         
-        if @account.update(@my_update_hash) #(account_update_params) #unless destroyed?  #save(:validate => true)
-     
+        correct_DOB_format_update(@my_update_hash)
+        
+        if params[:account][:homephone].gsub(/\D/, '').length == 10   #change homephone format to xxx-xxx-xxxx
+         @my_update_hash[:homephone] = params[:account][:homephone].gsub(/\D/, '').insert(3, '-').insert(7, '-')
+        end
+        
+        if params[:account][:emergency_phone].gsub(/\D/, '').length == 10   #change homephone format to xxx-xxx-xxxx
+         @my_update_hash[:emergency_phone] = params[:account][:emergency_phone].gsub(/\D/, '').insert(3, '-').insert(7, '-')
+        end
+        
+        if params[:account][:emergency_phone_alternate].gsub(/\D/, '').length == 10   #change homephone format to xxx-xxx-xxxx
+         @my_update_hash[:emergency_phone_alternate] = params[:account][:emergency_phone_alternate].gsub(/\D/, '').insert(3, '-').insert(7, '-')
+        end
+
+        if params[:account][:cellphone].gsub(/\D/, '').length == 10   #change homephone format to xxx-xxx-xxxx
+         @my_update_hash[:cellphone] = params[:account][:cellphone].gsub(/\D/, '').insert(3, '-').insert(7, '-')
+        end
+    
+    
+        if @account.update(@my_update_hash) #unless destroyed?  #save(:validate => true)
+         
         if(params[:account][:is_former_worker] == "0")
             if(@account.user_formerworker != nil)
                 @account.user_formerworker.destroy
@@ -252,6 +276,7 @@ class AccountsController < ApplicationController
               @account.accommodation.destroy
           end
         end
+       
 
         flash[:success] = 'Changes Saved!'
           
@@ -261,7 +286,7 @@ class AccountsController < ApplicationController
 
         flash[:warning] = @account.errors.full_messages;
 
-        flash[:danger] = 'save changes failed!'
+        flash[:danger] = 'Save changes failed!'
 
         redirect_to profiles_path #:id => @account.id
         end
@@ -333,13 +358,26 @@ class AccountsController < ApplicationController
      @account = Account.find(session[:id])
   end
    
+   def validate_password(password)
+     if password.length<6 || password.length>20
+      return nil
+    end
+    return 1
+  end
+  
    def save_password_change
       @account = Account.find(session[:id])
      
        if (params[:account][:password] == params[:account][:password_confirmation])
-         if @account.update(account_password_params)   
+          if validate_password(params[:account][:password])
+             @account.password = params[:account][:password]
+             if @account.save
             flash[:success] = "You have reset your password successfully."
             redirect_to login_path
+             else 
+            flash[:warning] = "Sorry, your password is not saved successfully, please input again!"
+            render 'reset_your_password'
+              end
          else
            flash[:warning] = "Passwords are not satisfied the requirement."
            flash[:info] = "Your password must be 6-20 characters and cannot be blank."
@@ -350,11 +388,9 @@ class AccountsController < ApplicationController
           render 'reset_your_password'
        end
    end
-
+   
 private
-  def account_password_params
-     params.require(:account).permit(:password, :password_confirmation)
-  end
+  
   def account_params
 
    params.require(:account).permit(:gender, :email,:password, :password_confirmation,:firstname,:lastname, :middlename,:maidenname,:country,:state,:city,:street,:zip,:homephone,:cellphone,:DOB)

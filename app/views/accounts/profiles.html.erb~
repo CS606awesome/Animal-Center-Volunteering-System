@@ -1,5 +1,7 @@
 <h1> Profile Edit</h1>
-
+<% if flash[:info] %>
+    <div class="info"><strong><%= flash[:info] %></strong></div>
+<% end %>
 
 <div id='@account'  style = "margin-top:10px">
     <div class='left column' style = "margin-bottom:10px">
@@ -14,7 +16,6 @@
 
   <%= form_for @account do |f| %>
   <!-- **************************************************************************** -->
-
         
 
       <div class="right column"  style = "margin-bottom:10px">
@@ -30,7 +31,7 @@
       </p>
       <p>
           <%=f.label :DOB, 'Date of Birth'%>
-          <%= f.text_field :DOB,:id=>'datepicker', :value => @account.DOB %>   <br />            <!-- why DOB is orange? -->
+          <%= f.text_field :DOB, :value => @account.DOB %>   <br />            <!-- why DOB is orange? -->
       </p>
       
       <p>

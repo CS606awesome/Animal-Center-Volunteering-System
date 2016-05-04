@@ -47,7 +47,11 @@
     %p
       = f.label :country, 'Country', :style => "width:150px"
       = f.text_field :country, :value => @account.country, :size => "25"
-      %br/
+    %P 
+      =f.label :shirt_size, 'Your Shirt Size (We may issue you a volunteer shirt)'
+      = f.text_field :shirt_size, :value => @account.shirt_size 
+      From XS to XXXL
+    %br
   %p
     %b#checkboxlink 1.Are you a former worker of the City of Bryan?
     %b (If you are still working for COB, please check no)
@@ -61,13 +65,13 @@
   #FWcheckbox
     = f.fields_for  :user_formerworker do |uf|
       / input type="text" name="CurrentDep"
-      = uf.label :date_of_employment, 'Dates of Employment'
+      = uf.label :date_of_employment, 'Dates of Employment',:style => "width:180px"
       = uf.text_field :date_of_employment, :value => @account.user_formerworker.date_of_employment
-      %br/
-      = uf.label :reason_for_leaving, 'Reasons for Leaving'
+      %p
+      = uf.label :reason_for_leaving, 'Reasons for Leaving',:style => "width:180px"
       = uf.text_field :reason_for_leaving, :value => @account.user_formerworker.reason_for_leaving
-      %br/
-      = uf.label :position_or_department, 'Position or Department'
+      %p
+      = uf.label :position_or_department, 'Position or Department',:style => "width:180px"
       = uf.text_field :position_or_department, :value => @account.user_formerworker.position_or_department
   %p
     %b 2.Are you a current worker of the City of Bryan?
@@ -81,10 +85,10 @@
   #CWcheckbox
     = f.fields_for  :current_worker do |cf|
       / input type="text" name="CurrentDep"
-      = cf.label :department, 'Department'
+      = cf.label :department, 'Department',:style => "width:100px"
       = cf.text_field :department, :value => @account.current_worker.department
-      %br/
-      = cf.label :name, 'Position'
+      %p
+      = cf.label :name, 'Position',:style => "width:100px"
       = cf.text_field :name, :value => @account.current_worker.name
       %br/
   %p
@@ -139,21 +143,21 @@
   #FCcheckbox
     = f.fields_for  :former_criminal do |ff|
       / input type="text" name="CurrentDep"
-      = ff.label :date_of_conviction, 'Date of Conviction'
+      = ff.label :date_of_conviction, 'Date of Conviction',:style => "width:140px"
       = ff.text_field :date_of_conviction, :value => @account.former_criminal.date_of_conviction
-      %br/
-      = ff.label :nature_of_offense, 'Nature of Offense'
+      %p
+      = ff.label :nature_of_offense, 'Nature of Offense',:style => "width:140px"
       = ff.text_field :nature_of_offense, :value => @account.former_criminal.nature_of_offense
-      %br/
-      = ff.label :name_of_court, 'Name of Court'
+      %p
+      = ff.label :name_of_court, 'Name of Court',:style => "width:140px"
       = ff.text_field :name_of_court, :value => @account.former_criminal.name_of_court
-      %br/
-      = ff.label :disposition_of_case, 'Disposition of Case'
+      %p
+      = ff.label :disposition_of_case, 'Disposition of Case',:style => "width:140px"
       = ff.text_field :disposition_of_case, :value => @account.former_criminal.disposition_of_case
-      %br/
+      %p
       = ff.label :former_crime, 'Please Write Your Former Crimes'
       = ff.text_field :former_crime, :value => @account.former_criminal.former_crime
-      %br/
+      %br
   %p
     %b 5.Are you a student volunteer required by a student organization?
     %br/
