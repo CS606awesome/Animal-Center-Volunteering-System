@@ -62,16 +62,22 @@ I understand that the City has the right to terminate my services as volunteer a
             <= af.text_field :interested_areas, :value => @account.application_form.interested_areas -->
 
             <br />
-            
+         
+
             <p>
                 <strong>What is your available time?</strong>
             </p>
-            <%= af.label :available_time_begin, 'From (Start Time)', :style => "width: 140px"%> 
-            <%= af.text_field :available_time_begin, :value => @account.application_form.available_time_begin,:size=>25,:placeholder=>"YYYY-MM-DD HH:MM" %>
+            <div class='col-sm-6'>
+            <%= af.label :available_time_begin, 'From (Start Time)', :style => "width: 140px"%>
+
+            <%= af.text_field :available_time_begin, :value => @account.application_form.available_time_begin,:size=>25,:placeholder=>"YYYY-MM-DD HH:MM",:id=>"datetimepicker" %>
+            </div>
             <br />
             <br />
+            <div class='col-sm-6'>
             <%= af.label :available_time_end, 'To (End Time)', :style => "width: 140px"%>
-            <%= af.text_field :available_time_end, :value => @account.application_form.available_time_end,:size=>25,:placeholder=>"YYYY-MM-DD HH:MM" %>
+            <%= af.text_field :available_time_end, :value => @account.application_form.available_time_end,:size=>25,:placeholder=>"YYYY-MM-DD HH:MM",:id=>"datetimepicker2" %>
+             </div>
             <br />
             <br />
         <% end %>
@@ -140,6 +146,7 @@ I understand that the City has the right to terminate my services as volunteer a
     
     <%= f.submit 'Submit the Application',class: 'btn btn-success' %>
     <% end %>
+</div>
     <br />
     <br />
     

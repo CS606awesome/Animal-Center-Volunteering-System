@@ -75,22 +75,55 @@ class AccountsController < ApplicationController
 
       #@account.application_form.interested_areas = params[:account][:application_form_attributes][:interested_areas].join(' ')
       if @account.update(:is_volunteering=>true) #&& @account.is_volunteering == false
-       
-        if @account.update(account_update_params)
-          @account.update(:application_form_attributes =>{:available_time_end => params[:account][:application_form_attributes][:available_time_end],:available_time_begin => params[:account][:application_form_attributes][:available_time_begin],:signature => params[:account][:application_form_attributes][:signature],:interested_areas => params[:account][:application_form_attributes][:interested_areas].join(' ')})
-          #@account.update_attributes(:application_form_attributes =>{:interested_areas => params[:account][:application_form_attributes][:interested_areas][0]})
-          #@account.update(:application_form_attributes =>{:signature => params[:account][:application_form_attributes][:signature]})
-          #@account.update(:application_form_attributes =>{:available_time_begin => params[:account][:application_form_attributes][:available_time_begin]})
-          #@account.update(:application_form_attributes =>{:available_time_end => params[:account][:application_form_attributes][:available_time_end]})
-          redirect_to viewapplication_path
+        #correct the format of datetime schedule
+        params[:account][:application_form_attributes][:available_time_end]=correct_datetime(params[:account][:application_form_attributes][:available_time_end])
+        params[:account][:application_form_attributes][:available_time_begin]=correct_datetime(params[:account][:application_form_attributes][:available_time_begin])
+        if(params[:account][:application_form_attributes][:available_time_end]&&params[:account][:application_form_attributes][:available_time_begin])
+         if(correct_time_range(params[:account][:application_form_attributes][:available_time_end],params[:account][:application_form_attributes][:available_time_begin]))
+          if @account.update(account_update_params)
+           @account.update(:application_form_attributes =>{:available_time_end => params[:account][:application_form_attributes][:available_time_end],:available_time_begin => params[:account][:application_form_attributes][:available_time_begin],:signature => params[:account][:application_form_attributes][:signature],:interested_areas => params[:account][:application_form_attributes][:interested_areas].join(' ')})
+           #@account.update_attributes(:application_form_attributes =>{:interested_areas => params[:account][:application_form_attributes][:interested_areas][0]})
+           #@account.update(:application_form_attributes =>{:signature => params[:account][:application_form_attributes][:signature]})
+           #@account.update(:application_form_attributes =>{:available_time_begin => params[:account][:application_form_attributes][:available_time_begin]})
+           #@account.update(:application_form_attributes =>{:available_time_end => params[:account][:application_form_attributes][:available_time_end]})
+           redirect_to viewapplication_path
+          else
+           flash[:danger] = @account.errors.full_messages;
+           redirect_to application_path(:id => @account.id)
+          end
+         else
+          flash[:danger] = "The time range you choosed makes me feel really confused, can you check it again and make sure it is reasonable"
+          redirect_to action: 'application' 
+         end 
         else
-          flash[:danger] = @account.errors.full_messages;
-          redirect_to application_path(:id => @account.id)
+        flash[:danger] = "datetime must be in the following format: yyyy-mm-dd hh:mm AM or PM"  
+        redirect_to action: 'application'
         end
       else
         redirect_to action: 'application'
       end
   end
+  
+  #validates that time begin is earlier than time end 
+  def correct_time_range(time_end, time_begin)
+    if  Time.parse(time_begin) < Time.parse(time_end) && Time.parse(time_begin) > Time.now.to_s
+      return true
+    else
+      return false
+    end
+  end
+
+
+  ##validate the application time range
+  def correct_datetime(time)   
+    if /^(0?[1-9]|1[0-2])\/(0?[1-9]|[12][0-9]|3[01])\/\d\d\d\d (00|[0-9]|1[0-9]|2[0-3]):([0-9]|[0-5][0-9]) (AM|PM)$/.match(time)
+      time = "#{$3}/#{$1}/#{$2} #{$4}:#{$5} #{$6}"
+      return time
+    else     
+      return false
+    end
+  end
+
 
 
   def destroyapplication
@@ -291,7 +324,8 @@ class AccountsController < ApplicationController
       redirect_to profiles_path #:id => @account.id
       
   end
-     
+
+
   
   def save_change
       @account = Account.find(params[:id])

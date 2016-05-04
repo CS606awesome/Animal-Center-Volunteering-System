@@ -22,7 +22,7 @@
       = f.text_field :lastname, :value => @account.lastname, :size => "25"
     %p
       = f.label :DOB, 'Date of Birth', :style => "width:150px"
-      = f.text_field :DOB, :value => @account.DOB, :size => "25"
+      = f.text_field :DOB, :value => @account.DOB,:id=>'datepicker', :size => "25"
       / why DOB is orange?
     %p
       = f.label :homephone, 'Home Phone', :style => "width:150px"
@@ -49,7 +49,7 @@
       = f.text_field :country, :value => @account.country, :size => "25"
     %P 
       =f.label :shirt_size, 'Your Shirt Size (We may issue you a volunteer shirt)'
-      = f.text_field :shirt_size, :value => @account.shirt_size,:placeholder =>  'XS|S|M|L|XL|XXL|XXXL',:size => "20"
+      =f.select :shirt_size, [["XS", "XS"], ["S", "S"], ["M", "M"], ["L", "L"], ["XL", "XL"], ["XXL", "XXL"], ["XXXL", "XXXL"]]
     %br  
      
     %br

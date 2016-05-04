@@ -15,10 +15,12 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+//= require moment
 //= require bootstrap-datepicker
+//= require bootstrap-datetimepicker
 //= require jquery-ui
 //= require jquery.autosize
-//= require moment
+
     function FWclickYes()
     {
         $('#FWcheckbox').show();
@@ -67,7 +69,8 @@
       changeMonth: true,
       changeYear: true
     });
-     $('#datetimepicker').datetimepicker();
+    $('#datetimepicker').datetimepicker();
+    $('#datetimepicker2').datetimepicker();
      });
 
 $(document).ready(function(){
