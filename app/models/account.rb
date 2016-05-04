@@ -70,11 +70,11 @@ validates :email,:firstname,:lastname,:homephone,
   
    INVALID_NUMBER_REGEX = /[^0-9-]/ 
   validates :emergency_phone, :emergency_phone_alternate,
-  length: { maximum: 20 },
-  format: { without: INVALID_NUMBER_REGEX}
+  length: { maximum: 12 },
+  format: { without: INVALID_NUMBER_REGEX}, :on => [ :update ]
 
 #validates date of birth
-  validates_format_of :DOB, :with => /\d{4}-\d{2}-\d{2}/, :message => "date must be in the following format: mm/dd/yyyy"
+  validates_format_of :DOB, :with => /^\d{4}-\d{2}-\d{2}$/, :message => "date must be in the following format: mm/dd/yyyy", :multiline => true 
 
 
 SHIRT_SIZE_FORMAT = /^\b(XS|S|M|L|XL|XXL|XXXL)\b$/
