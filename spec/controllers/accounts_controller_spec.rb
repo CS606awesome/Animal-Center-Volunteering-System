@@ -73,6 +73,42 @@ describe AccountsController do
     end
   end
   
+  describe "POST #save_and_submit" do 
+    
+    it "find correct account first" do 
+      session[:id] = @accounts[0].id
+      post :save_and_submit
+      assigns(:account).should eq @accounts[0]
+    end
+    
+    it "profile sent to admin" do 
+      session[:id] = @accounts[0].id
+      post :save_and_submit
+      flash[:success].should == 'Your profile has been sent to the administrator'
+    end
+    
+    it "profile rejected" do 
+      session[:id] = @accounts[0].id
+      @accounts[0].update_columns(submit_bcheck: true, status: false)
+      post :save_and_submit
+      flash[:warning].should == 'We are sorry that your profile is rejected, you can not submit again'
+    end
+    
+    it "profile approved" do 
+      session[:id] = @accounts[0].id
+      @accounts[0].update_columns(submit_bcheck: true, status: true)
+      post :save_and_submit
+      flash[:success].should == 'You are approved, no need to bother our administrator right? LOL'
+    end
+    
+    it "profile pending" do 
+      session[:id] = @accounts[0].id
+      @accounts[0].update_columns(submit_bcheck: true)
+      post :save_and_submit
+      flash[:info] = 'Your profile is under processing!'
+    end
+  end
+  
   # describe " #update" do
     # it "change saved" do 
       # session[:id] = @accounts[0].id
