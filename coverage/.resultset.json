@@ -1549,7 +1549,7 @@
         null,
         null,
         1,
-        0,
+        1,
         0,
         0,
         0,
@@ -1564,9 +1564,9 @@
         null,
         null,
         1,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
         null,
         null,
         1,
@@ -1975,19 +1975,14 @@
         null,
         null
       ],
-      "/Users/zhangsikai/GitHub/Project1/app/models/admin.rb": [
-        1,
-        1,
-        null
-      ],
       "/Users/zhangsikai/GitHub/Project1/app/mailers/mailer.rb": [
         1,
         1,
         null,
         1,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
         null,
         null,
         1,
@@ -2003,6 +1998,11 @@
       ],
       "/Users/zhangsikai/GitHub/Project1/app/mailers/application_mailer.rb": [
         1,
+        1,
+        1,
+        null
+      ],
+      "/Users/zhangsikai/GitHub/Project1/app/models/admin.rb": [
         1,
         1,
         null
@@ -2209,6 +2209,6 @@
         0
       ]
     },
-    "timestamp": 1462650341
+    "timestamp": 1462660334
   }
 }

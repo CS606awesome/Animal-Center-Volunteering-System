@@ -23573,3 +23573,743 @@ Processing by AccountsController#profiles as HTML
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.3ms)
   [1m[35m (8.9ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.4ms)[0m  [1mDELETE FROM "minor_applications";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'minor_applications';[0m
+  [1m[35m (1.2ms)[0m  DELETE FROM "accommodations";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'accommodations';
+  [1m[36m (1.1ms)[0m  [1mDELETE FROM "current_workers";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'current_workers';[0m
+  [1m[35m (1.1ms)[0m  DELETE FROM "related_councilmembers";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'related_councilmembers';
+  [1m[36m (0.9ms)[0m  [1mDELETE FROM "admins";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'admins';[0m
+  [1m[35m (1.1ms)[0m  DELETE FROM "accounts";
+  [1m[36m (0.3ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'accounts';
+  [1m[36m (1.2ms)[0m  [1mDELETE FROM "application_forms";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'application_forms';[0m
+  [1m[35m (1.1ms)[0m  DELETE FROM "former_criminals";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'former_criminals';
+  [1m[36m (1.2ms)[0m  [1mDELETE FROM "student_applications";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'student_applications';[0m
+  [1m[35m (1.2ms)[0m  DELETE FROM "user_formerworkers";
+  [1m[36m (0.5ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'user_formerworkers';
+  [1m[36m (1.2ms)[0m  [1mDELETE FROM "criminal_applications";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'criminal_applications';[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAccount Exists (0.4ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'fnesvt@outlook.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "accounts" ("gender", "email", "password_digest", "firstname", "lastname", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "DOB", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["gender", "female"], ["email", "fnesvt@outlook.com"], ["password_digest", "$2a$04$P6CBk8GWp7/2ansYOA5pruojs.sLc5WRz4om1HoLhnWJyCUwyMuQG"], ["firstname", "Sasa"], ["lastname", "Dai"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "8608999350"], ["cellphone", "860-899-9350"], ["DOB", "1999-09-19"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by AccountsController#index as HTML
+Redirected to http://test.host/signup
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAccount Exists (0.1ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'fnesvt@outlook.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "accounts" ("gender", "email", "password_digest", "firstname", "lastname", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "DOB", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["gender", "female"], ["email", "fnesvt@outlook.com"], ["password_digest", "$2a$04$jNsdRCbagdnnDeGHVhc1nuggVN.UasNVolZoR8uwsJejpdJmTrYBC"], ["firstname", "Sasa"], ["lastname", "Dai"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "8608999350"], ["cellphone", "860-899-9350"], ["DOB", "1999-09-19"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by AccountsController#new as HTML
+  Rendered accounts/new.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAccount Exists (0.3ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'fnesvt@outlook.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "accounts" ("gender", "email", "password_digest", "firstname", "lastname", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "DOB", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["gender", "female"], ["email", "fnesvt@outlook.com"], ["password_digest", "$2a$04$HypzvUgP7XRZy9eWk8H2DeEWZtjVdcpkQ9sNAj7z8Da42Z.F/929C"], ["firstname", "Sasa"], ["lastname", "Dai"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "8608999350"], ["cellphone", "860-899-9350"], ["DOB", "1999-09-19"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by AccountsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 14ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'fnesvt@outlook.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "accounts" ("gender", "email", "password_digest", "firstname", "lastname", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "DOB", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["gender", "female"], ["email", "fnesvt@outlook.com"], ["password_digest", "$2a$04$9OR7hIrc8.w84YX/08yC/Oc6XV.VL/6QbcrOJ5qHECP7bcEteDH5e"], ["firstname", "Sasa"], ["lastname", "Dai"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "8608999350"], ["cellphone", "860-899-9350"], ["DOB", "1999-09-19"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "accounts"
+Processing by AccountsController#create as HTML
+  Parameters: {"account"=>{"gender"=>"female", "email"=>"wzhsld@outlook.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "firstname"=>"Sasa", "lastname"=>"Dai", "middlename"=>"lulu", "country"=>"United States", "state"=>"TX", "city"=>"College Station", "street"=>"950 Colgate Drive", "zip"=>"77840", "homephone"=>"8608999350", "cellphone"=>"860-899-9350", "DOB"=>"1999-09-19"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAccount Exists (0.1ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'wzhsld@outlook.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "accounts" ("gender", "email", "password_digest", "firstname", "lastname", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "DOB") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["gender", "female"], ["email", "wzhsld@outlook.com"], ["password_digest", "$2a$04$rOOtGizcTfkks8lpsWLlwObQjGRvB67N6Fh/kuRX7Yh9rWEgLSejG"], ["firstname", "Sasa"], ["lastname", "Dai"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "860-899-9350"], ["cellphone", "860-899-9350"], ["DOB", "1999-09-19"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/accounts/2
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "accounts"[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'fnesvt@outlook.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "accounts" ("gender", "email", "password_digest", "firstname", "lastname", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "DOB", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["gender", "female"], ["email", "fnesvt@outlook.com"], ["password_digest", "$2a$04$844DaLf0fYzakrO/wuuaKOnHg93QIq8YcY0dkrtnVycG5JLb7NepO"], ["firstname", "Sasa"], ["lastname", "Dai"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "8608999350"], ["cellphone", "860-899-9350"], ["DOB", "1999-09-19"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by AccountsController#create as HTML
+  Parameters: {"account"=>{"email"=>"wzhsld@outlook.com", "firstname"=>"Sasa", "lastname"=>"Dai", "DOB"=>"1999-09-19", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "middlename"=>"lulu", "country"=>"United States", "state"=>"TX", "city"=>"College Station", "street"=>"950 Colgate Drive", "zip"=>"77840", "homephone"=>"8608999350", "cellphone"=>"860-899-9350"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'wzhsld@outlook.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "accounts" ("email", "password_digest", "firstname", "lastname", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "DOB") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "wzhsld@outlook.com"], ["password_digest", "$2a$04$NTBx7C98jx7.QicJzTfC6.onYSw4Qm7SW9t6qLWuyH42QL7k5YlsG"], ["firstname", "Sasa"], ["lastname", "Dai"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "860-899-9350"], ["cellphone", "860-899-9350"], ["DOB", "1999-09-19"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/accounts/2
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'fnesvt@outlook.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "accounts" ("gender", "email", "password_digest", "firstname", "lastname", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "DOB", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["gender", "female"], ["email", "fnesvt@outlook.com"], ["password_digest", "$2a$04$S4Kqkyjh9uV2yddJFvpP1ezRqYyN7EJOAii9hMw.z0alEYzUGZpv."], ["firstname", "Sasa"], ["lastname", "Dai"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "8608999350"], ["cellphone", "860-899-9350"], ["DOB", "1999-09-19"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by AccountsController#create as HTML
+  Parameters: {"account"=>{"email"=>"wzhsld@outlook.com", "cellphone"=>"860-899-9350", "homephone"=>"8608999350"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'wzhsld@outlook.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered accounts/new.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAccount Exists (0.1ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'fnesvt@outlook.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "accounts" ("gender", "email", "password_digest", "firstname", "lastname", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "DOB", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["gender", "female"], ["email", "fnesvt@outlook.com"], ["password_digest", "$2a$04$baMql0C6CvxchhstcK.wfOMGu029LiuTOyzw6onsWM2VTNtQb2i26"], ["firstname", "Sasa"], ["lastname", "Dai"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "8608999350"], ["cellphone", "860-899-9350"], ["DOB", "1999-09-19"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by AccountsController#create as HTML
+  Parameters: {"account"=>{"email"=>"wzhsld@outlook.com", "cellphone"=>"860-899-9350", "homephone"=>"8608999350"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAccount Exists (0.1ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'wzhsld@outlook.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered accounts/new.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mAccount Exists (0.1ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'xudong1@qq.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "accounts" ("firstname", "lastname", "DOB", "email", "password_digest", "homephone", "cellphone", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["firstname", "Xudong"], ["lastname", "Huang"], ["DOB", "1999-01-01"], ["email", "xudong1@qq.com"], ["password_digest", "$2a$04$3F8eIpG31FV3aM.uwWfXWePLnGglc6xvWfHeSuIva4PdHYjEE5dh."], ["homephone", "111-111-1111"], ["cellphone", "222-222-2222"], ["gender", "male"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by AccountsController#profiles as HTML
+Redirected to http://test.host/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'xudong1@qq.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "accounts" ("firstname", "lastname", "DOB", "email", "password_digest", "homephone", "cellphone", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["firstname", "Xudong"], ["lastname", "Huang"], ["DOB", "1999-01-01"], ["email", "xudong1@qq.com"], ["password_digest", "$2a$04$K9t51wjHFFYdxJz0xU1LguTicPI0UhtHy6H2D2Kt20qB1UUZUFVma"], ["homephone", "111-111-1111"], ["cellphone", "222-222-2222"], ["gender", "male"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by AccountsController#profiles as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered accounts/profiles.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'xudong1@qq.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "accounts" ("firstname", "lastname", "DOB", "email", "password_digest", "homephone", "cellphone", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["firstname", "Xudong"], ["lastname", "Huang"], ["DOB", "1999-01-01"], ["email", "xudong1@qq.com"], ["password_digest", "$2a$04$lXO9fLNsOR9e478XZI1a5uwYxLZlxwwvXm.4VK.wEOxWa9O/7yNBu"], ["homephone", "111-111-1111"], ["cellphone", "222-222-2222"], ["gender", "male"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by AccountsController#profiles as HTML
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered accounts/profiles.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'xudong1@qq.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "accounts" ("firstname", "lastname", "DOB", "email", "password_digest", "homephone", "cellphone", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["firstname", "Xudong"], ["lastname", "Huang"], ["DOB", "1999-01-01"], ["email", "xudong1@qq.com"], ["password_digest", "$2a$04$0A/XRuSt61PVUfIa9mSnO.T7Un/3RWj1OqKXREZHKNa/0h1yInlYK"], ["homephone", "111-111-1111"], ["cellphone", "222-222-2222"], ["gender", "male"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by AccountsController#application as HTML
+Redirected to http://test.host/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'xudong1@qq.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "accounts" ("firstname", "lastname", "DOB", "email", "password_digest", "homephone", "cellphone", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["firstname", "Xudong"], ["lastname", "Huang"], ["DOB", "1999-01-01"], ["email", "xudong1@qq.com"], ["password_digest", "$2a$04$ngGBLHm60DCiGLE1yv9YB.3Jm1hQan5Z09zHFYdnyq1VjVA4SNpjW"], ["homephone", "111-111-1111"], ["cellphone", "222-222-2222"], ["gender", "male"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by AccountsController#application as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to http://test.host/profiles
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'xudong1@qq.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "accounts" ("firstname", "lastname", "DOB", "email", "password_digest", "homephone", "cellphone", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["firstname", "Xudong"], ["lastname", "Huang"], ["DOB", "1999-01-01"], ["email", "xudong1@qq.com"], ["password_digest", "$2a$04$JTrdagYAkdDjeXJ4CcjIz.N1B7f0koPClRyxvnZpShvAF5nELG7.S"], ["homephone", "111-111-1111"], ["cellphone", "222-222-2222"], ["gender", "male"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by AccountsController#viewapplication as HTML
+Redirected to http://test.host/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'xudong1@qq.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "accounts" ("firstname", "lastname", "DOB", "email", "password_digest", "homephone", "cellphone", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["firstname", "Xudong"], ["lastname", "Huang"], ["DOB", "1999-01-01"], ["email", "xudong1@qq.com"], ["password_digest", "$2a$04$Qar92UevnY6w4Mrhk/tNfuMYfaz9/XhvGd2YIvL.dCdcRo/1T7M4y"], ["homephone", "111-111-1111"], ["cellphone", "222-222-2222"], ["gender", "male"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by AccountsController#viewapplication as HTML
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered accounts/viewapplication.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mAccount Exists (0.1ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'xudong1@qq.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "accounts" ("firstname", "lastname", "DOB", "email", "password_digest", "homephone", "cellphone", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["firstname", "Xudong"], ["lastname", "Huang"], ["DOB", "1999-01-01"], ["email", "xudong1@qq.com"], ["password_digest", "$2a$04$Q..rVOw0XR66G7uo9QFa..0mPGQIX.P.rERRFdpZAeO0GSjh4lZhi"], ["homephone", "111-111-1111"], ["cellphone", "222-222-2222"], ["gender", "male"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by AccountsController#save_change as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered accounts/save_change.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'xudong1@qq.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "accounts" ("firstname", "lastname", "DOB", "email", "password_digest", "homephone", "cellphone", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["firstname", "Xudong"], ["lastname", "Huang"], ["DOB", "1999-01-01"], ["email", "xudong1@qq.com"], ["password_digest", "$2a$04$CFTLNZHB0YhZoXSJE8dlYuhzr46y.pBPDpwmo0uyq00bUfnbZCcJm"], ["homephone", "111-111-1111"], ["cellphone", "222-222-2222"], ["gender", "male"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by AccountsController#save_and_submit as HTML
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "accounts" SET "submit_bcheck" = 't' WHERE "accounts"."id" = ?[0m  [["id", 1]]
+Redirected to http://test.host/profiles
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'xudong1@qq.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "accounts" ("firstname", "lastname", "DOB", "email", "password_digest", "homephone", "cellphone", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["firstname", "Xudong"], ["lastname", "Huang"], ["DOB", "1999-01-01"], ["email", "xudong1@qq.com"], ["password_digest", "$2a$04$sgdLR6EzWIkwG1PuYjRc1.IQZ.sjRgPxqa1sfhFlwHm7OZ8U5hLJm"], ["homephone", "111-111-1111"], ["cellphone", "222-222-2222"], ["gender", "male"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by AccountsController#save_and_submit as HTML
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "accounts" SET "submit_bcheck" = 't' WHERE "accounts"."id" = ?[0m  [["id", 1]]
+Redirected to http://test.host/profiles
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'xudong1@qq.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "accounts" ("firstname", "lastname", "DOB", "email", "password_digest", "homephone", "cellphone", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["firstname", "Xudong"], ["lastname", "Huang"], ["DOB", "1999-01-01"], ["email", "xudong1@qq.com"], ["password_digest", "$2a$04$ZdaLML89t9uQV.cl7SQNb.SeroZ.eq3b3rVrSNIGtJIITZDG.Mfy."], ["homephone", "111-111-1111"], ["cellphone", "222-222-2222"], ["gender", "male"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "accounts" SET "submit_bcheck" = 't', "status" = 'f' WHERE "accounts"."id" = ?  [["id", 1]]
+Processing by AccountsController#save_and_submit as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to http://test.host/profiles
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'xudong1@qq.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "accounts" ("firstname", "lastname", "DOB", "email", "password_digest", "homephone", "cellphone", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["firstname", "Xudong"], ["lastname", "Huang"], ["DOB", "1999-01-01"], ["email", "xudong1@qq.com"], ["password_digest", "$2a$04$C6YLBiC2pLRcPLdoxZ7NZeYEFvGzNUCp5ik6PaqhuT81vfqdslpy."], ["homephone", "111-111-1111"], ["cellphone", "222-222-2222"], ["gender", "male"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "accounts" SET "submit_bcheck" = 't', "status" = 't' WHERE "accounts"."id" = ?  [["id", 1]]
+Processing by AccountsController#save_and_submit as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to http://test.host/profiles
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'xudong1@qq.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "accounts" ("firstname", "lastname", "DOB", "email", "password_digest", "homephone", "cellphone", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["firstname", "Xudong"], ["lastname", "Huang"], ["DOB", "1999-01-01"], ["email", "xudong1@qq.com"], ["password_digest", "$2a$04$ABeO9Nnn5Igmo8/o7BEUlev2De9PMf5YIYBFjNDfoIuZuoUx/y.LW"], ["homephone", "111-111-1111"], ["cellphone", "222-222-2222"], ["gender", "male"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "accounts" SET "submit_bcheck" = 't' WHERE "accounts"."id" = ?  [["id", 1]]
+Processing by AccountsController#save_and_submit as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to http://test.host/profiles
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'xudong1@qq.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "accounts" ("firstname", "lastname", "DOB", "email", "password_digest", "homephone", "cellphone", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["firstname", "Xudong"], ["lastname", "Huang"], ["DOB", "1999-01-01"], ["email", "xudong1@qq.com"], ["password_digest", "$2a$04$zeHvCmmLcV6eLjR1HoC/oO0DuKlSN8xdmQEvvslQMC2F3OWYazFF6"], ["homephone", "111-111-1111"], ["cellphone", "222-222-2222"], ["gender", "male"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by AccountsController#input_your_email as HTML
+  Rendered accounts/input_your_email.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'xudong1@qq.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "accounts" ("firstname", "lastname", "DOB", "email", "password_digest", "homephone", "cellphone", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["firstname", "Xudong"], ["lastname", "Huang"], ["DOB", "1999-01-01"], ["email", "xudong1@qq.com"], ["password_digest", "$2a$04$58gLXWobY0F6P4KxD7oza.WEhuv8.xU.iSpsKRWQh8uiPzH7OAN/y"], ["homephone", "111-111-1111"], ["cellphone", "222-222-2222"], ["gender", "male"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by AccountsController#resend_your_email as HTML
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered mailer/reset_password_email.html.erb within layouts/mailer (3.4ms)
+
+Mailer#reset_password_email: processed outbound mail in 227.3ms
+
+Sent mail to xudong1@qq.com (14.6ms)
+Date: Sat, 07 May 2016 17:32:13 -0500
+From: zhangsikai123@tamu.edu
+To: xudong1@qq.com
+Message-ID: <572e6ced934e7_365d3fcc15c41a281685f@dhcp-10-202-130-139.tamulink.tamu.edu.mail>
+Subject: Reset password from Animal Center Volunteering System
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<hmtl>
+<body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p><strong>Welcome to Bryan Animal Center volunteering system, Xudong Huang</strong></p>
+    <p>
+      We received a request to reset the password associated with this e-mail address. If you made this request, please follow the instructions below.
+    </p>
+     
+    <p>
+      Click the link below to reset your password using our secure server:
+      <br>
+    </p>
+    
+    <p>
+     <a href="https://animal-center-bryan.herokuapp.com/reset_your_password">Reset My Password Now!</a>
+    </p>
+    
+    <p>If you did not request to have your password reset you can safely ignore this email. Reset assured your account is safe.
+       If clicking the link doesn't seem to work, you can copy and paste the link into your browser's address window, or retype it there. 
+       Once you have returned to Bryan Animal Center, we will give instructions for resetting your password.</p>
+  </body>
+</html>
+</body>
+</hmtl>
+
+  Rendered accounts/resend_your_email.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 267ms (Views: 6.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'wzhsld@outlook.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "wzhsld@outlook.com"], ["firstname", "Sasa"], ["lastname", "Dai"], ["DOB", "1999-09-19"], ["password_digest", "$2a$04$nrJmjuK/0s8MNsEXii8bXuudi29.fOqev/LLPqb8RH94zF8ZMFN4a"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "8608999350"], ["cellphone", "860-899-9350"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mAccount Exists (0.1ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'dejelsn@hotmail.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dejelsn@hotmail.com"], ["firstname", "Sikai"], ["lastname", "Zhang"], ["DOB", "1993-02-18"], ["password_digest", "$2a$04$rOdbCJNYw99h1ulZ66ACN.e20RX78AWO/OcnAU14nZIbACv6aHfZ6"], ["middlename", "waw"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "233 hollenman dr"], ["zip", "77840"], ["homephone", "7564861"], ["cellphone", "123-456-7800"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "lulu1993@outlook.com"], ["password_digest", "$2a$04$CzbRyVOwE3ngOyb/igoxb.sB3IXHunZorEIwAo3bfDvQUVivLUCnq"], ["key", "11110318"], ["created_at", "2016-05-07 22:32:13.647993"], ["updated_at", "2016-05-07 22:32:13.647993"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "blade099@hotmail.com"], ["password_digest", "$2a$04$4vaOx.2M0Wgf9N.2/8QFmuWCxcn.5DQZE.fpppV/ZMy6HdxcoJIIS"], ["key", "19990919"], ["created_at", "2016-05-07 22:32:13.651431"], ["updated_at", "2016-05-07 22:32:13.651431"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by AdminsController#index as HTML
+Redirected to http://test.host/adminsignup
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'wzhsld@outlook.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "wzhsld@outlook.com"], ["firstname", "Sasa"], ["lastname", "Dai"], ["DOB", "1999-09-19"], ["password_digest", "$2a$04$in7Y7ojW7wpvnfFt91ZiHuplRs6MOD6.c54HOdQJdySyZngORhwV6"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "8608999350"], ["cellphone", "860-899-9350"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mAccount Exists (0.1ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'dejelsn@hotmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dejelsn@hotmail.com"], ["firstname", "Sikai"], ["lastname", "Zhang"], ["DOB", "1993-02-18"], ["password_digest", "$2a$04$FKeo12ZNfia9ghpx04UCGuQyXsRwtTA/GeHIMumOu14aD58BavKMu"], ["middlename", "waw"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "233 hollenman dr"], ["zip", "77840"], ["homephone", "7564861"], ["cellphone", "123-456-7800"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "lulu1993@outlook.com"], ["password_digest", "$2a$04$j8UeW62Dcg1k4ksds0lWGeeKA2Xbm10hDdUrxkVmScYbbNt3gMre6"], ["key", "11110318"], ["created_at", "2016-05-07 22:32:13.675244"], ["updated_at", "2016-05-07 22:32:13.675244"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "blade099@hotmail.com"], ["password_digest", "$2a$04$QiPktGJXW0zEJwUM21w5guPmNtnRjy0SNT8CkT8pmB/LELDWa4yeu"], ["key", "19990919"], ["created_at", "2016-05-07 22:32:13.678106"], ["updated_at", "2016-05-07 22:32:13.678106"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by AdminsController#new as HTML
+  Rendered admins/new.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'wzhsld@outlook.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "wzhsld@outlook.com"], ["firstname", "Sasa"], ["lastname", "Dai"], ["DOB", "1999-09-19"], ["password_digest", "$2a$04$Rdd/d8jxrI6rTuMLdoNp2ONCt/ewRVEZRcJcvzAnsn6NOpndx6aPq"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "8608999350"], ["cellphone", "860-899-9350"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mAccount Exists (0.1ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'dejelsn@hotmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dejelsn@hotmail.com"], ["firstname", "Sikai"], ["lastname", "Zhang"], ["DOB", "1993-02-18"], ["password_digest", "$2a$04$5BC08D1b8jq8x822sGTHkuvMEEARaVBuR5rO3/PjSCP1iEf.YrkMa"], ["middlename", "waw"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "233 hollenman dr"], ["zip", "77840"], ["homephone", "7564861"], ["cellphone", "123-456-7800"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "lulu1993@outlook.com"], ["password_digest", "$2a$04$cpX2u7KMuybU7LqLu013tOaJSLhUnlJcCsFXgOEPdmhp3xoJzyqQa"], ["key", "11110318"], ["created_at", "2016-05-07 22:32:13.708651"], ["updated_at", "2016-05-07 22:32:13.708651"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "blade099@hotmail.com"], ["password_digest", "$2a$04$aNbNZbvjv/LvR5pgeVrMLuhT1Vk1HYHlIMEqDsPUwtQK3Hz/1eTPW"], ["key", "19990919"], ["created_at", "2016-05-07 22:32:13.711633"], ["updated_at", "2016-05-07 22:32:13.711633"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by AdminsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'wzhsld@outlook.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "wzhsld@outlook.com"], ["firstname", "Sasa"], ["lastname", "Dai"], ["DOB", "1999-09-19"], ["password_digest", "$2a$04$FQHJdNI8Ct.PlkwYh1it3OnimaPwBLd5uGsozNDDuIwsMCjIJJM8C"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "8608999350"], ["cellphone", "860-899-9350"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'dejelsn@hotmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "dejelsn@hotmail.com"], ["firstname", "Sikai"], ["lastname", "Zhang"], ["DOB", "1993-02-18"], ["password_digest", "$2a$04$YX3GHRsda6nrwRLZWD.97.yYX1jt50RVR1Kaeh5P6QUqLemeRwZd."], ["middlename", "waw"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "233 hollenman dr"], ["zip", "77840"], ["homephone", "7564861"], ["cellphone", "123-456-7800"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "lulu1993@outlook.com"], ["password_digest", "$2a$04$2W6/WSaTxCbd2.Dm/obT/eXBF1Omunk5WfBNb1V2om2ZSrk8lNm0W"], ["key", "11110318"], ["created_at", "2016-05-07 22:32:13.739778"], ["updated_at", "2016-05-07 22:32:13.739778"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "blade099@hotmail.com"], ["password_digest", "$2a$04$kPNxPmhop5Bgcq/h4M7YPOqCGZIWtRO3hrTZ9WoZkYw2aN9gYXPZG"], ["key", "19990919"], ["created_at", "2016-05-07 22:32:13.744245"], ["updated_at", "2016-05-07 22:32:13.744245"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "admins"
+Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"email"=>"lulu1993@outlook.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "key"=>"11110318"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "lulu1993@outlook.com"], ["password_digest", "$2a$04$8mIS4FFNtCS8b18aYbUPDe5BC2853DjxDFrlm89M1h/HsSSl.lVdC"], ["key", "11110318"], ["created_at", "2016-05-07 22:32:13.753412"], ["updated_at", "2016-05-07 22:32:13.753412"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Redirected to http://test.host/adminlogin?id=3
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "admins"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mAccount Exists (0.2ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'wzhsld@outlook.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "wzhsld@outlook.com"], ["firstname", "Sasa"], ["lastname", "Dai"], ["DOB", "1999-09-19"], ["password_digest", "$2a$04$MX3830cWhLPb5F88xq4WBexKwGHL5BIpQONHzeOKNNjq1nveyD3/K"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "8608999350"], ["cellphone", "860-899-9350"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mAccount Exists (0.1ms)[0m  SELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'dejelsn@hotmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dejelsn@hotmail.com"], ["firstname", "Sikai"], ["lastname", "Zhang"], ["DOB", "1993-02-18"], ["password_digest", "$2a$04$FB8VblJeQWG53tkQiR7OIeRfiBsesrt1sxqTQVbkfYOXSrgW7aPQu"], ["middlename", "waw"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "233 hollenman dr"], ["zip", "77840"], ["homephone", "7564861"], ["cellphone", "123-456-7800"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "lulu1993@outlook.com"], ["password_digest", "$2a$04$1ycpWmBYzf3dWgV08k9qOuJkGNxNleCKrxs15IjHhktLOZejN7wbq"], ["key", "11110318"], ["created_at", "2016-05-07 22:32:13.775400"], ["updated_at", "2016-05-07 22:32:13.775400"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "blade099@hotmail.com"], ["password_digest", "$2a$04$ZgOLIpLs71pSDPebbnu81.gQdEuvsU0.cOsPUVJUl/6ixWQC4LuaK"], ["key", "19990919"], ["created_at", "2016-05-07 22:32:13.778731"], ["updated_at", "2016-05-07 22:32:13.778731"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"email"=>"lulu1993@outlook.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "key"=>"11110318"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "lulu1993@outlook.com"], ["password_digest", "$2a$04$221da.kbEw/AZWGwC3LSbOfRrqCAOuvVN7s8ad36JZxaq7CtDUXXy"], ["key", "11110318"], ["created_at", "2016-05-07 22:32:13.786698"], ["updated_at", "2016-05-07 22:32:13.786698"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Redirected to http://test.host/adminlogin?id=3
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'wzhsld@outlook.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "wzhsld@outlook.com"], ["firstname", "Sasa"], ["lastname", "Dai"], ["DOB", "1999-09-19"], ["password_digest", "$2a$04$vwgDWLbRWk35zXJI5zKW0u170nODTiouLuwNC2jUBdqgU9h5Fc.uq"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "8608999350"], ["cellphone", "860-899-9350"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'dejelsn@hotmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "dejelsn@hotmail.com"], ["firstname", "Sikai"], ["lastname", "Zhang"], ["DOB", "1993-02-18"], ["password_digest", "$2a$04$xBQDxxB9LXymm2uChImz8.ZFBDMcIW3ZoCmoTiufH25YuZa9pOZK2"], ["middlename", "waw"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "233 hollenman dr"], ["zip", "77840"], ["homephone", "7564861"], ["cellphone", "123-456-7800"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "lulu1993@outlook.com"], ["password_digest", "$2a$04$LDJxAZRacr49L/ARZSzqWuGM3yeqZZpqhBe1LaqTeGE272bbsSEKW"], ["key", "11110318"], ["created_at", "2016-05-07 22:32:13.816235"], ["updated_at", "2016-05-07 22:32:13.816235"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "blade099@hotmail.com"], ["password_digest", "$2a$04$dNkp8mu1KH/NySGnoHZ1U.9zCdKJL5jkCWpPFHabwYDcwL9DLF846"], ["key", "19990919"], ["created_at", "2016-05-07 22:32:13.820811"], ["updated_at", "2016-05-07 22:32:13.820811"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"email"=>"lulu1993@outlook.com"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_2[0m
+  Rendered admins/new.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'wzhsld@outlook.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "wzhsld@outlook.com"], ["firstname", "Sasa"], ["lastname", "Dai"], ["DOB", "1999-09-19"], ["password_digest", "$2a$04$eItUL9.DFuprnwUu1dTVuu8yimDh84aWCVhD2jzDEhNnNGvBpU2T."], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "8608999350"], ["cellphone", "860-899-9350"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'dejelsn@hotmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "dejelsn@hotmail.com"], ["firstname", "Sikai"], ["lastname", "Zhang"], ["DOB", "1993-02-18"], ["password_digest", "$2a$04$VFEC1ziF9pWsPY54lYneReRznFABY92li09xKWNGhoRVW3osY9CGC"], ["middlename", "waw"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "233 hollenman dr"], ["zip", "77840"], ["homephone", "7564861"], ["cellphone", "123-456-7800"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "lulu1993@outlook.com"], ["password_digest", "$2a$04$tF6br1IGGrYt2dv4AkPNL.Gcqb6NsjbL3sCbgtizJqwK8s5MogbSW"], ["key", "11110318"], ["created_at", "2016-05-07 22:32:13.848187"], ["updated_at", "2016-05-07 22:32:13.848187"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "blade099@hotmail.com"], ["password_digest", "$2a$04$QUgh7XvfwIsRg8mrEj/EsuqQ9O.czXQJOsteywgDZcYcxS35bO8iu"], ["key", "19990919"], ["created_at", "2016-05-07 22:32:13.851207"], ["updated_at", "2016-05-07 22:32:13.851207"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"email"=>"lulu1993@outlook.com"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_2[0m
+  Rendered admins/new.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'wzhsld@outlook.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "wzhsld@outlook.com"], ["firstname", "Sasa"], ["lastname", "Dai"], ["DOB", "1999-09-19"], ["password_digest", "$2a$04$Ma2nCA0bNGoId01yBZ6CVevwkYC/q6yy9pX3dj5rm.hao3ie5cnaW"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "8608999350"], ["cellphone", "860-899-9350"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'dejelsn@hotmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "dejelsn@hotmail.com"], ["firstname", "Sikai"], ["lastname", "Zhang"], ["DOB", "1993-02-18"], ["password_digest", "$2a$04$aqHD1rK7xUFy3R4UtUD/ku0iaWc6Y10HxhMvgJYw4orAiaae8eKuO"], ["middlename", "waw"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "233 hollenman dr"], ["zip", "77840"], ["homephone", "7564861"], ["cellphone", "123-456-7800"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "lulu1993@outlook.com"], ["password_digest", "$2a$04$WoLTjRkBHhryafwm2GGkgecbuxm8ARX.FXplFeQaGP31ifjRJqQwK"], ["key", "11110318"], ["created_at", "2016-05-07 22:32:13.875193"], ["updated_at", "2016-05-07 22:32:13.875193"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "blade099@hotmail.com"], ["password_digest", "$2a$04$3rNPYOl37Cq1qS9ZN0U.rOKUa.Rz4NDN209f8BTUkRpC5qVzxIpWC"], ["key", "19990919"], ["created_at", "2016-05-07 22:32:13.878306"], ["updated_at", "2016-05-07 22:32:13.878306"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"2"}
+Redirected to http://test.host/adminlogin
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'wzhsld@outlook.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "wzhsld@outlook.com"], ["firstname", "Sasa"], ["lastname", "Dai"], ["DOB", "1999-09-19"], ["password_digest", "$2a$04$FRR2sYQsVxMa.4jmoWR5je4/7u7TCF1g7eu/d.y9qZ7/JXgGVov9K"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "8608999350"], ["cellphone", "860-899-9350"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'dejelsn@hotmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "dejelsn@hotmail.com"], ["firstname", "Sikai"], ["lastname", "Zhang"], ["DOB", "1993-02-18"], ["password_digest", "$2a$04$4WZ.b3WDtkYz3Q/IIWHTVummo6rpKCjHvzsVp.TEurF5UVI5emRSe"], ["middlename", "waw"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "233 hollenman dr"], ["zip", "77840"], ["homephone", "7564861"], ["cellphone", "123-456-7800"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "lulu1993@outlook.com"], ["password_digest", "$2a$04$Lgl2OH9y5vWSO6rpgnfB4ubi6dDLMTySCgyr8lwivwJaQ/qaOJEo2"], ["key", "11110318"], ["created_at", "2016-05-07 22:32:13.900673"], ["updated_at", "2016-05-07 22:32:13.900673"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "blade099@hotmail.com"], ["password_digest", "$2a$04$7wUU2IhzqMHTqDcaQ4shtugyEHcfhAnrVQaN7L.UCXudBLxsNh4Em"], ["key", "19990919"], ["created_at", "2016-05-07 22:32:13.903541"], ["updated_at", "2016-05-07 22:32:13.903541"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by AdminsController#approve as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "accounts" SET "status" = 't', "submit_bcheck" = 'f' WHERE "accounts"."id" = ?[0m  [["id", 1]]
+  Rendered mailer/approve_email.html.erb within layouts/mailer (0.8ms)
+
+Mailer#approve_email: processed outbound mail in 14.4ms
+
+Sent mail to wzhsld@outlook.com (2.9ms)
+Date: Sat, 07 May 2016 17:32:13 -0500
+From: zhangsikai123@tamu.edu
+To: wzhsld@outlook.com
+Message-ID: <572e6cede1597_365d3fcc15c41a28169b8@dhcp-10-202-130-139.tamulink.tamu.edu.mail>
+Subject: Congradulations!You have been approved by Animal Center Volunteering
+ Administrator
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<hmtl>
+<body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p><strong>Congratulations,dear Sasa Dai</strong></p>
+    <p>
+      Your profile has passed our background check and you are qualified as our volunteer, please go back to your profile page and finish the new application form and schedule a appropriate time for your volunteering!
+    </p>
+    
+  </body>
+</html>
+</body>
+</hmtl>
+
+Redirected to http://test.host/admins/1
+Completed 302 Found in 20ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'wzhsld@outlook.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "wzhsld@outlook.com"], ["firstname", "Sasa"], ["lastname", "Dai"], ["DOB", "1999-09-19"], ["password_digest", "$2a$04$uwV75gr/DPis60XuERz82OKZ4ZlLmqbS2MjlGQVfWXLxDhC/BI8MC"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "8608999350"], ["cellphone", "860-899-9350"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'dejelsn@hotmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "dejelsn@hotmail.com"], ["firstname", "Sikai"], ["lastname", "Zhang"], ["DOB", "1993-02-18"], ["password_digest", "$2a$04$EYM8ifJMaiSOLActvpIlbe33EVUx8.R0jktQslZLnRlM9MUBZ/hPK"], ["middlename", "waw"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "233 hollenman dr"], ["zip", "77840"], ["homephone", "7564861"], ["cellphone", "123-456-7800"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "lulu1993@outlook.com"], ["password_digest", "$2a$04$Vswb92ere2fkp4/NM2e4x.zUxSS5BQzAY1YBermCpSHYN3qzWlbHG"], ["key", "11110318"], ["created_at", "2016-05-07 22:32:13.947189"], ["updated_at", "2016-05-07 22:32:13.947189"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "blade099@hotmail.com"], ["password_digest", "$2a$04$gBD3FdppNIzC4irPmtuZMeqKvkhEjtIlEmYCf8dHzI7OLX4HDRcW2"], ["key", "19990919"], ["created_at", "2016-05-07 22:32:13.950964"], ["updated_at", "2016-05-07 22:32:13.950964"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by AdminsController#reject as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "accounts" SET "status" = 'f', "submit_bcheck" = 'f' WHERE "accounts"."id" = ?[0m  [["id", 1]]
+  Rendered mailer/reject_email.html.erb within layouts/mailer (0.9ms)
+
+Mailer#reject_email: processed outbound mail in 18.8ms
+
+Sent mail to wzhsld@outlook.com (3.0ms)
+Date: Sat, 07 May 2016 17:32:13 -0500
+From: zhangsikai123@tamu.edu
+To: wzhsld@outlook.com
+Message-ID: <572e6cedee6c4_365d3fcc15c41a28170de@dhcp-10-202-130-139.tamulink.tamu.edu.mail>
+Subject: Sorry, You are rejected by Animal Center Volunteering Administrator
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<hmtl>
+<body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p><strong>Sorry,dear Sasa Dai</strong></p>
+    <p>
+      Your profile has failed our background check and you are currently not qualified as our volunteer for some reasons, developer currently don't know how to tell you.We will figure out a way later on.LOL 
+    </p>
+    
+  </body>
+</html>
+</body>
+</hmtl>
+
+Redirected to http://test.host/admins/1
+Completed 302 Found in 25ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'wzhsld@outlook.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "wzhsld@outlook.com"], ["firstname", "Sasa"], ["lastname", "Dai"], ["DOB", "1999-09-19"], ["password_digest", "$2a$04$5FKcVPcmmSdD8vKz5cIGK.W64AL4r7RfnyTaLq1coaJ2u6m2TPpj6"], ["middlename", "lulu"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "950 Colgate Drive"], ["zip", "77840"], ["homephone", "8608999350"], ["cellphone", "860-899-9350"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mAccount Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = 'dejelsn@hotmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "accounts" ("email", "firstname", "lastname", "DOB", "password_digest", "middlename", "country", "state", "city", "street", "zip", "homephone", "cellphone", "emergency_contact_name", "emergency_phone", "emergency_phone_alternate") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "dejelsn@hotmail.com"], ["firstname", "Sikai"], ["lastname", "Zhang"], ["DOB", "1993-02-18"], ["password_digest", "$2a$04$zWXry4MnJutthQT8e8WEWu8zabV8rmcozSFbHEwkEyqCkA7xfruSu"], ["middlename", "waw"], ["country", "United States"], ["state", "TX"], ["city", "College Station"], ["street", "233 hollenman dr"], ["zip", "77840"], ["homephone", "7564861"], ["cellphone", "123-456-7800"], ["emergency_contact_name", ""], ["emergency_phone", ""], ["emergency_phone_alternate", ""]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "lulu1993@outlook.com"], ["password_digest", "$2a$04$2HaP3R17robltMCXzvqiIuNSK1TmNnU9JXTAvi2k88EF3/IYJK4FS"], ["key", "11110318"], ["created_at", "2016-05-07 22:32:14.004310"], ["updated_at", "2016-05-07 22:32:14.004310"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "admins" ("email", "password_digest", "key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "blade099@hotmail.com"], ["password_digest", "$2a$04$f1LbGCiTrdFPqO3AC.1Bd.OMtmfSDoY/y.s2UrbU6ovpP7xO.nI6u"], ["key", "19990919"], ["created_at", "2016-05-07 22:32:14.007678"], ["updated_at", "2016-05-07 22:32:14.007678"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"2"}
+Redirected to http://test.host/adminlogin
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
