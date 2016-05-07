@@ -271,6 +271,7 @@ DEPENDENCIES
   jquery-rails (~> 2.3.0)
   jquery-ui-rails
   launchy
+  minitest
   momentjs-rails (>= 2.9.0)
   rack_session_access
   rails (= 4.2.1)
@@ -286,4 +287,4 @@ DEPENDENCIES
   validates_timeliness (~> 4.0)
 
 BUNDLED WITH
-   1.11.2
+   1.12.2

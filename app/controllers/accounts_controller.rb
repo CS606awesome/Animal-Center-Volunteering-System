@@ -342,7 +342,7 @@ class AccountsController < ApplicationController
           redirect_to check_your_email_path
           flash[:success] = "Email has been resent, please check it."
         else
-          flash.now[:danger] = 'Your email is not valid or it has not been registered, please try again!'
+          flash[:danger] = 'Your email is not valid or it has not been registered, please try again!'
           render 'input_your_email'
         end
       end

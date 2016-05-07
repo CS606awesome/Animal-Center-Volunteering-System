@@ -1,5 +1,6 @@
 require 'spec_helper'
 require 'rails_helper'
+require "minitest/autorun"
 
 describe AccountsController do 
     before :each do
@@ -109,6 +110,21 @@ describe AccountsController do
     end
   end
   
+   describe 'reset your password by sending emails' do
+        it 'should find account id by inputting email' do
+            #session[:id] = @accounts[0].id
+            get :input_your_email
+            assigns(:account).should == @accounts[1]
+        end
+
+       it 'should resend your email' do
+         session[:id] = @accounts[0].id
+         get :resend_your_email
+         flash[:success].should == "Email has been resent, please check it."
+       end
+      
+ end   
+ 
   # describe " #update" do
     # it "change saved" do 
       # session[:id] = @accounts[0].id
@@ -116,5 +132,5 @@ describe AccountsController do
       # flash[:danger].should == 'Changes Saved!'
     # end
   # end
-    
+  
 end
