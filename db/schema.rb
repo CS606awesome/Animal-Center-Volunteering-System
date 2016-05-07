@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160503211524) do
+ActiveRecord::Schema.define(version: 20160504154618) do
 
   create_table "accommodations", force: :cascade do |t|
     t.string   "accommodation_name"
@@ -79,7 +79,7 @@ ActiveRecord::Schema.define(version: 20160503211524) do
   create_table "criminal_applications", force: :cascade do |t|
     t.integer  "mandatory_hours"
     t.string   "mandatory_area"
-    t.datetime "deadline"
+    t.string   "deadline"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "account_id"
@@ -96,7 +96,7 @@ ActiveRecord::Schema.define(version: 20160503211524) do
   end
 
   create_table "former_criminals", force: :cascade do |t|
-    t.datetime "date_of_conviction"
+    t.string   "date_of_conviction"
     t.string   "nature_of_offense"
     t.string   "name_of_court"
     t.string   "disposition_of_case"
@@ -131,7 +131,7 @@ ActiveRecord::Schema.define(version: 20160503211524) do
     t.string   "student_program"
     t.integer  "required_time"
     t.string   "required_area"
-    t.datetime "deadline"
+    t.string   "deadline"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "account_id"
@@ -140,7 +140,7 @@ ActiveRecord::Schema.define(version: 20160503211524) do
   add_index "student_applications", ["account_id"], name: "index_student_applications_on_account_id"
 
   create_table "user_formerworkers", force: :cascade do |t|
-    t.datetime "date_of_employment"
+    t.string   "date_of_employment"
     t.string   "reason_for_leaving"
     t.string   "position_or_department"
     t.string   "interested_area"

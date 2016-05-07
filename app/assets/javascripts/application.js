@@ -69,7 +69,20 @@
       changeMonth: true,
       changeYear: true
     });
+     //formerworkers
+      $( "#datepicker2" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+     //date of conviction 
+       $( "#datepicker3" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  
+     //begin
     $('#datetimepicker').datetimepicker();
+     //end
     $('#datetimepicker2').datetimepicker();
      });
 

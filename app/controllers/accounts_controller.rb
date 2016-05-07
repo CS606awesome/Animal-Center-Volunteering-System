@@ -106,7 +106,7 @@ class AccountsController < ApplicationController
   
   #validates that time begin is earlier than time end 
   def correct_time_range(time_end, time_begin)
-    if  Time.parse(time_begin) < Time.parse(time_end) && Time.parse(time_begin) > Time.now.to_s
+    if  Time.parse(time_begin) < Time.parse(time_end) and Time.parse(time_begin) > Time.now
       return true
     else
       return false
@@ -116,7 +116,7 @@ class AccountsController < ApplicationController
 
   ##validate the application time range
   def correct_datetime(time)   
-    if /^(0?[1-9]|1[0-2])\/(0?[1-9]|[12][0-9]|3[01])\/\d\d\d\d (00|[0-9]|1[0-9]|2[0-3]):([0-9]|[0-5][0-9]) (AM|PM)$/.match(time)
+    if /^(0?[1-9]|1[0-2])\/(0?[1-9]|[12][0-9]|3[01])\/(\d\d\d\d) (00|[0-9]|1[0-9]|2[0-3]):([0-9]|[0-5][0-9]) (AM|PM)$/.match(time)
       time = "#{$3}/#{$1}/#{$2} #{$4}:#{$5} #{$6}"
       return time
     else     
@@ -170,7 +170,7 @@ class AccountsController < ApplicationController
                @account.student_application ||= StudentApplication.new
            end
            ##if user's DOB is later than 18 years ago(younder than 18)
- 
+
            if to_sec(@account.DOB) > 18.years.ago.to_i    
             @account.minor_application ||= MinorApplication.new   
            end
@@ -196,17 +196,23 @@ class AccountsController < ApplicationController
   def update
 
 
-     @account = Account.find(session[:id])
-      
+     @account = Account.find(params[:id])
+     @my_update_hash = account_update_params
 
-     if @account.submit_bcheck == false||admin_logged_in
+     if @account.submit_bcheck == false&&@account.status== nil ||admin_logged_in
      
         if(params[:account][:is_former_worker] == "1") 
           @account.user_formerworker ||= UserFormerworker.new  
         else
           @account.user_formerworker ||= UserFormerworker.new 
           @account.update(:is_former_worker => "0")
+          if params[:account].has_key?(:user_formerworker_attributes)
+              @my_update_hash[:user_formerworker_attributes][:date_of_employment] = "1999-3-8"
+              @my_update_hash[:user_formerworker_attributes][:reason_for_leaving] = "none" 
+              @my_update_hash[:user_formerworker_attributes][:position_or_department] = "none"
+          end
         end
+        
         if(params[:account][:related_to_councilmember] == "1")
           if params[:account][:related_councilmember_attributes].nil?
             @account.related_councilmember ||= RelatedCouncilmember.new
@@ -218,37 +224,65 @@ class AccountsController < ApplicationController
             @account.related_councilmember ||= RelatedCouncilmember.new
             @account.related_councilmember.name = params[:account][:related_councilmember_attributes][:name].join(' ')
           end
-        end
-        if(params[:account][:is_current_worker] == "1") 
-          @account.current_worker ||= CurrentWorker.new   
-        end
-        if(params[:account][:has_convictions] == "1") 
-          @account.former_criminal ||= FormerCriminal.new   
-        end
-        if(params[:account][:need_accommodations] == "1") 
-          @account.accommodation ||= Accommodation.new   
+        else
+          if params[:account].has_key?(:related_councilmember_attributes)
+              @my_update_hash[:related_councilmember_attributes][:relationship] = "none"
+              @my_update_hash[:related_councilmember_attributes][:name] = "none"
+          end
         end
         
-        correct_DOB_format_update(params[:account])
+        if(params[:account][:is_current_worker] == "1") 
+          @account.current_worker ||= CurrentWorker.new
+        else
+          @account.current_worker ||= CurrentWorker.new
+          if params[:account].has_key?(:current_worker_attributes)
+              @my_update_hash[:current_worker_attributes][:department] = "none"
+              @my_update_hash[:current_worker_attributes][:name] = "none" 
+          end
+        end
+        
+        if(params[:account][:has_convictions] == "1") 
+          @account.former_criminal ||= FormerCriminal.new
+        else
+          @account.former_criminal ||= FormerCriminal.new
+          if params[:account].has_key?(:former_criminal_attributes)
+              @my_update_hash[:former_criminal_attributes][:date_of_conviction] = "1991-1-1"
+              @my_update_hash[:former_criminal_attributes][:nature_of_offense] = "none" 
+              @my_update_hash[:former_criminal_attributes][:name_of_court] = "none"
+              @my_update_hash[:former_criminal_attributes][:disposition_of_case] = "none" 
+              @my_update_hash[:former_criminal_attributes][:former_crime] = "none"
+          end
+        end
+        
+        if(params[:account][:need_accommodations] == "1") 
+          @account.accommodation ||= Accommodation.new
+        else
+          @account.accommodation ||= Accommodation.new
+          if params[:account].has_key?(:accommodation_attributes)
+              @my_update_hash[:accommodation_attributes][:accommodation_name] = "none"
+          end
+        end
+        
+        correct_DOB_format_update(@my_update_hash)
         
         if params[:account][:homephone].gsub(/\D/, '').length == 10   #change homephone format to xxx-xxx-xxxx
-         params[:account][:homephone] = params[:account][:homephone].gsub(/\D/, '').insert(3, '-').insert(7, '-')
+         @my_update_hash[:homephone] = params[:account][:homephone].gsub(/\D/, '').insert(3, '-').insert(7, '-')
         end
         
         if params[:account][:emergency_phone].gsub(/\D/, '').length == 10   #change homephone format to xxx-xxx-xxxx
-         params[:account][:emergency_phone] = params[:account][:emergency_phone].gsub(/\D/, '').insert(3, '-').insert(7, '-')
+         @my_update_hash[:emergency_phone] = params[:account][:emergency_phone].gsub(/\D/, '').insert(3, '-').insert(7, '-')
         end
         
         if params[:account][:emergency_phone_alternate].gsub(/\D/, '').length == 10   #change homephone format to xxx-xxx-xxxx
-         params[:account][:emergency_phone_alternate] = params[:account][:emergency_phone_alternate].gsub(/\D/, '').insert(3, '-').insert(7, '-')
+         @my_update_hash[:emergency_phone_alternate] = params[:account][:emergency_phone_alternate].gsub(/\D/, '').insert(3, '-').insert(7, '-')
         end
 
         if params[:account][:cellphone].gsub(/\D/, '').length == 10   #change homephone format to xxx-xxx-xxxx
-         params[:account][:cellphone] = params[:account][:cellphone].gsub(/\D/, '').insert(3, '-').insert(7, '-')
+         @my_update_hash[:cellphone] = params[:account][:cellphone].gsub(/\D/, '').insert(3, '-').insert(7, '-')
         end
     
     
-        if @account.update(account_update_params) #unless destroyed?  #save(:validate => true)
+        if @account.update(@my_update_hash) #unless destroyed?  #save(:validate => true)
          
         if(params[:account][:is_former_worker] == "0")
             if(@account.user_formerworker != nil)
@@ -291,7 +325,7 @@ class AccountsController < ApplicationController
         end
      else
 
-         flash[:warning] = 'Your profile is under processing, if you want to make any changes please contact our administrator!'
+         flash[:warning] = 'After sending to administrator, you can not change your profiel anymore, if you want to make any changes please contact our administrator!'
 
          redirect_to profiles_path
      end
