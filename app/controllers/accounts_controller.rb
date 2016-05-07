@@ -10,6 +10,7 @@ class AccountsController < ApplicationController
   
   def edit
       @account = Account.find params[:id]
+      render :nothing => true
   end
   
   def create
