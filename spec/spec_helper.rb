@@ -27,6 +27,7 @@ require 'rack_session_access/capybara'
 require 'rack_session_access'
 require 'database_cleaner'
 ActiveRecord::Migration.maintain_test_schema!
+
 RSpec.configure do |config|
   
   # rspec-expectations config goes here. You can use an alternate

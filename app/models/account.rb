@@ -24,7 +24,7 @@ class Account < ActiveRecord::Base
     
 has_secure_password
 
-validates :email,:firstname,:lastname,:homephone, 
+validates :email,:firstname,:lastname,:cellphone, 
   presence: true,
   :on => [ :create ]
 

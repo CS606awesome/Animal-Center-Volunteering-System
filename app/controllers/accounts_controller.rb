@@ -197,7 +197,7 @@ class AccountsController < ApplicationController
   def update
 
 
-     @account = Account.find(params[:id])
+     @account = Account.find(session[:id])
      @my_update_hash = account_update_params
 
      if @account.submit_bcheck == false&&@account.status== nil ||admin_logged_in
@@ -363,7 +363,7 @@ class AccountsController < ApplicationController
 
   
   def save_change
-      @account = Account.find(params[:id])
+      @account = Account.find(session[:id])
   end  
   
 
@@ -436,7 +436,7 @@ private
                                   :emergency_phone,:emergency_phone_alternate,:related_to_councilmember,
                                   :has_convictions, :need_accommodations, :is_volunteering,  :is_student,
                                   :firstname, :lastname, :DOB, :homephone, :cellphone, :street, :city, :state, :zip,
-                                  :middlename, :email, :country, :maidenname,
+                                  :middlename, :email, :country, :maidenname, :shirt_size,
                                   current_worker_attributes: [:id, :department, :name],
                                   user_formerworker_attributes: [:id, :date_of_employment, :reason_for_leaving, :position_or_department],
                                   former_criminal_attributes: [:id, :date_of_conviction, :nature_of_offense, :name_of_court, :disposition_of_case, :former_crime],

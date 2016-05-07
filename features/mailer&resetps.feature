@@ -6,8 +6,8 @@ Feature: reset your password
   
 Background: accounts in database
    Given the following accounts exist:
-   |id|email              |firstname|lastname |password|homephone |
-   |10 |670348828@qq.com   |Dongni   |Han      |123456  |9795714506|
+   |id|email              |firstname|lastname |password|cellphone |DOB|
+   |10 |670348828@qq.com   |Dongni   |Han      |123456  |979-571-4506|1992-03-04|
 
 Scenario: forget your password
   Given I am on the login page 

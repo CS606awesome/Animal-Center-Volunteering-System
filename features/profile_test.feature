@@ -3,9 +3,9 @@ Feature: User can edit profiles
 Background: accounts in database
  
   Given the following accounts exist:
-  | firstname    | lastname | email     | homephone | password   | gender  | emergency_contact_name | is_former_worker |
-  | Star         | PG       | zy@zy.com | 123123    | 1234567    | male    |                        |                  |
-  | Blade        | G        | Rid@g.com | 234234    | 1234567    | female  |                        |                  |
+  | firstname    | lastname | email     | homephone | cellphone |password   | gender  | emergency_contact_name | is_former_worker | DOB|
+  | Star         | PG       | zy@zy.com | 650-285-9769   |123-456-7890| 1234567    | male    |                        |                  |1992-03-21|
+  | Blade        | G        | Rid@g.com | 650-283-9484    |098-765-4321| 1234567    | female  |                        |                  |1990-04-03|
   
 
     
