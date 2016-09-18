@@ -1,31 +1,22 @@
 == README
 Hello!There!
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to the latest version of the Application data retrival and management system 
 
-Things you may want to cover:
+Things you may want to know:
 
 * Ruby version
-
+2.3.0
 * System dependencies
-I made a change here just for testing the SLACK.!!
+Check the ./gemfile
 * Configuration
-
+Check ./config/routes.rb
 * Database creation
-
+Based on both Postgres or Sqlite, Check ./db/schema.rb
 * Database initialization
-
+type: rails db:migrate
 * How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-I made I first change!
-I made my second change!
-I made the third change!
+type: rails server (make sure you are on the root dir before run the server)
+* Deployment
+Using Heroku for the testing deployment 
+Check https://animal-center-bryan.herokuapp.com/
+(We are still in the processing of optimize our code, which means it could be awfully slow for loading, please be patient!)
